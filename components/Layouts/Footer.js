@@ -21,6 +21,7 @@ const Footer = () => {
                 <p>
                   FlagOne is building the future of digital assets. We educate and help individuals, 
                   institutions and brands to produce, trade, collect in digital assets. 
+                  Experience Web 3.0 Better with FlagOne
                 </p>
 
                 <ul className="social-links">
@@ -142,10 +143,7 @@ const Footer = () => {
         <div className="copyright-area">
           <div className="container">
             <p>
-              Copyright &copy; {currentYear} Pungent. All Rights Reserved By{" "}
-              <a href="https://envytheme.com" target="_blank">
-                EnvyTheme
-              </a>
+              Copyright &copy; {currentYear} Flag One Pte Ltd. All Rights Reserved.
             </p>
           </div>
         </div>
