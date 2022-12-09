@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../components/Layouts/Navbar";
+import SinglePageNavbar from "../components/Layouts/SinglePageNavbar";
 import MainBanner from "../components/HomePages/DefaultHome/MainBanner";
 import Services from "../components/HomePages/DefaultHome/Services";
 import About from "../components/HomePages/DefaultHome/About";
@@ -16,7 +16,7 @@ import Footer from "../components/Layouts/Footer";
 const Index = () => {
   return (
     <>
-      <Navbar />
+      <SinglePageNavbar />
 
       <MainBanner />
 
@@ -28,17 +28,17 @@ const Index = () => {
 
       <WorkProcess />
 
-      <Feedback />
+      {/* <Feedback />
 
       <Team />
 
       <FunFacts />
 
-      <LatestNewsSlider />
+      <LatestNewsSlider /> */}
 
       <CtaArea />
 
-      <Partner />
+      {/* <Partner /> */}
 
       <Footer />
     </>
