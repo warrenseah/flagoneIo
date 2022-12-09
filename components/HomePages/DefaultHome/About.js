@@ -42,13 +42,11 @@ const About = () => {
                 <div className="section-title">
                   <h2>About Us</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, con se ctetur adipiscing elit.
-                    In sagittis eg esta ante, sed viverra nunc tinci dunt nec
-                    elei fend et tiram.
+                    We are Web3 Builders and Enablers. We are adept and highly adaptable to the fast-changing landscape of Web3 technologies. As such, we believe we are in the best position to help individuals and firms start their Web 3 journey.
                   </p>
                 </div>
 
-                <div className="about-text">
+                {/* <div className="about-text">
                   <h4>Who We Are</h4>
                   <p>
                     Sed ut perspiciatis unde omnis iste natus error sit
@@ -56,9 +54,9 @@ const About = () => {
                     aperiam, eaque ipsa quae ab illo inventore veritatis et
                     quasi architecto beatae vitae dicta sunt explicabo.
                   </p>
-                </div>
+                </div> */}
 
-                <div className="about-text">
+                {/* <div className="about-text">
                   <h4>Our History</h4>
                   <p>
                     But I must explain to you how all this mistaken idea of
@@ -66,15 +64,12 @@ const About = () => {
                     give you a complete account of the system, and expound the
                     actual teachings of the great explorer of the truth.
                   </p>
-                </div>
+                </div> */}
 
                 <div className="about-text">
                   <h4>Our Mission</h4>
                   <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus
-                    qui blanditiis praesentium voluptatum deleniti atque
-                    corrupti quos dolores et quas molestias excepturi sint
-                    occaecati cupiditate non provident, similique sunt in culpa.
+                    We believe the next Big-Tech companies will come out from the Fintech landscape powered by Blockchain and Web3 technologies. We see ourselves as enablers to impart and empowers this vision to individuals and companies. 
                   </p>
                 </div>
               </div>
