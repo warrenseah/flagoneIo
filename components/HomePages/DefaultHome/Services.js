@@ -4,13 +4,12 @@ import Link from "next/link";
 const Services = () => {
   return (
     <>
-      <div className="bg-fcfbfb pt-100 pb-70">
+      <div id="service" className="bg-fcfbfb pt-100 pb-70">
         <div className="container">
           <div className="section-title">
             <h2>Our Services</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna.
+              Flagone is building the future of digital assets
             </p>
           </div>
 
@@ -29,9 +28,7 @@ const Services = () => {
                   </Link>
                 </h3>
                 <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo.
+                  Educate individuals and companies to control their financial and creative "footprint" on Web 3.0.
                 </p>
               </div>
             </div>
@@ -50,9 +47,7 @@ const Services = () => {
                   </Link>
                 </h3>
                 <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo.
+                  Empowering web users with an easy user-interface to control their digital assets and identity all within their web browsers. 
                 </p>
               </div>
             </div>
@@ -67,13 +62,11 @@ const Services = () => {
                 <i className="pe-7s-light bg-ffb700"></i>
                 <h3>
                   <Link href="/service-details">
-                    <a>Digital Marketing</a>
+                    <a>Key Management</a>
                   </Link>
                 </h3>
                 <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo.
+                  Delivering an easy-to-start and secure way of managing private keys.
                 </p>
               </div>
             </div>
@@ -88,13 +81,11 @@ const Services = () => {
                 <i className="pe-7s-phone bg-fc3549"></i>
                 <h3>
                   <Link href="/service-details">
-                    <a>Mobile App Development</a>
+                    <a>Smart Contract Development</a>
                   </Link>
                 </h3>
                 <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo.
+                  Helping you move business logic and data into the public blockchain thereby building more trust and transparency to your business.
                 </p>
               </div>
             </div>
@@ -109,13 +100,11 @@ const Services = () => {
                 <i className="pe-7s-cart bg-00d280"></i>
                 <h3>
                   <Link href="/service-details">
-                    <a>eCommerce Development</a>
+                    <a>Crypto Payments</a>
                   </Link>
                 </h3>
                 <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo.
+                  Want a non-custodian way to store/accept crypto on the blockchain? We have an easy solution for you.
                 </p>
               </div>
             </div>
@@ -130,13 +119,11 @@ const Services = () => {
                 <i className="pe-7s-users bg-ff612f"></i>
                 <h3>
                   <Link href="/service-details">
-                    <a>Marketing & Reporting</a>
+                    <a>Staking</a>
                   </Link>
                 </h3>
                 <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo.
+                  Have a revenue idea to implement but needs to raise in the form of cryptocurrencies? Our team will be able to write smart contracts to accept crypto and channel the crypto to the necessary business logic to generate the yield with all contributors' fully accounted on-chain.
                 </p>
               </div>
             </div>
