@@ -13,11 +13,11 @@ const ContactInfo = () => {
                 </div>
                 <h3>Mail Here</h3>
                 <p>
-                  <a href="mailto:admin@pungent.com">admin@pungent.com</a>
+                  <a href="mailto:hello@flagone.io">hello@flagone.io</a>
                 </p>
-                <p>
+                {/* <p>
                   <a href="mailto:info@pungent.com">info@pungent.com</a>
-                </p>
+                </p> */}
               </div>
             </div>
 
@@ -28,12 +28,12 @@ const ContactInfo = () => {
                 </div>
                 <h3>Visit Here</h3>
                 <p>
-                  27 Division St, New York, <br /> NY 10002, USA
+                The Plaza, 7500A Beach Road <br /> #07-320, Singapore 199591.
                 </p>
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-6">
+            {/* <div className="col-lg-4 col-md-6">
               <div className="contact-info-box">
                 <div className="icon">
                   <i className="pe-7s-call"></i>
@@ -46,7 +46,7 @@ const ContactInfo = () => {
                   <a href="tel:+2414524526">+241 452 4526</a>
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

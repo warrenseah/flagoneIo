@@ -1,5 +1,5 @@
 const baseUrl = process.env.NODE_ENV === "production" 
-? 'https://trynext-react.envytheme.com' 
+? 'https://flagone.io' 
 : 'http://localhost:3000';
 
 export default baseUrl;

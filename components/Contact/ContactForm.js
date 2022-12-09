@@ -53,8 +53,7 @@ const ContactForm = () => {
         <div className="contact-title">
           <h2>Get In Touch</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Our friendly support team will get back to you.
           </p>
         </div>
 

@@ -19,29 +19,28 @@ const Footer = () => {
                 </div>
 
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam.
+                  FlagOne is building the future of digital assets. We educate and help individuals, 
+                  institutions and brands to produce, trade, collect in digital assets. 
                 </p>
 
                 <ul className="social-links">
                   <li>
-                    <a href="https://www.facebook.com/" target="_blank">
+                    <a href="https://www.facebook.com/profile.php?id=100057178100785" target="_blank">
                       <i className="fa-brands fa-facebook-f"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://twitter.com/" target="_blank">
+                    <a href="https://twitter.com/warrenseah" target="_blank">
                       <i className="fa-brands fa-twitter"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://linkedin.com/" target="_blank">
+                    <a href="https://www.linkedin.com/in/warrenseah/" target="_blank">
                       <i className="fa-brands fa-linkedin-in"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/" target="_blank">
+                    <a href="https://www.instagram.com/warrenseah/" target="_blank">
                       <i className="fa-brands fa-instagram"></i>
                     </a>
                   </li>
@@ -123,19 +122,16 @@ const Footer = () => {
 
                 <ul className="get-in-touch">
                   <li>
-                    <i className="fa-solid fa-location-dot"></i> 2750 Quadra Street
-                    Victoria, Canada.
+                    <i className="fa-solid fa-location-dot"></i> The Plaza, 7500A Beach Road
+                    #07-320, Singapore 199591.
                   </li>
-                  <li>
+                  {/* <li>
                     <i className="fa-solid fa-headset"></i>
                     <a href="tel:+324-9442-515">+324-9442-515</a> 
-                    <br />
-                    <a href="tel:+324-9442-515">+324-9442-999</a>
-                  </li>
+                  </li> */}
                   <li>
                     <i className="fa-solid fa-envelope"></i>
-                    <a href="mailto:hello@pungent.com">hello@pungent.com</a>
-                    <a href="mailto:support@pungent.com">support@pungent.com</a>
+                    <a href="mailto:hello@flagone.io">hello@flagone.io</a>
                   </li>
                 </ul>
               </div>
