@@ -10,11 +10,11 @@ const About = () => {
         sources={["https://www.youtube.com/embed/bk7McNUjWgw"]}
       />
 
-      <section className="about-area ptb-100">
+      <section className="about-area ptb-100" id="aboutUs">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-5 col-md-12">
-              <div 
+              <div
                 className="about-image"
                 data-aos="fade-up"
                 data-aos-duration="1200"
@@ -42,7 +42,11 @@ const About = () => {
                 <div className="section-title">
                   <h2>About Us</h2>
                   <p>
-                    We are Web3 Builders and Enablers. We are adept and highly adaptable to the fast-changing landscape of Web3 technologies. As such, we believe we are in the best position to help individuals and firms start their Web 3 journey.
+                    We are Web3 Builders and Enablers. We are adept and highly
+                    adaptable to the fast-changing landscape of Web3
+                    technologies. As such, we believe we are in the best
+                    position to help individuals and firms start their Web 3
+                    journey.
                   </p>
                 </div>
 
@@ -69,7 +73,10 @@ const About = () => {
                 <div className="about-text">
                   <h4>Our Mission</h4>
                   <p>
-                    We believe the next Big-Tech companies will come out from the Fintech landscape powered by Blockchain and Web3 technologies. We see ourselves as enablers to impart and empowers this vision to individuals and companies. 
+                    We believe the next Big-Tech companies will come out from
+                    the Fintech landscape powered by Blockchain and Web3
+                    technologies. We see ourselves as enablers to impart and
+                    empowers this vision to individuals and companies.
                   </p>
                 </div>
               </div>
