@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import FsLightbox from "fslightbox-react";
-import Link from 'next/link';
+import Link from "next/link";
 
 const MainBanner = () => {
   const [toggler, setToggler] = useState(false);
   return (
-		<>  
+    <>
       <FsLightbox
         toggler={toggler}
         sources={["https://www.youtube.com/embed/bk7McNUjWgw"]}
       />
 
-      <div 
-        className="main-banner" 
-        style={{ 
-          backgroundImage: `url(/images/main-banner-shape.jpg)` 
+      <div
+        id="home"
+        className="main-banner"
+        style={{
+          backgroundImage: `url(/images/main-banner-shape.jpg)`,
         }}
       >
         <div className="d-table">
@@ -24,10 +25,11 @@ const MainBanner = () => {
                 <div className="col-lg-6">
                   <div className="main-banner-content">
                     <span>A Web3 Company</span>
-                    <h1>We're Building the Future of Digital Asset Economy Powered by Blockchain.</h1>
-                    <p>
-                      Experience Web 3.0 Better with FlagOne.
-                    </p>
+                    <h1>
+                      We're Building the Future of Digital Asset Economy Powered
+                      by Blockchain.
+                    </h1>
+                    <p>Experience Web 3.0 Better with FlagOne.</p>
 
                     <Link href="/contact">
                       <a className="btn btn-primary">Get Started</a>
@@ -132,8 +134,8 @@ const MainBanner = () => {
           </div>
         </div>
       </div>
-		</>
+    </>
   );
-}
+};
 
 export default MainBanner;
