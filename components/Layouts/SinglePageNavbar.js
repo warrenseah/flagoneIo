@@ -54,38 +54,26 @@ const Navbar = () => {
             <div className={classOne} id="navbarSupportedContent">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link href="#">
-                    <a className="nav-link" onClick={(e) => e.preventDefault()}>
-                      Home
-                    </a>
+                  <Link href="/#home">
+                    <a className="nav-link">Home</a>
                   </Link>
                 </li>
 
                 <li className="nav-item">
-                    <a className="nav-link" href="#service">
-                      Services
-                    </a>
+                  <a className="nav-link" href="#service">
+                    Services
+                  </a>
                 </li>
 
                 <li className="nav-item">
-                  <Link href="/about" activeClassName="active">
+                  <Link href="#aboutUs" activeClassName="active">
                     <a className="nav-link">About us</a>
                   </Link>
                 </li>
 
                 <li className="nav-item">
-                  <Link href="#">
-                    <a className="nav-link" onClick={(e) => e.preventDefault()}>
-                      Portfolio
-                    </a>
-                  </Link>
-                </li>
-
-                <li className="nav-item">
-                  <Link href="#">
-                    <a className="nav-link" onClick={(e) => e.preventDefault()}>
-                      Blog
-                    </a>
+                  <Link href="#ourWorks">
+                    <a className="nav-link">Portfolio</a>
                   </Link>
                 </li>
 
@@ -95,12 +83,6 @@ const Navbar = () => {
                   </Link>
                 </li>
               </ul>
-
-              <div className="others-options">
-                <Link href="/contact">
-                  <a className="btn btn-primary">Get Started</a>
-                </Link>
-              </div>
             </div>
           </div>
         </nav>
