@@ -8,10 +8,6 @@ const OurWorks = () => {
         <div className="container">
           <div className="section-title">
             <h2>Our Works</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
           </div>
 
           <div className="row justify-content-center">
@@ -21,21 +17,21 @@ const OurWorks = () => {
               data-aos-duration="1200"
               data-aos-delay="100"
             >
-              <div 
+              <div
                 className="single-case-studies"
-                style={{ 
-                  backgroundImage: `url(/images/case-studies/studie1.jpg)` 
+                style={{
+                  backgroundImage: `url(/images/case-studies/studie1.jpg)`,
                 }}
               >
                 <div className="content">
                   <span>
                     <Link href="/portfolio-details">
-                      <a>Web Design</a>
+                      <a>DeFi</a>
                     </Link>
                   </span>
                   <h3>
                     <Link href="/portfolio-details">
-                      <a>Designing a better cinema experience</a>
+                      <a>Bnb Charger</a>
                     </Link>
                   </h3>
                 </div>
@@ -59,21 +55,21 @@ const OurWorks = () => {
               data-aos-duration="1200"
               data-aos-delay="200"
             >
-              <div 
+              <div
                 className="single-case-studies"
-                style={{ 
-                  backgroundImage: `url(/images/case-studies/studie2.jpg)` 
+                style={{
+                  backgroundImage: `url(/images/case-studies/studie2.jpg)`,
                 }}
               >
                 <div className="content">
                   <span>
                     <Link href="/portfolio-details">
-                      <a>Development</a>
+                      <a>NFT</a>
                     </Link>
                   </span>
                   <h3>
                     <Link href="/portfolio-details">
-                      <a>Building design process within teams</a>
+                      <a>Generative Art NFT Collection</a>
                     </Link>
                   </h3>
                 </div>
@@ -97,21 +93,23 @@ const OurWorks = () => {
               data-aos-duration="1200"
               data-aos-delay="300"
             >
-              <div 
+              <div
                 className="single-case-studies"
-                style={{ 
-                  backgroundImage: `url(/images/case-studies/studie3.jpg)` 
+                style={{
+                  backgroundImage: `url(/images/case-studies/studie3.jpg)`,
                 }}
               >
                 <div className="content">
                   <span>
                     <Link href="/portfolio-details">
-                      <a>Web Development</a>
+                      <a>dApp Development</a>
                     </Link>
                   </span>
                   <h3>
                     <Link href="/portfolio-details">
-                      <a>How intercom brings play into their design process</a>
+                      <a>
+                        Linking website with the blockchain and smart contracts
+                      </a>
                     </Link>
                   </h3>
                 </div>
@@ -135,10 +133,10 @@ const OurWorks = () => {
               data-aos-duration="1200"
               data-aos-delay="400"
             >
-              <div 
+              <div
                 className="single-case-studies"
-                style={{ 
-                  backgroundImage: `url(/images/case-studies/studie4.jpg)` 
+                style={{
+                  backgroundImage: `url(/images/case-studies/studie4.jpg)`,
                 }}
               >
                 <div className="content">
@@ -149,9 +147,7 @@ const OurWorks = () => {
                   </span>
                   <h3>
                     <Link href="/portfolio-details">
-                      <a>
-                        Stuck with to-do list, I created a new app for myself
-                      </a>
+                      <a>Backend and Frontend Development with NextJs</a>
                     </Link>
                   </h3>
                 </div>
@@ -163,82 +159,6 @@ const OurWorks = () => {
                 <div className="shape">
                   <img
                     src="/images/case-studies/studie-shape4.png"
-                    alt="logo"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="500"
-            >
-              <div 
-                className="single-case-studies"
-                style={{ 
-                  backgroundImage: `url(/images/case-studies/studie5.jpg)` 
-                }}
-              >
-                <div className="content">
-                  <span>
-                    <Link href="/portfolio-details">
-                      <a>Angular Development</a>
-                    </Link>
-                  </span>
-                  <h3>
-                    <Link href="/portfolio-details">
-                      <a>Examples of different types of sprints</a>
-                    </Link>
-                  </h3>
-                </div>
-
-                <Link href="/portfolio-details">
-                  <a className="btn btn-primary">View Case Study</a>
-                </Link>
-
-                <div className="shape">
-                  <img
-                    src="/images/case-studies/studie-shape5.png"
-                    alt="logo"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="600"
-            >
-              <div 
-                className="single-case-studies"
-                style={{ 
-                  backgroundImage: `url(/images/case-studies/studie6.jpg)` 
-                }}
-              >
-                <div className="content">
-                  <span>
-                    <Link href="/portfolio-details">
-                      <a>App Development</a>
-                    </Link>
-                  </span>
-                  <h3>
-                    <Link href="/portfolio-details">
-                      <a>Redesigning the New York times app</a>
-                    </Link>
-                  </h3>
-                </div>
-
-                <Link href="/portfolio-details">
-                  <a className="btn btn-primary">View Case Study</a>
-                </Link>
-
-                <div className="shape">
-                  <img
-                    src="/images/case-studies/studie-shape6.png"
                     alt="logo"
                   />
                 </div>
