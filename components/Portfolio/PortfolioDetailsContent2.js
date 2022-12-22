@@ -41,112 +41,115 @@ const PortfolioDetailsContent2 = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="portfolio-desc">
-                <h2>We Provide Useful Services</h2>
+                <h2>We Provide NFT Related Services</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim.
+                  Non Fungible Tokens (NFT) are on the rise. Currently, users
+                  that are interested in non-fungible tokens primarily think of
+                  them as digital art (jpegs) or collectibles. In the near
+                  future, NFT’s will change the way creatives create, distribute
+                  and own their digital content. We predict that NFT's utility
+                  will branch off to include even more digital content such as
+                  music and movie industries.
                 </p>
 
                 <h2>Core Development</h2>
                 <p>
-                  No fake products and services. The customer is king, their
-                  lives and needs are the inspiration. But I must explain to you
-                  how all this mistaken idea of denouncing pleasure and praising
-                  pain was born and I will give you a complete account of the
-                  system, and expound the actual teachings of the great explorer
-                  of the truth, the master-builder of human happiness. No one
-                  rejects, dislikes, or avoids pleasure itself, because it is
-                  pleasure, but because those who do not know how to pursue
-                  pleasure rationally encounter consequences that are extremely
-                  painful.
+                  We provide custom coding support for ERC-721, ERC-1155 and
+                  other OpenZeppelin token standards. Generative art makes use
+                  of machine learning and algorithmic tools to produce unique,
+                  unpredictable art. NFTs are cryptographic tokens used to
+                  represent unique digital assets stored on a blockchain. Unless
+                  something catastrophic happens and the Internet shuts down,
+                  digital assets stored on a blockchain are permanent and
+                  immutable. Each token has unique metadata that distinguishes
+                  it from other tokens, ensuring it can’t be changed or forged.
+                  The generated digital art files will be stored on
+                  decentralized storage and pull from the blockchain smart
+                  contract whenever someone request for the art.
                 </p>
 
                 <h2>Define Your Choices</h2>
                 <p>
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                  blanditiis praesentium voluptatum deleniti atque corrupti quos
-                  dolores et quas molestias excepturi sint occaecati cupiditate
-                  non provident, similique sunt in culpa qui officia deserunt
-                  mollitia animi, id est laborum et dolorum fuga. Et harum
-                  quidem rerum facilis est et expedita distinctio. Nam libero
-                  tempore, cum soluta nobis est eligendi optio cumque nihil
-                  impedit quo minus id quod maxime placeat facere possimus,
-                  omnis voluptas assumenda est, omnis dolor repellendus.
-                  Temporibus autem quibusdam et aut officiis debitis aut rerum
-                  necessitatibus saepe eveniet ut et voluptates repudiandae sint
-                  et molestiae non recusandae. Itaque earum rerum hic.
-                </p>
-
-                <p>
-                  On the other hand, we denounce with righteous indignation and
-                  dislike men who are so beguiled and demoralized by the charms
-                  of pleasure of the moment, so blinded by desire, that they
-                  cannot foresee the pain and trouble that are bound to ensue;
-                  and equal blame belongs to those who fail in their duty
-                  through weakness of will, which is the same as saying through
-                  shrinking from toil and pain. These cases are perfectly simple
-                  and easy to distinguish. In a free hour, when our power of
-                  choice is untrammelled and when nothing prevents our being
-                  able to do what we like best, every pleasure is to be welcomed
-                  and every pain avoided. But in certain circumstances and owing
-                  to the claims of duty or the obligations of business it will
-                  frequently occur that pleasures have to be repudiated and
-                  annoyances accepted. The wise man therefore always holds in
-                  these matters to this.
+                  Generative art or unique art on the blockchain? You decide. We
+                  are here to help you expand your creative juice into the
+                  digital world. By launching digital content with property tied
+                  to a blockchain network, you ensure all future credit and
+                  royalties be tied back to the rightful owner. By working on
+                  expanding your digital reach now, you are positioning yourself
+                  for the upcoming digital asset economy.
                 </p>
               </div>
 
               <div className="service-details-info">
                 <div className="single-info-box">
                   <h4>Client</h4>
-                  <span>James Anderson</span>
+                  <span>Real Herbs</span>
                 </div>
 
                 <div className="single-info-box">
                   <h4>Category</h4>
-                  <span>Saas, Marketing</span>
+                  <span>NFT, Generative Art</span>
                 </div>
 
                 <div className="single-info-box">
                   <h4>Date</h4>
-                  <span>February 28, 2022</span>
+                  <span>October 28, 2021</span>
                 </div>
 
                 <div className="single-info-box">
                   <h4>Share</h4>
                   <ul className="social">
                     <li>
-                      <a href="https://www.facebook.com/" target="_blank">
+                      <a
+                        href="https://www.facebook.com/kryptotrees"
+                        title="kyrptoTrees fb"
+                        target="_blank"
+                      >
                         <i className="fa-brands fa-facebook-f"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="https://twitter.com/" target="_blank">
+                      <a
+                        href="https://twitter.com/KryptoTreesNFT"
+                        title="kyrptoTrees Twitter"
+                        target="_blank"
+                      >
                         <i className="fa-brands fa-twitter"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.linkedin.com/" target="_blank">
-                        <i className="fa-brands fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.instagram.com/" target="_blank">
-                        <i className="fa-brands fa-instagram"></i>
+                      <a
+                        href="https://discord.gg/EwybaHdp"
+                        title="kyrptoTrees Discord"
+                        target="_blank"
+                      >
+                        <i className="fa-brands fa-discord"></i>
                       </a>
                     </li>
                   </ul>
                 </div>
 
                 <div className="single-info-box">
-                  <a href="#" className="default-btn" target="_blank">
-                    Live Preview
+                  <a
+                    href="https://kryptotrees.com"
+                    className="default-btn m-1"
+                    target="_blank"
+                  >
+                    Website Preview
+                  </a>
+                  <a
+                    href="https://polygon.kryptotrees.com"
+                    className="default-btn m-1"
+                    target="_blank"
+                  >
+                    dApp Preview
+                  </a>
+                  <a
+                    href="https://polygonscan.com/address/0x660dec2e3a19fb5534afe02b5c115dc4905bc9f9"
+                    className="default-btn m-1"
+                    target="_blank"
+                  >
+                    Contract Address (Polygon)
                   </a>
                 </div>
               </div>

@@ -63,18 +63,18 @@ const OurWorks = () => {
               >
                 <div className="content">
                   <span>
-                    <Link href="/portfolio-details">
+                    <Link href="/portfolio-nft-collections">
                       <a>NFT</a>
                     </Link>
                   </span>
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link href="/portfolio-nft-collections">
                       <a>Generative Art NFT Collection</a>
                     </Link>
                   </h3>
                 </div>
 
-                <Link href="/portfolio-details">
+                <Link href="/portfolio-nft-collections">
                   <a className="btn btn-primary">View Case Study</a>
                 </Link>
 
