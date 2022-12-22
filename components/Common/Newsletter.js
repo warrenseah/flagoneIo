@@ -1,30 +1,9 @@
 import React, { useRef } from "react";
 import axios from "axios";
-import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
-const MySwal = withReactContent(Swal);
-
-const alertSuccessContent = () => {
-  MySwal.fire({
-    title: "Congratulations!",
-    text: "Your email was successfully added!",
-    icon: "success",
-    timer: 2000,
-    timerProgressBar: true,
-    showConfirmButton: false,
-  });
-};
-
-const alertFailedContent = (errorMsg) => {
-  MySwal.fire({
-    title: "Oops!",
-    text: errorMsg,
-    icon: "error",
-    timer: 2000,
-    timerProgressBar: true,
-    showConfirmButton: false,
-  });
-};
+import {
+  alertSuccessContent,
+  alertFailedContent,
+} from "../../utils/sweetAlert";
 
 const Newsletter = () => {
   const emailInputRef = useRef();
@@ -42,7 +21,7 @@ const Newsletter = () => {
       const response = await axios.post(url, payload);
       // console.log(response);
       if (response.status === 200) {
-        alertSuccessContent();
+        alertSuccessContent("Your email was successfully added!");
         e.target.reset();
       } else {
         throw new Error("User is not added!");

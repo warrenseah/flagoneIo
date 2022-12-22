@@ -1,20 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
-const MySwal = withReactContent(Swal);
+import {
+  alertFailedContent,
+  alertSuccessContent,
+} from "../../utils/sweetAlert";
 import baseUrl from "../../utils/baseUrl";
-
-const alertContent = () => {
-  MySwal.fire({
-    title: "Congratulations!",
-    text: "Your message was successfully send and will back to you soon",
-    icon: "success",
-    timer: 2000,
-    timerProgressBar: true,
-    showConfirmButton: false,
-  });
-};
 
 // Form initial state
 const INITIAL_STATE = {
@@ -41,9 +31,12 @@ const ContactForm = () => {
       const response = await axios.post(url, payload);
       console.log(response);
       setContact(INITIAL_STATE);
-      alertContent();
+      alertSuccessContent(
+        "Your message was successfully send and will back to you soon"
+      );
     } catch (error) {
       console.log(error);
+      alertFailedContent(error.message);
     }
   };
 
@@ -52,9 +45,7 @@ const ContactForm = () => {
       <div className="contact-form">
         <div className="contact-title">
           <h2>Get In Touch</h2>
-          <p>
-            Our friendly support team will get back to you.
-          </p>
+          <p>Our friendly support team will get back to you.</p>
         </div>
 
         <form onSubmit={handleSubmit}>
