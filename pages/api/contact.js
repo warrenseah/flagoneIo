@@ -16,8 +16,8 @@ export default async (req, res) => {
 
   const data = {
     // Update your email here
-    to: "bk@flagone.io",
-    from: "bk@flagone.io",
+    to: "accounts@flagone.io",
+    from: "hello@flagone.io",
     subject: "Hello Enquiry",
     text: text,
     html: `
