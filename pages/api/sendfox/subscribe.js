@@ -1,14 +1,10 @@
-import axios from "axios";
+import axios from "../../../utils/axios";
 
 const listID = "385942";
 
 const postContact = async (email, first_name) => {
   try {
-    const instance = axios.create({
-      baseURL: "https://api.sendfox.com",
-      timeout: 60000,
-      headers: { Authorization: `Bearer ${process.env.SENDFOX_TOKEN}` },
-    });
+    const instance = axios();
     const response = await instance.post(
       `/contacts?email=${email}&first_name=${first_name}&lists[]=${listID}`
     );

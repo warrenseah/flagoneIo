@@ -1,12 +1,8 @@
-import axios from "axios";
+import axios from "../../../utils/axios";
 
 const getList = async () => {
   try {
-    const instance = axios.create({
-      baseURL: "https://api.sendfox.com",
-      timeout: 60000,
-      headers: { Authorization: `Bearer ${process.env.SENDFOX_TOKEN}` },
-    });
+    const instance = axios();
     const response = await instance.get("/lists");
     return response.data;
   } catch (error) {
