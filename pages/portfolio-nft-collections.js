@@ -5,7 +5,7 @@ import PortfolioDetailsContent2 from "../components/Portfolio/PortfolioDetailsCo
 import CtaAreaTwo from "../components/Common/CtaAreaTwo";
 import Footer from "../components/Layouts/Footer";
 
-const PortfolioDetails2 = () => {
+const NftCollections = () => {
   return (
     <>
       <SinglePageNavBarDark />
@@ -177,4 +177,4 @@ const PortfolioDetails2 = () => {
   );
 };
 
-export default PortfolioDetails2;
+export default NftCollections;
