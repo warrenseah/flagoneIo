@@ -25,18 +25,18 @@ const OurWorks = () => {
               >
                 <div className="content">
                   <span>
-                    <Link href="/portfolio-details">
-                      <a>DeFi</a>
+                    <Link href="/portfolio-defi-staking">
+                      <a>DeFi Staking</a>
                     </Link>
                   </span>
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link href="/portfolio-defi-staking">
                       <a>Bnb Charger</a>
                     </Link>
                   </h3>
                 </div>
 
-                <Link href="/portfolio-details">
+                <Link href="/portfolio-defi-staking">
                   <a className="btn btn-primary">View Case Study</a>
                 </Link>
 
