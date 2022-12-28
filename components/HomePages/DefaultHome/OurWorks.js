@@ -126,11 +126,11 @@ const OurWorks = () => {
             </div>
           </div>
 
-          <div className="view-more-work">
+          {/* <div className="view-more-work">
             <Link href="/portfolio">
               <a className="btn btn-primary">View More Work</a>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
