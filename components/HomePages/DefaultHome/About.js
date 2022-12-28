@@ -1,15 +1,10 @@
 import React, { useState } from "react";
-import FsLightbox from "fslightbox-react";
+import Image from "next/image";
 
 const About = () => {
   const [toggler, setToggler] = useState(false);
   return (
     <>
-      <FsLightbox
-        toggler={toggler}
-        sources={["https://www.youtube.com/embed/bk7McNUjWgw"]}
-      />
-
       <section className="about-area ptb-100" id="aboutUs">
         <div className="container">
           <div className="row align-items-center">
@@ -20,20 +15,13 @@ const About = () => {
                 data-aos-duration="1200"
                 data-aos-delay="600"
               >
-                <img
-                  src="/images/about-img1.jpg"
-                  alt="image"
+                <Image
+                  src="/images/aboutUs.jpg"
+                  alt="about image"
                   className="rounded-10"
+                  height="789"
+                  width="526"
                 />
-
-                <div className="video-box">
-                  <div
-                    onClick={() => setToggler(!toggler)}
-                    className="video-btn"
-                  >
-                    <i className="fa-solid fa-play"></i>
-                  </div>
-                </div>
               </div>
             </div>
 
