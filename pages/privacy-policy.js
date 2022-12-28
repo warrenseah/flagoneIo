@@ -14,8 +14,8 @@ const PrivacyPolicy = () => {
         BGImage="/images/page-banner5.jpg"
       />
 
-      <div class="text-container ptb-100">
-        <div class="container">
+      <div className="text-container ptb-100">
+        <div className="container">
           <p>Effective date: December 06, 2018</p>
           <p>
             Flag One Pte Ltd (&#8220;us&#8221;, &#8220;we&#8221;, or
