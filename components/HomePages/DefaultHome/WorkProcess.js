@@ -6,15 +6,12 @@ const WorkProcess = () => {
       <section className="work-process-area ptb-100">
         <div className="container">
           <div className="section-title">
-            <h2>Our Work Process</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <h2>dApp Development Process</h2>
+            <p></p>
           </div>
 
           <div className="work-process">
-            <div 
+            <div
               data-aos="zoom-in"
               data-aos-duration="1200"
               data-aos-delay="600"
@@ -27,40 +24,40 @@ const WorkProcess = () => {
                 <div className="icon">
                   <i className="pe-7s-display1"></i>
                 </div>
-                <h3>Surface</h3>
-                <span>Visual Design</span>
+                <h3>Consulting</h3>
+                <span>Business to Blockchain</span>
               </div>
 
               <div className="single-work-process">
                 <div className="icon">
                   <i className="pe-7s-display2"></i>
                 </div>
-                <h3>Skeleton</h3>
-                <span>Wireframes</span>
+                <h3>WireFraming</h3>
+                <span>Architecture Design</span>
               </div>
 
               <div className="single-work-process">
                 <div className="icon">
                   <i className="pe-7s-airplay"></i>
                 </div>
-                <h3>Structure</h3>
-                <span>Screen Flow</span>
+                <h3>Smart Contract</h3>
+                <span>Development</span>
               </div>
 
               <div className="single-work-process">
                 <div className="icon">
                   <i className="pe-7s-note2"></i>
                 </div>
-                <h3>Scope</h3>
-                <span>Requirements</span>
+                <h3>Frontend</h3>
+                <span>NextJS, ReactJS</span>
               </div>
 
               <div className="single-work-process">
                 <div className="icon">
                   <i className="pe-7s-light"></i>
                 </div>
-                <h3>User Research</h3>
-                <span>User Research</span>
+                <h3>Unit Tests</h3>
+                <span>Optimize and testing on local and test nets</span>
               </div>
 
               <div className="single-work-process">
@@ -68,7 +65,7 @@ const WorkProcess = () => {
                   <i className="pe-7s-sun"></i>
                 </div>
                 <h3>Implement</h3>
-                <span>Lunch/Analyse</span>
+                <span>Launch on Mainnet</span>
               </div>
             </div>
 
