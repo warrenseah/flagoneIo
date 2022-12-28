@@ -11,8 +11,8 @@ const Disclaimer = () => {
 
       <PageBanner pageTitle="Disclaimer" BGImage="/images/page-banner2.jpg" />
 
-      <div class="text-container ptb-100">
-        <div class="container">
+      <div className="text-container ptb-100">
+        <div className="container">
           <h4>No Investment Advice</h4>
           <p>
             The service rendered may include ownership of cryptocurrencies. Any
