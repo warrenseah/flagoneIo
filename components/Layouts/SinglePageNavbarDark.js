@@ -31,9 +31,13 @@ const NavbarTwo = () => {
           <div className="container-fluid">
             <Link href="/">
               <a className="navbar-brand">
-                <img src="/images/logo.png" className="black-logo" alt="logo" />
                 <img
-                  src="/images/logo-white.png"
+                  src="/images/f1logo.png"
+                  className="black-logo"
+                  alt="logo"
+                />
+                <img
+                  src="/images/f1logo-white.png"
                   className="white-logo"
                   alt="logo"
                 />
@@ -72,7 +76,7 @@ const NavbarTwo = () => {
 
                 <li className="nav-item">
                   <Link href="/#aboutUs" activeClassName="active">
-                    <a className="nav-link">About us</a>
+                    <a className="nav-link">About</a>
                   </Link>
                 </li>
 
