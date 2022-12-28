@@ -9,26 +9,11 @@ const ContactInfo = () => {
             <div className="col-lg-4 col-md-6">
               <div className="contact-info-box">
                 <div className="icon">
-                  <i className="pe-7s-mail"></i>
-                </div>
-                <h3>Mail Here</h3>
-                <p>
-                  <a href="mailto:hello@flagone.io">hello@flagone.io</a>
-                </p>
-                {/* <p>
-                  <a href="mailto:info@pungent.com">info@pungent.com</a>
-                </p> */}
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="contact-info-box">
-                <div className="icon">
                   <i className="pe-7s-map-2"></i>
                 </div>
                 <h3>Visit Here</h3>
                 <p>
-                The Plaza, 7500A Beach Road <br /> #07-320, Singapore 199591.
+                  The Plaza, 7500A Beach Road <br /> #07-320, Singapore 199591.
                 </p>
               </div>
             </div>
