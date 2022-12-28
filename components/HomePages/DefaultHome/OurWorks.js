@@ -101,64 +101,24 @@ const OurWorks = () => {
               >
                 <div className="content">
                   <span>
-                    <Link href="/portfolio-details">
-                      <a>dApp Development</a>
+                    <Link href="/portfolio-dapp-dev">
+                      <a>dApp</a>
                     </Link>
                   </span>
                   <h3>
-                    <Link href="/portfolio-details">
-                      <a>
-                        Linking website with the blockchain and smart contracts
-                      </a>
+                    <Link href="/portfolio-dapp-dev">
+                      <a>dApp Development</a>
                     </Link>
                   </h3>
                 </div>
 
-                <Link href="/portfolio-details">
+                <Link href="/portfolio-dapp-dev">
                   <a className="btn btn-primary">View Case Study</a>
                 </Link>
 
                 <div className="shape">
                   <img
                     src="/images/case-studies/studie-shape3.png"
-                    alt="logo"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="400"
-            >
-              <div
-                className="single-case-studies"
-                style={{
-                  backgroundImage: `url(/images/case-studies/studie4.jpg)`,
-                }}
-              >
-                <div className="content">
-                  <span>
-                    <Link href="/portfolio-details">
-                      <a>React Development</a>
-                    </Link>
-                  </span>
-                  <h3>
-                    <Link href="/portfolio-details">
-                      <a>Backend and Frontend Development with NextJs</a>
-                    </Link>
-                  </h3>
-                </div>
-
-                <Link href="/portfolio-details">
-                  <a className="btn btn-primary">View Case Study</a>
-                </Link>
-
-                <div className="shape">
-                  <img
-                    src="/images/case-studies/studie-shape4.png"
                     alt="logo"
                   />
                 </div>
