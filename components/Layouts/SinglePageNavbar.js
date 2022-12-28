@@ -31,7 +31,7 @@ const Navbar = () => {
           <div className="container">
             <Link href="/">
               <a className="navbar-brand">
-                <img src="/images/logo.png" alt="logo" />
+                <img src="/images/f1logo.png" alt="logo" />
               </a>
             </Link>
 
@@ -67,7 +67,7 @@ const Navbar = () => {
 
                 <li className="nav-item">
                   <Link href="/#aboutUs" activeClassName="active">
-                    <a className="nav-link">About us</a>
+                    <a className="nav-link">About</a>
                   </Link>
                 </li>
 
