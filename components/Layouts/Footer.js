@@ -19,14 +19,18 @@ const Footer = () => {
                 </div>
 
                 <p>
-                  FlagOne is building the future of digital assets. We educate and help individuals, 
-                  institutions and brands to produce, trade, collect in digital assets. 
-                  Experience Web 3.0 Better with FlagOne
+                  FlagOne is building the future of digital assets. We educate
+                  and help individuals, institutions and brands to produce,
+                  trade, collect in digital assets. Experience Web 3.0 Better
+                  with FlagOne
                 </p>
 
                 <ul className="social-links">
                   <li>
-                    <a href="https://www.facebook.com/profile.php?id=100057178100785" target="_blank">
+                    <a
+                      href="https://www.facebook.com/profile.php?id=100057178100785"
+                      target="_blank"
+                    >
                       <i className="fa-brands fa-facebook-f"></i>
                     </a>
                   </li>
@@ -36,12 +40,18 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.linkedin.com/in/warrenseah/" target="_blank">
+                    <a
+                      href="https://www.linkedin.com/in/warrenseah/"
+                      target="_blank"
+                    >
                       <i className="fa-brands fa-linkedin-in"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/warrenseah/" target="_blank">
+                    <a
+                      href="https://www.instagram.com/warrenseah/"
+                      target="_blank"
+                    >
                       <i className="fa-brands fa-instagram"></i>
                     </a>
                   </li>
@@ -74,11 +84,6 @@ const Footer = () => {
                       <a>Portfolio</a>
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/team">
-                      <a>Team</a>
-                    </Link>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -90,17 +95,7 @@ const Footer = () => {
                 <ul className="list">
                   <li>
                     <Link href="/contact">
-                      <a>Contact Us</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/pricing">
-                      <a>Pricing</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/faq">
-                      <a>Faq</a>
+                      <a>Contact</a>
                     </Link>
                   </li>
                   <li>
@@ -113,6 +108,11 @@ const Footer = () => {
                       <a>Terms & Conditions</a>
                     </Link>
                   </li>
+                  <li>
+                    <Link href="/disclaimer">
+                      <a>Disclaimer</a>
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -123,17 +123,13 @@ const Footer = () => {
 
                 <ul className="get-in-touch">
                   <li>
-                    <i className="fa-solid fa-location-dot"></i> The Plaza, 7500A Beach Road
-                    #07-320, Singapore 199591.
+                    <i className="fa-solid fa-location-dot"></i> The Plaza,
+                    7500A Beach Road #07-320, Singapore 199591.
                   </li>
                   {/* <li>
                     <i className="fa-solid fa-headset"></i>
                     <a href="tel:+324-9442-515">+324-9442-515</a> 
                   </li> */}
-                  <li>
-                    <i className="fa-solid fa-envelope"></i>
-                    <a href="mailto:hello@flagone.io">hello@flagone.io</a>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -143,7 +139,8 @@ const Footer = () => {
         <div className="copyright-area">
           <div className="container">
             <p>
-              Copyright &copy; {currentYear} Flag One Pte Ltd. All Rights Reserved.
+              Copyright &copy; {currentYear} Flag One Pte Ltd. All Rights
+              Reserved.
             </p>
           </div>
         </div>
