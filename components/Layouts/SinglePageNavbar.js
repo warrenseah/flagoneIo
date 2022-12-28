@@ -79,7 +79,7 @@ const Navbar = () => {
 
                 <li className="nav-item">
                   <Link href="/contact" activeClassName="active">
-                    <a className="nav-link">Contact Us</a>
+                    <a className="nav-link">Contact</a>
                   </Link>
                 </li>
               </ul>
