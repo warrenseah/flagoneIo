@@ -55,11 +55,11 @@ const DefiStaking = () => {
               <div className="portfolio-desc">
                 <h2>We Provide DeFi Staking Services</h2>
                 <p>
-                  We code Fixed / variable rate staking. Let us know your
-                  business crypto logic and we will create a smart contract
-                  written in Solidity to account for all on-chain activites. The
-                  smart contract will account for all crypto receive and channel
-                  the funds and get them to work. The yields will then be
+                  We code fix / variable rate staking. Let us know your business
+                  crypto logic and we will create a smart contract written in
+                  Solidity to account for all on-chain activites. The smart
+                  contract will account for all crypto receive and channel the
+                  funds and get them to work. The yields will then be
                   distributed by to the contributors.
                 </p>
 
