@@ -28,17 +28,7 @@ const Index = () => {
 
       <WorkProcess />
 
-      {/* <Feedback />
-
-      <Team />
-
-      <FunFacts />
-
-      <LatestNewsSlider /> */}
-
       <CtaArea />
-
-      {/* <Partner /> */}
 
       <Footer />
     </>
