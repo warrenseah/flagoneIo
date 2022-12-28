@@ -13,8 +13,8 @@ const TermsConditions = () => {
         BGImage="/images/page-banner2.jpg"
       />
 
-      <div class="text-container ptb-100">
-        <div class="container">
+      <div className="text-container ptb-100">
+        <div className="container">
           <h4>Flag One Terms of Use</h4>
           <p>Flag One Terms of Use</p>
           <p>LAST UPDATED: 28th Dec 2022</p>
