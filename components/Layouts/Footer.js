@@ -22,7 +22,8 @@ const Footer = () => {
                   FlagOne is building the future of digital assets. We educate
                   and help individuals, institutions and brands to produce,
                   trade, collect in digital assets. Experience Web 3.0 Better
-                  with FlagOne
+                  with FlagOne. We are a member of Singapore Fintech Association
+                  (20050024).
                 </p>
 
                 <ul className="social-links">
