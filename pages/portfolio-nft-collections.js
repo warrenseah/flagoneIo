@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import SinglePageNavBarDark from "../components/Layouts/SinglePageNavbarDark";
 import PageBanner from "../components/Common/PageBanner";
 import PortfolioDetailsContent2 from "../components/Portfolio/PortfolioDetailsContent2";
@@ -20,17 +21,32 @@ const NftCollections = () => {
           <div className="row m-0">
             <div className="col-lg-4 col-md-6 p-0">
               <div className="portfolio-details-image">
-                <img src="/images/portfolio/portfolio1.jpg" alt="image" />
+                <Image
+                  src="/images/portfolio/painting.jpg"
+                  alt="painting image"
+                  height="350"
+                  width="480"
+                />
               </div>
 
               <div className="portfolio-details-image">
-                <img src="/images/portfolio/portfolio2.jpg" alt="image" />
+                <Image
+                  src="/images/portfolio/womanDrawing.jpg"
+                  alt="woman drawing image"
+                  width="480"
+                  height="350"
+                />
               </div>
             </div>
 
             <div className="col-lg-4 col-md-6 p-0">
               <div className="portfolio-details-image">
-                <img src="/images/portfolio/portfolio3.jpg" alt="image" />
+                <Image
+                  src="/images/portfolio/paintingArt.jpg"
+                  alt="another painting image"
+                  width="480"
+                  height="700"
+                />
               </div>
             </div>
 
@@ -38,12 +54,22 @@ const NftCollections = () => {
               <div className="row">
                 <div className="col-lg-12 col-md-6 pr_0">
                   <div className="portfolio-details-image">
-                    <img src="/images/portfolio/portfolio4.jpg" alt="image" />
+                    <Image
+                      src="/images/portfolio/abstractArt.jpg"
+                      alt="apple image"
+                      width="480"
+                      height="350"
+                    />
                   </div>
                 </div>
                 <div className="col-lg-12 col-md-6 pl_0">
                   <div className="portfolio-details-image">
-                    <img src="/images/portfolio/portfolio5.jpg" alt="image" />
+                    <Image
+                      src="/images/portfolio/deal.jpg"
+                      alt="deal image"
+                      width="480"
+                      height="350"
+                    />
                   </div>
                 </div>
               </div>
