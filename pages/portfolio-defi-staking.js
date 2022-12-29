@@ -11,7 +11,7 @@ const DefiStaking = () => {
       <SinglePageNavBarDark />
 
       <PageBanner
-        pageTitle="DeFi Staking Smart Contract Service"
+        pageTitle="DeFi Staking Smart Contract"
         BGImage="/images/page-banner2.jpg"
       />
 
@@ -53,36 +53,42 @@ const DefiStaking = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="portfolio-desc">
-                <h2>We Provide DeFi Staking Services</h2>
+                <h2>DeFi Staking</h2>
                 <p>
-                  We code fix / variable rate staking. Let us know your business
-                  crypto logic and we will create a smart contract written in
-                  Solidity to account for all on-chain activites. The smart
-                  contract will account for all crypto receive and channel the
-                  funds and get them to work. The yields will then be
-                  distributed by to the contributors.
+                  The customized smart contract will account for all crypto
+                  receive and channel the funds based on the business logic
+                  provided. The yields will then be distributed back to the
+                  contributors based on their crypto deposited into the pool.
                 </p>
 
                 <h2>Core Development</h2>
                 <p>
                   We will kick-start your deFi development journey by drafting
                   out a smart contract strategy that suits your business logic
-                  in a scaleable way. The smart contract actions will be
-                  integrated into a web framework like NextJS/ReactJs via
-                  Metamask. This will allow web visitors to interact with the
-                  smart contract and participate in your DeFi project. We will
-                  assist you throughout the entire rollout process - from
-                  development (unit testing) to testnet to mainnet, deploying
-                  the final solution on any compatible blockchain. Smart
-                  contract optimization such as gas optimization so that user
-                  will pay minimal transaction fees with your smart contract.
+                  in a scaleable way. The smart contract can receive any native
+                  token like eth or bnb. In addition, any erc20 tokens can also
+                  be used to collect as deposit. The staking yield will be
+                  accounted for the amount and total time deposited into the
+                  smart contract. When the yield is ready, the defi user will
+                  redeem their share of yield from the pool. They can stake and
+                  unstake at any point during the yield process. Unstaking will
+                  take a period of 7 days before their deposited crypto can be
+                  fully withdrawn.
                 </p>
 
-                <h2>Choose Transparency, Use Smart Contracts</h2>
+                <h2>BNB Charger Smart Contract</h2>
                 <p>
-                  Integrate smart contracts into your business. It brings data
-                  and your business transparency and accountability to the next
-                  level when you publish it on the blockchain.
+                  The smart contract will accept BNB from user deposits. The
+                  deposited funds will be channeled into Binance.com to
+                  participate in their crypto exchange activities. The yields
+                  will then be fairly distributed back to the crypto depositors.
+                  The yields generated are altcoins other than BNB. The same
+                  amount of BNB will then be used repeatedly in subsequent
+                  exchange activities to farm for more tokens. The smart
+                  contract charge two type of fees. One fee is a admin fee that
+                  is charged of the user deposited BNB. The other fee is a
+                  profit sharing fee which is charged based off the amount of
+                  token yield farmed.
                 </p>
               </div>
 
@@ -107,8 +113,17 @@ const DefiStaking = () => {
                   <ul className="social">
                     <li>
                       <a
-                        href="https://www.facebook.com/kryptotrees"
-                        title="kyrptoTrees fb"
+                        href="https://www.youtube.com/c/TokenClan"
+                        title="TokenClan youtube"
+                        target="_blank"
+                      >
+                        <i className="fa-brands fa-youtube"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.facebook.com/tokenclanio"
+                        title="TokenClan facebook"
                         target="_blank"
                       >
                         <i className="fa-brands fa-facebook-f"></i>
@@ -116,26 +131,24 @@ const DefiStaking = () => {
                     </li>
                     <li>
                       <a
-                        href="https://twitter.com/KryptoTreesNFT"
-                        title="kyrptoTrees Twitter"
+                        href="https://github.com/warrenseah/vault-v1"
+                        title="BNB Charger Github"
                         target="_blank"
                       >
-                        <i className="fa-brands fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://discord.gg/EwybaHdp"
-                        title="kyrptoTrees Discord"
-                        target="_blank"
-                      >
-                        <i className="fa-brands fa-discord"></i>
+                        <i className="fa-brands fa-github"></i>
                       </a>
                     </li>
                   </ul>
                 </div>
 
                 <div className="single-info-box">
+                  <a
+                    href="https://github.com/warrenseah/vault-v1"
+                    className="default-btn m-1"
+                    target="_blank"
+                  >
+                    GitHub Repo
+                  </a>
                   <a
                     href="https://testnet.bscscan.com/address/0x8a1f638791aed3514d72543d3698dfea0096cd6d"
                     className="default-btn m-1"
