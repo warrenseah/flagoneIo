@@ -53,42 +53,39 @@ const NftCollections = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="portfolio-desc">
-                <h2>We Provide NFT Related Services</h2>
+                <h2>kryptoTree NFT</h2>
                 <p>
-                  Non Fungible Tokens (NFT) are on the rise. Currently, users
-                  that are interested in non-fungible tokens primarily think of
-                  them as digital art (jpegs) or collectibles. In the near
-                  future, NFT’s will change the way creatives create, distribute
-                  and own their digital content. We predict that NFT's utility
-                  will branch off to include even more digital content such as
-                  music and movie industries.
+                  Non Fungible Tokens (NFT) are on the rise. The kryptoTree NFT
+                  collection consists of 10,000 different variation of trees
+                  bearing fruits. Each of the tree's artwork file and their
+                  randomly generated attributes are stored in decentralized
+                  storage. You will be able to see the NFT owner by calling the
+                  ERC-721 smart contract.
                 </p>
 
                 <h2>Core Development</h2>
                 <p>
-                  We provide custom coding support for ERC-721, ERC-1155 and
-                  other OpenZeppelin token standards. Generative art makes use
-                  of machine learning and algorithmic tools to produce unique,
-                  unpredictable art. NFTs are cryptographic tokens used to
-                  represent unique digital assets stored on a blockchain. Unless
-                  something catastrophic happens and the Internet shuts down,
-                  digital assets stored on a blockchain are permanent and
-                  immutable. Each token has unique metadata that distinguishes
-                  it from other tokens, ensuring it can’t be changed or forged.
-                  The generated digital art files will be stored on
-                  decentralized storage and pull from the blockchain smart
-                  contract whenever someone request for the art.
+                  A nodeJS generative art code repo is coded to define the
+                  number of attributes the artwork should have. The number of
+                  variant for each attribute will then be provided into the code
+                  repo. The code repo is executed to generate 10,000 different
+                  variants of the kryptoTrees. The 10,000 artworks are named and
+                  properly stored into decentralized storage like IPFS. An
+                  ERC721 smart contract is customized to collect a minting fee
+                  and to ensure the artwork files, attribute file in json and
+                  the all necessary information relating to individual artwork
+                  are issued with an NFT id for minting later.
                 </p>
 
-                <h2>Define Your Choices</h2>
+                <h2>Putting a Minting dApp Together</h2>
                 <p>
-                  Generative art or unique art on the blockchain? You decide. We
-                  are here to help you expand your creative juice into the
-                  digital world. By launching digital content with property tied
-                  to a blockchain network, you ensure all future credit and
-                  royalties be tied back to the rightful owner. By working on
-                  expanding your digital reach now, you are positioning yourself
-                  for the upcoming digital asset economy.
+                  When the digital artwork files are ready and ERC721
+                  openzeppelin contract are deployed, a frontend website powered
+                  by ReactJS is developed and designed. User will be able to
+                  interact with the smart contract via Metamask browser
+                  extension to mint the NFT. Each user is allowed to mint up to
+                  a maximum of 10 kryptoTrees per wallet address controlled by
+                  the deployed smart contract.
                 </p>
               </div>
 
@@ -111,6 +108,15 @@ const NftCollections = () => {
                 <div className="single-info-box">
                   <h4>Share</h4>
                   <ul className="social">
+                    <li>
+                      <a
+                        href="https://github.com/warrenseah/kryptoTreesNft/tree/main/contracts"
+                        title="kyrptoTrees github"
+                        target="_blank"
+                      >
+                        <i className="fa-brands fa-github"></i>
+                      </a>
+                    </li>
                     <li>
                       <a
                         href="https://www.facebook.com/kryptotrees"
@@ -162,6 +168,20 @@ const NftCollections = () => {
                     target="_blank"
                   >
                     Contract Address (Polygon)
+                  </a>
+                  <a
+                    href="https://github.com/warrenseah/kryptoTreesNft/tree/main/contracts"
+                    className="default-btn m-1"
+                    target="_blank"
+                  >
+                    Smart Contract Github
+                  </a>
+                  <a
+                    href="https://github.com/coollif3/nftArtEngine"
+                    className="default-btn m-1"
+                    target="_blank"
+                  >
+                    Generative Art Engine Github
                   </a>
                 </div>
               </div>
