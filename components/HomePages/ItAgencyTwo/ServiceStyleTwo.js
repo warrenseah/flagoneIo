@@ -10,13 +10,8 @@ const ServiceStyleTwo = () => {
             <div className="col-lg-6">
               <div className="service-info pr-50">
                 <div className="info-head">
-                  <h2 className="title">Web & Mobile Development</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris.
-                  </p>
+                  <h2 className="title">Web3 dApp Development</h2>
+                  <p>From smart contract development to frontend web design.</p>
                 </div>
 
                 <div className="row">
@@ -27,36 +22,36 @@ const ServiceStyleTwo = () => {
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Mobile App Development
+                      Smart Contract Development
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      React Web Development
+                      Smart Contract Unit Testing
+                    </div>
+                    <div className="feature-list">
+                      <i className="fa-solid fa-circle-check"></i>
+                      Hardhat / Truffle JS
                     </div>
                   </div>
 
                   <div className="col-sm-6">
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      UI / UX Design
+                      NodeJS Backend Development
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Laravel Web Development
+                      Testnet Deployment
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Angular Web Development
+                      React Web Development
+                    </div>
+                    <div className="feature-list">
+                      <i className="fa-solid fa-circle-check"></i>
+                      NextJS Development
                     </div>
                   </div>
-                </div>
-
-                <div className="service-read-more">
-                  <Link href="/service-details">
-                    <a className="btn btn-primary">
-                      <i className="fa-solid fa-list-check"></i> Read more
-                    </a>
-                  </Link>
                 </div>
               </div>
             </div>
@@ -79,7 +74,7 @@ const ServiceStyleTwo = () => {
             <div className="col-lg-6">
               <div className="service-left-img">
                 <img
-                  src="/images/services/it-service2.png"
+                  src="/images/services/it-service3.png"
                   alt="Service Image"
                 />
               </div>
@@ -88,12 +83,9 @@ const ServiceStyleTwo = () => {
             <div className="col-lg-6">
               <div className="service-info pl-50">
                 <div className="info-head">
-                  <h2 className="title">Digital Marketing</h2>
+                  <h2 className="title">Programming Stack</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris.
+                    Our team or coder work in the following programming stacks:
                   </p>
                 </div>
 
@@ -101,40 +93,40 @@ const ServiceStyleTwo = () => {
                   <div className="col-sm-6">
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      SEO Marketing
+                      Git Version Control
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Facebook Marketing
+                      Javascript
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Social Marketing
+                      Hardhat / Truffle Suite
+                    </div>
+                    <div className="feature-list">
+                      <i className="fa-solid fa-circle-check"></i>
+                      Solidity
                     </div>
                   </div>
 
                   <div className="col-sm-6">
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Email Marketing
+                      Openzepplin Token Standards
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Data Scraping
+                      MySql
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Youtube Marketing
+                      EtherJs / Web3Js
+                    </div>
+                    <div className="feature-list">
+                      <i className="fa-solid fa-circle-check"></i>
+                      ReactJs / NextJS
                     </div>
                   </div>
-                </div>
-
-                <div className="service-read-more">
-                  <Link href="/service-details">
-                    <a className="btn btn-primary">
-                      <i className="fa-solid fa-list-check"></i> Read more
-                    </a>
-                  </Link>
                 </div>
               </div>
             </div>
@@ -148,12 +140,11 @@ const ServiceStyleTwo = () => {
             <div className="col-lg-6">
               <div className="service-info pr-50">
                 <div className="info-head">
-                  <h2 className="title">Cloud Hosting Services</h2>
+                  <h2 className="title">Biz to Blockchain Consulting</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris.
+                    Do your business is blockchain ready? Consultations are
+                    complimentary and available on a first-come-first-serve
+                    basis.
                   </p>
                 </div>
 
@@ -161,40 +152,32 @@ const ServiceStyleTwo = () => {
                   <div className="col-sm-6">
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Cloud Databases
+                      Asset Tokenization
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Email Servers
+                      Choice of Blockchain Network
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      File Storage
+                      Choice of Token Standards
                     </div>
                   </div>
 
                   <div className="col-sm-6">
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Hybrid Cloud
+                      Gas Optimizations
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Website Hosting
+                      Smart Contract Security
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Backup Systems
+                      dApp Architecture
                     </div>
                   </div>
-                </div>
-
-                <div className="service-read-more">
-                  <Link href="/service-details">
-                    <a className="btn btn-primary">
-                      <i className="fa-solid fa-list-check"></i> Read more
-                    </a>
-                  </Link>
                 </div>
               </div>
             </div>
@@ -202,7 +185,7 @@ const ServiceStyleTwo = () => {
             <div className="col-lg-6">
               <div className="service-right-img">
                 <img
-                  src="/images/services/it-service3.png"
+                  src="/images/services/it-service2.png"
                   alt="Service Image"
                 />
               </div>
