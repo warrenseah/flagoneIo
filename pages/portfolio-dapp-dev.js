@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import SinglePageNavBarDark from "../components/Layouts/SinglePageNavbarDark";
 import PageBanner from "../components/Common/PageBanner";
 import PortfolioDetailsContent2 from "../components/Portfolio/PortfolioDetailsContent2";
@@ -20,17 +21,32 @@ const dappDev = () => {
           <div className="row m-0">
             <div className="col-lg-4 col-md-6 p-0">
               <div className="portfolio-details-image">
-                <img src="/images/portfolio/portfolio1.jpg" alt="image" />
+                <Image
+                  src="/images/portfolio/portfolio1.jpg"
+                  alt="man doing brainstorming image"
+                  width="480"
+                  height="350"
+                />
               </div>
 
               <div className="portfolio-details-image">
-                <img src="/images/portfolio/portfolio2.jpg" alt="image" />
+                <Image
+                  src="/images/portfolio/coding.jpg"
+                  alt="doing coding on a laptop image"
+                  width="480"
+                  height="350"
+                />
               </div>
             </div>
 
             <div className="col-lg-4 col-md-6 p-0">
               <div className="portfolio-details-image">
-                <img src="/images/portfolio/portfolio3.jpg" alt="image" />
+                <Image
+                  src="/images/portfolio/portfolio3.jpg"
+                  alt="workflow flip chart image"
+                  width="480"
+                  height="700"
+                />
               </div>
             </div>
 
@@ -38,12 +54,22 @@ const dappDev = () => {
               <div className="row">
                 <div className="col-lg-12 col-md-6 pr_0">
                   <div className="portfolio-details-image">
-                    <img src="/images/portfolio/portfolio4.jpg" alt="image" />
+                    <Image
+                      src="/images/portfolio/womanSelecting.jpg"
+                      alt="lady selecting on board image"
+                      width="480"
+                      height="350"
+                    />
                   </div>
                 </div>
                 <div className="col-lg-12 col-md-6 pl_0">
                   <div className="portfolio-details-image">
-                    <img src="/images/portfolio/portfolio5.jpg" alt="image" />
+                    <Image
+                      src="/images/portfolio/teamWorking.jpg"
+                      alt="team working together image"
+                      width="480"
+                      height="350"
+                    />
                   </div>
                 </div>
               </div>
@@ -53,49 +79,45 @@ const dappDev = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="portfolio-desc">
-                <h2>dApp Development Services</h2>
+                <h2>Decentralized Application (dApp)</h2>
                 <p>
-                  From token integration to frictionless UX designs, Flag one
-                  provides end-to-end dApp development services. A dApp's
-                  purpose is to offer a solution to users. dApp are powered
-                  under a blockchain network with business logic coded into
-                  smart contract fully integrated by a frontend framework
-                  ReactJS.
+                  Flag One have provided an NFT minting dApp and a staking dApp
+                  as examples here. Basically, a dApp wired smart contract with
+                  a website so that users with a web wallet like Metamask will
+                  be able to interact and participate directly easily.
                 </p>
 
-                <h2>dApp Benefits</h2>
+                <h2>Core Development</h2>
                 <p>
-                  Decentralized applications have self-executing codes to
-                  perform core business logics with automation. dApp data is
-                  stored on a public ledger like Ethereum which guarantees that
-                  no one can manipulate it. This openness and transparancy in
-                  data storage eliminates the need for middlemen which further
-                  reduces business operational costs. All codes developed on the
-                  dApp are mostly open-source and not proprietary owned. That
-                  means dApp maintainance with a new/existing team will not be
-                  complicated.
+                  Popular frontend frameworks like ReactJS or NextJS are
+                  commonly used in the web3 community to fire up a responsive
+                  and fast-speed website. The website will integrate so that it
+                  will work seamlessly with browser extensions or web wallets
+                  such as Metamask. The associated smart contract address will
+                  be provided in the dApp for users so that they are able to
+                  verify and identify the genuine smart contract address
+                  whenever interacting with them. At times when the website is
+                  down, users can use the smart contract address at block
+                  explorer like etherscan or bnbscan to fall back on.
+                </p>
+                <h2>Minting dApp</h2>
+                <p>
+                  In kryptoTrees nft minting app, the price for minting an nft
+                  is read from the smart contract. Also the available number of
+                  un-minted NFT quantity will also be displayed. These figures
+                  are updated every time the person visits the page.
                 </p>
 
-                <h2>What it Means for dApp Users</h2>
+                <h2>Staking dApp</h2>
                 <p>
-                  dApp users will benefit from reduced costs of participating
-                  with a defi provider vs traditional finance provider. With
-                  increased transparency, lower costs and higher autonomy to
-                  their own data, they will be able to make better decisions for
-                  themsevles.
-                </p>
-
-                <h2>Building dApps with Flag One</h2>
-                <p>
-                  Since 2008, Flag One has been developing fintech applications.
-                  By 2021, Flag One shifted his core development focus to dApp /
-                  crypto development. During this time, we have deployed over 3
-                  dApps on Ethereum. Flag One offers end-to-end dApp
-                  development, including smart contracts, frontend, backend, and
-                  design. Our dApp development process ensures that we are
-                  capable of abstracting the complexity of the blockchain and
-                  frontend web design. Core programming knowledge stack includes
-                  solidity, javascript, nodeJS, ReactJS, NextJS.
+                  In Bnb charger dApp, visitor is able to deposit BNB via
+                  Metamask browser extension into the smart contract on Bnb
+                  chain. Subsequently, they will be able to check back from time
+                  to time when their deposited crypto generate yields in the
+                  form of altcoins. When a yield programme concludes, user will
+                  be able to redeem their yields from the dApp. As long as they
+                  do not unstake their BNB tokens, their deposited funds will
+                  continue to perform yield farming.
                 </p>
               </div>
 
