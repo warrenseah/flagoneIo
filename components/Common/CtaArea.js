@@ -10,7 +10,7 @@ const CtaArea = () => {
             <div className="col-lg-7 col-md-8">
               <div className="cta-content">
                 <h3>Have a project in mind?</h3>
-                <p>Let's get to work</p>
+                <p>Get your complimentary consultation with our team.</p>
               </div>
             </div>
 
