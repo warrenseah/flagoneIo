@@ -43,7 +43,7 @@ const Newsletter = () => {
           >
             <div className="newsletter-content">
               <span className="sub-title">Get Updates!</span>
-              <h2>Get our newsletter delivered to your inbox instantly!</h2>
+              <h2>Get our Daily Crypto Newsletter Delivered to Your Inbox!</h2>
 
               <form className="newsletter-form" onSubmit={emailSubmitHandler}>
                 <input
