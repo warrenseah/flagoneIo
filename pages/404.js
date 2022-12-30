@@ -1,5 +1,5 @@
 import React from "react";
-import NavbarTwo from "../components/Layouts/NavbarTwo";
+import SinglePageNavBarDark from "../components/Layouts/SinglePageNavbarDark";
 import PageBanner from "../components/Common/PageBanner";
 import ErrorContent from "../components/Error/ErrorContent";
 import Footer from "../components/Layouts/Footer";
@@ -7,7 +7,7 @@ import Footer from "../components/Layouts/Footer";
 const Error = () => {
   return (
     <>
-      <NavbarTwo />
+      <SinglePageNavBarDark />
 
       <PageBanner pageTitle="404 Error" BGImage="/images/page-banner3.jpg" />
 
