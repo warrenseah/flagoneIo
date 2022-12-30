@@ -35,14 +35,14 @@ const MainBanner = () => {
                       <a className="btn btn-primary">Get Started</a>
                     </Link>
 
-                    <Link href="#play-video">
+                    {/* <Link href="#play-video">
                       <a
                         onClick={() => setToggler(!toggler)}
                         className="btn btn-secondary"
                       >
                         <i className="fa-solid fa-play me-1"></i> How it works
                       </a>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
 
