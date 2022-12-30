@@ -14,11 +14,11 @@ const Contact = () => {
 
       <PageBanner pageTitle="Contact Us" BGImage="/images/page-banner1.jpg" />
 
-      <ContactInfo />
-
       <ContactForm />
 
-      <div className="ptb-100">
+      <ContactInfo />
+
+      <div className="pb-100">
         <Newsletter />
       </div>
 
