@@ -12,6 +12,7 @@ import LatestNewsSlider from "../components/Common/LatestNewsSlider";
 import CtaArea from "../components/Common/CtaArea";
 import Partner from "../components/Common/Partner";
 import Footer from "../components/Layouts/Footer";
+import Newsletter from "../components/Common/Newsletter";
 
 const Index = () => {
   return (
@@ -29,6 +30,10 @@ const Index = () => {
       <WorkProcess />
 
       <CtaArea />
+
+      <div className="pb-100 mt-3">
+        <Newsletter />
+      </div>
 
       <Footer />
     </>
