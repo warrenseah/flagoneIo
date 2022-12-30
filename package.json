@@ -23,6 +23,7 @@
         "react-tabs": "^5.1.0",
         "react-visibility-sensor": "^5.1.1",
         "sass": "^1.43.4",
+        "sharp": "^0.31.3",
         "sweetalert2": "^11.4.17",
         "sweetalert2-react-content": "^5.0.0",
         "swiper": "^8.2.2"
