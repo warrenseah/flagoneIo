@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
-import SinglePageNavBarDark from "../components/Layouts/SinglePageNavbarDark";
+import NavbarDark from "../components/Layouts/NavbarDark";
 import PageBanner from "../components/Common/PageBanner";
 import Footer from "../components/Layouts/Footer";
 
 const Disclaimer = () => {
   return (
     <>
-      <SinglePageNavBarDark />
+      <NavbarDark />
 
       <PageBanner pageTitle="Disclaimer" BGImage="/images/page-banner2.jpg" />
 

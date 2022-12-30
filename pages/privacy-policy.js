@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
-import SinglePageNavBarDark from "../components/Layouts/SinglePageNavbarDark";
+import NavbarDark from "../components/Layouts/NavbarDark";
 import PageBanner from "../components/Common/PageBanner";
 import Footer from "../components/Layouts/Footer";
 
 const PrivacyPolicy = () => {
   return (
     <>
-      <SinglePageNavBarDark />
+      <NavbarDark />
 
       <PageBanner
         pageTitle="Privacy Policy"

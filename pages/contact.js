@@ -1,5 +1,5 @@
 import React from "react";
-import SinglePageNavBarDark from "../components/Layouts/SinglePageNavbarDark";
+import NavbarDark from "../components/Layouts/NavbarDark";
 import NavbarTwo from "../components/Layouts/NavbarTwo";
 import PageBanner from "../components/Common/PageBanner";
 import ContactInfo from "../components/Contact/ContactInfo";
@@ -10,7 +10,7 @@ import Footer from "../components/Layouts/Footer";
 const Contact = () => {
   return (
     <>
-      <SinglePageNavBarDark />
+      <NavbarDark />
 
       <PageBanner pageTitle="Contact Us" BGImage="/images/page-banner1.jpg" />
 

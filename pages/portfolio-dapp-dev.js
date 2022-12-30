@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import SinglePageNavBarDark from "../components/Layouts/SinglePageNavbarDark";
+import NavbarDark from "../components/Layouts/NavbarDark";
 import PageBanner from "../components/Common/PageBanner";
 import PortfolioDetailsContent2 from "../components/Portfolio/PortfolioDetailsContent2";
 import CtaAreaTwo from "../components/Common/CtaAreaTwo";
@@ -9,7 +9,7 @@ import Footer from "../components/Layouts/Footer";
 const dappDev = () => {
   return (
     <>
-      <SinglePageNavBarDark />
+      <NavbarDark />
 
       <PageBanner
         pageTitle="dApp Development"

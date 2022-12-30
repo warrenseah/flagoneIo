@@ -1,7 +1,8 @@
 import React from "react";
-import SinglePageNavbar from "../components/Layouts/SinglePageNavbar";
+import Navbar from "../components/Layouts/Navbar";
 import MainBanner from "../components/HomePages/DefaultHome/MainBanner";
 import Services from "../components/HomePages/DefaultHome/Services";
+import ServiceStyleTwo from "../components/HomePages/ItAgencyTwo/ServiceStyleTwo";
 import About from "../components/HomePages/DefaultHome/About";
 import OurWorks from "../components/HomePages/DefaultHome/OurWorks";
 import WorkProcess from "../components/HomePages/DefaultHome/WorkProcess";
@@ -17,11 +18,13 @@ import Newsletter from "../components/Common/Newsletter";
 const Index = () => {
   return (
     <>
-      <SinglePageNavbar />
+      <Navbar />
 
       <MainBanner />
 
       <Services />
+
+      <ServiceStyleTwo />
 
       <About />
 
@@ -31,7 +34,7 @@ const Index = () => {
 
       <CtaArea />
 
-      <div className="pb-100 mt-3">
+      <div className="pt-100">
         <Newsletter />
       </div>
 
