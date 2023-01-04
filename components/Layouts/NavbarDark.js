@@ -69,12 +69,6 @@ const NavbarTwo = () => {
                 </li>
 
                 <li className="nav-item">
-                  <Link href="/#services">
-                    <a className="nav-link">Services</a>
-                  </Link>
-                </li>
-
-                <li className="nav-item">
                   <Link href="/#aboutUs" activeClassName="active">
                     <a className="nav-link">About</a>
                   </Link>
@@ -83,6 +77,12 @@ const NavbarTwo = () => {
                 <li className="nav-item">
                   <Link href="/#ourWorks">
                     <a className="nav-link">Portfolio</a>
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link href="/services">
+                    <a className="nav-link">Services</a>
                   </Link>
                 </li>
 
