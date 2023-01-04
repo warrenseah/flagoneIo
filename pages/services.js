@@ -1,5 +1,6 @@
 import React from "react";
-import NavbarTwo from "../components/Layouts/NavbarTwo";
+import Head from "next/head";
+import NavbarDark from "../components/Layouts/NavbarDark";
 import PageBanner from "../components/Common/PageBanner";
 import ServiceDetailsContent from "../components/Services/ServiceDetailsContent";
 import CtaAreaTwo from "../components/Common/CtaAreaTwo";
@@ -8,9 +9,19 @@ import Footer from "../components/Layouts/Footer";
 const ServiceDetails = () => {
   return (
     <>
-      <NavbarTwo />
+      <Head>
+        <title>FlagOne | Services</title>
+        <meta
+          name="description"
+          content="FlagOne services and offerings as a web3 tech provider."
+        />
+      </Head>
+      <NavbarDark />
 
-      <PageBanner pageTitle="Mobile App Development" BGImage="/images/page-banner1.jpg" />
+      <PageBanner
+        pageTitle="Web3 dApp Development"
+        BGImage="/images/page-banner1.jpg"
+      />
 
       <ServiceDetailsContent />
 
