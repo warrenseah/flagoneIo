@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Image from "next/image";
 import NavbarDark from "../components/Layouts/NavbarDark";
 import PageBanner from "../components/Common/PageBanner";
@@ -9,6 +10,13 @@ import Footer from "../components/Layouts/Footer";
 const dappDev = () => {
   return (
     <>
+      <Head>
+        <title>FlagOne | dApp Portfolio Page</title>
+        <meta
+          name="description"
+          content="dApp portfolio page serves as great idea starting point for whomever wanna land their first step into the world of web3."
+        />
+      </Head>
       <NavbarDark />
 
       <PageBanner

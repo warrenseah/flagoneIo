@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Image from "next/image";
 import NavbarDark from "../components/Layouts/NavbarDark";
 import PageBanner from "../components/Common/PageBanner";
@@ -9,6 +10,13 @@ import Footer from "../components/Layouts/Footer";
 const NftCollections = () => {
   return (
     <>
+      <Head>
+        <title>FlagOne | Portfolio NFT Collections</title>
+        <meta
+          name="description"
+          content="NFT collections portfolio page serves as great idea starting point for whomever want to land their first step into the world of web3 Nfts."
+        />
+      </Head>
       <NavbarDark />
 
       <PageBanner

@@ -43,9 +43,8 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>
-          Building the Future of Digital Assets - Flag One
-        </title>
+        <meta name="author" content="Warren Seah" />
+        <title>Building the Future of Digital Assets - Flag One</title>
       </Head>
 
       <Component {...pageProps} />

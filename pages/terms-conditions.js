@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import NavbarDark from "../components/Layouts/NavbarDark";
 import PageBanner from "../components/Common/PageBanner";
 import Footer from "../components/Layouts/Footer";
@@ -6,6 +7,10 @@ import Footer from "../components/Layouts/Footer";
 const TermsConditions = () => {
   return (
     <>
+      <Head>
+        <title>FlagOne | Terms Page</title>
+        <meta name="description" content="Terms and condition page" />
+      </Head>
       <NavbarDark />
 
       <PageBanner

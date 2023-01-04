@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Link from "next/link";
 import NavbarDark from "../components/Layouts/NavbarDark";
 import PageBanner from "../components/Common/PageBanner";
@@ -7,6 +8,10 @@ import Footer from "../components/Layouts/Footer";
 const PrivacyPolicy = () => {
   return (
     <>
+      <Head>
+        <title>FlagOne | Privacy Policy</title>
+        <meta name="description" content="Privacy policy page" />
+      </Head>
       <NavbarDark />
 
       <PageBanner

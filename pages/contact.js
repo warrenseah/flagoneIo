@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import NavbarDark from "../components/Layouts/NavbarDark";
 import NavbarTwo from "../components/Layouts/NavbarTwo";
 import PageBanner from "../components/Common/PageBanner";
@@ -10,6 +11,10 @@ import Footer from "../components/Layouts/Footer";
 const Contact = () => {
   return (
     <>
+      <Head>
+        <title>FlagOne | Contact Us</title>
+        <meta name="description" content="Contact page" />
+      </Head>
       <NavbarDark />
 
       <PageBanner pageTitle="Contact Us" BGImage="/images/page-banner1.jpg" />

@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Navbar from "../components/Layouts/Navbar";
 import MainBanner from "../components/HomePages/DefaultHome/MainBanner";
 import Services from "../components/HomePages/DefaultHome/Services";
@@ -18,6 +19,9 @@ import Newsletter from "../components/Common/Newsletter";
 const Index = () => {
   return (
     <>
+      <Head>
+        <meta name="description" content="Website main page" />
+      </Head>
       <Navbar />
 
       <MainBanner />

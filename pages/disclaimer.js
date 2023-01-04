@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Link from "next/link";
 import NavbarDark from "../components/Layouts/NavbarDark";
 import PageBanner from "../components/Common/PageBanner";
@@ -7,6 +8,10 @@ import Footer from "../components/Layouts/Footer";
 const Disclaimer = () => {
   return (
     <>
+      <Head>
+        <title>FlagOne | Disclaimer Page</title>
+        <meta name="description" content="Disclaimer page" />
+      </Head>
       <NavbarDark />
 
       <PageBanner pageTitle="Disclaimer" BGImage="/images/page-banner2.jpg" />
