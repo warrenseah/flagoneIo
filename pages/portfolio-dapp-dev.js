@@ -34,6 +34,9 @@ const dappDev = () => {
                   alt="man doing brainstorming image"
                   width="480"
                   height="350"
+                  sizes="(max-width: 768px) 100vw,
+                      (max-width: 1200px) 50vw,
+                      33vw" 
                 />
               </div>
 
@@ -67,6 +70,9 @@ const dappDev = () => {
                       alt="lady selecting on board image"
                       width="480"
                       height="350"
+                      sizes="(max-width: 768px) 100vw,
+                      (max-width: 1200px) 50vw,
+                      33vw" 
                     />
                   </div>
                 </div>

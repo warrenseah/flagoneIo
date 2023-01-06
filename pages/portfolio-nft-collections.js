@@ -34,15 +34,20 @@ const NftCollections = () => {
                   alt="painting image"
                   height="350"
                   width="480"
+                  sizes="(max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  33vw"  
                 />
               </div>
 
               <div className="portfolio-details-image">
                 <Image
                   src="/images/portfolio/womanDrawing.jpg"
+                  className="test-image"
                   alt="woman drawing image"
                   width="480"
                   height="350"
+                
                 />
               </div>
             </div>
@@ -67,6 +72,9 @@ const NftCollections = () => {
                       alt="apple image"
                       width="480"
                       height="350"
+                      sizes="(max-width: 768px) 100vw,
+                      (max-width: 1200px) 50vw,
+                      33vw" 
                     />
                   </div>
                 </div>
