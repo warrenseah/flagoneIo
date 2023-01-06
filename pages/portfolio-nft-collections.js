@@ -43,11 +43,9 @@ const NftCollections = () => {
               <div className="portfolio-details-image">
                 <Image
                   src="/images/portfolio/womanDrawing.jpg"
-                  className="test-image"
                   alt="woman drawing image"
                   width="480"
                   height="350"
-                
                 />
               </div>
             </div>
