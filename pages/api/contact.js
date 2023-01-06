@@ -16,7 +16,7 @@ export default async (req, res) => {
 
   const data = {
     // Update your email here
-    to: "accounts@flagone.io",
+    to: process.env.SEND_TO_EMAIL,
     from: "hello@flagone.io",
     subject: "Hello Enquiry",
     text: text,
