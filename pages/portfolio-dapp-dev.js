@@ -6,6 +6,7 @@ import PageBanner from "../components/Common/PageBanner";
 import PortfolioDetailsContent2 from "../components/Portfolio/PortfolioDetailsContent2";
 import CtaAreaTwo from "../components/Common/CtaAreaTwo";
 import Footer from "../components/Layouts/Footer";
+import Link from "next/link";
 
 const dappDev = () => {
   return (
@@ -146,20 +147,61 @@ const dappDev = () => {
                 </div>
 
                 <div className="single-info-box">
-                  <a
-                    href="https://polygon.kryptotrees.com"
-                    className="default-btn m-1"
-                    target="_blank"
-                  >
-                    Minting dApp Preview
-                  </a>
-                  <a
+                  <h4>Share</h4>
+                  <ul className="social">
+                    <li>
+                      <a
+                        href="https://github.com/warrenseah/kryptoTreesNft/tree/main/contracts"
+                        title="kyrptoTrees github"
+                        target="_blank"
+                      >
+                        <i className="fa-brands fa-github"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.facebook.com/kryptotrees"
+                        title="kyrptoTrees fb"
+                        target="_blank"
+                      >
+                        <i className="fa-brands fa-facebook-f"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://twitter.com/KryptoTreesNFT"
+                        title="kyrptoTrees Twitter"
+                        target="_blank"
+                      >
+                        <i className="fa-brands fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://discord.gg/EwybaHdp"
+                        title="kyrptoTrees Discord"
+                        target="_blank"
+                      >
+                        <i className="fa-brands fa-discord"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="single-info-link-box">
+                  <Link href="https://polygon.kryptotrees.com" legacyBehavior>
+                    <a className="default-btn m-1" target="_blank">
+                      Minting dApp Preview
+                    </a>
+                  </Link>
+                  <Link
                     href="https://timely-marshmallow-62bc3f.netlify.app"
-                    className="default-btn m-1"
-                    target="_blank"
+                    legacyBehavior
                   >
-                    Staking dApp Preview
-                  </a>
+                    <a className="default-btn m-1" target="_blank">
+                      Staking dApp Preview
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
