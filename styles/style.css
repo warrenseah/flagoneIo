@@ -5137,7 +5137,10 @@ Portfolio Details CSS
 .service-details-info .single-info-box:last-child {
   text-align: center;
 }
-
+.service-details-info .single-info-link-box:last-child {
+  text-align: start;
+  width: '100%'
+}
 .pd-preview-img {
   position: relative;
 }
