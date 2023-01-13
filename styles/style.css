@@ -5114,6 +5114,13 @@ Portfolio Details CSS
   font-size: 14px;
   font-weight: 500;
 }
+.service-details-info .single-info-box .default-btn:hover {
+  background-color: #ffffff;
+  color: #ff2c9c;
+}
+.service-details-info .single-info-box:last-child {
+  text-align: center;
+}
 .service-details-info .single-info-link-box .default-btn {
   display: inline-block;
   padding: 12px 30px;
@@ -5126,21 +5133,15 @@ Portfolio Details CSS
   font-size: 14px;
   font-weight: 500;
 }
-.service-details-info .single-info-box .default-btn:hover {
-  background-color: #ffffff;
-  color: #ff2c9c;
-}
 .service-details-info .single-info-link-box .default-btn:hover {
   background-color: #ffffff;
   color: #ff2c9c;
 }
-.service-details-info .single-info-box:last-child {
-  text-align: center;
-}
 .service-details-info .single-info-link-box:last-child {
   text-align: start;
-  width: '100%'
+  width: "100%";
 }
+
 .pd-preview-img {
   position: relative;
 }
