@@ -189,7 +189,7 @@ const NftCollections = () => {
                     </a>
                   </Link>
 
-                  <Link href="https://polygon.kryptotrees.com" legacyBehavior>
+                  <Link href="https://mint.kryptotrees.com" legacyBehavior>
                     <a className="default-btn m-1" target="_blank">
                       dApp Preview
                     </a>
