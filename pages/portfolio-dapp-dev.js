@@ -6,6 +6,7 @@ import PageBanner from "../components/Common/PageBanner";
 import PortfolioDetailsContent2 from "../components/Portfolio/PortfolioDetailsContent2";
 import CtaAreaTwo from "../components/Common/CtaAreaTwo";
 import Footer from "../components/Layouts/Footer";
+import Link from "next/link";
 
 const dappDev = () => {
   return (
@@ -151,21 +152,20 @@ const dappDev = () => {
                   <span>October 19, 2022</span>
                 </div>
 
-                <div className="single-info-box">
-                  <a
-                    href="https://polygon.kryptotrees.com"
-                    className="default-btn m-1"
-                    target="_blank"
-                  >
-                    Minting dApp Preview
-                  </a>
-                  <a
+                <div className="single-info-link-box">
+                  <Link href="https://mint.kryptotrees.com" legacyBehavior>
+                    <a className="default-btn m-1" target="_blank">
+                      Minting dApp Preview
+                    </a>
+                  </Link>
+                  <Link
                     href="https://timely-marshmallow-62bc3f.netlify.app"
-                    className="default-btn m-1"
-                    target="_blank"
+                    legacyBehavior
                   >
-                    Staking dApp Preview
-                  </a>
+                    <a className="default-btn m-1" target="_blank">
+                      Staking dApp Preview
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>

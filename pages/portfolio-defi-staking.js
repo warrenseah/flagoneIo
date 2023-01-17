@@ -5,6 +5,7 @@ import PageBanner from "../components/Common/PageBanner";
 import PortfolioDetailsContent2 from "../components/Portfolio/PortfolioDetailsContent2";
 import CtaAreaTwo from "../components/Common/CtaAreaTwo";
 import Footer from "../components/Layouts/Footer";
+import Link from "next/link";
 
 const DefiStaking = () => {
   return (
@@ -149,28 +150,31 @@ const DefiStaking = () => {
                   </ul>
                 </div>
 
-                <div className="single-info-box">
-                  <a
+                <div className="single-info-link-box">
+                  <Link
                     href="https://github.com/warrenseah/vault-v1"
-                    className="default-btn m-1"
-                    target="_blank"
+                    legacyBehavior
                   >
-                    GitHub Repo
-                  </a>
-                  <a
+                    <a className="default-btn m-1" target="_blank">
+                      GitHub Repo
+                    </a>
+                  </Link>
+                  <Link
                     href="https://testnet.bscscan.com/address/0x8a1f638791aed3514d72543d3698dfea0096cd6d"
-                    className="default-btn m-1"
-                    target="_blank"
+                    legacyBehavior
                   >
-                    Contract Address Preview (Bnb chain Testnet)
-                  </a>
-                  <a
+                    <a className="default-btn m-1" target="_blank">
+                      Contract Address Preview (Bnb chain Testnet)
+                    </a>
+                  </Link>
+                  <Link
                     href="https://timely-marshmallow-62bc3f.netlify.app"
-                    className="default-btn m-1"
-                    target="_blank"
+                    legacyBehavior
                   >
-                    dApp Preview
-                  </a>
+                    <a className="default-btn m-1" target="_blank">
+                      dApp Preview
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>

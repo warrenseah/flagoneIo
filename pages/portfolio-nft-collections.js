@@ -6,6 +6,7 @@ import PageBanner from "../components/Common/PageBanner";
 import PortfolioDetailsContent2 from "../components/Portfolio/PortfolioDetailsContent2";
 import CtaAreaTwo from "../components/Common/CtaAreaTwo";
 import Footer from "../components/Layouts/Footer";
+import Link from "next/link";
 
 const NftCollections = () => {
   return (
@@ -187,42 +188,42 @@ const NftCollections = () => {
                   </ul>
                 </div>
 
-                <div className="single-info-box">
-                  <a
-                    href="https://kryptotrees.com"
-                    className="default-btn m-1"
-                    target="_blank"
-                  >
-                    Website Preview
-                  </a>
-                  <a
-                    href="https://polygon.kryptotrees.com"
-                    className="default-btn m-1"
-                    target="_blank"
-                  >
-                    dApp Preview
-                  </a>
-                  <a
+                <div className="single-info-link-box">
+                  <Link href="https://kryptotrees.com" legacyBehavior>
+                    <a className="default-btn m-1" target="_blank">
+                      Website Preview
+                    </a>
+                  </Link>
+
+                  <Link href="https://mint.kryptotrees.com" legacyBehavior>
+                    <a className="default-btn m-1" target="_blank">
+                      dApp Preview
+                    </a>
+                  </Link>
+                  <Link
                     href="https://polygonscan.com/address/0x660dec2e3a19fb5534afe02b5c115dc4905bc9f9"
-                    className="default-btn m-1"
-                    target="_blank"
+                    legacyBehavior
                   >
-                    Contract Address (Polygon)
-                  </a>
-                  <a
+                    <a className="default-btn m-1" target="_blank">
+                      Contract Address (Polygon)
+                    </a>
+                  </Link>
+                  <Link
                     href="https://github.com/warrenseah/kryptoTreesNft/tree/main/contracts"
-                    className="default-btn m-1"
-                    target="_blank"
+                    legacyBehavior
                   >
-                    Smart Contract Github
-                  </a>
-                  <a
+                    <a className="default-btn m-1" target="_blank">
+                      Smart Contract Github
+                    </a>
+                  </Link>
+                  <Link
                     href="https://github.com/coollif3/nftArtEngine"
-                    className="default-btn m-1"
-                    target="_blank"
+                    legacyBehavior
                   >
-                    Generative Art Engine Github
-                  </a>
+                    <a className="default-btn m-1" target="_blank">
+                      Generative Art Engine Github
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
