@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "../../utils/ActiveLink";
+import NextLink from "next/link";
 
 const Navbar = () => {
   const [menu, setMenu] = React.useState(true);
@@ -72,9 +73,9 @@ const Navbar = () => {
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link" href="/services">
+                  <NextLink className="nav-link" href="/services">
                     Services
-                  </a>
+                  </NextLink>
                 </li>
 
                 <li className="nav-item">
