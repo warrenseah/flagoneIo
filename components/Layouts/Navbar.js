@@ -30,7 +30,7 @@ const Navbar = () => {
       <div id="navbar" className="navbar-area">
         <nav className="navbar navbar-expand-md navbar-light">
           <div className="container">
-            <Link href="/">
+            <Link legacyBehavior href="/">
               <a className="navbar-brand">
                 <img src="/images/f1logo.png" alt="logo" />
               </a>
@@ -55,19 +55,19 @@ const Navbar = () => {
             <div className={classOne} id="navbarSupportedContent">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link href="/#home">
+                  <Link legacyBehavior href="/#home">
                     <a className="nav-link">Home</a>
                   </Link>
                 </li>
 
                 <li className="nav-item">
-                  <Link href="/#aboutUs" activeClassName="active">
+                  <Link legacyBehavior href="/#aboutUs" activeClassName="active">
                     <a className="nav-link">About</a>
                   </Link>
                 </li>
 
                 <li className="nav-item">
-                  <Link href="/#ourWorks">
+                  <Link legacyBehavior href="/#ourWorks">
                     <a className="nav-link">Portfolio</a>
                   </Link>
                 </li>
@@ -79,7 +79,7 @@ const Navbar = () => {
                 </li>
 
                 <li className="nav-item">
-                  <Link href="/contact" activeClassName="active">
+                  <Link legacyBehavior href="/contact" activeClassName="active">
                     <a className="nav-link">Contact</a>
                   </Link>
                 </li>

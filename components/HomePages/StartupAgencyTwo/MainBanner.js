@@ -25,7 +25,7 @@ const MainBanner = () => {
                       magna aliqua.
                     </p>
 
-                    <Link href="/contact">
+                    <Link legacyBehavior href="/contact">
                       <a className="btn btn-primary">Get Started</a>
                     </Link>
                   </div>

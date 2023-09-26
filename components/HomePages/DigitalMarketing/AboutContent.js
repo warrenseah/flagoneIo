@@ -72,7 +72,7 @@ const AboutContent = () => {
                   </div>
                 </div>
 
-                <Link href="/about">
+                <Link legacyBehavior href="/about">
                   <a className="default-btn-two">
                     Learn More <i className="fas fa-chevron-right"></i>
                   </a>

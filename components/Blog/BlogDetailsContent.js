@@ -19,8 +19,8 @@ const BlogRightSidebar = () => {
                   <ul className="entry-meta">
                     <li>
                       <i className="fa-solid fa-user"></i>
-                      <Link href="/blog">
-                        <a>Admin</a>
+                      <Link legacyBehavior href="/blog">
+                        Admin
                       </Link>
                     </li>
                     <li>
@@ -93,22 +93,22 @@ const BlogRightSidebar = () => {
                       <span>Tags:</span>
                     </li>
                     <li>
-                      <Link href="/blog">
+                      <Link legacyBehavior href="/blog">
                         <a>Business</a>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/blog">
+                      <Link legacyBehavior href="/blog">
                         <a>IT</a>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/blog">
+                      <Link legacyBehavior href="/blog">
                         <a>Tips</a>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/blog">
+                      <Link legacyBehavior href="/blog">
                         <a>Design</a>
                       </Link>
                     </li>
@@ -119,12 +119,12 @@ const BlogRightSidebar = () => {
               {/* Post controls */}
               <div className="post-controls-buttons">
                 <div>
-                  <Link href="#">
+                  <Link legacyBehavior href="#">
                     <a>Prev Post</a>
                   </Link>
                 </div>
                 <div>
-                  <Link href="#">
+                  <Link legacyBehavior href="#">
                     <a>Next Post</a>
                   </Link>
                 </div>

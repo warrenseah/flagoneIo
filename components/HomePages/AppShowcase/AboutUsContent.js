@@ -48,7 +48,7 @@ const AboutUsContent = () => {
                 </div>
 
                 <div className="btn-box">
-                  <Link href="#">
+                  <Link legacyBehavior href="#">
                     <a className="app-default-btn">Start Free Trial</a>
                   </Link>
                 </div>

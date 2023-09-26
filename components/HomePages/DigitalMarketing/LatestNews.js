@@ -20,14 +20,14 @@ const LatestNews = () => {
                 data-aos-delay="100"
               >
                 <div className="blog-image">
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a>
                       <img src="/images/blog/blog7.jpg" alt="image" />
                     </a>
                   </Link>
 
                   <div className="post-tag">
-                    <Link href="/blog">
+                    <Link legacyBehavior href="/blog">
                       <a>Technology</a>
                     </Link>
                   </div>
@@ -36,7 +36,7 @@ const LatestNews = () => {
                 <div className="blog-post-content">
                   <span className="date">Feb 15, 2022</span>
                   <h3>
-                    <Link href="/blog-details">
+                    <Link legacyBehavior href="/blog-details">
                       <a>The Most Popular New top Business Apps</a>
                     </Link>
                   </h3>
@@ -46,7 +46,7 @@ const LatestNews = () => {
                     voluptatem accusantium.
                   </p>
 
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a className="read-more-btn">
                       Read More
                       <i className="fa-solid fa-angles-right"></i>
@@ -64,14 +64,14 @@ const LatestNews = () => {
                 data-aos-delay="200"
               >
                 <div className="blog-image">
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a>
                       <img src="/images/blog/blog8.jpg" alt="image" />
                     </a>
                   </Link>
 
                   <div className="post-tag">
-                    <Link href="/blog">
+                    <Link legacyBehavior href="/blog">
                       <a>Agency</a>
                     </Link>
                   </div>
@@ -81,7 +81,7 @@ const LatestNews = () => {
                   <span className="date">Feb 16, 2022</span>
 
                   <h3>
-                    <Link href="/blog-details">
+                    <Link legacyBehavior href="/blog-details">
                       <a>The Best Marketing top use Management Tools</a>
                     </Link>
                   </h3>
@@ -91,7 +91,7 @@ const LatestNews = () => {
                     voluptatem accusantium.
                   </p>
 
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a className="read-more-btn">
                       Read More
                       <i className="fa-solid fa-angles-right"></i>
@@ -109,14 +109,14 @@ const LatestNews = () => {
                 data-aos-delay="300"
               >
                 <div className="blog-image">
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a>
                       <img src="/images/blog/blog9.jpg" alt="image" />
                     </a>
                   </Link>
 
                   <div className="post-tag">
-                    <Link href="/blog">
+                    <Link legacyBehavior href="/blog">
                       <a>IT Agency</a>
                     </Link>
                   </div>
@@ -126,7 +126,7 @@ const LatestNews = () => {
                   <span className="date">Feb 17, 2022</span>
 
                   <h3>
-                    <Link href="/blog-details">
+                    <Link legacyBehavior href="/blog-details">
                       <a>3 WooCommerce Plugins to Boost Sales</a>
                     </Link>
                   </h3>
@@ -136,7 +136,7 @@ const LatestNews = () => {
                     voluptatem accusantium.
                   </p>
 
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a className="read-more-btn">
                       Read More
                       <i className="fa-solid fa-angles-right"></i>

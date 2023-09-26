@@ -47,7 +47,7 @@ const MainBanner = () => {
                 </a>
               </li>
             </ul>
-            <Link href="/contact">
+            <Link legacyBehavior href="/contact">
               <a className="default-btn-two">
                 Contact Me <i className="fas fa-chevron-right"></i>
               </a>

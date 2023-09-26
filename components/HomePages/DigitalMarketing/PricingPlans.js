@@ -43,7 +43,7 @@ const PricingPlans = () => {
                   </li>
                 </ul>
 
-                <Link href="#">
+                <Link legacyBehavior href="#">
                   <a className="default-btn-two">Purchase Now</a>
                 </Link>
               </div>
@@ -80,7 +80,7 @@ const PricingPlans = () => {
                   </li>
                 </ul>
 
-                <Link href="#">
+                <Link legacyBehavior href="#">
                   <a className="default-btn-two">Purchase Now</a>
                 </Link>
               </div>
@@ -117,7 +117,7 @@ const PricingPlans = () => {
                   </li>
                 </ul>
 
-                <Link href="#">
+                <Link legacyBehavior href="#">
                   <a className="default-btn-two">Purchase Now</a>
                 </Link>
               </div>

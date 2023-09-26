@@ -28,11 +28,11 @@ const MainBanner = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
 
-                <Link href="/contact">
+                <Link legacyBehavior href="/contact">
                   <a className="btn btn-primary">Contact Us</a>
                 </Link>
 
-                <Link href="#play-video">
+                <Link legacyBehavior href="#play-video">
                   <a
                     onClick={() => setToggler(!toggler)}
                     className="btn btn-secondary"

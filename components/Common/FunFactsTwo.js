@@ -72,7 +72,7 @@ const FunFactsTwo = () => {
             <h3>Have any questions about us?</h3>
             <p>Don't hesitate to contact us</p>
 
-            <Link href="/contact">
+            <Link legacyBehavior href="/contact">
               <a className="btn btn-primary">Contact Us</a>
             </Link>
           </div>

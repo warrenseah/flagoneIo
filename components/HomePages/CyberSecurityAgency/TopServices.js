@@ -21,7 +21,7 @@ const TopServices = () => {
                     consectetur adipiscing elit sed do.
                   </p>
 
-                  <Link href="/contact">
+                  <Link legacyBehavior href="/contact">
                     <a className="get-started-btn">GET STARTED</a>
                   </Link>
                 </div>
@@ -45,7 +45,7 @@ const TopServices = () => {
                     consectetur adipiscing elit sed do.
                   </p>
 
-                  <Link href="/contact">
+                  <Link legacyBehavior href="/contact">
                     <a className="get-started-btn">GET STARTED</a>
                   </Link>
                 </div>
@@ -69,7 +69,7 @@ const TopServices = () => {
                     consectetur adipiscing elit sed do.
                   </p>
 
-                  <Link href="/contact">
+                  <Link legacyBehavior href="/contact">
                     <a className="get-started-btn">GET STARTED</a>
                   </Link>
                 </div>

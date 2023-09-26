@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-footer-widget">
                 <div className="logo">
-                  <Link href="/">
+                  <Link legacyBehavior href="/">
                     <a>
                       <img src="/images/f1logo.png" alt="Logo" />
                     </a>
@@ -66,22 +66,22 @@ const Footer = () => {
 
                 <ul className="list">
                   <li>
-                    <Link href="/">
+                    <Link legacyBehavior href="/">
                       <a>Home</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/#aboutUs">
+                    <Link legacyBehavior href="/#aboutUs">
                       <a>About</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services">
+                    <Link legacyBehavior href="/services">
                       <a>Services</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/#ourWorks">
+                    <Link legacyBehavior href="/#ourWorks">
                       <a>Portfolio</a>
                     </Link>
                   </li>
@@ -95,22 +95,22 @@ const Footer = () => {
 
                 <ul className="list">
                   <li>
-                    <Link href="/contact">
+                    <Link legacyBehavior href="/contact">
                       <a>Contact</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/privacy-policy">
+                    <Link legacyBehavior href="/privacy-policy">
                       <a>Privacy Policy</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/terms-conditions">
+                    <Link legacyBehavior href="/terms-conditions">
                       <a>Terms & Conditions</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/disclaimer">
+                    <Link legacyBehavior href="/disclaimer">
                       <a>Disclaimer</a>
                     </Link>
                   </li>

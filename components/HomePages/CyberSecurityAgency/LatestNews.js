@@ -29,7 +29,7 @@ const LatestNews = () => {
                   </li>
                 </ul>
                 <h3>
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a>The Launch Of A Revamped User Referral Program</a>
                   </Link>
                 </h3>
@@ -60,7 +60,7 @@ const LatestNews = () => {
                   </li>
                 </ul>
                 <h3>
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a>Complete Protection For All Your Devices</a>
                   </Link>
                 </h3>
@@ -91,7 +91,7 @@ const LatestNews = () => {
                   </li>
                 </ul>
                 <h3>
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a>Online Security For Your Devices Antivirus</a>
                   </Link>
                 </h3>

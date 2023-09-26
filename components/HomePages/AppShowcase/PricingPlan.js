@@ -27,7 +27,7 @@ const PricingPlan = () => {
                   $39 <span>/Month</span>
                 </div>
 
-                <Link href="/sign-in">
+                <Link legacyBehavior href="/sign-in">
                   <a className="app-default-btn">Purchase Plan</a>
                 </Link>
 
@@ -71,7 +71,7 @@ const PricingPlan = () => {
                   $49 <span>/Month</span>
                 </div>
 
-                <Link href="/sign-in">
+                <Link legacyBehavior href="/sign-in">
                   <a className="app-default-btn">Purchase Plan</a>
                 </Link>
 
@@ -114,7 +114,7 @@ const PricingPlan = () => {
                   $59 <span>/Yearly</span>
                 </div>
 
-                <Link href="/sign-in">
+                <Link legacyBehavior href="/sign-in">
                   <a className="app-default-btn">Purchase Plan</a>
                 </Link>
 

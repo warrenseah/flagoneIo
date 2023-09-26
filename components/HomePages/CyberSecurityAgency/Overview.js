@@ -21,7 +21,7 @@ const Overview = () => {
                   <div className="col-lg-8 col-md-6">
                     <div className="cs-overview-content">
                       <h3>Personal Online Protection Everywhere We Go</h3>
-                      <Link href="/contact">
+                      <Link legacyBehavior href="/contact">
                         <a className="get-started-btn">GET STARTED</a>
                       </Link>
                     </div>
@@ -44,7 +44,7 @@ const Overview = () => {
                   <div className="col-lg-8 col-md-6">
                     <div className="cs-overview-content">
                       <h3>Simple Solution For Your Business's Security</h3>
-                      <Link href="/contact">
+                      <Link legacyBehavior href="/contact">
                         <a className="get-started-btn">GET STARTED</a>
                       </Link>
                     </div>

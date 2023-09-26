@@ -25,19 +25,19 @@ const CaseStudies = () => {
               >
                 <div className="content">
                   <span>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Web, Sales</a>
                     </Link>
                   </span>
 
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Community Engagements</a>
                     </Link>
                   </h3>
                 </div>
 
-                <Link href="/portfolio-details">
+                <Link legacyBehavior href="/portfolio-details">
                   <a className="btn btn-primary">View Case Study</a>
                 </Link>
 
@@ -60,19 +60,19 @@ const CaseStudies = () => {
               >
                 <div className="content">
                   <span>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Sales, SEO, Web</a>
                     </Link>
                   </span>
 
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Built web faster & better</a>
                     </Link>
                   </h3>
                 </div>
 
-                <Link href="/portfolio-details">
+                <Link legacyBehavior href="/portfolio-details">
                   <a className="btn btn-primary">View Case Study</a>
                 </Link>
 
@@ -95,19 +95,19 @@ const CaseStudies = () => {
               >
                 <div className="content">
                   <span>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Marketing</a>
                     </Link>
                   </span>
 
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Traffic Management</a>
                     </Link>
                   </h3>
                 </div>
 
-                <Link href="/portfolio-details">
+                <Link legacyBehavior href="/portfolio-details">
                   <a className="btn btn-primary">View Case Study</a>
                 </Link>
 
@@ -122,7 +122,7 @@ const CaseStudies = () => {
           </div>
 
           <div className="view-more-work">
-            <Link href="/portfolio">
+            <Link legacyBehavior href="/portfolio">
               <a className="btn btn-primary">View More Work</a>
             </Link>
           </div>

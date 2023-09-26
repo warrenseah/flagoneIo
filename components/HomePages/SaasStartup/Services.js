@@ -25,7 +25,7 @@ const Services = () => {
               >
                 <i className="icon fa-solid fa-gear"></i>
                 <h3>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a>Product Engineering</a>
                   </Link>
                 </h3>
@@ -45,7 +45,7 @@ const Services = () => {
               >
                 <i className="icon fa-solid fa-building-lock"></i>
                 <h3>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a>Security Design</a>
                   </Link>
                 </h3>
@@ -65,7 +65,7 @@ const Services = () => {
               >
                 <i className="icon fa-solid fa-certificate"></i>
                 <h3>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a>License Management</a>
                   </Link>
                 </h3>
@@ -85,7 +85,7 @@ const Services = () => {
               >
                 <i className="icon fa-solid fa-file-pen"></i>
                 <h3>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a>Release Planning</a>
                   </Link>
                 </h3>

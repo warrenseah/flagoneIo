@@ -52,7 +52,7 @@ const ServiceStyleTwo = () => {
                 </div>
 
                 <div className="service-read-more">
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a className="btn btn-primary">
                       <i className="fa-solid fa-list-check"></i> Read more
                     </a>
@@ -138,7 +138,7 @@ const ServiceStyleTwo = () => {
                 </div>
 
                 <div className="service-read-more">
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a className="btn btn-primary">
                       <i className="fa-solid fa-list-check"></i> Read more
                     </a>
@@ -198,7 +198,7 @@ const ServiceStyleTwo = () => {
                 </div>
 
                 <div className="service-read-more">
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a className="btn btn-primary">
                       <i className="fa-solid fa-list-check"></i> Read more
                     </a>

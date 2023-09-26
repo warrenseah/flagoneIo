@@ -25,7 +25,7 @@ const LatestNews = () => {
                     </li>
                   </ul>
                   <h3>
-                    <Link href="/blog-details">
+                    <Link legacyBehavior href="/blog-details">
                       <a>Some Important Rules to Start a New Business</a>
                     </Link>
                   </h3>
@@ -33,7 +33,7 @@ const LatestNews = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt.
                   </p>
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a className="link-btn">
                       Read More <i className="fas fa-chevron-right"></i>
                     </a>
@@ -55,7 +55,7 @@ const LatestNews = () => {
                     </li>
                   </ul>
                   <h3>
-                    <Link href="/blog-details">
+                    <Link legacyBehavior href="/blog-details">
                       <a>Why Would You Need Some New Business</a>
                     </Link>
                   </h3>
@@ -63,7 +63,7 @@ const LatestNews = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt.
                   </p>
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a className="link-btn">
                       Read More <i className="fas fa-chevron-right"></i>
                     </a>
@@ -85,7 +85,7 @@ const LatestNews = () => {
                     </li>
                   </ul>
                   <h3>
-                    <Link href="/blog-details">
+                    <Link legacyBehavior href="/blog-details">
                       <a>Know Top Ten Rules for Corporate Business</a>
                     </Link>
                   </h3>
@@ -93,7 +93,7 @@ const LatestNews = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt.
                   </p>
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a className="link-btn">
                       Read More <i className="fas fa-chevron-right"></i>
                     </a>

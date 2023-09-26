@@ -23,12 +23,12 @@ const Portfolio = () => {
 
                 <div className="portfolio-content">
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>UX Workflow</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="link-btn">
                       <i className="pe-7s-link"></i>
                     </a>
@@ -41,12 +41,12 @@ const Portfolio = () => {
 
                 <div className="portfolio-content">
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Web Development</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="link-btn">
                       <i className="pe-7s-link"></i>
                     </a>
@@ -61,12 +61,12 @@ const Portfolio = () => {
 
                 <div className="portfolio-content">
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Web Design</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="link-btn">
                       <i className="pe-7s-link"></i>
                     </a>
@@ -81,12 +81,12 @@ const Portfolio = () => {
 
                 <div className="portfolio-content">
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>React Development</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="link-btn" target="_blank">
                       <i className="pe-7s-link"></i>
                     </a>
@@ -99,12 +99,12 @@ const Portfolio = () => {
 
                 <div className="portfolio-content">
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Mobile Apps Development</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="link-btn" target="_blank">
                       <i className="pe-7s-link"></i>
                     </a>
@@ -119,12 +119,12 @@ const Portfolio = () => {
 
                 <div className="portfolio-content">
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>eCommerce</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="link-btn" target="_blank">
                       <i className="pe-7s-link"></i>
                     </a>
@@ -137,12 +137,12 @@ const Portfolio = () => {
 
                 <div className="portfolio-content">
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>UX for Mobile Apps</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="link-btn" target="_blank">
                       <i className="pe-7s-link"></i>
                     </a>

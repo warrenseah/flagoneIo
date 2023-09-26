@@ -23,7 +23,7 @@ const FAQ = () => {
               <div className="faq-img">
                 <img src="/images/app/faq-app.jpg" alt="Image" />
 
-                <Link href="/contact">
+                <Link legacyBehavior href="/contact">
                   <a className="app-default-btn">Have you any question?</a>
                 </Link>
               </div>

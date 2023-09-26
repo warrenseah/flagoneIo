@@ -30,7 +30,7 @@ const MainBanner = () => {
                       aliqua.
                     </p>
 
-                    <Link href="/contact">
+                    <Link legacyBehavior href="/contact">
                       <a className="btn btn-primary">Contact Us</a>
                     </Link>
                   </div>
@@ -38,7 +38,7 @@ const MainBanner = () => {
 
                 <div className="col-lg-4">
                   <div className="video-box">
-                    <Link href="#play-video">
+                    <Link legacyBehavior href="#play-video">
                       <a
                         onClick={() => setToggler(!toggler)}
                         className="video-btn"

@@ -19,7 +19,7 @@ const Services = () => {
               <div className="service-card-one white-bg border text-center">
                 <i className="pe-7s-rocket bg-13c4a1"></i>
                 <h3>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a>Advertising</a>
                   </Link>
                 </h3>
@@ -34,7 +34,7 @@ const Services = () => {
               <div className="service-card-one white-bg border text-center">
                 <i className="pe-7s-diamond bg-6610f2"></i>
                 <h3>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a>Branding</a>
                   </Link>
                 </h3>
@@ -49,7 +49,7 @@ const Services = () => {
               <div className="service-card-one white-bg border text-center">
                 <i className="pe-7s-light bg-ffb700"></i>
                 <h3>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a>Digital Marketing</a>
                   </Link>
                 </h3>
@@ -64,7 +64,7 @@ const Services = () => {
               <div className="service-card-one white-bg border text-center">
                 <i className="pe-7s-target bg-fc3549"></i>
                 <h3>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a>Creative Conceptions</a>
                   </Link>
                 </h3>
@@ -79,7 +79,7 @@ const Services = () => {
               <div className="service-card-one white-bg border text-center">
                 <i className="pe-7s-film bg-00d280"></i>
                 <h3>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a>Motion Graphics</a>
                   </Link>
                 </h3>
@@ -94,7 +94,7 @@ const Services = () => {
               <div className="service-card-one white-bg border text-center">
                 <i className="pe-7s-users bg-ff612f"></i>
                 <h3>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a>Workshops</a>
                   </Link>
                 </h3>

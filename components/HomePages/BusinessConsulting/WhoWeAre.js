@@ -28,7 +28,7 @@ const WhoWeAre = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Quis ipsum suspend sghisse ultrices gravida.
                 </p>
-                <Link href="/about">
+                <Link legacyBehavior href="/about">
                   <a className="default-btn-two">
                     Read More <i className="fas fa-chevron-right"></i>
                   </a>

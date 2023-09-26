@@ -17,7 +17,7 @@ const Banner = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id
                   tincidunt eifend odio viverra diam aliquet donec again.
                 </p>
-                <Link href="/contact">
+                <Link legacyBehavior href="/contact">
                   <a className="software-btn">
                     Get Started Now{" "}
                     <i className="fa-solid fa-angles-right"></i>

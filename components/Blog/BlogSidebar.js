@@ -29,7 +29,7 @@ const BlogSidebar = () => {
           <h3 className="widget-title">Popular posts</h3>
 
           <article className="item">
-            <Link href="/blog-details">
+            <Link legacyBehavior href="/blog-details">
               <a className="thumb">
                 <span className="fullimage cover bg1" role="img"></span>
               </a>
@@ -37,7 +37,7 @@ const BlogSidebar = () => {
             <div className="info">
               <time>March 15, 2022</time>
               <h4 className="title usmall">
-                <Link href="/blog-details">
+                <Link legacyBehavior href="/blog-details">
                   <a>The Best Marketing top use Management Tools</a>
                 </Link>
               </h4>
@@ -53,7 +53,7 @@ const BlogSidebar = () => {
             <div className="info">
               <time>March 16, 2022</time>
               <h4 className="title usmall">
-                <Link href="/blog-details">
+                <Link legacyBehavior href="/blog-details">
                   <a>Top 21 Must-Read Blogs For Creative Agencies</a>
                 </Link>
               </h4>
@@ -69,7 +69,7 @@ const BlogSidebar = () => {
             <div className="info">
               <time>March 17, 2022</time>
               <h4 className="title usmall">
-                <Link href="/blog-details">
+                <Link legacyBehavior href="/blog-details">
                   <a>Protect your workplace from cyber attacks</a>
                 </Link>
               </h4>
@@ -85,31 +85,31 @@ const BlogSidebar = () => {
 
           <ul>
             <li>
-              <Link href="/blog-details">
+              <Link legacyBehavior href="/blog-details">
                 <a>The security risks of changing package owners</a>
               </Link>
               <span className="post-date">March 15, 2022</span>
             </li>
             <li>
-              <Link href="/blog-details">
+              <Link legacyBehavior href="/blog-details">
                 <a>Tips to protecting business and Family</a>
               </Link>
               <span className="post-date">March 16, 2022</span>
             </li>
             <li>
-              <Link href="/blog-details">
+              <Link legacyBehavior href="/blog-details">
                 <a>Protect your workplace from cyber attacks</a>
               </Link>
               <span className="post-date">March 17, 2022</span>
             </li>
             <li>
-              <Link href="/blog-details">
+              <Link legacyBehavior href="/blog-details">
                 <a>Business debit Fees to increase in 2022</a>
               </Link>
               <span className="post-date">March 18, 2022</span>
             </li>
             <li>
-              <Link href="/blog-details">
+              <Link legacyBehavior href="/blog-details">
                 <a>10 tips to reduce your card processing costs</a>
               </Link>
               <span className="post-date">March 19, 2022</span>
@@ -123,35 +123,35 @@ const BlogSidebar = () => {
 
           <ul>
             <li>
-              <Link href="/blog">
+              <Link legacyBehavior href="/blog">
                 <a>
                   Business <span className="post-count">(05)</span>
                 </a>
               </Link>
             </li>
             <li>
-              <Link href="/blog">
+              <Link legacyBehavior href="/blog">
                 <a>
                   Privacy <span className="post-count">(10)</span>
                 </a>
               </Link>
             </li>
             <li>
-              <Link href="/blog">
+              <Link legacyBehavior href="/blog">
                 <a>
                   Technology <span className="post-count">(15)</span>
                 </a>
               </Link>
             </li>
             <li>
-              <Link href="/blog">
+              <Link legacyBehavior href="/blog">
                 <a>
                   Tips <span className="post-count">(12)</span>
                 </a>
               </Link>
             </li>
             <li>
-              <Link href="/blog">
+              <Link legacyBehavior href="/blog">
                 <a>
                   Uncategorized <span className="post-count">(02)</span>
                 </a>
@@ -165,42 +165,42 @@ const BlogSidebar = () => {
           <h3 className="widget-title">Tags</h3>
 
           <div className="tagcloud">
-            <Link href="/blog">
+            <Link legacyBehavior href="/blog">
               <a>
                 IT <span className="tag-link-count">(3)</span>
               </a>
             </Link>
-            <Link href="/blog">
+            <Link legacyBehavior href="/blog">
               <a>
                 React <span className="tag-link-count">(3)</span>
               </a>
             </Link>
-            <Link href="/blog">
+            <Link legacyBehavior href="/blog">
               <a>
                 Games <span className="tag-link-count">(2)</span>
               </a>
             </Link>
-            <Link href="/blog">
+            <Link legacyBehavior href="/blog">
               <a>
                 Development <span className="tag-link-count">(2)</span>
               </a>
             </Link>
-            <Link href="/blog">
+            <Link legacyBehavior href="/blog">
               <a>
                 Design <span className="tag-link-count">(1)</span>
               </a>
             </Link>
-            <Link href="/blog">
+            <Link legacyBehavior href="/blog">
               <a>
                 Apps <span className="tag-link-count">(1)</span>
               </a>
             </Link>
-            <Link href="/blog">
+            <Link legacyBehavior href="/blog">
               <a>
                 Marketing <span className="tag-link-count">(1)</span>
               </a>
             </Link>
-            <Link href="/blog">
+            <Link legacyBehavior href="/blog">
               <a>
                 Tips <span className="tag-link-count">(2)</span>
               </a>

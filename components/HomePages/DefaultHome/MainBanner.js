@@ -31,11 +31,11 @@ const MainBanner = () => {
                     </h1>
                     <p>Experience Web 3.0 Better with FlagOne.</p>
 
-                    <Link href="/contact">
+                    <Link legacyBehavior href="/contact">
                       <a className="btn btn-primary">Get Started</a>
                     </Link>
 
-                    {/* <Link href="#play-video">
+                    {/* <Link legacyBehavior href="#play-video">
                       <a
                         onClick={() => setToggler(!toggler)}
                         className="btn btn-secondary"

@@ -36,7 +36,7 @@ const WhyChooseUs = () => {
                   </li>
                 </ul>
                 <div className="choose-btn">
-                  <Link href="/contact">
+                  <Link legacyBehavior href="/contact">
                     <a className="default-btn-two">
                       Get Started <i className="fa-solid fa-chevron-right"></i>
                     </a>

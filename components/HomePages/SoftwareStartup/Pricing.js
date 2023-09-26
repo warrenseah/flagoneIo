@@ -28,7 +28,7 @@ const Pricing = () => {
                     <div className="price">
                       $49<span>/Monthly</span>
                     </div>
-                    <Link href="/contact">
+                    <Link legacyBehavior href="/contact">
                       <a className="software-btn">
                         Purchage Plan{" "}
                         <i className="fa-solid fa-angles-right"></i>
@@ -75,7 +75,7 @@ const Pricing = () => {
                     <div className="price">
                       $69<span>/Monthly</span>
                     </div>
-                    <Link href="/contact">
+                    <Link legacyBehavior href="/contact">
                       <a className="software-btn">
                         Purchage Plan{" "}
                         <i className="fa-solid fa-angles-right"></i>

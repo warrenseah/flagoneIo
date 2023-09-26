@@ -26,7 +26,7 @@ const HelpDesk = () => {
                   Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed
                   est non feugiat sagittis, donec.
                 </p>
-                <Link href="/service-details">
+                <Link legacyBehavior href="/service-details">
                   <a className="link-btn">
                     Learn More <i className="fa-solid fa-angle-right"></i>
                   </a>
@@ -49,7 +49,7 @@ const HelpDesk = () => {
                   Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed
                   est non feugiat sagittis, donec.
                 </p>
-                <Link href="/service-details">
+                <Link legacyBehavior href="/service-details">
                   <a className="link-btn">
                     Learn More <i className="fa-solid fa-angle-right"></i>
                   </a>
@@ -72,7 +72,7 @@ const HelpDesk = () => {
                   Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed
                   est non feugiat sagittis, donec.
                 </p>
-                <Link href="/service-details">
+                <Link legacyBehavior href="/service-details">
                   <a className="link-btn">
                     Learn More <i className="fa-solid fa-angle-right"></i>
                   </a>
@@ -95,7 +95,7 @@ const HelpDesk = () => {
                   Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed
                   est non feugiat sagittis, donec.
                 </p>
-                <Link href="/service-details">
+                <Link legacyBehavior href="/service-details">
                   <a className="link-btn">
                     Learn More <i className="fa-solid fa-angle-right"></i>
                   </a>

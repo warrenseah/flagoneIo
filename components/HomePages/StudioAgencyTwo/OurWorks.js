@@ -51,18 +51,18 @@ const OurWorks = () => {
 
                 <div className="content text-center">
                   <span>
-                    <Link href="/portfolio">
+                    <Link legacyBehavior href="/portfolio">
                       <a>Development</a>
                     </Link>
                   </span>
 
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Designing a better cinema experience</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="custom-btn">Read More</a>
                   </Link>
                 </div>
@@ -74,18 +74,18 @@ const OurWorks = () => {
                 <img src="/images/works/work2.jpg" alt="image" />
                 <div className="content text-center">
                   <span>
-                    <Link href="/portfolio">
+                    <Link legacyBehavior href="/portfolio">
                       <a>Web Design</a>
                     </Link>
                   </span>
 
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Building design process within teams</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="custom-btn">Read More</a>
                   </Link>
                 </div>
@@ -98,18 +98,18 @@ const OurWorks = () => {
 
                 <div className="content text-center">
                   <span>
-                    <Link href="/portfolio">
+                    <Link legacyBehavior href="/portfolio">
                       <a>eCommerce</a>
                     </Link>
                   </span>
 
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>How intercom brings play eCommerce</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="custom-btn">Read More</a>
                   </Link>
                 </div>
@@ -122,18 +122,18 @@ const OurWorks = () => {
 
                 <div className="content text-center">
                   <span>
-                    <Link href="/portfolio">
+                    <Link legacyBehavior href="/portfolio">
                       <a>Reactjs</a>
                     </Link>
                   </span>
 
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>How to start a project with Reactjs</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="custom-btn">Read More</a>
                   </Link>
                 </div>
@@ -146,18 +146,18 @@ const OurWorks = () => {
 
                 <div className="content text-center">
                   <span>
-                    <Link href="/portfolio">
+                    <Link legacyBehavior href="/portfolio">
                       <a>Angular js</a>
                     </Link>
                   </span>
 
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Examples of different types of sprints</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="custom-btn">Read More</a>
                   </Link>
                 </div>
@@ -170,18 +170,18 @@ const OurWorks = () => {
 
                 <div className="content text-center">
                   <span>
-                    <Link href="/portfolio">
+                    <Link legacyBehavior href="/portfolio">
                       <a>UI/UX Design</a>
                     </Link>
                   </span>
 
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Redesigning the New York times app</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="custom-btn">Read More</a>
                   </Link>
                 </div>
@@ -194,18 +194,18 @@ const OurWorks = () => {
 
                 <div className="content text-center">
                   <span>
-                    <Link href="/portfolio">
+                    <Link legacyBehavior href="/portfolio">
                       <a>Graphic Design</a>
                     </Link>
                   </span>
 
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Design the Web, Mobile, and eCommerce</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="custom-btn">Read More</a>
                   </Link>
                 </div>
@@ -218,18 +218,18 @@ const OurWorks = () => {
 
                 <div className="content text-center">
                   <span>
-                    <Link href="/portfolio">
+                    <Link legacyBehavior href="/portfolio">
                       <a>Bootstrap</a>
                     </Link>
                   </span>
 
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Redesigning the New York times app</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="custom-btn">Read More</a>
                   </Link>
                 </div>

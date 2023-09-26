@@ -15,7 +15,7 @@ const LatestNews = () => {
             <div className="col-lg-4 col-md-6">
               <div className="bc-post-item">
                 <div className="post-image">
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a className="d-block">
                       <img
                         src="/images/business-consulting/blog-img1.jpg"
@@ -35,13 +35,13 @@ const LatestNews = () => {
                     </li>
                   </ul>
                   <h3>
-                    <Link href="/blog-details">
+                    <Link legacyBehavior href="/blog-details">
                       <a>
                         The Best Way to Get Consulting From Business Clients
                       </a>
                     </Link>
                   </h3>
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a className="link-btn">
                       Read More <i className="fas fa-chevron-right"></i>
                     </a>
@@ -53,7 +53,7 @@ const LatestNews = () => {
             <div className="col-lg-4 col-md-6">
               <div className="bc-post-item">
                 <div className="post-image">
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a className="d-block">
                       <img
                         src="/images/business-consulting/blog-img2.jpg"
@@ -73,11 +73,11 @@ const LatestNews = () => {
                     </li>
                   </ul>
                   <h3>
-                    <Link href="/blog-details">
+                    <Link legacyBehavior href="/blog-details">
                       <a>Grow Your Counsulting Business and This Questions</a>
                     </Link>
                   </h3>
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a className="link-btn">
                       Read More <i className="fas fa-chevron-right"></i>
                     </a>
@@ -89,7 +89,7 @@ const LatestNews = () => {
             <div className="col-lg-4 col-md-6">
               <div className="bc-post-item">
                 <div className="post-image">
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a className="d-block">
                       <img
                         src="/images/business-consulting/blog-img3.jpg"
@@ -109,14 +109,14 @@ const LatestNews = () => {
                     </li>
                   </ul>
                   <h3>
-                    <Link href="/blog-details">
+                    <Link legacyBehavior href="/blog-details">
                       <a>
                         How to Have a Good Relation With Clients in Your
                         Business
                       </a>
                     </Link>
                   </h3>
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a className="link-btn">
                       Read More <i className="fas fa-chevron-right"></i>
                     </a>

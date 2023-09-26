@@ -28,7 +28,7 @@ const Services = () => {
                   />
                 </div>
                 <h3>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a>Easy To Transact</a>
                   </Link>
                 </h3>
@@ -53,7 +53,7 @@ const Services = () => {
                   />
                 </div>
                 <h3>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a>Secure Managed IT</a>
                   </Link>
                 </h3>
@@ -78,7 +78,7 @@ const Services = () => {
                   />
                 </div>
                 <h3>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a>Data Protection</a>
                   </Link>
                 </h3>
@@ -103,7 +103,7 @@ const Services = () => {
                   />
                 </div>
                 <h3>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a>Incident Responder</a>
                   </Link>
                 </h3>
@@ -128,7 +128,7 @@ const Services = () => {
                   />
                 </div>
                 <h3>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a>Data Encryption</a>
                   </Link>
                 </h3>
@@ -153,7 +153,7 @@ const Services = () => {
                   />
                 </div>
                 <h3>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a>Disaster Planning</a>
                   </Link>
                 </h3>
@@ -178,7 +178,7 @@ const Services = () => {
                   />
                 </div>
                 <h3>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a>Threat Hunter</a>
                   </Link>
                 </h3>
@@ -203,7 +203,7 @@ const Services = () => {
                   />
                 </div>
                 <h3>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a>Data Recovery</a>
                   </Link>
                 </h3>

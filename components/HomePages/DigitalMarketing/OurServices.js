@@ -19,7 +19,7 @@ const OurServices = () => {
                 data-aos-duration="1200"
                 data-aos-delay="100"
               >
-                <Link href="/service-details">
+                <Link legacyBehavior href="/service-details">
                   <a>
                     <img
                       src="/images/digital-marketing/services-img1.jpg"
@@ -29,7 +29,7 @@ const OurServices = () => {
                 </Link>
                 <div className="content">
                   <h3>
-                    <Link href="/service-details">
+                    <Link legacyBehavior href="/service-details">
                       <a>Digital Marketing</a>
                     </Link>
                   </h3>
@@ -48,7 +48,7 @@ const OurServices = () => {
                 data-aos-duration="1200"
                 data-aos-delay="200"
               >
-                <Link href="/service-details">
+                <Link legacyBehavior href="/service-details">
                   <a>
                     <img
                       src="/images/digital-marketing/services-img2.jpg"
@@ -58,7 +58,7 @@ const OurServices = () => {
                 </Link>
                 <div className="content">
                   <h3>
-                    <Link href="/service-details">
+                    <Link legacyBehavior href="/service-details">
                       <a>Strategy & Planning</a>
                     </Link>
                   </h3>
@@ -77,7 +77,7 @@ const OurServices = () => {
                 data-aos-duration="1200"
                 data-aos-delay="300"
               >
-                <Link href="/service-details">
+                <Link legacyBehavior href="/service-details">
                   <a>
                     <img
                       src="/images/digital-marketing/services-img3.jpg"
@@ -87,7 +87,7 @@ const OurServices = () => {
                 </Link>
                 <div className="content">
                   <h3>
-                    <Link href="/service-details">
+                    <Link legacyBehavior href="/service-details">
                       <a>Search Engine Optimization</a>
                     </Link>
                   </h3>

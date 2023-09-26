@@ -23,7 +23,7 @@ const MyAllProjects = () => {
                   alt="image"
                 />
                 <h3>Startup Business</h3>
-                <Link href="/portfolio-details/">
+                <Link legacyBehavior href="/portfolio-details/">
                   <a className="link-btn"></a>
                 </Link>
               </div>
@@ -111,7 +111,7 @@ const MyAllProjects = () => {
 
             <div className="col-lg-12 col-sm-12 col-md-12">
               <div className="pp-works-box-btn">
-                <Link href="#">
+                <Link legacyBehavior href="#">
                   <a className="default-btn-two">
                     View More <i className="fas fa-chevron-right"></i>
                   </a>

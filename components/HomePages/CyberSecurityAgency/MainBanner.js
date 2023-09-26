@@ -28,7 +28,7 @@ const MainBanner = () => {
 
                 <ul className="banner-btn">
                   <li>
-                    <Link href="/contact">
+                    <Link legacyBehavior href="/contact">
                       <a className="default-btn-two">
                         Contact Us{" "}
                         <i className="fa-solid fa-chevron-right"></i>

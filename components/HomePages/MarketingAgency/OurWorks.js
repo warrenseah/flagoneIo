@@ -26,18 +26,18 @@ const OurWorks = () => {
 
                 <div className="content">
                   <span>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>SEO Optimization</a>
                     </Link>
                   </span>
 
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Designing a better cinema experience</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="custom-btn">View Details</a>
                   </Link>
                 </div>
@@ -55,18 +55,18 @@ const OurWorks = () => {
 
                 <div className="content">
                   <span>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Digital Marketing</a>
                     </Link>
                   </span>
 
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Building design process within teams</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="custom-btn">View Details</a>
                   </Link>
                 </div>
@@ -84,18 +84,18 @@ const OurWorks = () => {
 
                 <div className="content">
                   <span>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Keyword Targeting</a>
                     </Link>
                   </span>
 
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>How intercom brings play into their design process</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="custom-btn">View Details</a>
                   </Link>
                 </div>
@@ -113,20 +113,20 @@ const OurWorks = () => {
 
                 <div className="content">
                   <span>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Email Marketing</a>
                     </Link>
                   </span>
 
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>
                         Stuck with to-do list, I created a new app for myself
                       </a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="custom-btn">View Details</a>
                   </Link>
                 </div>
@@ -144,18 +144,18 @@ const OurWorks = () => {
 
                 <div className="content">
                   <span>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Marketing & Reporting</a>
                     </Link>
                   </span>
 
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Examples of different types of sprints</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="custom-btn">View Details</a>
                   </Link>
                 </div>
@@ -173,18 +173,18 @@ const OurWorks = () => {
 
                 <div className="content">
                   <span>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Development</a>
                     </Link>
                   </span>
 
                   <h3>
-                    <Link href="/portfolio-details">
+                    <Link legacyBehavior href="/portfolio-details">
                       <a>Redesigning the New York times app</a>
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
+                  <Link legacyBehavior href="/portfolio-details">
                     <a className="custom-btn">View Details</a>
                   </Link>
                 </div>
@@ -193,7 +193,7 @@ const OurWorks = () => {
           </div>
 
           <div className="view-more-work">
-            <Link href="/portfolio">
+            <Link legacyBehavior href="/portfolio">
               <a className="btn btn-primary">
                 <i className="fa-solid fa-list-check"></i> View More
               </a>

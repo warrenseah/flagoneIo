@@ -153,14 +153,13 @@ const dappDev = () => {
                 </div>
 
                 <div className="single-info-link-box">
-                  <Link href="https://mint.kryptotrees.com" legacyBehavior>
+                  <Link legacyBehavior href="https://mint.kryptotrees.com">
                     <a className="default-btn m-1" target="_blank">
                       Minting dApp Preview
                     </a>
                   </Link>
-                  <Link
+                  <Link legacyBehavior
                     href="https://timely-marshmallow-62bc3f.netlify.app"
-                    legacyBehavior
                   >
                     <a className="default-btn m-1" target="_blank">
                       Staking dApp Preview

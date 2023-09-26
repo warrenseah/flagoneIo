@@ -40,7 +40,7 @@ const AboutUs = () => {
                       iriure dolor in hendrerit.
                     </li>
                   </ul>
-                  <Link href="/about">
+                  <Link legacyBehavior href="/about">
                     <a className="default-btn-two">
                       Learn More <i className="fas fa-chevron-right"></i>
                     </a>

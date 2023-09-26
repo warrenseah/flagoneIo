@@ -25,18 +25,18 @@ const OurWorks = () => {
               >
                 <div className="content">
                   <span>
-                    <Link href="/portfolio-defi-staking">
+                    <Link legacyBehavior href="/portfolio-defi-staking">
                       <a>DeFi Staking</a>
                     </Link>
                   </span>
                   <h3>
-                    <Link href="/portfolio-defi-staking">
+                    <Link legacyBehavior href="/portfolio-defi-staking">
                       <a>Bnb Charger</a>
                     </Link>
                   </h3>
                 </div>
 
-                <Link href="/portfolio-defi-staking">
+                <Link legacyBehavior href="/portfolio-defi-staking">
                   <a className="btn btn-primary">View Case Study</a>
                 </Link>
 
@@ -63,18 +63,18 @@ const OurWorks = () => {
               >
                 <div className="content">
                   <span>
-                    <Link href="/portfolio-nft-collections">
+                    <Link legacyBehavior href="/portfolio-nft-collections">
                       <a>NFT</a>
                     </Link>
                   </span>
                   <h3>
-                    <Link href="/portfolio-nft-collections">
+                    <Link legacyBehavior href="/portfolio-nft-collections">
                       <a>Generative Art NFT Collection</a>
                     </Link>
                   </h3>
                 </div>
 
-                <Link href="/portfolio-nft-collections">
+                <Link legacyBehavior href="/portfolio-nft-collections">
                   <a className="btn btn-primary">View Case Study</a>
                 </Link>
 
@@ -101,18 +101,18 @@ const OurWorks = () => {
               >
                 <div className="content">
                   <span>
-                    <Link href="/portfolio-dapp-dev">
+                    <Link legacyBehavior href="/portfolio-dapp-dev">
                       <a>dApp</a>
                     </Link>
                   </span>
                   <h3>
-                    <Link href="/portfolio-dapp-dev">
+                    <Link legacyBehavior href="/portfolio-dapp-dev">
                       <a>dApp Development</a>
                     </Link>
                   </h3>
                 </div>
 
-                <Link href="/portfolio-dapp-dev">
+                <Link legacyBehavior href="/portfolio-dapp-dev">
                   <a className="btn btn-primary">View Case Study</a>
                 </Link>
 
@@ -127,7 +127,7 @@ const OurWorks = () => {
           </div>
 
           {/* <div className="view-more-work">
-            <Link href="/portfolio">
+            <Link legacyBehavior href="/portfolio">
               <a className="btn btn-primary">View More Work</a>
             </Link>
           </div> */}

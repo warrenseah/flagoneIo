@@ -31,11 +31,11 @@ const MainBanner = () => {
                         magna aliqua.
                       </p>
 
-                      <Link href="/contact">
+                      <Link legacyBehavior href="/contact">
                         <a className="btn btn-primary">Get Started</a>
                       </Link>
 
-                      <Link href="#play-video">
+                      <Link legacyBehavior href="#play-video">
                         <a
                           className="btn btn-secondary" 
                           onClick={() => setToggler(!toggler)}

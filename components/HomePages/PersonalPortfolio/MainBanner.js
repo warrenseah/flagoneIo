@@ -17,7 +17,7 @@ const MainBanner = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Risus commodo viverra maecenas accumsan lacus vel facilisis.
                 </p>
-                <Link href="/contact">
+                <Link legacyBehavior href="/contact">
                   <a className="default-btn-two">Connect With Me</a>
                 </Link>
               </div>

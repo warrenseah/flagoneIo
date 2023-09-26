@@ -36,14 +36,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Process</a>
                           </Link>
                         </span>
                         <h3>Designing a better cinema experience</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -65,14 +65,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Process</a>
                           </Link>
                         </span>
                         <h3>Building design process within teams</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -94,7 +94,7 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Process</a>
                           </Link>
                         </span>
@@ -103,7 +103,7 @@ const CaseStudies = () => {
                         </h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -125,7 +125,7 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Process</a>
                           </Link>
                         </span>
@@ -134,7 +134,7 @@ const CaseStudies = () => {
                         </h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -156,14 +156,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Process</a>
                           </Link>
                         </span>
                         <h3>Examples of different types of sprints</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -185,14 +185,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Process</a>
                           </Link>
                         </span>
                         <h3>Redesigning the New York Times app</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -218,14 +218,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Experience</a>
                           </Link>
                         </span>
                         <h3>Designing a better cinema experience</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -247,14 +247,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Experience</a>
                           </Link>
                         </span>
                         <h3>Building design process within teams</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -276,7 +276,7 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Experience</a>
                           </Link>
                         </span>
@@ -285,7 +285,7 @@ const CaseStudies = () => {
                         </h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -307,7 +307,7 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Experience</a>
                           </Link>
                         </span>
@@ -316,7 +316,7 @@ const CaseStudies = () => {
                         </h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -338,14 +338,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Experience</a>
                           </Link>
                         </span>
                         <h3>Examples of different types of sprints</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -367,14 +367,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Experience</a>
                           </Link>
                         </span>
                         <h3>Redesigning the New York Times app</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -400,14 +400,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Interface</a>
                           </Link>
                         </span>
                         <h3>Designing a better cinema experience</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -429,14 +429,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Interface</a>
                           </Link>
                         </span>
                         <h3>Building design process within teams</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -458,7 +458,7 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Interface</a>
                           </Link>
                         </span>
@@ -467,7 +467,7 @@ const CaseStudies = () => {
                         </h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -489,7 +489,7 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Interface</a>
                           </Link>
                         </span>
@@ -498,7 +498,7 @@ const CaseStudies = () => {
                         </h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -520,14 +520,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Interface</a>
                           </Link>
                         </span>
                         <h3>Examples of different types of sprints</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -549,14 +549,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Interface</a>
                           </Link>
                         </span>
                         <h3>Redesigning the New York Times app</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -582,14 +582,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Brand</a>
                           </Link>
                         </span>
                         <h3>Designing a better cinema experience</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -611,14 +611,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Brand</a>
                           </Link>
                         </span>
                         <h3>Building design process within teams</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -640,7 +640,7 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Brand</a>
                           </Link>
                         </span>
@@ -649,7 +649,7 @@ const CaseStudies = () => {
                         </h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -671,7 +671,7 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Brand</a>
                           </Link>
                         </span>
@@ -680,7 +680,7 @@ const CaseStudies = () => {
                         </h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -702,14 +702,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Brand</a>
                           </Link>
                         </span>
                         <h3>Examples of different types of sprints</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -731,14 +731,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Brand</a>
                           </Link>
                         </span>
                         <h3>Redesigning the New York Times app</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -764,14 +764,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Product</a>
                           </Link>
                         </span>
                         <h3>Designing a better cinema experience</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -793,14 +793,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Product</a>
                           </Link>
                         </span>
                         <h3>Building design process within teams</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -822,7 +822,7 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Product</a>
                           </Link>
                         </span>
@@ -831,7 +831,7 @@ const CaseStudies = () => {
                         </h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -853,7 +853,7 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Product</a>
                           </Link>
                         </span>
@@ -862,7 +862,7 @@ const CaseStudies = () => {
                         </h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -884,14 +884,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Product</a>
                           </Link>
                         </span>
                         <h3>Examples of different types of sprints</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 
@@ -913,14 +913,14 @@ const CaseStudies = () => {
                     >
                       <div className="content">
                         <span>
-                          <Link href="/portfolio">
+                          <Link legacyBehavior href="/portfolio">
                             <a>Product</a>
                           </Link>
                         </span>
                         <h3>Redesigning the New York Times app</h3>
                       </div>
 
-                      <Link href="/portfolio-details">
+                      <Link legacyBehavior href="/portfolio-details">
                         <a className="btn btn-primary">View Case Study</a>
                       </Link>
 

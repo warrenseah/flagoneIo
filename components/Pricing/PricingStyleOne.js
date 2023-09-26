@@ -47,7 +47,7 @@ const PricingStyleOne = () => {
                 </div>
 
                 <div className="pricing-footer">
-                  <Link href="#">
+                  <Link legacyBehavior href="#">
                     <a className="btn btn-primary">Select Plan</a>
                   </Link>
                 </div>
@@ -86,7 +86,7 @@ const PricingStyleOne = () => {
                 </div>
 
                 <div className="pricing-footer">
-                  <Link href="#">
+                  <Link legacyBehavior href="#">
                     <a className="btn btn-primary">Select Plan</a>
                   </Link>
                 </div>
@@ -125,7 +125,7 @@ const PricingStyleOne = () => {
                 </div>
 
                 <div className="pricing-footer">
-                  <Link href="#">
+                  <Link legacyBehavior href="#">
                     <a className="btn btn-primary">Select Plan</a>
                   </Link>
                 </div>

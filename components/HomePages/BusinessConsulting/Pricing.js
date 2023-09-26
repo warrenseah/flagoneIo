@@ -27,7 +27,7 @@ const Pricing = () => {
                   <li className="unactive">100% Safe & Secure</li>
                   <li className="unactive">No Hidden Charges</li>
                 </ul>
-                <Link href="#">
+                <Link legacyBehavior href="#">
                   <a className="default-btn-two">
                     Choose Plan <i className="fas fa-chevron-right"></i>
                   </a>
@@ -53,7 +53,7 @@ const Pricing = () => {
                   <li>100% Safe & Secure</li>
                   <li className="unactive">No Hidden Charges</li>
                 </ul>
-                <Link href="#">
+                <Link legacyBehavior href="#">
                   <a className="default-btn-two">
                     Choose Plan <i className="fas fa-chevron-right"></i>
                   </a>
@@ -76,7 +76,7 @@ const Pricing = () => {
                   <li>100% Safe & Secure</li>
                   <li>No Hidden Charges</li>
                 </ul>
-                <Link href="#">
+                <Link legacyBehavior href="#">
                   <a className="default-btn-two">
                     Choose Plan <i className="fas fa-chevron-right"></i>
                   </a>

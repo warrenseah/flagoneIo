@@ -18,7 +18,7 @@ const CallToAction = () => {
 
             <div className="col-lg-4 col-md-12">
               <div className="call-to-action-btn">
-                <Link href="/contact">
+                <Link legacyBehavior href="/contact">
                   <a className="default-btn-two">
                     Contact Us <i className="fas fa-chevron-right"></i>
                   </a>

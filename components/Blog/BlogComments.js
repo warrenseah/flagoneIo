@@ -34,7 +34,7 @@ const BlogComments = () => {
               </div>
 
               <div className="reply">
-                <Link href="#">
+                <Link legacyBehavior href="#">
                   <a className="comment-reply-link">Reply</a>
                 </Link>
               </div>
@@ -68,7 +68,7 @@ const BlogComments = () => {
                   </div>
 
                   <div className="reply">
-                    <Link href="#">
+                    <Link legacyBehavior href="#">
                       <a className="comment-reply-link">Reply</a>
                     </Link>
                   </div>
@@ -103,7 +103,7 @@ const BlogComments = () => {
                       </div>
 
                       <div className="reply">
-                        <Link href="#">
+                        <Link legacyBehavior href="#">
                           <a className="comment-reply-link">Reply</a>
                         </Link>
                       </div>
@@ -139,7 +139,7 @@ const BlogComments = () => {
               </div>
 
               <div className="reply">
-                <Link href="#">
+                <Link legacyBehavior href="#">
                   <a className="comment-reply-link">Reply</a>
                 </Link>
               </div>
@@ -173,7 +173,7 @@ const BlogComments = () => {
                   </div>
 
                   <div className="reply">
-                    <Link href="#">
+                    <Link legacyBehavior href="#">
                       <a className="comment-reply-link">Reply</a>
                     </Link>
                   </div>

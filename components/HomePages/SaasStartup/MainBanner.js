@@ -16,7 +16,7 @@ const MainBanner = () => {
                   Risus commodo viverra maecenas accumsan lacus vel facilisis.
                 </p>
 
-                <Link href="/contact">
+                <Link legacyBehavior href="/contact">
                   <a className="default-btn-two">
                     Get Started <i className="fas fa-chevron-right"></i>
                   </a>

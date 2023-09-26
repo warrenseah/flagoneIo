@@ -44,11 +44,11 @@ const MainBanner = () => {
                   data-aos-duration="1200"
                   data-aos-delay="300"
                 >
-                  <Link href="/contact">
+                  <Link legacyBehavior href="/contact">
                     <a className="btn btn-primary">Contact Us</a>
                   </Link>
 
-                  <Link href="#play-video">
+                  <Link legacyBehavior href="#play-video">
                     <a
                       onClick={() => setToggler(!toggler)}
                       className="btn btn-secondary"

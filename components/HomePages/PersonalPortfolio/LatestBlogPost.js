@@ -24,7 +24,7 @@ const LatestBlogPost = () => {
                     </li>
                   </ul>
                   <h3>
-                    <Link href="/blog-details">
+                    <Link legacyBehavior href="/blog-details">
                       <a>Top 5 Tips To Create An Eye-Catching Website</a>
                     </Link>
                   </h3>
@@ -32,7 +32,7 @@ const LatestBlogPost = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt.
                   </p>
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a className="link-btn">
                       Read More <i className="fas fa-chevron-right"></i>
                     </a>
@@ -54,7 +54,7 @@ const LatestBlogPost = () => {
                     </li>
                   </ul>
                   <h3>
-                    <Link href="/blog-details">
+                    <Link legacyBehavior href="/blog-details">
                       <a>Improve Marketing Techniques For Lead Generation</a>
                     </Link>
                   </h3>
@@ -62,7 +62,7 @@ const LatestBlogPost = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt.
                   </p>
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a className="link-btn">
                       Read More <i className="fas fa-chevron-right"></i>
                     </a>
@@ -84,7 +84,7 @@ const LatestBlogPost = () => {
                     </li>
                   </ul>
                   <h3>
-                    <Link href="/blog-details">
+                    <Link legacyBehavior href="/blog-details">
                       <a>Esit And A Case For Successful Fast Delivery</a>
                     </Link>
                   </h3>
@@ -92,7 +92,7 @@ const LatestBlogPost = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt.
                   </p>
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a className="link-btn">
                       Read More <i className="fas fa-chevron-right"></i>
                     </a>

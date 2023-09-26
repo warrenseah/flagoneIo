@@ -21,7 +21,7 @@ const Services = () => {
                 <h3>Sales & Marketing</h3>
                 <div className="hover-content">
                   <h3>
-                    <Link href="/service-details">
+                    <Link legacyBehavior href="/service-details">
                       <a>Sales & Marketing</a>
                     </Link>
                   </h3>
@@ -29,7 +29,7 @@ const Services = () => {
                     Lorem ipsum dolor sit amet, cons e ctetur adipiscing elit,
                     sed do eiu smod.
                   </p>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a className="link-btn">
                       Read More <i className="fas fa-chevron-right"></i>
                     </a>
@@ -47,7 +47,7 @@ const Services = () => {
                 <h3>Cost Transformation</h3>
                 <div className="hover-content">
                   <h3>
-                    <Link href="/service-details">
+                    <Link legacyBehavior href="/service-details">
                       <a>Cost Transformation</a>
                     </Link>
                   </h3>
@@ -55,7 +55,7 @@ const Services = () => {
                     Lorem ipsum dolor sit amet, cons e ctetur adipiscing elit,
                     sed do eiu smod.
                   </p>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a className="link-btn">
                       Read More <i className="fas fa-chevron-right"></i>
                     </a>
@@ -73,7 +73,7 @@ const Services = () => {
                 <h3>Sustainability</h3>
                 <div className="hover-content">
                   <h3>
-                    <Link href="/service-details">
+                    <Link legacyBehavior href="/service-details">
                       <a>Sustainability</a>
                     </Link>
                   </h3>
@@ -81,7 +81,7 @@ const Services = () => {
                     Lorem ipsum dolor sit amet, cons e ctetur adipiscing elit,
                     sed do eiu smod.
                   </p>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a className="link-btn">
                       Read More <i className="fas fa-chevron-right"></i>
                     </a>
@@ -99,7 +99,7 @@ const Services = () => {
                 <h3>Strategy</h3>
                 <div className="hover-content">
                   <h3>
-                    <Link href="/service-details">
+                    <Link legacyBehavior href="/service-details">
                       <a>Strategy</a>
                     </Link>
                   </h3>
@@ -107,7 +107,7 @@ const Services = () => {
                     Lorem ipsum dolor sit amet, cons e ctetur adipiscing elit,
                     sed do eiu smod.
                   </p>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a className="link-btn">
                       Read More <i className="fas fa-chevron-right"></i>
                     </a>
@@ -125,7 +125,7 @@ const Services = () => {
                 <h3>Customer Experience</h3>
                 <div className="hover-content">
                   <h3>
-                    <Link href="/service-details">
+                    <Link legacyBehavior href="/service-details">
                       <a>Customer Experience</a>
                     </Link>
                   </h3>
@@ -133,7 +133,7 @@ const Services = () => {
                     Lorem ipsum dolor sit amet, cons e ctetur adipiscing elit,
                     sed do eiu smod.
                   </p>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a className="link-btn">
                       Read More <i className="fas fa-chevron-right"></i>
                     </a>
@@ -151,7 +151,7 @@ const Services = () => {
                 <h3>Profit Planning</h3>
                 <div className="hover-content">
                   <h3>
-                    <Link href="/service-details">
+                    <Link legacyBehavior href="/service-details">
                       <a>Profit Planning</a>
                     </Link>
                   </h3>
@@ -159,7 +159,7 @@ const Services = () => {
                     Lorem ipsum dolor sit amet, cons e ctetur adipiscing elit,
                     sed do eiu smod.
                   </p>
-                  <Link href="/service-details">
+                  <Link legacyBehavior href="/service-details">
                     <a className="link-btn">
                       Read More <i className="fas fa-chevron-right"></i>
                     </a>

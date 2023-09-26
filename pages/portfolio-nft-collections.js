@@ -189,36 +189,33 @@ const NftCollections = () => {
                 </div>
 
                 <div className="single-info-link-box">
-                  <Link href="https://kryptotrees.com" legacyBehavior>
+                  <Link legacyBehavior href="https://kryptotrees.com">
                     <a className="default-btn m-1" target="_blank">
                       Website Preview
                     </a>
                   </Link>
 
-                  <Link href="https://mint.kryptotrees.com" legacyBehavior>
+                  <Link legacyBehavior href="https://mint.kryptotrees.com">
                     <a className="default-btn m-1" target="_blank">
                       dApp Preview
                     </a>
                   </Link>
-                  <Link
+                  <Link legacyBehavior
                     href="https://polygonscan.com/address/0x660dec2e3a19fb5534afe02b5c115dc4905bc9f9"
-                    legacyBehavior
                   >
                     <a className="default-btn m-1" target="_blank">
                       Contract Address (Polygon)
                     </a>
                   </Link>
-                  <Link
+                  <Link legacyBehavior
                     href="https://github.com/warrenseah/kryptoTreesNft/tree/main/contracts"
-                    legacyBehavior
                   >
                     <a className="default-btn m-1" target="_blank">
                       Smart Contract Github
                     </a>
                   </Link>
-                  <Link
+                  <Link legacyBehavior
                     href="https://github.com/coollif3/nftArtEngine"
-                    legacyBehavior
                   >
                     <a className="default-btn m-1" target="_blank">
                       Generative Art Engine Github

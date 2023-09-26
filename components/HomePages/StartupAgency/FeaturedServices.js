@@ -33,7 +33,7 @@ const FeaturedServices = () => {
                       <i className="pe-7s-filter"></i>
                     </div>
                     <h3>
-                      <Link href="/service-details">
+                      <Link legacyBehavior href="/service-details">
                         <a>Information Architect</a>
                       </Link>
                     </h3>
@@ -42,7 +42,7 @@ const FeaturedServices = () => {
                       viverra maecenas accumsan lacus vel facilisis.
                     </p>
 
-                    <Link href="/service-details">
+                    <Link legacyBehavior href="/service-details">
                       <a className="read-more-btn">Read More</a>
                     </Link>
 
@@ -58,7 +58,7 @@ const FeaturedServices = () => {
                       <i className="pe-7s-display1"></i>
                     </div>
                     <h3>
-                      <Link href="/service-details">
+                      <Link legacyBehavior href="/service-details">
                         <a>Business Analyst</a>
                       </Link>
                     </h3>
@@ -67,7 +67,7 @@ const FeaturedServices = () => {
                       viverra maecenas accumsan lacus vel facilisis.
                     </p>
 
-                    <Link href="/service-details">
+                    <Link legacyBehavior href="/service-details">
                       <a className="read-more-btn">Read More</a>
                     </Link>
 
@@ -83,7 +83,7 @@ const FeaturedServices = () => {
                       <i className="pe-7s-plugin"></i>
                     </div>
                     <h3>
-                      <Link href="/service-details">
+                      <Link legacyBehavior href="/service-details">
                         <a>Interaction Designer</a>
                       </Link>
                     </h3>
@@ -92,7 +92,7 @@ const FeaturedServices = () => {
                       viverra maecenas accumsan lacus vel facilisis.
                     </p>
 
-                    <Link href="/service-details">
+                    <Link legacyBehavior href="/service-details">
                       <a className="read-more-btn">Read More</a>
                     </Link>
 
@@ -108,7 +108,7 @@ const FeaturedServices = () => {
                       <i className="pe-7s-arc"></i>
                     </div>
                     <h3>
-                      <Link href="/service-details">
+                      <Link legacyBehavior href="/service-details">
                         <a>Information Architect</a>
                       </Link>
                     </h3>
@@ -117,7 +117,7 @@ const FeaturedServices = () => {
                       viverra maecenas accumsan lacus vel facilisis.
                     </p>
 
-                    <Link href="/service-details">
+                    <Link legacyBehavior href="/service-details">
                       <a className="read-more-btn">Read More</a>
                     </Link>
 
@@ -133,7 +133,7 @@ const FeaturedServices = () => {
                       <i className="pe-7s-diamond"></i>
                     </div>
                     <h3>
-                      <Link href="/service-details">
+                      <Link legacyBehavior href="/service-details">
                         <a>Visual Designer</a>
                       </Link>
                     </h3>
@@ -142,7 +142,7 @@ const FeaturedServices = () => {
                       viverra maecenas accumsan lacus vel facilisis.
                     </p>
 
-                    <Link href="/service-details">
+                    <Link legacyBehavior href="/service-details">
                       <a className="read-more-btn">Read More</a>
                     </Link>
 
@@ -158,7 +158,7 @@ const FeaturedServices = () => {
                       <i className="pe-7s-helm"></i>
                     </div>
                     <h3>
-                      <Link href="/service-details">
+                      <Link legacyBehavior href="/service-details">
                         <a>Content Strategist</a>
                       </Link>
                     </h3>
@@ -167,7 +167,7 @@ const FeaturedServices = () => {
                       viverra maecenas accumsan lacus vel facilisis.
                     </p>
 
-                    <Link href="/service-details">
+                    <Link legacyBehavior href="/service-details">
                       <a className="read-more-btn">Read More</a>
                     </Link>
 
@@ -183,7 +183,7 @@ const FeaturedServices = () => {
                       <i className="pe-7s-magnet"></i>
                     </div>
                     <h3>
-                      <Link href="/service-details">
+                      <Link legacyBehavior href="/service-details">
                         <a>UX Strategist</a>
                       </Link>
                     </h3>
@@ -192,7 +192,7 @@ const FeaturedServices = () => {
                       viverra maecenas accumsan lacus vel facilisis.
                     </p>
 
-                    <Link href="/service-details">
+                    <Link legacyBehavior href="/service-details">
                       <a className="read-more-btn">Read More</a>
                     </Link>
 

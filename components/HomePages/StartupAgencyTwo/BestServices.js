@@ -63,7 +63,7 @@ const BestServices = () => {
                           viverra maecenas accumsan lacus vel facilisis.
                         </p>
 
-                        <Link href="/service-details">
+                        <Link legacyBehavior href="/service-details">
                           <a className="read-more-btn">Read More</a>
                         </Link>
                       </div>
@@ -89,7 +89,7 @@ const BestServices = () => {
                           viverra maecenas accumsan lacus vel facilisis.
                         </p>
 
-                        <Link href="/service-details">
+                        <Link legacyBehavior href="/service-details">
                           <a className="read-more-btn">Read More</a>
                         </Link>
                       </div>
@@ -115,7 +115,7 @@ const BestServices = () => {
                           viverra maecenas accumsan lacus vel facilisis.
                         </p>
 
-                        <Link href="/service-details">
+                        <Link legacyBehavior href="/service-details">
                           <a className="read-more-btn">Read More</a>
                         </Link>
                       </div>
@@ -141,7 +141,7 @@ const BestServices = () => {
                           viverra maecenas accumsan lacus vel facilisis.
                         </p>
 
-                        <Link href="/service-details">
+                        <Link legacyBehavior href="/service-details">
                           <a className="read-more-btn">Read More</a>
                         </Link>
                       </div>

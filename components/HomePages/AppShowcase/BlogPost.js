@@ -15,13 +15,13 @@ const BlogPost = () => {
             <div className="col-lg-4 col-md-6">
               <div className="app-blog-post">
                 <div className="image">
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a className="d-block">
                       <img src="/images/blog/blog1.jpg" alt="blog" />
                     </a>
                   </Link>
 
-                  <Link href="/blog-grid">
+                  <Link legacyBehavior href="/blog-grid">
                     <a className="tag">Branding</a>
                   </Link>
                 </div>
@@ -33,13 +33,13 @@ const BlogPost = () => {
                     </li>
                     <li>
                       <i className="fa-solid fa-comment"></i>
-                      <Link href="/blog-details">
+                      <Link legacyBehavior href="/blog-details">
                         <a>(0) Comment</a>
                       </Link>
                     </li>
                   </ul>
                   <h3>
-                    <Link href="/blog-details">
+                    <Link legacyBehavior href="/blog-details">
                       <a>
                         Branding involves developing strategy to create a point
                         of differentiation
@@ -53,12 +53,12 @@ const BlogPost = () => {
             <div className="col-lg-4 col-md-6">
               <div className="app-blog-post">
                 <div className="image">
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a className="d-block">
                       <img src="/images/blog/blog2.jpg" alt="blog" />
                     </a>
                   </Link>
-                  <Link href="/blog-grid">
+                  <Link legacyBehavior href="/blog-grid">
                     <a className="tag">Agency</a>
                   </Link>
                 </div>
@@ -70,13 +70,13 @@ const BlogPost = () => {
                     </li>
                     <li>
                       <i className="fa-solid fa-comment"></i>
-                      <Link href="/blog-details">
+                      <Link legacyBehavior href="/blog-details">
                         <a>(4) Comment</a>
                       </Link>
                     </li>
                   </ul>
                   <h3>
-                    <Link href="/blog-details">
+                    <Link legacyBehavior href="/blog-details">
                       <a>
                         Design is a plan or specification for the construction
                         of an object
@@ -90,12 +90,12 @@ const BlogPost = () => {
             <div className="col-lg-4 col-md-6">
               <div className="app-blog-post">
                 <div className="image">
-                  <Link href="/blog-details">
+                  <Link legacyBehavior href="/blog-details">
                     <a className="d-block">
                       <img src="/images/blog/blog3.jpg" alt="blog" />
                     </a>
                   </Link>
-                  <Link href="/blog-grid">
+                  <Link legacyBehavior href="/blog-grid">
                     <a className="tag">Marketing</a>
                   </Link>
                 </div>
@@ -107,13 +107,13 @@ const BlogPost = () => {
                     </li>
                     <li>
                       <i className="fa-solid fa-comment"></i>
-                      <Link href="/blog-details">
+                      <Link legacyBehavior href="/blog-details">
                         <a>(2) Comment</a>
                       </Link>
                     </li>
                   </ul>
                   <h3>
-                    <Link href="/blog-details">
+                    <Link legacyBehavior href="/blog-details">
                       <a>
                         Branding involves developing strategy to create a point
                       </a>
