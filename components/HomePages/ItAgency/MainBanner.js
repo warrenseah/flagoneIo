@@ -41,20 +41,6 @@ const MainBanner = () => {
                       magna aliqua.
                     </p>
 
-<<<<<<< HEAD
-                    <Link legacyBehavior href="/contact">
-                      <a className="btn btn-primary">Get Started</a>
-                    </Link>
-
-                    <Link legacyBehavior href="#play-video">
-                      <a
-                        onClick={() => setToggler(!toggler)}
-                        className="btn btn-secondary"
-                      >
-                        <i className="fa-solid fa-play me-1"></i> How it works
-                      </a>
-                    </Link>
-=======
                     <Link 
                       href="/contact" 
                       className="btn btn-primary"
@@ -74,7 +60,6 @@ const MainBanner = () => {
                     >
                       <i className="fa-solid fa-play me-1"></i> How it works
                     </button>
->>>>>>> eef434e2f136d3f9419f8b37f167d5b3893fd0a1
                   </div>
                 </div>
 

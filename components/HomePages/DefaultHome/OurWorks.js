@@ -74,7 +74,7 @@ const OurWorks = () => {
                   </h3>
                 </div>
 
-                <Link legacyBehavior href="/portfolio-nft-collections" className="btn btn-primary">
+                <Link href="/portfolio-nft-collections" className="btn btn-primary">
                   View Case Study
                 </Link>
 
@@ -127,7 +127,7 @@ const OurWorks = () => {
           </div>
 
           {/* <div className="view-more-work">
-            <Link legacyBehavior href="/portfolio">
+            <Link href="/portfolio">
               <a className="btn btn-primary">View More Work</a>
             </Link>
           </div> */}

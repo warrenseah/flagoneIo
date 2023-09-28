@@ -189,37 +189,30 @@ const NftCollections = () => {
                 </div>
 
                 <div className="single-info-link-box">
-                  <Link legacyBehavior href="https://kryptotrees.com">
-                    <a className="default-btn m-1" target="_blank">
-                      Website Preview
-                    </a>
+                  <Link href="https://kryptotrees.com" className="default-btn m-1" target="_blank">
+                    Website Preview
                   </Link>
 
-                  <Link legacyBehavior href="https://mint.kryptotrees.com">
-                    <a className="default-btn m-1" target="_blank">
-                      dApp Preview
-                    </a>
+                  <Link href="https://mint.kryptotrees.com" className="default-btn m-1" target="_blank">
+                    dApp Preview
                   </Link>
-                  <Link legacyBehavior
+                  <Link
                     href="https://polygonscan.com/address/0x660dec2e3a19fb5534afe02b5c115dc4905bc9f9"
+                    className="default-btn m-1" target="_blank"
                   >
-                    <a className="default-btn m-1" target="_blank">
-                      Contract Address (Polygon)
-                    </a>
+                    Contract Address (Polygon)
                   </Link>
-                  <Link legacyBehavior
+                  <Link
                     href="https://github.com/warrenseah/kryptoTreesNft/tree/main/contracts"
+                    className="default-btn m-1" target="_blank"
                   >
-                    <a className="default-btn m-1" target="_blank">
-                      Smart Contract Github
-                    </a>
+                    Smart Contract Github
                   </Link>
-                  <Link legacyBehavior
+                  <Link
                     href="https://github.com/coollif3/nftArtEngine"
+                    className="default-btn m-1" target="_blank"
                   >
-                    <a className="default-btn m-1" target="_blank">
-                      Generative Art Engine Github
-                    </a>
+                    Generative Art Engine Github
                   </Link>
                 </div>
               </div>

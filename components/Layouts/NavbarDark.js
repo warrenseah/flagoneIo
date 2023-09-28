@@ -29,7 +29,7 @@ const NavbarTwo = () => {
       <div id="navbar" className="navbar-area navbar-style-2">
         <nav className="navbar navbar-expand-md navbar-light">
           <div className="container-fluid">
-            <Link legacyBehavior href="/" className="navbar-brand">
+            <Link href="/" className="navbar-brand">
                 <img
                   src="/images/f1logo.png"
                   className="black-logo"
@@ -61,31 +61,31 @@ const NavbarTwo = () => {
             <div className={classOne} id="navbarSupportedContent">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link legacyBehavior href="/#home" className="nav-link">
+                  <Link href="/#home" className="nav-link">
                     Home
                   </Link>
                 </li>
 
                 <li className="nav-item">
-                  <Link legacyBehavior href="/#aboutUs" activeClassName="active" className="nav-link">
+                  <Link href="/#aboutUs" activeClassName="active" className="nav-link">
                     About
                   </Link>
                 </li>
 
                 <li className="nav-item">
-                  <Link legacyBehavior href="/#ourWorks" className="nav-link">
+                  <Link href="/#ourWorks" className="nav-link">
                     Portfolio
                   </Link>
                 </li>
 
                 <li className="nav-item">
-                  <Link legacyBehavior href="/services" className="nav-link">
+                  <Link href="/services" className="nav-link">
                     Services
                   </Link>
                 </li>
 
                 <li className="nav-item">
-                  <Link legacyBehavior href="/contact" activeClassName="active" className="nav-link">
+                  <Link href="/contact" activeClassName="active" className="nav-link">
                     Contact
                   </Link>
                 </li>
