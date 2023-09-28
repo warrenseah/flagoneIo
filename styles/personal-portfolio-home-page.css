@@ -79,8 +79,7 @@
   right: 40px;
   top: 100px;
   z-index: -1;
-  -webkit-animation: moveleftbounce 5s linear infinite;
-          animation: moveleftbounce 5s linear infinite;
+  animation: moveleftbounce 5s linear infinite;
 }
 .pp-shape1 img {
   max-width: 350px;
@@ -431,7 +430,7 @@
 .pp-post-item .post-content .meta li i {
   position: absolute;
   left: 0;
-  top: 4px;
+  top: 2px;
   color: #111;
 }
 .pp-post-item .post-content .meta li a {

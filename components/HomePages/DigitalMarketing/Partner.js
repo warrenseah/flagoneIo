@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 
 const Partner = () => {
   return (
@@ -19,6 +19,11 @@ const Partner = () => {
           <Swiper
             navigation={true}
             spaceBetween={30}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: true,
+              pauseOnMouseEnter: true,
+            }}
             breakpoints={{
               0: {
                 slidesPerView: 2,
@@ -36,7 +41,7 @@ const Partner = () => {
                 slidesPerView: 6,
               },
             }}
-            modules={[Navigation]}
+            modules={[Autoplay, Navigation]}
             className="partner-slides"
           >
             <SwiperSlide>

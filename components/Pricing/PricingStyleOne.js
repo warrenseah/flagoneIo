@@ -1,6 +1,111 @@
 import React from "react";
 import Link from "next/link";
 
+const pricingData = [
+  {
+    title: "Basic Plan",
+    price: "59",
+    duration: "/Monthly",
+    aosDelay: "100",
+    activeClass: "",
+
+    priceList: [
+      {
+        title: "5 GB Bandwidth",
+      },
+      {
+        title: "Highest Speed",
+      },
+      {
+        title: "1 GB Storage",
+      },
+      {
+        title: "Unlimited Website",
+      },
+      {
+        title: "Unlimited Users",
+      },
+      {
+        title: "24x7 Great Support",
+      },
+      {
+        title: "Data Security and Backups",
+      },
+      {
+        title: "Monthly Reports and Analytics",
+      },
+    ],
+  },
+  {
+    title: "Advanced Plan",
+    price: "79",
+    duration: "/Monthly",
+    aosDelay: "200",
+    activeClass: "active-plan",
+
+    priceList: [
+      {
+        title: "10 GB Bandwidth",
+      },
+      {
+        title: "Highest Speed",
+      },
+      {
+        title: "5 GB Storage",
+      },
+      {
+        title: "Unlimited Website",
+      },
+      {
+        title: "Unlimited Users",
+      },
+      {
+        title: "24x7 Great Support",
+      },
+      {
+        title: "Data Security and Backups",
+      },
+      {
+        title: "Monthly Reports and Analytics",
+      },
+    ],
+  },
+  {
+    title: "Expert Plan",
+    price: "99",
+    duration: "/Monthly",
+    aosDelay: "300",
+    activeClass: "",
+
+    priceList: [
+      {
+        title: "15 GB Bandwidth",
+      },
+      {
+        title: "Highest Speed",
+      },
+      {
+        title: "10 GB Storage",
+      },
+      {
+        title: "Unlimited Website",
+      },
+      {
+        title: "Unlimited Users",
+      },
+      {
+        title: "24x7 Great Support",
+      },
+      {
+        title: "Data Security and Backups",
+      },
+      {
+        title: "Monthly Reports and Analytics",
+      },
+    ],
+  },
+];
+
 const PricingStyleOne = () => {
   return (
     <>
@@ -15,122 +120,43 @@ const PricingStyleOne = () => {
           </div>
 
           <div className="row justify-content-center">
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="pricing-table"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="100"
-              >
-                <div className="pricing-header">
-                  <h3>Basic Plan</h3>
-                </div>
+            {pricingData &&
+              pricingData.slice(0, 3).map((value, i) => (
+                <div className="col-lg-4 col-md-6" key={i}>
+                  <div
+                    className={`pricing-table ${value.activeClass}`}
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-delay={value.aosDelay}
+                  >
+                    <div className="pricing-header">
+                      <h3>{value.title}</h3>
+                    </div>
 
-                <div className="price">
-                  <span>
-                    <sup>$</sup>59
-                    <span>/Monthly</span>
-                  </span>
-                </div>
+                    <div className="price">
+                      <span>
+                        <sup>$</sup>
+                        {value.price}
+                        <span>{value.duration}</span>
+                      </span>
+                    </div>
 
-                <div className="pricing-features">
-                  <ul>
-                    <li className="active">5 GB Bandwidth</li>
-                    <li className="active">Highest Speed</li>
-                    <li className="active">1 GB Storage</li>
-                    <li className="active">Unlimited Website</li>
-                    <li className="active">Unlimited Users</li>
-                    <li className="active">24x7 Great Support</li>
-                    <li>Data Security and Backups</li>
-                    <li>Monthly Reports and Analytics</li>
-                  </ul>
-                </div>
+                    <div className="pricing-features">
+                      <ul>
+                        {value.priceList.map((value, i) => (
+                          <li key={i}>{value.title}</li>
+                        ))}
+                      </ul>
+                    </div>
 
-                <div className="pricing-footer">
-                  <Link legacyBehavior href="#">
-                    <a className="btn btn-primary">Select Plan</a>
-                  </Link>
+                    <div className="pricing-footer">
+                      <Link href="#" className="btn btn-primary">
+                        Select Plan
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="pricing-table active-plan"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="200"
-              >
-                <div className="pricing-header">
-                  <h3>Advanced Plan</h3>
-                </div>
-
-                <div className="price">
-                  <span>
-                    <sup>$</sup>79
-                    <span>/Monthly</span>
-                  </span>
-                </div>
-
-                <div className="pricing-features">
-                  <ul>
-                    <li className="active">10 GB Bandwidth</li>
-                    <li className="active">Highest Speed</li>
-                    <li className="active">3 GB Storage</li>
-                    <li className="active">Unlimited Website</li>
-                    <li className="active">Unlimited Users</li>
-                    <li className="active">24x7 Great Support</li>
-                    <li className="active">Data Security and Backups</li>
-                    <li>Monthly Reports and Analytics</li>
-                  </ul>
-                </div>
-
-                <div className="pricing-footer">
-                  <Link legacyBehavior href="#">
-                    <a className="btn btn-primary">Select Plan</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="pricing-table"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="300"
-              >
-                <div className="pricing-header">
-                  <h3>Expert Plan</h3>
-                </div>
-
-                <div className="price">
-                  <span>
-                    <sup>$</sup>100
-                    <span>/Monthly</span>
-                  </span>
-                </div>
-
-                <div className="pricing-features">
-                  <ul>
-                    <li className="active">15 GB Bandwidth</li>
-                    <li className="active">Highest Speed</li>
-                    <li className="active">5 GB Storage</li>
-                    <li className="active">Unlimited Website</li>
-                    <li className="active">Unlimited Users</li>
-                    <li className="active">24x7 Great Support</li>
-                    <li className="active">Data Security and Backups</li>
-                    <li className="active">Monthly Reports and Analytics</li>
-                  </ul>
-                </div>
-
-                <div className="pricing-footer">
-                  <Link legacyBehavior href="#">
-                    <a className="btn btn-primary">Select Plan</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
+              ))}
           </div>
         </div>
       </div>

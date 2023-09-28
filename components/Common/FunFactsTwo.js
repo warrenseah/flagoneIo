@@ -1,6 +1,33 @@
 import React from "react";
 import Link from "next/link";
 
+const funFactsData = [
+  {
+    iconName: "fa-solid fa-circle-check",
+    number: "980+",
+    shortText: "Completed Projects",
+    aosDelay: "100",
+  },
+  {
+    iconName: "fa-solid fa-heart",
+    number: "950+",
+    shortText: "Happy Clients",
+    aosDelay: "200",
+  },
+  {
+    iconName: "fa-solid fa-list-check",
+    number: "780+",
+    shortText:"Ongoing Projects",
+    aosDelay: "300",
+  },
+  {
+    iconName: "fa-solid fa-trophy",
+    number: "70+",
+    shortText:"Winning Awards",
+    aosDelay: "400",
+  },
+];
+
 const FunFactsTwo = () => {
   return (
     <>
@@ -15,65 +42,36 @@ const FunFactsTwo = () => {
           </div>
 
           <div className="row justify-content-center">
-            <div
-              className="col-lg-3 col-sm-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="100"
-            >
-              <div className="funfact">
-                <i className="fa-solid fa-circle-check"></i>
-                <h3>980+</h3>
-                <p>Completed Projects</p>
-              </div>
-            </div>
-
-            <div
-              className="col-lg-3 col-sm-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="200"
-            >
-              <div className="funfact">
-                <i className="fa-solid fa-heart"></i>
-                <h3>950+</h3>
-                <p>Happy Clients</p>
-              </div>
-            </div>
-
-            <div
-              className="col-lg-3 col-sm-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="300"
-            >
-              <div className="funfact">
-                <i className="fa-solid fa-list-check"></i>
-                <h3>780+</h3>
-                <p>Ongoing Projects</p>
-              </div>
-            </div>
-
-            <div
-              className="col-lg-3 col-sm-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="400"
-            >
-              <div className="funfact">
-                <i className="fa-solid fa-trophy"></i>
-                <h3>70+</h3>
-                <p>Winning Awards</p>
-              </div>
-            </div>
+            {funFactsData &&
+              funFactsData.slice(0, 4).map((value, i) => (
+                <div className="col-lg-3 col-sm-6" key={i}>
+                  <div
+                    className="funfact"
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-delay={value.aosDelay}
+                  >
+                    <i className={value.iconName}></i>
+                    <h3>
+                      {value.number}
+                    </h3>
+                    <p>{value.shortText}</p>
+                  </div>
+                </div>
+              ))}
           </div>
 
-          <div className="contact-cta-box">
+          <div 
+            className="contact-cta-box"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            data-aos-delay="500"
+          >
             <h3>Have any questions about us?</h3>
             <p>Don't hesitate to contact us</p>
 
-            <Link legacyBehavior href="/contact">
-              <a className="btn btn-primary">Contact Us</a>
+            <Link href="/contact" className="btn btn-primary">
+              Contact Us
             </Link>
           </div>
 

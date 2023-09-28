@@ -1,7 +1,46 @@
 import React from "react";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
+
+const latestNewsSliderData = [
+  {
+    image: "/images/blog/blog1.jpg",
+    title: "The Most Popular New top Business Apps",
+    date: "Feb 15, 2023",
+    category: "Technology",
+    shortText:
+      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
+    readMoreLink: "/blog-details",
+  },
+  {
+    image: "/images/blog/blog2.jpg",
+    title: "The Best Marketing top use Management Tools",
+    date: "Feb 16, 2023",
+    category: "Agency",
+    shortText:
+      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
+    readMoreLink: "/blog-details",
+  },
+  {
+    image: "/images/blog/blog3.jpg",
+    title: "3 WooCommerce Plugins to Boost Sales",
+    date: "Feb 17, 2023",
+    category: "IT Agency",
+    shortText:
+      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
+    readMoreLink: "/blog-details",
+  },
+  {
+    image: "/images/blog/blog4.jpg",
+    title: "Top 21 Must-Read Blogs For Creative Agencies",
+    date: "Feb 18, 2023",
+    category: "Development",
+    shortText:
+      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
+    readMoreLink: "/blog-details",
+  },
+];
 
 const LatestNewsSlider = () => {
   return (
@@ -9,7 +48,7 @@ const LatestNewsSlider = () => {
       <div className="blog-area ptb-100">
         <div className="container">
           <div className="section-title">
-            <h2>Latest Newss</h2>
+            <h2>Latest News</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -19,6 +58,11 @@ const LatestNewsSlider = () => {
           <Swiper
             pagination={{
               clickable: true,
+            }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: true,
+              pauseOnMouseEnter: true,
             }}
             spaceBetween={30}
             breakpoints={{
@@ -32,167 +76,42 @@ const LatestNewsSlider = () => {
                 slidesPerView: 3,
               },
             }}
-            modules={[Pagination]}
+            modules={[Autoplay, Pagination]}
             className="blog-slides"
+            data-aos="fade-in"
+            data-aos-duration="1200"
+            data-aos-delay="200"
           >
-            <SwiperSlide>
-              <div className="single-blog-item">
-                <div className="blog-image">
-                  <Link legacyBehavior href="/blog-details">
-                    <a>
-                      <img src="/images/blog/blog1.jpg" alt="image" />
-                    </a>
-                  </Link>
+            {latestNewsSliderData &&
+              latestNewsSliderData.slice(0, 5).map((value, i) => (
+                <SwiperSlide key={i}>
+                  <div className="single-blog-item">
+                    <div className="blog-image">
+                      <Link href={value.readMoreLink}>
+                        <img src={value.image} alt="image" />
+                      </Link>
 
-                  <div className="post-tag">
-                    <Link legacyBehavior href="/blog">
-                      <a>Technology</a>
-                    </Link>
+                      <div className="post-tag">
+                        <Link href={value.readMoreLink}>{value.category}</Link>
+                      </div>
+                    </div>
+
+                    <div className="blog-post-content">
+                      <span className="date">{value.date}</span>
+                      <h3>
+                        <Link href={value.readMoreLink}>{value.title}</Link>
+                      </h3>
+
+                      <p>{value.shortText}</p>
+
+                      <Link href={value.readMoreLink} className="read-more-btn">
+                        Read More
+                        <i className="fa-solid fa-angles-right"></i>
+                      </Link>
+                    </div>
                   </div>
-                </div>
-
-                <div className="blog-post-content">
-                  <span className="date">Feb 15, 2022</span>
-                  <h3>
-                    <Link legacyBehavior href="/blog-details">
-                      <a>The Most Popular New top Business Apps</a>
-                    </Link>
-                  </h3>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna.
-                  </p>
-
-                  <Link legacyBehavior href="/blog-details">
-                    <a className="read-more-btn">
-                      Read More
-                      <i className="fa-solid fa-angles-right"></i>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="single-blog-item">
-                <div className="blog-image">
-                  <Link legacyBehavior href="/blog-details">
-                    <a>
-                      <img src="/images/blog/blog2.jpg" alt="image" />
-                    </a>
-                  </Link>
-
-                  <div className="post-tag">
-                    <Link legacyBehavior href="/blog">
-                      <a>Agency</a>
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="blog-post-content">
-                  <span className="date">Feb 16, 2022</span>
-
-                  <h3>
-                    <Link legacyBehavior href="/blog-details">
-                      <a>The Best Marketing top use Management Tools</a>
-                    </Link>
-                  </h3>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna.
-                  </p>
-
-                  <Link legacyBehavior href="/blog-details">
-                    <a className="read-more-btn">
-                      Read More
-                      <i className="fa-solid fa-angles-right"></i>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="single-blog-item">
-                <div className="blog-image">
-                  <Link legacyBehavior href="/blog-details">
-                    <a>
-                      <img src="/images/blog/blog3.jpg" alt="image" />
-                    </a>
-                  </Link>
-
-                  <div className="post-tag">
-                    <Link legacyBehavior href="/blog">
-                      <a>IT Agency</a>
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="blog-post-content">
-                  <span className="date">Feb 17, 2022</span>
-
-                  <h3>
-                    <Link legacyBehavior href="/blog-details">
-                      <a>3 WooCommerce Plugins to Boost Sales</a>
-                    </Link>
-                  </h3>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna.
-                  </p>
-
-                  <Link legacyBehavior href="/blog-details">
-                    <a className="read-more-btn">
-                      Read More
-                      <i className="fa-solid fa-angles-right"></i>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="single-blog-item">
-                <div className="blog-image">
-                  <Link legacyBehavior href="/blog-details">
-                    <a>
-                      <img src="/images/blog/blog4.jpg" alt="image" />
-                    </a>
-                  </Link>
-
-                  <div className="post-tag">
-                    <Link legacyBehavior href="/blog">
-                      <a>Development</a>
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="blog-post-content">
-                  <span className="date">Feb 18, 2022</span>
-
-                  <h3>
-                    <Link legacyBehavior href="/blog-details">
-                      <a>Top 21 Must-Read Blogs For Creative Agencies</a>
-                    </Link>
-                  </h3>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna.
-                  </p>
-
-                  <Link legacyBehavior href="/blog-details">
-                    <a className="read-more-btn">
-                      Read More
-                      <i className="fa-solid fa-angles-right"></i>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
+                </SwiperSlide>
+              ))}
           </Swiper>
         </div>
       </div>

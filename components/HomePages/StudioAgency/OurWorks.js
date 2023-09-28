@@ -1,7 +1,82 @@
 import React from "react";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+import { Autoplay, Navigation, Pagination } from "swiper";
+
+const ourWorksData = [
+  {
+    image: "/images/works/work1.jpg",
+    title: "Designing a better cinema experience",
+    category: "Development",
+    viewDetails: "/portfolio-details",
+  },
+  {
+    image: "/images/works/work2.jpg",
+    title: "Building design process within teams",
+    category: "Web Design",
+    viewDetails: "/portfolio-details",
+  },
+  {
+    image: "/images/works/work3.jpg",
+    title: "How intercom brings play into their design process",
+    category: "eCommerce",
+    viewDetails: "/portfolio-details",
+  },
+  {
+    image: "/images/works/work4.jpg",
+    title: "Stuck with to-do list, I created a new app for myself",
+    category: "Email Marketing",
+    viewDetails: "/portfolio-details",
+  },
+  {
+    image: "/images/works/work5.jpg",
+    title: "Examples of different types of sprints",
+    category: "Marketing & Reporting",
+    viewDetails: "/portfolio-details",
+  },
+  {
+    image: "/images/works/work6.jpg",
+    title: "Redesigning the New York times app",
+    category: "App Development",
+    viewDetails: "/portfolio-details",
+  },
+  {
+    image: "/images/works/work7.jpg",
+    title: "Design the Web, Mobile, and eCommerce",
+    category: "SEO Optimization",
+    viewDetails: "/portfolio-details",
+  },
+  {
+    image: "/images/works/work8.jpg",
+    title: "Redesigning the New York times app",
+    category: "Digital Marketing",
+    viewDetails: "/portfolio-details",
+  },
+  {
+    image: "/images/works/work9.jpg",
+    title: "We provide any type of app development",
+    category: "App Development",
+    viewDetails: "/portfolio-details",
+  },
+  {
+    image: "/images/works/work10.jpg",
+    title: "We provide any type of marketing support",
+    category: "SEO Marketing",
+    viewDetails: "/portfolio-details",
+  },
+  {
+    image: "/images/works/work11.jpg",
+    title: "We provide any type of Email Marketing",
+    category: "Email Marketing",
+    viewDetails: "/portfolio-details",
+  },
+  {
+    image: "/images/works/work12.jpg",
+    title: "We provide any type of Marketing & Reporting",
+    category: "Marketing & Reporting",
+    viewDetails: "/portfolio-details",
+  },
+];
 
 const OurWorks = () => {
   return (
@@ -23,6 +98,11 @@ const OurWorks = () => {
             pagination={{
               clickable: true,
             }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: true,
+              pauseOnMouseEnter: true,
+            }}
             breakpoints={{
               0: {
                 slidesPerView: 1,
@@ -40,201 +120,31 @@ const OurWorks = () => {
                 slidesPerView: 5,
               },
             }}
-            mousewheel={true}
-            keyboard={true}
-            modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+            modules={[Autoplay, Navigation, Pagination]}
             className="work-slides"
           >
-            <SwiperSlide>
-              <div className="work-card">
-                <img src="/images/works/work1.jpg" alt="image" />
+            {ourWorksData &&
+              ourWorksData.map((value, i) => (
+                <SwiperSlide key={i}>
+                  <div className="work-card">
+                    <img src={value.image} alt="image" />
 
-                <div className="content text-center">
-                  <span>
-                    <Link legacyBehavior href="/portfolio">
-                      <a>Development</a>
-                    </Link>
-                  </span>
+                    <div className="content text-center">
+                      <span>
+                        <Link href={value.viewDetails}>{value.category}</Link>
+                      </span>
 
-                  <h3>
-                    <Link legacyBehavior href="/portfolio-details">
-                      <a>Designing a better cinema experience</a>
-                    </Link>
-                  </h3>
+                      <h3>
+                        <Link href={value.viewDetails}>{value.title}</Link>
+                      </h3>
 
-                  <Link legacyBehavior href="/portfolio-details">
-                    <a className="custom-btn">Read More</a>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="work-card">
-                <img src="/images/works/work2.jpg" alt="image" />
-                <div className="content text-center">
-                  <span>
-                    <Link legacyBehavior href="/portfolio">
-                      <a>Web Design</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link legacyBehavior href="/portfolio-details">
-                      <a>Building design process within teams</a>
-                    </Link>
-                  </h3>
-
-                  <Link legacyBehavior href="/portfolio-details">
-                    <a className="custom-btn">Read More</a>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="work-card">
-                <img src="/images/works/work3.jpg" alt="image" />
-
-                <div className="content text-center">
-                  <span>
-                    <Link legacyBehavior href="/portfolio">
-                      <a>eCommerce</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link legacyBehavior href="/portfolio-details">
-                      <a>How intercom brings play eCommerce</a>
-                    </Link>
-                  </h3>
-
-                  <Link legacyBehavior href="/portfolio-details">
-                    <a className="custom-btn">Read More</a>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="work-card">
-                <img src="/images/works/work4.jpg" alt="image" />
-
-                <div className="content text-center">
-                  <span>
-                    <Link legacyBehavior href="/portfolio">
-                      <a>Reactjs</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link legacyBehavior href="/portfolio-details">
-                      <a>How to start a project with Reactjs</a>
-                    </Link>
-                  </h3>
-
-                  <Link legacyBehavior href="/portfolio-details">
-                    <a className="custom-btn">Read More</a>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="work-card">
-                <img src="/images/works/work5.jpg" alt="image" />
-
-                <div className="content text-center">
-                  <span>
-                    <Link legacyBehavior href="/portfolio">
-                      <a>Angular js</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link legacyBehavior href="/portfolio-details">
-                      <a>Examples of different types of sprints</a>
-                    </Link>
-                  </h3>
-
-                  <Link legacyBehavior href="/portfolio-details">
-                    <a className="custom-btn">Read More</a>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="work-card">
-                <img src="/images/works/work6.jpg" alt="image" />
-
-                <div className="content text-center">
-                  <span>
-                    <Link legacyBehavior href="/portfolio">
-                      <a>UI/UX Design</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link legacyBehavior href="/portfolio-details">
-                      <a>Redesigning the New York times app</a>
-                    </Link>
-                  </h3>
-
-                  <Link legacyBehavior href="/portfolio-details">
-                    <a className="custom-btn">Read More</a>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="work-card">
-                <img src="/images/works/work7.jpg" alt="image" />
-
-                <div className="content text-center">
-                  <span>
-                    <Link legacyBehavior href="/portfolio">
-                      <a>Graphic Design</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link legacyBehavior href="/portfolio-details">
-                      <a>Design the Web, Mobile, and eCommerce</a>
-                    </Link>
-                  </h3>
-
-                  <Link legacyBehavior href="/portfolio-details">
-                    <a className="custom-btn">Read More</a>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="work-card">
-                <img src="/images/works/work8.jpg" alt="image" />
-
-                <div className="content text-center">
-                  <span>
-                    <Link legacyBehavior href="/portfolio">
-                      <a>Bootstrap</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link legacyBehavior href="/portfolio-details">
-                      <a>Redesigning the New York times app</a>
-                    </Link>
-                  </h3>
-
-                  <Link legacyBehavior href="/portfolio-details">
-                    <a className="custom-btn">Read More</a>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
+                      <Link href={value.viewDetails} className="custom-btn">
+                        View Details
+                      </Link>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
           </Swiper>
         </div>
       </section>

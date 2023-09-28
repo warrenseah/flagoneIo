@@ -1,31 +1,43 @@
 import React from "react";
 
+const topFeaturesData = [
+  {
+    title: "1. High Quality Services",
+    aosDelay: "100"
+  },
+  {
+    title: "2. Effective Protection",
+    aosDelay: "200"
+  },
+  {
+    title: "3. Provide Advanced Security",
+    aosDelay: "300"
+  },
+  {
+    title: "4. Complete Website Security",
+    aosDelay: "400"
+  },
+];
+
 const TopFeatures = () => {
   return (
     <>
       <div className="cs-card-area">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-3 col-sm-6">
-              <div className="cs-card-content">
-                <h3>1. High Quality Services</h3>
-              </div>
-            </div>
-            <div className="col-lg-3 col-sm-6">
-              <div className="cs-card-content">
-                <h3>2. Effective Protection</h3>
-              </div>
-            </div>
-            <div className="col-lg-3 col-sm-6">
-              <div className="cs-card-content">
-                <h3>3. Provide Advanced Security</h3>
-              </div>
-            </div>
-            <div className="col-lg-3 col-sm-6">
-              <div className="cs-card-content">
-                <h3>4. Complete Website Security</h3>
-              </div>
-            </div>
+            {topFeaturesData &&
+              topFeaturesData.slice(0, 4).map((value, i) => (
+                <div className="col-lg-3 col-sm-6" key={i}>
+                  <div 
+                  className="cs-card-content"
+                  data-aos="fade-in"
+                  data-aos-duration="1200"
+                  data-aos-delay={value.aosDelay}
+                  >
+                    <h3>{value.title}</h3>
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
       </div>

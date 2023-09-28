@@ -16,9 +16,9 @@ const About = () => {
             <div className="col-lg-5 col-md-12">
               <div 
                 className="about-image"
-                data-aos="fade-up"
+                data-aos="fade-in"
                 data-aos-duration="1200"
-                data-aos-delay="300"
+                data-aos-delay="200"
               >
                 <img
                   src="/images/about-img1.jpg"
@@ -40,9 +40,9 @@ const About = () => {
             <div className="col-lg-7 col-md-12">
               <div 
                 className="about-content about-content-two"
-                data-aos="fade-up"
+                data-aos="fade-in"
                 data-aos-duration="1200"
-                data-aos-delay="300"
+                data-aos-delay="400"
               >
                 <div className="section-title">
                   <h2>About Us</h2>

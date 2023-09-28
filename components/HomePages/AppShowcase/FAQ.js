@@ -20,17 +20,27 @@ const FAQ = () => {
 
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <div className="faq-img">
+              <div 
+                className="faq-img"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="100"
+              >
                 <img src="/images/app/faq-app.jpg" alt="Image" />
 
-                <Link legacyBehavior href="/contact">
-                  <a className="app-default-btn">Have you any question?</a>
+                <Link href="/contact" className="app-default-btn">
+                  Have you any question?
                 </Link>
               </div>
             </div>
 
             <div className="col-lg-6">
-              <div className="faq-accordion">
+              <div 
+                className="faq-accordion"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="200"
+              >
                 <Accordion allowZeroExpanded preExpanded={["a"]}>
                   <AccordionItem uuid="a">
                     <AccordionItemHeading>

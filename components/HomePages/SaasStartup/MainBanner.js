@@ -9,17 +9,31 @@ const MainBanner = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-12">
               <div className="saas-banner-content">
-                <h1>Pungent is Most Powerful SaaS Solution</h1>
-                <p>
+                <h1
+                  data-aos="fade-in"
+                  data-aos-duration="1200"
+                  data-aos-delay="100"
+                >
+                  Pungent is Most Powerful SaaS Solution
+                </h1>
+                <p
+                  data-aos="fade-in"
+                  data-aos-duration="1200"
+                  data-aos-delay="200"
+                >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Risus commodo viverra maecenas accumsan lacus vel facilisis.
                 </p>
 
-                <Link legacyBehavior href="/contact">
-                  <a className="default-btn-two">
-                    Get Started <i className="fas fa-chevron-right"></i>
-                  </a>
+                <Link 
+                  href="/contact" 
+                  className="default-btn-two"
+                  data-aos="fade-in"
+                  data-aos-duration="1200"
+                  data-aos-delay="300"
+                >
+                  Get Started <i className="fas fa-chevron-right"></i>
                 </Link>
               </div>
             </div>

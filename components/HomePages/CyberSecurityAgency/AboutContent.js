@@ -8,13 +8,23 @@ const AboutContent = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-12">
-              <div className="cs-about-image">
+              <div 
+                className="cs-about-image"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="100"
+              >
                 <img src="/images/cyber-security/about.png" alt="image" />
               </div>
             </div>
 
             <div className="col-lg-6 col-md-12">
-              <div className="cs-about-content">
+              <div 
+                className="cs-about-content"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="300"
+              >
                 <span className="sub-title">ABOUT US</span>
                 <h3>
                   Secure Your Clicks, <span>Secure Your</span> Business
@@ -40,6 +50,7 @@ const AboutContent = () => {
                       </p>
                     </div>
                   </div>
+                  
                   <div className="col-lg-6 col-sm-6">
                     <div className="cs-about-card">
                       <div className="icon">
@@ -55,10 +66,8 @@ const AboutContent = () => {
                 </div>
 
                 <div className="about-btn">
-                  <Link legacyBehavior href="/contact">
-                    <a className="default-btn-two">
-                      Get Started <i className="fa-solid fa-chevron-right"></i>
-                    </a>
+                  <Link href="/contact" className="default-btn-two">
+                    Get Started <i className="fa-solid fa-chevron-right"></i>
                   </Link>
                 </div>
               </div>

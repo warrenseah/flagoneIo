@@ -15,15 +15,41 @@ const AppDownload = () => {
                 <img src="/images/software/app-download.png" />
               </div>
             </div>
+
             <div className="col-lg-6 col-md-12">
               <div className="softeware-app-download-content">
-                <span className="sub-title">Download App</span>
-                <h2>Let&apos;s get your free copy from Apple and Play store</h2>
-                <p>
+                <span 
+                  className="sub-title"
+                  data-aos="fade-in"
+                  data-aos-duration="1200"
+                  data-aos-delay="100"
+                >
+                  Download App
+                </span>
+
+                <h2
+                  data-aos="fade-in"
+                  data-aos-duration="1200"
+                  data-aos-delay="200"
+                >
+                  Let&apos;s get your free copy from Apple and Play store
+                </h2>
+
+                <p
+                  data-aos="fade-in"
+                  data-aos-duration="1200"
+                  data-aos-delay="300"
+                >
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </p>
-                <div className="btn-box">
+
+                <div 
+                  className="btn-box"
+                  data-aos="fade-in"
+                  data-aos-duration="1200"
+                  data-aos-delay="400"
+                >
                   <a
                     href="https://play.google.com/store/apps"
                     className="playstore-btn"
@@ -36,6 +62,7 @@ const AppDownload = () => {
                     Get It On
                     <span>Google Play</span>
                   </a>
+
                   <a
                     href="https://www.apple.com/itunes/"
                     className="applestore-btn"
@@ -52,12 +79,6 @@ const AppDownload = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="lines">
-          <div className="line"></div>
-          <div className="line"></div>
-          <div className="line"></div>
         </div>
       </div>
     </>

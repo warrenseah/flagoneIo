@@ -40,19 +40,43 @@ const Screenshots = () => {
 
                 <div className="col-lg-9 col-sm-8">
                   <TabPanel>
-                    <img src="/images/software/screen1.jpg" alt="screenshots" />
+                    <img
+                      src="/images/software/screen1.jpg"
+                      alt="screenshots"
+                      data-aos="fade-up"
+                      data-aos-duration="1200"
+                      data-aos-delay="100"
+                    />
                   </TabPanel>
 
                   <TabPanel>
-                    <img src="/images/software/screen2.jpg" alt="screenshots" />
+                    <img
+                      src="/images/software/screen2.jpg"
+                      alt="screenshots"
+                      data-aos="fade-up"
+                      data-aos-duration="1200"
+                      data-aos-delay="100"
+                    />
                   </TabPanel>
 
                   <TabPanel>
-                    <img src="/images/software/screen3.jpg" alt="screenshots" />
+                    <img
+                      src="/images/software/screen3.jpg"
+                      alt="screenshots"
+                      data-aos="fade-up"
+                      data-aos-duration="1200"
+                      data-aos-delay="100"
+                    />
                   </TabPanel>
 
                   <TabPanel>
-                    <img src="/images/software/screen4.jpg" alt="screenshots" />
+                    <img
+                      src="/images/software/screen4.jpg"
+                      alt="screenshots"
+                      data-aos="fade-up"
+                      data-aos-duration="1200"
+                      data-aos-delay="100"
+                    />
                   </TabPanel>
                 </div>
               </div>

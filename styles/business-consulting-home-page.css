@@ -70,6 +70,7 @@
   margin-bottom: 0;
   font-size: 20px;
   color: #fff;
+  max-width: 140px;
 }
 
 /* Who We Are Area CSS */
@@ -140,12 +141,10 @@
   border: 1.5px solid #f9004d;
 }
 .bc-who-we-are-image .video-btn::before {
-  -webkit-animation: ripple 2s linear infinite;
-          animation: ripple 2s linear infinite;
+  animation: ripple 2s linear infinite;
 }
 .bc-who-we-are-image .video-btn::after {
-  -webkit-animation: ripple 2s linear 1s infinite;
-          animation: ripple 2s linear 1s infinite;
+  animation: ripple 2s linear 1s infinite;
 }
 
 /* Services */
@@ -549,7 +548,7 @@
 .bc-post-item .post-content .tag i {
   position: absolute;
   left: 0;
-  top: 4px;
+  top: 2px;
 }
 .bc-post-item .post-content .meta {
   padding-left: 0;
@@ -720,5 +719,11 @@
   .call-to-action-btn {
     text-align: center;
     margin-top: 25px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .consulting-banner-area {
+    padding-top: 320px;
+    padding-bottom: 320px;
   }
 }/*# sourceMappingURL=business-consulting-home-page.css.map */

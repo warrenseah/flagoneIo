@@ -8,7 +8,12 @@ const WhyChooseUs = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-12">
-              <div className="cs-choose-content">
+              <div 
+                className="cs-choose-content"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="100"
+              >
                 <span className="sub-title">WHY CHOOSE US</span>
                 <h3>
                   Reduce Attacker Time With Early Detection & Derailment Of
@@ -35,18 +40,22 @@ const WhyChooseUs = () => {
                     Action & Low Maintenance.
                   </li>
                 </ul>
+
                 <div className="choose-btn">
-                  <Link legacyBehavior href="/contact">
-                    <a className="default-btn-two">
-                      Get Started <i className="fa-solid fa-chevron-right"></i>
-                    </a>
+                  <Link href="/contact" className="default-btn-two">
+                    Get Started <i className="fa-solid fa-chevron-right"></i>
                   </Link>
                 </div>
               </div>
             </div>
 
             <div className="col-lg-6 col-md-12">
-              <div className="cs-choose-image">
+              <div 
+                className="cs-choose-image"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="300"
+              >
                 <img src="/images/cyber-security/choose.png" alt="image" />
               </div>
             </div>

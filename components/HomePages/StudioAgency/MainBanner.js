@@ -1,9 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import FsLightbox from "fslightbox-react";
 import Link from "next/link";
 
 const MainBanner = () => {
   const [toggler, setToggler] = useState(false);
+
+  // Auto Play Video
+  const videoEl = useRef(null);
+
+  const attemptPlay = () => {
+    videoEl &&
+      videoEl.current &&
+      videoEl.current.play().catch(error => {
+        console.error("Error attempting to play", error);
+      });
+  };
+
+  useEffect(() => {
+    attemptPlay();
+  }, []);
+
   return (
     <>
       <FsLightbox
@@ -13,7 +29,14 @@ const MainBanner = () => {
 
       <div className="hero-banner video-studio overly-6">
         <div className="video-background">
-          <video autoPlay loop src="/video/promo-video.mp4" />
+          <video
+            playsInline
+            loop
+            muted
+            alt="App Promo"
+            src="/video/promo-video.mp4"
+            ref={videoEl}
+          />
         </div>
 
         <div className="d-table">
@@ -22,30 +45,49 @@ const MainBanner = () => {
               <div className="row align-items-center">
                 <div className="col-lg-8">
                   <div className="main-banner-content">
-                    <h1>Welcome to our video studio!</h1>
+                    <h1
+                      data-aos="fade-in"
+                      data-aos-duration="1200"
+                      data-aos-delay="200"
+                    >
+                      Welcome to our video studio!
+                    </h1>
 
-                    <p>
+                    <p
+                      data-aos="fade-in"
+                      data-aos-duration="1200"
+                      data-aos-delay="400"
+                    >
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua.
                     </p>
 
-                    <Link legacyBehavior href="/contact">
-                      <a className="btn btn-primary">Contact Us</a>
+                    <Link 
+                      href="/contact" 
+                      className="btn btn-primary"
+                      data-aos="fade-in"
+                      data-aos-duration="1200"
+                      data-aos-delay="600"
+                    >
+                      Contact Us
                     </Link>
                   </div>
                 </div>
 
                 <div className="col-lg-4">
-                  <div className="video-box">
-                    <Link legacyBehavior href="#play-video">
-                      <a
-                        onClick={() => setToggler(!toggler)}
-                        className="video-btn"
-                      >
-                        <i className="fa-solid fa-play"></i>
-                      </a>
-                    </Link>
+                  <div 
+                    className="video-box"
+                    data-aos="zoom-in"
+                    data-aos-duration="1200"
+                    data-aos-delay="600"
+                  >
+                    <button
+                      onClick={() => setToggler(!toggler)}
+                      className="video-btn"
+                    >
+                      <i className="fa-solid fa-play"></i>
+                    </button>
                   </div>
                 </div>
               </div>

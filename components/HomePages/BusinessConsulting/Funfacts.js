@@ -1,40 +1,49 @@
 import React from "react";
 
+const funfactsData = [
+  {
+    number: "275",
+    title: "Clients Served Globally",
+    aosDelay: "100",
+  },
+  {
+    number: "499",
+    title: "Successful Projects",
+    aosDelay: "200",
+  },
+  {
+    number: "20",
+    title: "Years in Business",
+    aosDelay: "300",
+  },
+  {
+    number: "100%",
+    title: "Success Rate",
+    aosDelay: "400",
+  },
+];
+
 const Funfacts = () => {
   return (
     <>
       <div className="bc-funfacts-area bg-image pt-100 pb-70">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-3 col-sm-6 col-md-3 col-6">
-              <div className="bc-funfacts-box text-center">
-                <h3>275</h3>
-                <span className="sub-title">Clients Served Globally</span>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-sm-6 col-md-3 col-6">
-              <div className="bc-funfacts-box text-center">
-                <h3>499</h3>
-                <span className="sub-title">Successful Projects</span>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-sm-6 col-md-3 col-6">
-              <div className="bc-funfacts-box text-center">
-                <h3>20</h3>
-                <span className="sub-title">Years in Business</span>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-sm-6 col-md-3 col-6">
-              <div className="bc-funfacts-box text-center">
-                <h3>
-                  100<span className="sign">%</span>
-                </h3>
-                <span className="sub-title">Success Rate</span>
-              </div>
-            </div>
+            {funfactsData &&
+              funfactsData.slice(0, 4).map((value, i) => (
+                <div 
+                  className="col-lg-3 col-sm-6 col-md-3 col-6" 
+                  key={i}
+                  data-aos="fade-in"
+                  data-aos-duration="1200"
+                  data-aos-delay={value.aosDelay}
+                >
+                  <div className="bc-funfacts-box text-center">
+                    <h3>{value.number}</h3>
+                    <span className="sub-title">{value.title}</span>
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
       </div>

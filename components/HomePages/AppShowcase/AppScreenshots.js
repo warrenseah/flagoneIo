@@ -1,6 +1,27 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
+
+const appScreenshotsData = [
+  {
+    image: "/images/app/screenshots1.png",
+  },
+  {
+    image: "/images/app/screenshots2.png",
+  },
+  {
+    image: "/images/app/screenshots3.png",
+  },
+  {
+    image: "/images/app/screenshots4.png",
+  },
+  {
+    image: "/images/app/screenshots5.png",
+  },
+  {
+    image: "/images/app/screenshots4.png",
+  },
+];
 
 const AppScreenshots = () => {
   return (
@@ -15,6 +36,11 @@ const AppScreenshots = () => {
           <Swiper
             navigation={true}
             spaceBetween={30}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: true,
+              pauseOnMouseEnter: true,
+            }}
             breakpoints={{
               0: {
                 slidesPerView: 1,
@@ -32,44 +58,17 @@ const AppScreenshots = () => {
                 slidesPerView: 5,
               },
             }}
-            modules={[Navigation]}
+            modules={[Autoplay, Navigation]}
             className="app-screenshots-slides"
           >
-            <SwiperSlide>
-              <div className="app-screenshot-item">
-                <img src="/images/app/screenshots1.png" alt="screenshots" />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="app-screenshot-item">
-                <img src="/images/app/screenshots2.png" alt="screenshots" />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="app-screenshot-item">
-                <img src="/images/app/screenshots3.png" alt="screenshots" />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="app-screenshot-item">
-                <img src="/images/app/screenshots4.png" alt="screenshots" />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="app-screenshot-item">
-                <img src="/images/app/screenshots5.png" alt="screenshots" />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="app-screenshot-item">
-                <img src="/images/app/screenshots4.png" alt="screenshots" />
-              </div>
-            </SwiperSlide>
+            {appScreenshotsData &&
+              appScreenshotsData.map((value, i) => (
+                <SwiperSlide key={i}>
+                  <div className="app-screenshot-item">
+                    <img src={value.image} alt="screenshots" />
+                  </div>
+                </SwiperSlide>
+              ))}
           </Swiper>
         </div>
       </div>

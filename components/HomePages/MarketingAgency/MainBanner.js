@@ -67,18 +67,16 @@ const MainBanner = () => {
                               : "opacityZero"
                           }
                         >
-                          <Link legacyBehavior href="/contact">
-                            <a className="btn btn-primary">Contact Us</a>
+                          <Link href="/contact" className="btn btn-primary">
+                            Contact Us
                           </Link>
 
-                          <Link legacyBehavior href="#play-video">
-                            <a
-                              onClick={() => setToggler(!toggler)}
-                              className="btn btn-secondary"
-                            >
-                              <i className="fa-solid fa-play me-1"></i> How it works
-                            </a>
-                          </Link>
+                          <button
+                            onClick={() => setToggler(!toggler)}
+                            className="btn btn-secondary"
+                          >
+                            <i className="fa-solid fa-play me-1"></i> How it works
+                          </button>
                         </div>
                       </div>
                     )}
@@ -131,18 +129,16 @@ const MainBanner = () => {
                               : "opacityZero"
                           }
                         >
-                          <Link legacyBehavior href="/contact">
-                            <a className="btn btn-primary">Contact Us</a>
+                          <Link href="/contact" className="btn btn-primary">
+                            Contact Us
                           </Link>
 
-                          <Link legacyBehavior href="#play-video">
-                            <a
-                              onClick={() => setToggler(!toggler)}
-                              className="btn btn-secondary"
-                            >
-                              <i className="fa-solid fa-play me-1"></i> How it works
-                            </a>
-                          </Link>
+                          <button
+                            onClick={() => setToggler(!toggler)}
+                            className="btn btn-secondary"
+                          >
+                            <i className="fa-solid fa-play me-1"></i> How it works
+                          </button>
                         </div>
                       </div>
                     )}
@@ -195,18 +191,16 @@ const MainBanner = () => {
                               : "opacityZero"
                           }
                         >
-                          <Link legacyBehavior href="/contact">
-                            <a className="btn btn-primary">Contact Us</a>
+                          <Link href="/contact" className="btn btn-primary">
+                            Contact Us
                           </Link>
 
-                          <Link legacyBehavior href="#play-video">
-                            <a
-                              onClick={() => setToggler(!toggler)}
-                              className="btn btn-secondary"
-                            >
-                              <i className="fa-solid fa-play me-1"></i> How it works
-                            </a>
-                          </Link>
+                          <button
+                            onClick={() => setToggler(!toggler)}
+                            className="btn btn-secondary"
+                          >
+                            <i className="fa-solid fa-play me-1"></i> How it works
+                          </button>
                         </div>
                       </div>
                     )}

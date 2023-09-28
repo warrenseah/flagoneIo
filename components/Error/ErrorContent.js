@@ -15,8 +15,8 @@ const ErrorContent = () => {
             </p>
 
             <div className="back-btn">
-              <Link legacyBehavior href="/">
-                <a className="btn btn-primary">Go Back Home</a>
+              <Link href="/" className="btn btn-primary">
+                Go Back Home
               </Link>
             </div>
           </div>

@@ -84,6 +84,7 @@ $transition: all 0.6s ease;
         margin-bottom: 0;
         font-size: 20px;
         color: #fff;
+        max-width: 140px;
     }
 }
 
@@ -640,7 +641,7 @@ $transition: all 0.6s ease;
             i {
                 position: absolute;
                 left: 0;
-                top: 4px;
+                top: 2px;
             }
         }
         .meta {
@@ -841,10 +842,11 @@ $transition: all 0.6s ease;
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-
-}
-
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-
+@media only screen and (min-width: 1800px) {
+    .consulting-banner-area {
+        padding: {
+            top: 320px;
+            bottom: 320px;
+        };
+    }
 }

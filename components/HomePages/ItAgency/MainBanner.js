@@ -23,14 +23,25 @@ const MainBanner = () => {
               <div className="row align-items-center">
                 <div className="col-lg-6">
                   <div className="main-banner-content">
-                    <h1>We're an IT agency</h1>
+                    <h1
+                      data-aos="fade-in"
+                      data-aos-duration="1200"
+                      data-aos-delay="100"
+                    >
+                      We're an IT agency
+                    </h1>
 
-                    <p>
+                    <p
+                      data-aos="fade-in"
+                      data-aos-duration="1200"
+                      data-aos-delay="200"
+                    >
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore
                       magna aliqua.
                     </p>
 
+<<<<<<< HEAD
                     <Link legacyBehavior href="/contact">
                       <a className="btn btn-primary">Get Started</a>
                     </Link>
@@ -43,6 +54,27 @@ const MainBanner = () => {
                         <i className="fa-solid fa-play me-1"></i> How it works
                       </a>
                     </Link>
+=======
+                    <Link 
+                      href="/contact" 
+                      className="btn btn-primary"
+                      data-aos="fade-in"
+                      data-aos-duration="1200"
+                      data-aos-delay="300"
+                    >
+                      Get Started
+                    </Link>
+
+                    <button
+                      onClick={() => setToggler(!toggler)}
+                      className="btn btn-secondary"
+                      data-aos="fade-in"
+                      data-aos-duration="1200"
+                      data-aos-delay="400"
+                    >
+                      <i className="fa-solid fa-play me-1"></i> How it works
+                    </button>
+>>>>>>> eef434e2f136d3f9419f8b37f167d5b3893fd0a1
                   </div>
                 </div>
 

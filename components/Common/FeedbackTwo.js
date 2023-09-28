@@ -1,6 +1,27 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
+
+const feedbacskData = [
+  {
+    name: "Steve Jobs",
+    designation: "Co-founder of Apple, Inc.",
+    feedbacskText:
+      "Design is not just what it looks like and feels like. Design is how it works.",
+  },
+  {
+    name: "Charlie",
+    designation: "Co-founder of 3S, Inc.",
+    feedbacskText:
+      "Design is not just what it looks like and feels like. Design is how it works.",
+  },
+  {
+    name: "Amelia",
+    designation: "Co-founder of Envato, Inc.",
+    feedbacskText:
+      "Design is not just what it looks like and feels like. Design is how it works.",
+  },
+];
 
 const FeedbackTwo = () => {
   return (
@@ -11,42 +32,24 @@ const FeedbackTwo = () => {
             pagination={{
               clickable: true,
             }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: true,
+            }}
             slidesPerView={1}
-            modules={[Pagination]}
+            modules={[Autoplay, Pagination]}
             className="quotes-slides"
           >
-            <SwiperSlide>
-              <div className="quotes-content">
-                <p>
-                  Design is not just what it looks like and feels like. Design
-                  is how it works.
-                </p>
-                <h3>Steve Jobs</h3>
-                <span>Co-founder of Apple, Inc.</span>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="quotes-content">
-                <p>
-                  Design is not just what it looks like and feels like. Design
-                  is how it works.
-                </p>
-                <h3>Charlie</h3>
-                <span>Co-founder of 3S, Inc.</span>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="quotes-content">
-                <p>
-                  Design is not just what it looks like and feels like. Design
-                  is how it works.
-                </p>
-                <h3>Amelia</h3>
-                <span>Co-founder of Envato, Inc.</span>
-              </div>
-            </SwiperSlide>
+            {feedbacskData &&
+              feedbacskData.map((value, i) => (
+                <SwiperSlide key={i}>
+                  <div className="quotes-content">
+                    <p>{value.feedbacskText}</p>
+                    <h3>{value.name}</h3>
+                    <span>{value.designation}</span>
+                  </div>
+                </SwiperSlide>
+              ))}
           </Swiper>
         </div>
       </div>

@@ -1,7 +1,42 @@
 import React from "react";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
+
+const bestServicesData = [
+  {
+    image: "/images/services/service1.jpg",
+    iconName: "pe-7s-magnet",
+    title: "UX Design",
+    shortText:
+      "Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+    detailsLink: "/service-details/",
+  },
+  {
+    image: "/images/services/service2.jpg",
+    iconName: "pe-7s-vector",
+    title: "UI Design",
+    shortText:
+      "Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+    detailsLink: "/service-details/",
+  },
+  {
+    image: "/images/services/service3.jpg",
+    iconName: "pe-7s-scissors",
+    title: "Digital Product Design",
+    shortText:
+      "Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+    detailsLink: "/service-details/",
+  },
+  {
+    image: "/images/services/service4.jpg",
+    iconName: "pe-7s-comment",
+    title: "Business Consultancy",
+    shortText:
+      "Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+    detailsLink: "/service-details/",
+  },
+];
 
 const BestServices = () => {
   return (
@@ -30,6 +65,11 @@ const BestServices = () => {
                 <Swiper
                   spaceBetween={30}
                   navigation={true}
+                  autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: true,
+                    pauseOnMouseEnter: true,
+                  }}
                   breakpoints={{
                     0: {
                       slidesPerView: 1,
@@ -37,116 +77,41 @@ const BestServices = () => {
                     600: {
                       slidesPerView: 2,
                     },
-                    992: {
+                    1400: {
                       slidesPerView: 3,
                     },
                   }}
-                  modules={[Navigation]}
+                  modules={[Autoplay, Navigation]}
                   className="services-slides"
                 >
-                  <SwiperSlide>
-                    <div className="single-services">
-                      <img
-                        src="/images/services/service1.jpg"
-                        alt="image"
-                        className="w-100"
-                      />
+                  {bestServicesData &&
+                    bestServicesData.map((value, i) => (
+                      <SwiperSlide key={i}>
+                        <div className="single-services">
+                          <img
+                            src={value.image}
+                            alt="image"
+                            className="w-100"
+                          />
 
-                      <div className="content">
-                        <div className="icon">
-                          <i className="pe-7s-magnet"></i>
+                          <div className="content">
+                            <div className="icon">
+                              <i className={value.iconName}></i>
+                            </div>
+
+                            <h3>{value.title}</h3>
+                            <p>{value.shortText}</p>
+
+                            <Link
+                              href={value.detailsLink}
+                              className="read-more-btn"
+                            >
+                              Read More
+                            </Link>
+                          </div>
                         </div>
-
-                        <h3>UX Design</h3>
-                        <p>
-                          Quis ipsum suspendisse ultrices gravida. Risus commodo
-                          viverra maecenas accumsan lacus vel facilisis.
-                        </p>
-
-                        <Link legacyBehavior href="/service-details">
-                          <a className="read-more-btn">Read More</a>
-                        </Link>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                    <div className="single-services">
-                      <img
-                        src="/images/services/service2.jpg"
-                        alt="image"
-                        className="w-100"
-                      />
-
-                      <div className="content">
-                        <div className="icon">
-                          <i className="pe-7s-vector"></i>
-                        </div>
-
-                        <h3>UI Design</h3>
-                        <p>
-                          Quis ipsum suspendisse ultrices gravida. Risus commodo
-                          viverra maecenas accumsan lacus vel facilisis.
-                        </p>
-
-                        <Link legacyBehavior href="/service-details">
-                          <a className="read-more-btn">Read More</a>
-                        </Link>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                    <div className="single-services">
-                      <img
-                        src="/images/services/service3.jpg"
-                        alt="image"
-                        className="w-100"
-                      />
-
-                      <div className="content">
-                        <div className="icon">
-                          <i className="pe-7s-scissors"></i>
-                        </div>
-
-                        <h3>Digital Product Design</h3>
-                        <p>
-                          Quis ipsum suspendisse ultrices gravida. Risus commodo
-                          viverra maecenas accumsan lacus vel facilisis.
-                        </p>
-
-                        <Link legacyBehavior href="/service-details">
-                          <a className="read-more-btn">Read More</a>
-                        </Link>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                    <div className="single-services">
-                      <img
-                        src="/images/services/service1.jpg"
-                        alt="image"
-                        className="w-100"
-                      />
-
-                      <div className="content">
-                        <div className="icon">
-                          <i className="pe-7s-scissors"></i>
-                        </div>
-
-                        <h3>Digital Product Design</h3>
-                        <p>
-                          Quis ipsum suspendisse ultrices gravida. Risus commodo
-                          viverra maecenas accumsan lacus vel facilisis.
-                        </p>
-
-                        <Link legacyBehavior href="/service-details">
-                          <a className="read-more-btn">Read More</a>
-                        </Link>
-                      </div>
-                    </div>
-                  </SwiperSlide>
+                      </SwiperSlide>
+                    ))}
                 </Swiper>
               </div>
             </div>

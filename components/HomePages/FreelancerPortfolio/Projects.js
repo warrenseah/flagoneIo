@@ -1,5 +1,92 @@
 import React from "react";
 
+const projectsData = [
+  {
+    image: "/images/freelancer-portfolio/portfolio-img1.jpg",
+    title: "Designing a better cinema experience",
+    category: "Web Design",
+    url: "#",
+    aosDelay: "100",
+  },
+  {
+    image: "/images/freelancer-portfolio/portfolio-img2.jpg",
+    title: "Building design process within teams",
+    category: "Web Development",
+    url: "#",
+    aosDelay: "200",
+  },
+  {
+    image: "/images/freelancer-portfolio/portfolio-img3.jpg",
+    title: "How intercom brings play eCommerce",
+    category: "eCommerce Development",
+    url: "#",
+    aosDelay: "300",
+  },
+  {
+    image: "/images/freelancer-portfolio/portfolio-img4.jpg",
+    title: "UI/UX Design for ABC company",
+    category: "UI/UX Design",
+    url: "#",
+    aosDelay: "400",
+  },
+  {
+    image: "/images/freelancer-portfolio/portfolio-img5.jpg",
+    title: "Examples of different types of sprints",
+    category: "Digital Marketing",
+    url: "#",
+    aosDelay: "500",
+  },
+  {
+    image: "/images/freelancer-portfolio/portfolio-img6.jpg",
+    title: "Redesigning the New York times app",
+    category: "PSD to HTML",
+    url: "#",
+    aosDelay: "600",
+  },
+  {
+    image: "/images/freelancer-portfolio/portfolio-img7.jpg",
+    title: "We provide any type of JavaScript development",
+    category: "JavaScript Development",
+    url: "#",
+    aosDelay: "700",
+  },
+  {
+    image: "/images/freelancer-portfolio/portfolio-img8.jpg",
+    title: "We provide any type of Mobile App",
+    category: "Mobile App",
+    url: "#",
+    aosDelay: "800",
+  },
+  {
+    image: "/images/freelancer-portfolio/portfolio-img9.jpg",
+    title: "We provide any type of WordPress",
+    category: "WordPress Development",
+    url: "#",
+    aosDelay: "900",
+  },
+  {
+    image: "/images/freelancer-portfolio/portfolio-img10.jpg",
+    title: "Maintenance service provides for ABC Company",
+    category: "IT Maintenance",
+    url: "#",
+    aosDelay: "1000",
+  },
+  {
+    image: "/images/freelancer-portfolio/portfolio-img11.jpg",
+    title: "We provide any type of Email Marketing",
+    category: "Email Marketing",
+    url: "#",
+    aosDelay: "1100",
+  },
+  {
+    image: "/images/freelancer-portfolio/portfolio-img12.jpg",
+    title: "We provide any type of Marketing & Reporting",
+    category: "Marketing & Reporting",
+    url: "#",
+    aosDelay: "1200",
+  },
+];
+
 const Projects = () => {
   return (
     <>
@@ -9,306 +96,33 @@ const Projects = () => {
             <h2>My all Projects</h2>
           </div>
 
-          <div className="row">
-            <div className="col-lg-4 col-sm-6">
-              <div
-                className="fp-project-item"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="100"
-              >
-                <img
-                  src="/images/freelancer-portfolio/portfolio-img1.jpg"
-                  alt="image"
-                />
-                <div className="content">
-                  <a href="#" className="link-btn" target="_blank">
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </a>
-                  <h3>
-                    <a href="#" target="_blank">
-                      Designing a better cinema experience
+          <div className="row justify-content-center">
+            {projectsData &&
+              projectsData.map((value, i) => (
+                <div className="col-lg-4 col-sm-6" key={i}>
+                  <div
+                    className="fp-project-item"
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-delay={value.aosDelay}
+                  >
+                    <a href={value.url} className="link-btn" target="_blank">
+                      <img src={value.image} alt="image" />
                     </a>
-                  </h3>
-                  <span>Web Design</span>
+                    <div className="content">
+                      <a href={value.url} className="link-btn" target="_blank">
+                        <i className="fa-solid fa-arrow-right"></i>
+                      </a>
+                      <h3>
+                        <a href={value.url} target="_blank">
+                          {value.title}
+                        </a>
+                      </h3>
+                      <span>{value.category}</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div
-                className="fp-project-item"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="200"
-              >
-                <img
-                  src="/images/freelancer-portfolio/portfolio-img2.jpg"
-                  alt="image"
-                />
-                <div className="content">
-                  <a href="#" className="link-btn" target="_blank">
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </a>
-                  <h3>
-                    <a href="#" target="_blank">
-                      Building design process within teams
-                    </a>
-                  </h3>
-                  <span>Web Development</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div
-                className="fp-project-item"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="300"
-              >
-                <img
-                  src="/images/freelancer-portfolio/portfolio-img3.jpg"
-                  alt="image"
-                />
-                <div className="content">
-                  <a href="#" className="link-btn" target="_blank">
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </a>
-                  <h3>
-                    <a href="#" target="_blank">
-                      How intercom brings play eCommerce
-                    </a>
-                  </h3>
-                  <span>eCommerce Development</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div
-                className="fp-project-item"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="100"
-              >
-                <img
-                  src="/images/freelancer-portfolio/portfolio-img4.jpg"
-                  alt="image"
-                />
-                <div className="content">
-                  <a href="#" className="link-btn" target="_blank">
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </a>
-                  <h3>
-                    <a href="#" target="_blank">
-                      UX/UI Design for ABC company
-                    </a>
-                  </h3>
-                  <span>UX/UI Design</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div
-                className="fp-project-item"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="200"
-              >
-                <img
-                  src="/images/freelancer-portfolio/portfolio-img5.jpg"
-                  alt="image"
-                />
-                <div className="content">
-                  <a href="#" className="link-btn" target="_blank">
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </a>
-                  <h3>
-                    <a href="#" target="_blank">
-                      Examples of different types of sprints
-                    </a>
-                  </h3>
-                  <span>Digital Marketing</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div
-                className="fp-project-item"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="300"
-              >
-                <img
-                  src="/images/freelancer-portfolio/portfolio-img6.jpg"
-                  alt="image"
-                />
-                <div className="content">
-                  <a href="#" className="link-btn" target="_blank">
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </a>
-                  <h3>
-                    <a href="#" target="_blank">
-                      Redesigning the New York times app
-                    </a>
-                  </h3>
-                  <span>PSD to HTML</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div
-                className="fp-project-item"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="100"
-              >
-                <img
-                  src="/images/freelancer-portfolio/portfolio-img7.jpg"
-                  alt="image"
-                />
-                <div className="content">
-                  <a href="#" className="link-btn" target="_blank">
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </a>
-                  <h3>
-                    <a href="#" target="_blank">
-                      We provide any type of JavaScript development
-                    </a>
-                  </h3>
-                  <span>JavaScript Development</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div
-                className="fp-project-item"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="200"
-              >
-                <img
-                  src="/images/freelancer-portfolio/portfolio-img8.jpg"
-                  alt="image"
-                />
-                <div className="content">
-                  <a href="#" className="link-btn" target="_blank">
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </a>
-                  <h3>
-                    <a href="#" target="_blank">
-                      We provide any type of Mobile App
-                    </a>
-                  </h3>
-                  <span>Mobile App</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div
-                className="fp-project-item"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="300"
-              >
-                <img
-                  src="/images/freelancer-portfolio/portfolio-img9.jpg"
-                  alt="image"
-                />
-                <div className="content">
-                  <a href="#" className="link-btn" target="_blank">
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </a>
-                  <h3>
-                    <a href="#" target="_blank">
-                      We provide any type of WordPress
-                    </a>
-                  </h3>
-                  <span>WordPress Development</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div
-                className="fp-project-item"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="100"
-              >
-                <img
-                  src="/images/freelancer-portfolio/portfolio-img10.jpg"
-                  alt="image"
-                />
-                <div className="content">
-                  <a href="#" className="link-btn" target="_blank">
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </a>
-                  <h3>
-                    <a href="#" target="_blank">
-                      Maintenance service provides for ABC Company
-                    </a>
-                  </h3>
-                  <span>IT Maintenance</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div
-                className="fp-project-item"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="200"
-              >
-                <img
-                  src="/images/freelancer-portfolio/portfolio-img11.jpg"
-                  alt="image"
-                />
-                <div className="content">
-                  <a href="#" className="link-btn" target="_blank">
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </a>
-                  <h3>
-                    <a href="#" target="_blank">
-                      We provide any type of Email Marketing
-                    </a>
-                  </h3>
-                  <span>Email Marketing</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div
-                className="fp-project-item"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="300"
-              >
-                <img
-                  src="/images/freelancer-portfolio/portfolio-img12.jpg"
-                  alt="image"
-                />
-                <div className="content">
-                  <a href="#" className="link-btn" target="_blank">
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </a>
-                  <h3>
-                    <a href="#" target="_blank">
-                      We provide any type of Marketing & Reporting
-                    </a>
-                  </h3>
-                  <span>Marketing & Reporting</span>
-                </div>
-              </div>
-            </div>
+              ))}
           </div>
         </div>
       </div>

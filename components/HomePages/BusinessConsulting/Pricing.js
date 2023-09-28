@@ -1,6 +1,108 @@
 import React from "react";
 import Link from "next/link";
 
+const pricingData = [
+  {
+    title: "Basic Plan",
+    price: "29",
+    duration: "/year",
+
+    list: [
+      {
+        title: "Increase Traffic 100%",
+        unactiveClass: "",
+      },
+      {
+        title: "Content Optimization",
+        unactiveClass: "",
+      },
+      {
+        title: "24x7 Great Support",
+        unactiveClass: "",
+      },
+      {
+        title: "100% Safe & Secure",
+        unactiveClass: "unactive",
+      },
+      {
+        title: "No Hidden Charges",
+        unactiveClass: "unactive",
+      },
+    ],
+
+    btnLink: "#",
+    activeClass: "",
+    popularTag: "",
+    aosDelay: "100",
+  },
+  {
+    title: "Ultra Plan",
+    price: "39",
+    duration: "/year",
+
+    list: [
+      {
+        title: "Increase Traffic 100%",
+        unactiveClass: "",
+      },
+      {
+        title: "Content Optimization",
+        unactiveClass: "",
+      },
+      {
+        title: "24x7 Great Support",
+        unactiveClass: "",
+      },
+      {
+        title: "100% Safe & Secure",
+        unactiveClass: "",
+      },
+      {
+        title: "No Hidden Charges",
+        unactiveClass: "unactive",
+      },
+    ],
+
+    btnLink: "#",
+    activeClass: "active",
+    popularTag: "Popular",
+    aosDelay: "200",
+  },
+  {
+    title: "Enterprise Plan",
+    price: "49",
+    duration: "/year",
+
+    list: [
+      {
+        title: "Increase Traffic 100%",
+        unactiveClass: "",
+      },
+      {
+        title: "Content Optimization",
+        unactiveClass: "",
+      },
+      {
+        title: "24x7 Great Support",
+        unactiveClass: "",
+      },
+      {
+        title: "100% Safe & Secure",
+        unactiveClass: "",
+      },
+      {
+        title: "No Hidden Charges",
+        unactiveClass: "",
+      },
+    ],
+
+    btnLink: "#",
+    activeClass: "",
+    popularTag: "",
+    aosDelay: "300",
+  },
+];
+
 const Pricing = () => {
   return (
     <>
@@ -12,77 +114,42 @@ const Pricing = () => {
           </div>
 
           <div className="row justify-content-center">
-            <div className="col-lg-4 col-md-6 col-sm-6">
-              <div className="bc-pricing-item">
-                <div className="pricing-header">
-                  <h3>Basic Plan</h3>
-                  <span className="price">
-                    $29<span>/year</span>
-                  </span>
-                </div>
-                <ul className="features-list">
-                  <li>Increase Traffic 100%</li>
-                  <li>Content Optimization</li>
-                  <li>24x7 Great Support</li>
-                  <li className="unactive">100% Safe & Secure</li>
-                  <li className="unactive">No Hidden Charges</li>
-                </ul>
-                <Link legacyBehavior href="#">
-                  <a className="default-btn-two">
-                    Choose Plan <i className="fas fa-chevron-right"></i>
-                  </a>
-                </Link>
-              </div>
-            </div>
+            {pricingData &&
+              pricingData.slice(0, 3).map((value, i) => (
+                <div 
+                  className="col-lg-4 col-md-6 col-sm-6" 
+                  key={i}
+                  data-aos="fade-in"
+                  data-aos-duration="1200"
+                  data-aos-delay={value.aosDelay}
+                >
+                  <div className={`bc-pricing-item ${value.activeClass}`}>
+                    <div className="ribbon">
+                      <span>{value.popularTag}</span>
+                    </div>
 
-            <div className="col-lg-4 col-md-6 col-sm-6">
-              <div className="bc-pricing-item active">
-                <div className="ribbon">
-                  <span>Popular</span>
-                </div>
-                <div className="pricing-header">
-                  <h3>Ultra Plan</h3>
-                  <span className="price">
-                    $39<span>/year</span>
-                  </span>
-                </div>
-                <ul className="features-list">
-                  <li>Increase Traffic 100%</li>
-                  <li>Content Optimization</li>
-                  <li>24x7 Great Support</li>
-                  <li>100% Safe & Secure</li>
-                  <li className="unactive">No Hidden Charges</li>
-                </ul>
-                <Link legacyBehavior href="#">
-                  <a className="default-btn-two">
-                    Choose Plan <i className="fas fa-chevron-right"></i>
-                  </a>
-                </Link>
-              </div>
-            </div>
+                    <div className="pricing-header">
+                      <h3>{value.title}</h3>
+                      <span className="price">
+                        ${value.price}
+                        <span>{value.duration}</span>
+                      </span>
+                    </div>
 
-            <div className="col-lg-4 col-md-6 col-sm-6">
-              <div className="bc-pricing-item">
-                <div className="pricing-header">
-                  <h3>Enterprise Plan</h3>
-                  <span className="price">
-                    $49<span>/year</span>
-                  </span>
+                    <ul className="features-list">
+                      {value.list.map((value, i) => (
+                        <li className={value.unactiveClass} key={i}>
+                          {value.title}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <Link href={value.btnLink} className="default-btn-two">
+                      Choose Plan <i className="fas fa-chevron-right"></i>
+                    </Link>
+                  </div>
                 </div>
-                <ul className="features-list">
-                  <li>Increase Traffic 100%</li>
-                  <li>Content Optimization</li>
-                  <li>24x7 Great Support</li>
-                  <li>100% Safe & Secure</li>
-                  <li>No Hidden Charges</li>
-                </ul>
-                <Link legacyBehavior href="#">
-                  <a className="default-btn-two">
-                    Choose Plan <i className="fas fa-chevron-right"></i>
-                  </a>
-                </Link>
-              </div>
-            </div>
+              ))}
           </div>
         </div>
       </div>

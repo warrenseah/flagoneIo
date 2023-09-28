@@ -11,37 +11,60 @@ const MainBanner = () => {
         sources={["https://www.youtube.com/embed/bk7McNUjWgw"]}
       />
 
-      <div 
-        className="hero-banner overly" 
-        style={{ 
-          backgroundImage: `url(/images/hero-banner1.jpg)` 
+      <div
+        className="hero-banner overly"
+        style={{
+          backgroundImage: `url(/images/hero-banner1.jpg)`,
         }}
       >
         <div className="d-table">
           <div className="d-table-cell">
             <div className="container">
               <div className="main-banner-content text-center">
-                <span>We are a</span>
+                <span
+                  data-aos="fade-in"
+                  data-aos-duration="1200"
+                  data-aos-delay="100"
+                >
+                  We are a
+                </span>
 
-                <h1>Creative agency</h1>
+                <h1
+                  data-aos="fade-in"
+                  data-aos-duration="1200"
+                  data-aos-delay="200"
+                >
+                  Creative agency
+                </h1>
 
-                <p>
+                <p
+                  data-aos="fade-in"
+                  data-aos-duration="1200"
+                  data-aos-delay="300"
+                >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
 
-                <Link legacyBehavior href="/contact">
-                  <a className="btn btn-primary">Get Started</a>
+                <Link
+                  href="/contact"
+                  className="btn btn-primary"
+                  data-aos="fade-in"
+                  data-aos-duration="1200"
+                  data-aos-delay="400"
+                >
+                  Get Started
                 </Link>
 
-                <Link legacyBehavior href="#play-video">
-                  <a
-                    onClick={() => setToggler(!toggler)}
-                    className="btn btn-secondary"
-                  >
-                    <i className="fa-solid fa-play me-1"></i> How it works
-                  </a>
-                </Link>
+                <button
+                  onClick={() => setToggler(!toggler)}
+                  className="btn btn-secondary"
+                  data-aos="fade-in"
+                  data-aos-duration="1200"
+                  data-aos-delay="500"
+                >
+                  <i className="fa-solid fa-play me-1"></i> How it works
+                </button>
               </div>
             </div>
           </div>

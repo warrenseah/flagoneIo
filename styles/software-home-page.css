@@ -152,6 +152,9 @@
 .screenshots-tabs .react-tabs__tab-list .react-tabs__tab:last-child {
   margin-bottom: 0;
 }
+.screenshots-tabs .react-tabs__tab-list .react-tabs__tab:focus-visible {
+  outline: 0 !important;
+}
 
 /* Software partner area */
 .software-partner-area .partner-title {
@@ -443,8 +446,7 @@
   position: absolute;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.2);
-  -webkit-animation: border-transform 10s linear infinite alternate forwards;
-          animation: border-transform 10s linear infinite alternate forwards;
+  animation: border-transform 10s linear infinite alternate forwards;
 }
 
 .softeware-app-download-content {
@@ -610,13 +612,6 @@
   .software-overview-box .overview-content .overview-list li span {
     padding: 20px 25px 20px 70px;
     font-size: 15px;
-  }
-  .software-overview-box .overview-content .overview-list li span i {
-    line-height: 38px;
-    font-size: 25px;
-    height: 35px;
-    width: 35px;
-    left: 25px;
   }
   .software-funfacts-item {
     text-align: center;

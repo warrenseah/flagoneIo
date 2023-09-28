@@ -1,6 +1,54 @@
 import React from "react";
 import Link from "next/link";
 
+const latestNewsData = [
+  {
+    image: "/images/blog/blog1.jpg",
+    title: "How to Become a Successful Entry Level UX Designer",
+    admin: "Admin",
+    category: "Web Development",
+    date: "Feb 15, 2023",
+    viewDetails: "/blog-details",
+    aosDelay: "100",
+  },
+  {
+    image: "/images/blog/blog2.jpg",
+    title: "How to Become a Successful Entry Level ReactJS Designer",
+    admin: "Admin",
+    category: "ReactJS",
+    date: "Feb 16, 2023",
+    viewDetails: "/blog-details",
+    aosDelay: "150",
+  },
+  {
+    image: "/images/blog/blog3.jpg",
+    title: "The Guide to Running a Client Discovery Process",
+    admin: "Admin",
+    category: "Angular JS",
+    date: "Feb 17, 2023",
+    viewDetails: "/blog-details",
+    aosDelay: "200",
+  },
+  {
+    image: "/images/blog/blog4.jpg",
+    title: "3 Ways to Get Client Approval for Scope Changes",
+    admin: "Admin",
+    category: "Design",
+    date: "Feb 18, 2023",
+    viewDetails: "/blog-details",
+    aosDelay: "250",
+  },
+  {
+    image: "/images/blog/blog5.jpg",
+    title: "Top 21 Must-Read Blogs For Creative Agencies",
+    admin: "Admin",
+    category: "Development",
+    date: "Feb 19, 2023",
+    viewDetails: "/blog-details",
+    aosDelay: "300",
+  },
+];
+
 const LatestNews = () => {
   return (
     <>
@@ -15,224 +63,96 @@ const LatestNews = () => {
           </div>
 
           <div className="row align-items-center">
-            <div className="col-lg-6 col-md-12">
-              <div className="single-blog-post mb-0">
-                <div className="post-image">
-                  <Link legacyBehavior href="/blog-details">
-                    <a>
-                      <img src="/images/blog/blog1.jpg" alt="image" />
-                    </a>
-                  </Link>
-                </div>
-
-                <div className="post-content">
-                  <ul className="post-meta">
-                    <li>
-                      <i className="fa-solid fa-user"></i>
-                      <Link legacyBehavior href="/blog">
-                        <a>Admin</a>
+            {latestNewsData &&
+              latestNewsData.slice(0, 1).map((value, i) => (
+                <div className="col-lg-6 col-md-12" key={i}>
+                  <div 
+                    className="single-blog-post mb-0"
+                    data-aos="fade-in"
+                    data-aos-duration="1200"
+                    data-aos-delay={value.aosDelay}
+                  >
+                    <div className="post-image">
+                      <Link href={value.viewDetails}>
+                        <img src={value.image} alt="image" />
                       </Link>
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-tag"></i>
-                      <Link legacyBehavior href="/blog-details">
-                        <a>Web Development</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-calendar-days"></i>
-                      Feb 15, 2022
-                    </li>
-                  </ul>
+                    </div>
 
-                  <h3 className="mb-0">
-                    <Link legacyBehavior href="/blog-details">
-                      <a>How to Become a Successful Entry Level UX Designer</a>
-                    </Link>
-                  </h3>
+                    <div className="post-content">
+                      <ul className="post-meta">
+                        <li>
+                          <i className="fa-solid fa-user"></i>
+                          <Link href={value.viewDetails}>{value.admin}</Link>
+                        </li>
+                        <li>
+                          <i className="fa-solid fa-tag"></i>
+                          <Link href={value.viewDetails}>{value.category}</Link>
+                        </li>
+                        <li>
+                          <i className="fa-solid fa-calendar-days"></i>
+                          {value.date}
+                        </li>
+                      </ul>
+
+                      <h3 className="mb-0">
+                        <Link href={value.viewDetails}>{value.title}</Link>
+                      </h3>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              ))}
 
             <div className="col-lg-6 col-md-12">
               <div className="blog-item-box">
-                <div className="blog-item">
-                  <div className="row align-items-center">
-                    <div className="col-lg-4 col-md-3 col-sm-4">
-                      <div className="post-image">
-                        <Link legacyBehavior href="/blog-details">
-                          <a>
-                            <img src="/images/blog/blog2.jpg" alt="image" />
-                          </a>
-                        </Link>
+                {latestNewsData &&
+                  latestNewsData.slice(1, 5).map((value, i) => (
+                    <div 
+                      className="blog-item" 
+                      key={i}
+                      data-aos="fade-in"
+                      data-aos-duration="1200"
+                      data-aos-delay={value.aosDelay}
+                    >
+                      <div className="row align-items-center">
+                        <div className="col-lg-4 col-md-3 col-sm-4">
+                          <div className="post-image">
+                            <Link href={value.viewDetails}>
+                              <img src={value.image} alt="image" />
+                            </Link>
+                          </div>
+                        </div>
+
+                        <div className="col-lg-8 col-md-9 col-sm-8">
+                          <div className="post-content">
+                            <ul className="post-meta">
+                              <li>
+                                <i className="fa-solid fa-user"></i>
+                                <Link href={value.viewDetails}>
+                                  {value.admin}
+                                </Link>
+                              </li>
+                              <li>
+                                <i className="fa-solid fa-tag"></i>
+                                <Link href={value.viewDetails}>
+                                  {value.category}
+                                </Link>
+                              </li>
+                              <li>
+                                <i className="fa-solid fa-calendar-days"></i>
+                                {value.date}
+                              </li>
+                            </ul>
+
+                            <h3>
+                              <Link href={value.viewDetails}>
+                                {value.title}
+                              </Link>
+                            </h3>
+                          </div>
+                        </div>
                       </div>
                     </div>
-
-                    <div className="col-lg-8 col-md-9 col-sm-8">
-                      <div className="post-content">
-                        <ul className="post-meta">
-                          <li>
-                            <i className="fa-solid fa-user"></i>
-                            <Link legacyBehavior href="/blog">
-                              <a>Admin</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-tag"></i>
-                            <Link legacyBehavior href="/blog-details">
-                              <a>React Js</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-calendar-days"></i>
-                            Feb 16, 2022
-                          </li>
-                        </ul>
-
-                        <h3>
-                          <Link legacyBehavior href="/blog-details">
-                            <a>
-                              How to Become a Successful Entry Level UX Designer
-                            </a>
-                          </Link>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="blog-item">
-                  <div className="row align-items-center">
-                    <div className="col-lg-4 col-md-3 col-sm-4">
-                      <div className="post-image">
-                        <Link legacyBehavior href="/blog-details">
-                          <a>
-                            <img src="/images/blog/blog3.jpg" alt="image" />
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div className="col-lg-8 col-md-9 col-sm-8">
-                      <div className="post-content">
-                        <ul className="post-meta">
-                          <li>
-                            <i className="fa-solid fa-user"></i>
-                            <Link legacyBehavior href="/blog">
-                              <a>Admin</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-tag"></i>
-                            <Link legacyBehavior href="/blog-details">
-                              <a>Angular Js</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-calendar-days"></i>
-                            Feb 17, 2022
-                          </li>
-                        </ul>
-
-                        <h3>
-                          <Link legacyBehavior href="/blog-details">
-                            <a>
-                              The Guide to Running a Client Discovery Process
-                            </a>
-                          </Link>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="blog-item">
-                  <div className="row align-items-center">
-                    <div className="col-lg-4 col-md-3 col-sm-4">
-                      <div className="post-image">
-                        <Link legacyBehavior href="/blog-details">
-                          <a>
-                            <img src="/images/blog/blog4.jpg" alt="image" />
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div className="col-lg-8 col-md-9 col-sm-8">
-                      <div className="post-content">
-                        <ul className="post-meta">
-                          <li>
-                            <i className="fa-solid fa-user"></i>
-                            <Link legacyBehavior href="/blog">
-                              <a>Admin</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-tag"></i>
-                            <Link legacyBehavior href="/blog-details">
-                              <a>Design</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-calendar-days"></i>
-                            Feb 18, 2022
-                          </li>
-                        </ul>
-
-                        <h3>
-                          <Link legacyBehavior href="/blog-details">
-                            <a>
-                              3 Ways to Get Client Approval for Scope Changes
-                            </a>
-                          </Link>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="blog-item">
-                  <div className="row align-items-center">
-                    <div className="col-lg-4 col-md-3 col-sm-4">
-                      <div className="post-image">
-                        <Link legacyBehavior href="/blog-details">
-                          <a>
-                            <img src="/images/blog/blog1.jpg" alt="image" />
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div className="col-lg-8 col-md-9 col-sm-8">
-                      <div className="post-content">
-                        <ul className="post-meta">
-                          <li>
-                            <i className="fa-solid fa-user"></i>
-                            <Link legacyBehavior href="/blog">
-                              <a>Admin</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-tag"></i>
-                            <Link legacyBehavior href="/blog-details">
-                              <a>Design</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-calendar-days"></i>
-                            Feb 18, 2022
-                          </li>
-                        </ul>
-
-                        <h3>
-                          <Link legacyBehavior href="/blog-details">
-                            <a>Top 21 Must-Read Blogs For Creative Agencies</a>
-                          </Link>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  ))}
               </div>
             </div>
           </div>

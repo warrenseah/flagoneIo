@@ -1,6 +1,39 @@
 import React from "react";
 import Link from "next/link";
 
+const latestBlogPostData = [
+  {
+    title: "Top 5 Tips To Create An Eye-Catching Website",
+    shortText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    date: "Dec 02, 2022",
+    author: "Shelley Percy",
+    authorLink: "#",
+    blogDetailsLink: "/blog-details",
+    aosDelay: "100",
+  },
+  {
+    title: "Improve Marketing Techniques For Lead Generation",
+    shortText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    date: "Dec 03, 2022",
+    author: "Stevn Smith",
+    authorLink: "#",
+    blogDetailsLink: "/blog-details",
+    aosDelay: "200",
+  },
+  {
+    title: "Esit And A Case For Successful Fast Delivery",
+    shortText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    date: "Dec 04, 2022",
+    author: "David Warner",
+    authorLink: "#",
+    blogDetailsLink: "/blog-details",
+    aosDelay: "300",
+  },
+];
+
 const LatestBlogPost = () => {
   return (
     <>
@@ -11,95 +44,36 @@ const LatestBlogPost = () => {
           </div>
 
           <div className="row justify-content-center">
-            <div className="col-lg-4 col-md-6">
-              <div className="pp-post-item">
-                <div className="post-content">
-                  <ul className="meta">
-                    <li>
-                      <i className="far fa-calendar-alt"></i> Dec 02, 2022
-                    </li>
-                    <li>
-                      <i className="far fa-user-circle"></i>{" "}
-                      <a href="#">Shelley Percy</a>
-                    </li>
-                  </ul>
-                  <h3>
-                    <Link legacyBehavior href="/blog-details">
-                      <a>Top 5 Tips To Create An Eye-Catching Website</a>
-                    </Link>
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt.
-                  </p>
-                  <Link legacyBehavior href="/blog-details">
-                    <a className="link-btn">
-                      Read More <i className="fas fa-chevron-right"></i>
-                    </a>
-                  </Link>
+            {latestBlogPostData &&
+              latestBlogPostData.map((value, i) => (
+                <div className="col-lg-4 col-md-6" key={i}>
+                  <div 
+                    className="pp-post-item"
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-delay={value.aosDelay}
+                  >
+                    <div className="post-content">
+                      <ul className="meta">
+                        <li>
+                          <i className="far fa-calendar-alt"></i> {value.date}
+                        </li>
+                        <li>
+                          <i className="far fa-user-circle"></i>{" "}
+                          <a href={value.authorLink}>{value.author}</a>
+                        </li>
+                      </ul>
+                      <h3>
+                        <Link href={value.blogDetailsLink}>{value.title}</Link>
+                      </h3>
+                      <p>{value.shortText}</p>
+                      <Link href={value.blogDetailsLink} className="link-btn">
+                        Read More <i className="fas fa-chevron-right"></i>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="pp-post-item">
-                <div className="post-content">
-                  <ul className="meta">
-                    <li>
-                      <i className="far fa-calendar-alt"></i> Dec 03, 2022
-                    </li>
-                    <li>
-                      <i className="far fa-user-circle"></i>{" "}
-                      <a href="#">Stevn Smith</a>
-                    </li>
-                  </ul>
-                  <h3>
-                    <Link legacyBehavior href="/blog-details">
-                      <a>Improve Marketing Techniques For Lead Generation</a>
-                    </Link>
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt.
-                  </p>
-                  <Link legacyBehavior href="/blog-details">
-                    <a className="link-btn">
-                      Read More <i className="fas fa-chevron-right"></i>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="pp-post-item">
-                <div className="post-content">
-                  <ul className="meta">
-                    <li>
-                      <i className="far fa-calendar-alt"></i> Dec 02, 2022
-                    </li>
-                    <li>
-                      <i className="far fa-user-circle"></i>{" "}
-                      <a href="#">David Warner</a>
-                    </li>
-                  </ul>
-                  <h3>
-                    <Link legacyBehavior href="/blog-details">
-                      <a>Esit And A Case For Successful Fast Delivery</a>
-                    </Link>
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt.
-                  </p>
-                  <Link legacyBehavior href="/blog-details">
-                    <a className="link-btn">
-                      Read More <i className="fas fa-chevron-right"></i>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </div>
+              ))}
           </div>
         </div>
       </div>

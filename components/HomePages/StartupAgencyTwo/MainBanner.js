@@ -18,15 +18,32 @@ const MainBanner = () => {
               <div className="row align-items-center">
                 <div className="col-lg-6">
                   <div className="main-banner-content">
-                    <h1>Start your startup agency with Pungent</h1>
-                    <p>
+                    <h1
+                      data-aos="fade-up"
+                      data-aos-duration="1200"
+                      data-aos-delay="200"
+                    >
+                      Start your startup agency with Pungent
+                    </h1>
+
+                    <p
+                      data-aos="fade-up"
+                      data-aos-duration="1200"
+                      data-aos-delay="300"
+                    >
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore
-                      magna aliqua.
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
                     </p>
 
-                    <Link legacyBehavior href="/contact">
-                      <a className="btn btn-primary">Get Started</a>
+                    <Link
+                      href="/contact"
+                      className="btn btn-primary"
+                      data-aos="fade-up"
+                      data-aos-duration="1200"
+                      data-aos-delay="400"
+                    >
+                      Get Started
                     </Link>
                   </div>
                 </div>
@@ -36,18 +53,16 @@ const MainBanner = () => {
                     className="banner-image"
                     data-aos="fade-up"
                     data-aos-duration="1200"
+                    data-aos-delay="600"
                   >
-                    <img 
-                      src="/images/banner-img2.png" 
-                      alt="image" 
-                    />
+                    <img src="/images/banner-img2.png" alt="image" />
                     <div className="video-box">
-                        <div
-                          onClick={() => setToggler(!toggler)}
-                          className="video-btn"
-                        > 
-                          <i className="fa-solid fa-play"></i>
-                        </div>
+                      <div
+                        onClick={() => setToggler(!toggler)}
+                        className="video-btn"
+                      >
+                        <i className="fa-solid fa-play"></i>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -57,7 +72,7 @@ const MainBanner = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default MainBanner;

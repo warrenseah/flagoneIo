@@ -6,12 +6,29 @@ const FreeTrial = () => {
       <div className="app-free-trial-area">
         <div className="container">
           <div className="app-free-trial-content">
-            <span className="sub-title">FREE TRIAL</span>
-            <h2>Start Your 14 Days Free Trials Today!</h2>
+            <span 
+              className="sub-title"
+              data-aos="fade-in"
+              data-aos-duration="1200"
+              data-aos-delay="100"
+            >
+              FREE TRIAL
+            </span>
+
+            <h2
+              data-aos="fade-in"
+              data-aos-duration="1200"
+              data-aos-delay="200"
+            >
+              Start Your 14 Days Free Trials Today!
+            </h2>
 
             <form
               className="free-trial-form"
               onSubmit={(e) => e.preventDefault()}
+              data-aos="fade-in"
+              data-aos-duration="1200"
+              data-aos-delay="300"
             >
               <input
                 type="text"

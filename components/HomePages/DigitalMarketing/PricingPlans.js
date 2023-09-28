@@ -1,6 +1,108 @@
 import React from "react";
 import Link from "next/link";
 
+const pricingData = [
+  {
+    price: "19",
+    duration: "/Monthly",
+    title: "Basic",
+    aosDelay: "100",
+
+    priceList: [
+      {
+        title: "Get a Free Account",
+        iconName: "fas fa-check",
+      },
+      {
+        title: "Own Analytics Platform",
+        iconName: "fas fa-check",
+      },
+      {
+        title: "Live Chat Support",
+        iconName: "fas fa-check",
+      },
+      {
+        title: "Optimize Hashtags",
+        iconName: "fas fa-times close",
+      },
+      {
+        title: "Account Manager",
+        iconName: "fas fa-times close",
+      },
+      {
+        title: "24/7 Support",
+        iconName: "fas fa-times close",
+      },
+    ],
+  },
+  {
+    price: "29",
+    duration: "/Monthly",
+    title: "Professional",
+    aosDelay: "200",
+
+    priceList: [
+      {
+        title: "Get a Free Account",
+        iconName: "fas fa-check",
+      },
+      {
+        title: "Own Analytics Platform",
+        iconName: "fas fa-check",
+      },
+      {
+        title: "Live Chat Support",
+        iconName: "fas fa-check",
+      },
+      {
+        title: "Optimize Hashtags",
+        iconName: "fas fa-check",
+      },
+      {
+        title: "Account Manager",
+        iconName: "fas fa-times close",
+      },
+      {
+        title: "24/7 Support",
+        iconName: "fas fa-times close",
+      },
+    ],
+  },
+  {
+    price: "39",
+    duration: "/Monthly",
+    title: "Enterprise",
+    aosDelay: "300",
+
+    priceList: [
+      {
+        title: "Get a Free Account",
+        iconName: "fas fa-check",
+      },
+      {
+        title: "Own Analytics Platform",
+        iconName: "fas fa-check",
+      },
+      {
+        title: "Live Chat Support",
+        iconName: "fas fa-check",
+      },
+      {
+        title: "Optimize Hashtags",
+        iconName: "fas fa-check",
+      },
+      {
+        title: "Account Manager",
+        iconName: "fas fa-check",
+      },
+      {
+        title: "24/7 Support",
+        iconName: "fas fa-check",
+      },
+    ],
+  },
+];
+
 const PricingPlans = () => {
   return (
     <>
@@ -12,116 +114,38 @@ const PricingPlans = () => {
           </div>
 
           <div className="row justify-content-center">
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="dm-pricing-box"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="100"
-              >
-                <div className="pricing-header">
-                  <h3>
-                    $19<span>/Monthly</span>
-                  </h3>
-                  <span className="sub-title">Starter</span>
+            {pricingData &&
+              pricingData.slice(0, 3).map((value, i) => (
+                <div className="col-lg-4 col-md-6" key={i}>
+                  <div
+                    className="dm-pricing-box"
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-delay={value.aosDelay}
+                  >
+                    <div className="pricing-header">
+                      <h3>
+                        ${value.price}
+                        <span>{value.duration}</span>
+                      </h3>
+                      <span className="sub-title">{value.title}</span>
+                    </div>
+
+                    <ul className="features-list">
+                      {value.priceList.map((value, i) => (
+                        <li key={i}>
+                          <i className={value.iconName}></i>
+                          {value.title}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <Link href="#" className="default-btn-two">
+                      Purchase Now
+                    </Link>
+                  </div>
                 </div>
-                <ul className="features-list">
-                  <li>
-                    <i className="fas fa-check"></i> Get a Free Account
-                  </li>
-                  <li>
-                    <i className="fas fa-check"></i> Own Analytics Platform
-                  </li>
-                  <li>
-                    <i className="fas fa-check"></i> Chat Support
-                  </li>
-                  <li>
-                    <i className="fas fa-times close"></i> Optimize Hashtags
-                  </li>
-                  <li>
-                    <i className="fas fa-times close"></i> Account Manager
-                  </li>
-                </ul>
-
-                <Link legacyBehavior href="#">
-                  <a className="default-btn-two">Purchase Now</a>
-                </Link>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="dm-pricing-box"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="200"
-              >
-                <div className="pricing-header">
-                  <h3>
-                    $29<span>/Monthly</span>
-                  </h3>
-                  <span className="sub-title">Professional</span>
-                </div>
-                <ul className="features-list">
-                  <li>
-                    <i className="fas fa-check"></i> Get a Free Account
-                  </li>
-                  <li>
-                    <i className="fas fa-check"></i> Own Analytics Platform
-                  </li>
-                  <li>
-                    <i className="fas fa-check"></i> Chat Support
-                  </li>
-                  <li>
-                    <i className="fas fa-check"></i> Optimize Hashtags
-                  </li>
-                  <li>
-                    <i className="fas fa-times close"></i> Account Manager
-                  </li>
-                </ul>
-
-                <Link legacyBehavior href="#">
-                  <a className="default-btn-two">Purchase Now</a>
-                </Link>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="dm-pricing-box"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="300"
-              >
-                <div className="pricing-header">
-                  <h3>
-                    $39<span>/Yearly</span>
-                  </h3>
-                  <span className="sub-title">Enterprise</span>
-                </div>
-                <ul className="features-list">
-                  <li>
-                    <i className="fas fa-check"></i> Get a Free Account
-                  </li>
-                  <li>
-                    <i className="fas fa-check"></i> Own Analytics Platform
-                  </li>
-                  <li>
-                    <i className="fas fa-check"></i> Chat Support
-                  </li>
-                  <li>
-                    <i className="fas fa-check"></i> Optimize Hashtags
-                  </li>
-                  <li>
-                    <i className="fas fa-check"></i> Account Manager
-                  </li>
-                </ul>
-
-                <Link legacyBehavior href="#">
-                  <a className="default-btn-two">Purchase Now</a>
-                </Link>
-              </div>
-            </div>
+              ))}
           </div>
         </div>
       </div>

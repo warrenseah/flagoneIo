@@ -19,7 +19,7 @@ const BlogRightSidebar = () => {
                   <ul className="entry-meta">
                     <li>
                       <i className="fa-solid fa-user"></i>
-                      <Link legacyBehavior href="/blog">
+                      <Link href="/blog">
                         Admin
                       </Link>
                     </li>
@@ -93,23 +93,23 @@ const BlogRightSidebar = () => {
                       <span>Tags:</span>
                     </li>
                     <li>
-                      <Link legacyBehavior href="/blog">
-                        <a>Business</a>
+                      <Link href="/blog">
+                        Business
                       </Link>
                     </li>
                     <li>
-                      <Link legacyBehavior href="/blog">
-                        <a>IT</a>
+                      <Link href="/blog">
+                        IT
                       </Link>
                     </li>
                     <li>
-                      <Link legacyBehavior href="/blog">
-                        <a>Tips</a>
+                      <Link href="/blog">
+                        Tips
                       </Link>
                     </li>
                     <li>
-                      <Link legacyBehavior href="/blog">
-                        <a>Design</a>
+                      <Link href="/blog">
+                        Design
                       </Link>
                     </li>
                   </ul>
@@ -119,13 +119,13 @@ const BlogRightSidebar = () => {
               {/* Post controls */}
               <div className="post-controls-buttons">
                 <div>
-                  <Link legacyBehavior href="#">
-                    <a>Prev Post</a>
+                  <Link href="#">
+                    Prev Post
                   </Link>
                 </div>
                 <div>
-                  <Link legacyBehavior href="#">
-                    <a>Next Post</a>
+                  <Link href="#">
+                    Next Post
                   </Link>
                 </div>
               </div>
