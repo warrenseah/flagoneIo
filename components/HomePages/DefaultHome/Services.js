@@ -21,8 +21,8 @@ const Services = () => {
               <div className="service-card-one">
                 <i className="pe-7s-comment bg-13c4a1"></i>
                 <h3>
-                  <Link legacyBehavior href="/service-details">
-                    <a>Business to Blockchain Consulting</a>
+                  <Link href="/service-details">
+                    Business to Blockchain Consulting
                   </Link>
                 </h3>
                 <p>
@@ -41,8 +41,8 @@ const Services = () => {
               <div className="service-card-one">
                 <i className="pe-7s-display2 bg-6610f2"></i>
                 <h3>
-                  <Link legacyBehavior href="/service-details">
-                    <a>dApp Development</a>
+                  <Link href="/service-details">
+                    dApp Development
                   </Link>
                 </h3>
                 <p>
@@ -62,8 +62,8 @@ const Services = () => {
               <div className="service-card-one">
                 <i className="pe-7s-light bg-ffb700"></i>
                 <h3>
-                  <Link legacyBehavior href="/service-details">
-                    <a>Key Management</a>
+                  <Link href="/service-details">
+                    Key Management
                   </Link>
                 </h3>
                 <p>
@@ -82,8 +82,8 @@ const Services = () => {
               <div className="service-card-one">
                 <i className="pe-7s-phone bg-fc3549"></i>
                 <h3>
-                  <Link legacyBehavior href="/service-details">
-                    <a>Smart Contract Development</a>
+                  <Link href="/service-details">
+                    Smart Contract Development
                   </Link>
                 </h3>
                 <p>
@@ -103,8 +103,8 @@ const Services = () => {
               <div className="service-card-one">
                 <i className="pe-7s-cart bg-00d280"></i>
                 <h3>
-                  <Link legacyBehavior href="/service-details">
-                    <a>Crypto Payments</a>
+                  <Link href="/service-details">
+                    Crypto Payments
                   </Link>
                 </h3>
                 <p>
@@ -123,8 +123,8 @@ const Services = () => {
               <div className="service-card-one">
                 <i className="pe-7s-users bg-ff612f"></i>
                 <h3>
-                  <Link legacyBehavior href="/service-details">
-                    <a>Staking</a>
+                  <Link href="/service-details">
+                    Staking
                   </Link>
                 </h3>
                 <p>

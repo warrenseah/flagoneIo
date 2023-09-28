@@ -31,8 +31,8 @@ const MainBanner = () => {
                     </h1>
                     <p>Experience Web 3.0 Better with FlagOne.</p>
 
-                    <Link legacyBehavior href="/contact">
-                      <a className="btn btn-primary">Get Started</a>
+                    <Link legacyBehavior href="/contact" className="btn btn-primary">
+                      Get Started
                     </Link>
 
                     {/* <Link legacyBehavior href="#play-video">
