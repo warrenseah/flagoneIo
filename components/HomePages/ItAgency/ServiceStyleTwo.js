@@ -52,10 +52,8 @@ const ServiceStyleTwo = () => {
                 </div>
 
                 <div className="service-read-more">
-                  <Link href="/service-details">
-                    <a className="btn btn-primary">
-                      <i className="fa-solid fa-list-check"></i> Read more
-                    </a>
+                  <Link href="/service-details" className="btn btn-primary">
+                    <i className="fa-solid fa-list-check"></i> Read more
                   </Link>
                 </div>
               </div>
@@ -138,10 +136,8 @@ const ServiceStyleTwo = () => {
                 </div>
 
                 <div className="service-read-more">
-                  <Link href="/service-details">
-                    <a className="btn btn-primary">
-                      <i className="fa-solid fa-list-check"></i> Read more
-                    </a>
+                  <Link href="/service-details" className="btn btn-primary">
+                    <i className="fa-solid fa-list-check"></i> Read more
                   </Link>
                 </div>
               </div>
@@ -198,10 +194,8 @@ const ServiceStyleTwo = () => {
                 </div>
 
                 <div className="service-read-more">
-                  <Link href="/service-details">
-                    <a className="btn btn-primary">
-                      <i className="fa-solid fa-list-check"></i> Read more
-                    </a>
+                  <Link href="/service-details" className="btn btn-primary">
+                    <i className="fa-solid fa-list-check"></i> Read more
                   </Link>
                 </div>
               </div>

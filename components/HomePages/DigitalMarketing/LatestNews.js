@@ -1,6 +1,39 @@
 import React from "react";
 import Link from "next/link";
 
+const latestNewsData = [
+  {
+    image: "/images/blog/blog7.jpg",
+    title: "The Most Popular New top Business Apps",
+    date: "Feb 15, 2023",
+    category: "Technology",
+    shortText:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.",
+    detailsLink: "/blog-details",
+    aosDelay: "100",
+  },
+  {
+    image: "/images/blog/blog8.jpg",
+    title: "The Best Marketing top use Management Tools",
+    date: "Feb 16, 2023",
+    category: "Agency",
+    shortText:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.",
+    detailsLink: "/blog-details",
+    aosDelay: "200",
+  },
+  {
+    image: "/images/blog/blog9.jpg",
+    title: "3 WooCommerce Plugins to Boost Sales",
+    date: "Feb 17, 2023",
+    category: "IT Agency",
+    shortText:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.",
+    detailsLink: "/blog-details",
+    aosDelay: "300",
+  },
+];
+
 const LatestNews = () => {
   return (
     <>
@@ -12,139 +45,41 @@ const LatestNews = () => {
           </div>
 
           <div className="row justify-content-center">
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="single-blog-item"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="100"
-              >
-                <div className="blog-image">
-                  <Link href="/blog-details">
-                    <a>
-                      <img src="/images/blog/blog7.jpg" alt="image" />
-                    </a>
-                  </Link>
+            {latestNewsData &&
+              latestNewsData.slice(0, 3).map((value, i) => (
+                <div className="col-lg-4 col-md-6" key={i}>
+                  <div
+                    className="single-blog-item"
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-delay={value.aosDelay}
+                  >
+                    <div className="blog-image">
+                      <Link href={value.detailsLink}>
+                        <img src={value.image} alt="image" />
+                      </Link>
 
-                  <div className="post-tag">
-                    <Link href="/blog">
-                      <a>Technology</a>
-                    </Link>
+                      <div className="post-tag">
+                        <Link href={value.detailsLink}>{value.category}</Link>
+                      </div>
+                    </div>
+
+                    <div className="blog-post-content">
+                      <span className="date">{value.date}</span>
+                      <h3>
+                        <Link href={value.detailsLink}>{value.title}</Link>
+                      </h3>
+
+                      <p>{value.shortText}</p>
+
+                      <Link href={value.detailsLink} className="read-more-btn">
+                        Read More
+                        <i className="fa-solid fa-angles-right"></i>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-
-                <div className="blog-post-content">
-                  <span className="date">Feb 15, 2022</span>
-                  <h3>
-                    <Link href="/blog-details">
-                      <a>The Most Popular New top Business Apps</a>
-                    </Link>
-                  </h3>
-
-                  <p>
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium.
-                  </p>
-
-                  <Link href="/blog-details">
-                    <a className="read-more-btn">
-                      Read More
-                      <i className="fa-solid fa-angles-right"></i>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="single-blog-item"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="200"
-              >
-                <div className="blog-image">
-                  <Link href="/blog-details">
-                    <a>
-                      <img src="/images/blog/blog8.jpg" alt="image" />
-                    </a>
-                  </Link>
-
-                  <div className="post-tag">
-                    <Link href="/blog">
-                      <a>Agency</a>
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="blog-post-content">
-                  <span className="date">Feb 16, 2022</span>
-
-                  <h3>
-                    <Link href="/blog-details">
-                      <a>The Best Marketing top use Management Tools</a>
-                    </Link>
-                  </h3>
-
-                  <p>
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium.
-                  </p>
-
-                  <Link href="/blog-details">
-                    <a className="read-more-btn">
-                      Read More
-                      <i className="fa-solid fa-angles-right"></i>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="single-blog-item"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="300"
-              >
-                <div className="blog-image">
-                  <Link href="/blog-details">
-                    <a>
-                      <img src="/images/blog/blog9.jpg" alt="image" />
-                    </a>
-                  </Link>
-
-                  <div className="post-tag">
-                    <Link href="/blog">
-                      <a>IT Agency</a>
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="blog-post-content">
-                  <span className="date">Feb 17, 2022</span>
-
-                  <h3>
-                    <Link href="/blog-details">
-                      <a>3 WooCommerce Plugins to Boost Sales</a>
-                    </Link>
-                  </h3>
-
-                  <p>
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium.
-                  </p>
-
-                  <Link href="/blog-details">
-                    <a className="read-more-btn">
-                      Read More
-                      <i className="fa-solid fa-angles-right"></i>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </div>
+              ))}
           </div>
         </div>
       </div>

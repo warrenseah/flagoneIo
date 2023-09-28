@@ -1,82 +1,102 @@
 import React from "react";
 
+const workProcessData = [
+  {
+    title: "Our Work Process",
+    shortText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    image: "/images/man-with-mobile.png",
+    circleImage: "/images/circle.png",
+
+    list: [
+      {
+        iconName: "pe-7s-display1",
+        title: "Surface",
+        text: "Visual Design",
+        aosDelay: "100",
+      },
+      {
+        iconName: "pe-7s-display2",
+        title: "Skeleton",
+        text: "Wireframes",
+        aosDelay: "200",
+      },
+      {
+        iconName: "pe-7s-airplay",
+        title: "Structure",
+        text: "Screen Flow",
+        aosDelay: "300",
+      },
+      {
+        iconName: "pe-7s-note2",
+        title: "Scope",
+        text: "Requirements",
+        aosDelay: "400",
+      },
+      {
+        iconName: "pe-7s-light",
+        title: "User Research",
+        text: "User Research",
+        aosDelay: "500",
+      },
+      {
+        iconName: "pe-7s-sun",
+        title: "Implement",
+        text: "Lunch/Analyse",
+        aosDelay: "600",
+      },
+    ],
+  },
+];
+
 const WorkProcess = () => {
   return (
     <>
-      <section className="work-process-area ptb-100">
-        <div className="container">
-          <div className="section-title">
-            <h2>dApp Development Process</h2>
-            <p></p>
-          </div>
-
-          <div className="work-process">
-            <div
-              data-aos="zoom-in"
-              data-aos-duration="1200"
-              data-aos-delay="600"
-            >
-              <img src="/images/man-with-mobile.png" alt="logo" />
-            </div>
-
-            <div className="work-process-list">
-              <div className="single-work-process">
-                <div className="icon">
-                  <i className="pe-7s-display1"></i>
-                </div>
-                <h3>Consulting</h3>
-                <span>Business to Blockchain</span>
+      {workProcessData &&
+        workProcessData.map((value, i) => (
+          <section className="work-process-area ptb-100" key={i}>
+            <div className="container">
+              <div className="section-title">
+                <h2>{value.title}</h2>
+                <p>{value.shortText}</p>
               </div>
 
-              <div className="single-work-process">
-                <div className="icon">
-                  <i className="pe-7s-display2"></i>
+              <div className="work-process">
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="1200"
+                  data-aos-delay="600"
+                >
+                  <img src={value.image} alt="image" />
                 </div>
-                <h3>WireFraming</h3>
-                <span>Architecture Design</span>
-              </div>
 
-              <div className="single-work-process">
-                <div className="icon">
-                  <i className="pe-7s-airplay"></i>
+                <div className="work-process-list">
+                  {value.list.slice(0, 6).map((value, i) => (
+                    <div
+                      className="single-work-process"
+                      key={i}
+                      data-aos="fade-in"
+                      data-aos-duration="1200"
+                      data-aos-delay={value.aosDelay}
+                    >
+                      <div className="icon">
+                        <i className={value.iconName}></i>
+                      </div>
+                      <h3>{value.title}</h3>
+                      <span>{value.text}</span>
+                    </div>
+                  ))}
                 </div>
-                <h3>Smart Contract</h3>
-                <span>Development</span>
-              </div>
 
-              <div className="single-work-process">
-                <div className="icon">
-                  <i className="pe-7s-note2"></i>
-                </div>
-                <h3>Frontend</h3>
-                <span>NextJS, ReactJS</span>
-              </div>
-
-              <div className="single-work-process">
-                <div className="icon">
-                  <i className="pe-7s-light"></i>
-                </div>
-                <h3>Unit Tests</h3>
-                <span>Optimize and testing on local and test nets</span>
-              </div>
-
-              <div className="single-work-process">
-                <div className="icon">
-                  <i className="pe-7s-sun"></i>
-                </div>
-                <h3>Implement</h3>
-                <span>Launch on Mainnet</span>
+                <img
+                  src={value.circleImage}
+                  className="rotateme circle-image"
+                  alt="image"
+                />
               </div>
             </div>
-
-            <img
-              src="/images/circle.png"
-              className="rotateme circle-image"
-              alt="image"
-            />
-          </div>
-        </div>
-      </section>
+          </section>
+        ))}
     </>
   );
 };

@@ -6,20 +6,24 @@ const CtaAreaThree = () => {
     <>
       <div className="cta-area-two dark-style ptb-100">
         <div className="container">
-          <div className="cta-content">
+          <div 
+            className="cta-content"
+            data-aos="fade-in"
+            data-aos-duration="1200"
+            data-aos-delay="200"
+          >
             <span>So What is Next?</span>
             <h3>Are You Ready? Let's get to work!</h3>
           </div>
 
           <div
             className="cta-btn-box"
-            data-aos="fade-up"
+            data-aos="fade-in"
             data-aos-duration="1200"
+            data-aos-delay="400"
           >
-            <Link href="/contact">
-              <a className="default-btn-two">
-                Contact Us <i className="fa-solid fa-chevron-right"></i>
-              </a>
+            <Link href="/contact" className="default-btn-two">
+              Contact Us <i className="fa-solid fa-chevron-right"></i>
             </Link>
           </div>
         </div>

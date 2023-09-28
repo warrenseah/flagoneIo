@@ -1,6 +1,123 @@
 import React from "react";
 import Link from "next/link";
 
+const pricingData = [
+  {
+    title: "Daily plan",
+    price: "120",
+    duration: "/Per Day",
+    shortText:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+    aosDelay: "200",
+
+    priceList: [
+      {
+        title: "Web Development",
+      },
+      {
+        title: "Email Integration",
+      },
+      {
+        title: "Messenger Integration",
+      },
+      {
+        title: "Mobile + Desktop Apps",
+      },
+      {
+        title: "Quick Responses",
+      },
+      {
+        title: "Drag & Drop Widgets",
+      },
+      {
+        title: "Visitor Notes",
+      },
+      {
+        title: "Google Analytics",
+      },
+      {
+        title: "24/7 Live Chat",
+      },
+    ],
+  },
+  {
+    title: "Weekly plan",
+    price: "840",
+    duration: "/Per Week",
+    shortText:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+    aosDelay: "300",
+
+    priceList: [
+      {
+        title: "Web Development",
+      },
+      {
+        title: "Email Integration",
+      },
+      {
+        title: "Messenger Integration",
+      },
+      {
+        title: "Mobile + Desktop Apps",
+      },
+      {
+        title: "Quick Responses",
+      },
+      {
+        title: "Drag & Drop Widgets",
+      },
+      {
+        title: "Visitor Notes",
+      },
+      {
+        title: "Google Analytics",
+      },
+      {
+        title: "24/7 Live Chat",
+      },
+    ],
+  },
+  {
+    title: "Monthly plan",
+    price: "3,600",
+    duration: "/Per Month",
+    shortText:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+    aosDelay: "400",
+
+    priceList: [
+      {
+        title: "Web Development",
+      },
+      {
+        title: "Email Integration",
+      },
+      {
+        title: "Messenger Integration",
+      },
+      {
+        title: "Mobile + Desktop Apps",
+      },
+      {
+        title: "Quick Responses",
+      },
+      {
+        title: "Drag & Drop Widgets",
+      },
+      {
+        title: "Visitor Notes",
+      },
+      {
+        title: "Google Analytics",
+      },
+      {
+        title: "24/7 Live Chat",
+      },
+    ],
+  },
+];
+
 const PricingStyleThree = () => {
   return (
     <>
@@ -15,182 +132,42 @@ const PricingStyleThree = () => {
           </div>
 
           <div className="row justify-content-center">
-            {/* Single pricing table */}
-            <div className="col-lg-4 col-sm-6">
-              <div
-                className="single-pricing-table"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="100"
-              >
-                <div className="pricing-header">
-                  <h3>Daily plan</h3>
+            {pricingData &&
+              pricingData.slice(0, 3).map((value, i) => (
+                <div className="col-lg-4 col-md-6" key={i}>
+                  <div
+                    className="single-pricing-table"
+                    data-aos="fade-in"
+                    data-aos-duration="1200"
+                    data-aos-delay={value.aosDelay}
+                  >
+                    <div className="pricing-header">
+                      <h3>{value.title}</h3>
+                    </div>
+
+                    <div className="price">
+                      <sup>$</sup>
+                      {value.price} <sub>{value.duration}</sub>
+                      <p className="info-text">{value.shortText}</p>
+                    </div>
+
+                    <ul className="pricing-features">
+                      {value.priceList.map((value, i) => (
+                        <li key={i}>
+                          <i className="fa-solid fa-circle-check"></i>{" "}
+                          {value.title}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="btn-box">
+                      <Link href="#" className="btn btn-primary">
+                        Select the plan
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-
-                <div className="price">
-                  <sup>$</sup>120 <sub>/ Day</sub>
-                </div>
-
-                <ul className="pricing-features">
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Web Development
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Email Integration
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Messenger Integration
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Mobile + Desktop Apps
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Quick Responses
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Drag & Drop Widgets
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Visitor Notes
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Google Analytics
-                  </li>
-                </ul>
-
-                <div className="btn-box">
-                  <Link href="#">
-                    <a className="btn btn-primary">Select the plan</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Single pricing table */}
-            <div className="col-lg-4 col-sm-6">
-              <div
-                className="single-pricing-table"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="200"
-              >
-                <div className="pricing-header">
-                  <h3>Weekly plan</h3>
-                </div>
-
-                <div className="price">
-                  <sup>$</sup>840 <sub>/ Week</sub>
-                </div>
-
-                <ul className="pricing-features">
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Web Development
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Email Integration
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Messenger Integration
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Mobile + Desktop Apps
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Quick Responses
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Drag & Drop Widgets
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Visitor Notes
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Google Analytics
-                  </li>
-                </ul>
-
-                <div className="btn-box">
-                  <Link href="#">
-                    <a className="btn btn-primary">Select the plan</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Single pricing table */}
-            <div className="col-lg-4 col-sm-6">
-              <div
-                className="single-pricing-table"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="300"
-              >
-                <div className="pricing-header">
-                  <h3>Monthly plan</h3>
-                </div>
-
-                <div className="price">
-                  <sup>$</sup>3,600<sub> / Month</sub>
-                </div>
-
-                <ul className="pricing-features">
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Web Development
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Email Integration
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Messenger Integration
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Mobile + Desktop Apps
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Quick Responses
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Drag & Drop Widgets
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Visitor Notes
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check"></i>
-                    Google Analytics
-                  </li>
-                </ul>
-
-                <div className="btn-box">
-                  <Link href="#">
-                    <a className="btn btn-primary">Select the plan</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
+              ))}
           </div>
         </div>
       </div>

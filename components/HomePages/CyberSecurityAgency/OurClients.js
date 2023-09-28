@@ -1,6 +1,36 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
+
+const OurClientsData = [
+  {
+    image: "/images/cyber-security/partner/partner-1.png",
+  },
+  {
+    image: "/images/cyber-security/partner/partner-2.png",
+  },
+  {
+    image: "/images/cyber-security/partner/partner-3.png",
+  },
+  {
+    image: "/images/cyber-security/partner/partner-4.png",
+  },
+  {
+    image: "/images/cyber-security/partner/partner-5.png",
+  },
+  {
+    image: "/images/cyber-security/partner/partner-6.png",
+  },
+  {
+    image: "/images/cyber-security/partner/partner-7.png",
+  },
+  {
+    image: "/images/cyber-security/partner/partner-8.png",
+  },
+  {
+    image: "/images/cyber-security/partner/partner-6.png",
+  },
+];
 
 const OurClients = () => {
   return (
@@ -18,6 +48,11 @@ const OurClients = () => {
           <Swiper
             navigation={true}
             spaceBetween={30}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: true,
+              pauseOnMouseEnter: true,
+            }}
             breakpoints={{
               0: {
                 slidesPerView: 2,
@@ -38,89 +73,20 @@ const OurClients = () => {
                 slidesPerView: 8,
               },
             }}
-            modules={[Navigation]}
+            modules={[Autoplay, Navigation]}
             className="cs-partner-slides"
+            data-aos="fade-in"
+            data-aos-duration="1200"
+            data-aos-delay="200"
           >
-            <SwiperSlide>
-              <div className="cs-partner-item text-center">
-                <img
-                  src="/images/cyber-security/partner/partner-1.png"
-                  alt="image"
-                />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="cs-partner-item text-center">
-                <img
-                  src="/images/cyber-security/partner/partner-2.png"
-                  alt="image"
-                />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="cs-partner-item text-center">
-                <img
-                  src="/images/cyber-security/partner/partner-3.png"
-                  alt="image"
-                />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="cs-partner-item text-center">
-                <img
-                  src="/images/cyber-security/partner/partner-4.png"
-                  alt="image"
-                />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="cs-partner-item text-center">
-                <img
-                  src="/images/cyber-security/partner/partner-5.png"
-                  alt="image"
-                />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="cs-partner-item text-center">
-                <img
-                  src="/images/cyber-security/partner/partner-6.png"
-                  alt="image"
-                />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="cs-partner-item text-center">
-                <img
-                  src="/images/cyber-security/partner/partner-7.png"
-                  alt="image"
-                />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="cs-partner-item text-center">
-                <img
-                  src="/images/cyber-security/partner/partner-8.png"
-                  alt="image"
-                />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="cs-partner-item text-center">
-                <img
-                  src="/images/cyber-security/partner/partner-6.png"
-                  alt="image"
-                />
-              </div>
-            </SwiperSlide>
+            {OurClientsData &&
+              OurClientsData.map((value, i) => (
+                <SwiperSlide key={i}>
+                  <div className="cs-partner-item text-center">
+                    <img src={value.image} alt="image" />
+                  </div>
+                </SwiperSlide>
+              ))}
           </Swiper>
         </div>
       </div>

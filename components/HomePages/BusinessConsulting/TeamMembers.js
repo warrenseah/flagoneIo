@@ -1,5 +1,124 @@
 import React from "react";
 
+const teamMemberData = [
+  {
+    image: "/images/business-consulting/team-img1.jpg",
+    name: "Jerome Le Luel",
+    designation: "Business Consultant",
+    aosDelay: "100",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+  {
+    image: "/images/business-consulting/team-img2.jpg",
+    name: "Mary K. Austin",
+    designation: "Law Consultant",
+    aosDelay: "200",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+  {
+    image: "/images/business-consulting/team-img3.jpg",
+    name: "Douglas Burgess",
+    designation: "Lead Consultant",
+    aosDelay: "300",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+  {
+    image: "/images/business-consulting/team-img4.jpg",
+    name: "Christopher Lindsey",
+    designation: "Finance Consultant",
+    aosDelay: "400",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+];
+
 const TeamMembers = () => {
   return (
     <>
@@ -11,153 +130,34 @@ const TeamMembers = () => {
           </div>
 
           <div className="row justify-content-center">
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="bc-team-box">
-                <div className="image">
-                  <img
-                    src="/images/business-consulting/team-img1.jpg"
-                    alt="image"
-                  />
-                  <ul className="social">
-                    <li>
-                      <a href="#" target="_blank">
-                        <i className="fab fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">
-                        <i className="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">
-                        <i className="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">
-                        <i className="fab fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                  </ul>
+            {teamMemberData &&
+              teamMemberData.slice(0, 4).map((value, i) => (
+                <div className="col-lg-3 col-md-6 col-sm-6" key={i}>
+                  <div
+                    className="bc-team-box"
+                    data-aos="fade-in"
+                    data-aos-duration="1200"
+                    data-aos-delay={value.aosDelay}
+                  >
+                    <div className="image">
+                      <img src={value.image} alt="image" />
+                      <ul className="social">
+                        {value.socialLinks.map((value, i) => (
+                          <li key={i}>
+                            <a href={value.url} target="_blank">
+                              <i className={value.iconName}></i>
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="content">
+                      <h3>{value.name}</h3>
+                      <span>{value.designation}</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="content">
-                  <h3>Jerome Le Luel</h3>
-                  <span>Business Consultant</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="bc-team-box">
-                <div className="image">
-                  <img
-                    src="/images/business-consulting/team-img2.jpg"
-                    alt="image"
-                  />
-                  <ul className="social">
-                    <li>
-                      <a href="#" target="_blank">
-                        <i className="fab fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">
-                        <i className="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">
-                        <i className="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">
-                        <i className="fab fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="content">
-                  <h3>Mary K. Austin</h3>
-                  <span>Law Consultant</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="bc-team-box">
-                <div className="image">
-                  <img
-                    src="/images/business-consulting/team-img3.jpg"
-                    alt="image"
-                  />
-                  <ul className="social">
-                    <li>
-                      <a href="#" target="_blank">
-                        <i className="fab fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">
-                        <i className="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">
-                        <i className="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">
-                        <i className="fab fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="content">
-                  <h3>Douglas Burgess</h3>
-                  <span>Lead Consultant</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="bc-team-box">
-                <div className="image">
-                  <img
-                    src="/images/business-consulting/team-img4.jpg"
-                    alt="image"
-                  />
-                  <ul className="social">
-                    <li>
-                      <a href="#" target="_blank">
-                        <i className="fab fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">
-                        <i className="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">
-                        <i className="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">
-                        <i className="fab fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="content">
-                  <h3>Christopher Lindsey</h3>
-                  <span>Finance Consultant</span>
-                </div>
-              </div>
-            </div>
+              ))}
           </div>
         </div>
       </div>

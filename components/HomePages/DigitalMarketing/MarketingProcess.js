@@ -1,5 +1,29 @@
 import React from "react";
 
+const marketingProcessData = [
+  {
+    image: "/images/digital-marketing/process1.png",
+    title: "Marketing Plan",
+    shortText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+    aosDelay: "100",
+  },
+  {
+    image: "/images/digital-marketing/process2.png",
+    title: "Marketing Plan",
+    shortText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+    aosDelay: "200",
+  },
+  {
+    image: "/images/digital-marketing/process3.png",
+    title: "Marketing Plan",
+    shortText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+    aosDelay: "300",
+  },
+];
+
 const MarketingProcess = () => {
   return (
     <>
@@ -11,53 +35,21 @@ const MarketingProcess = () => {
           </div>
 
           <div className="row justify-content-center">
-            <div className="col-lg-4 col-md-6 col-sm-6">
-              <div
-                className="dm-process-box"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="100"
-              >
-                <img src="/images/digital-marketing/process1.png" alt="image" />
-                <h3>Marketing Plan</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-                  eiusmod.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 col-sm-6">
-              <div
-                className="dm-process-box"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="200"
-              >
-                <img src="/images/digital-marketing/process2.png" alt="image" />
-                <h3>Marketing Execution</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-                  eiusmod.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 col-sm-6">
-              <div
-                className="dm-process-box"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="300"
-              >
-                <img src="/images/digital-marketing/process3.png" alt="image" />
-                <h3>Growth & Scale</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-                  eiusmod.
-                </p>
-              </div>
-            </div>
+            {marketingProcessData &&
+              marketingProcessData.slice(0, 3).map((value, i) => (
+                <div className="col-lg-4 col-md-6 col-sm-6" key={i}>
+                  <div
+                    className="dm-process-box"
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-delay={value.aosDelay}
+                  >
+                    <img src={value.image} alt="image" />
+                    <h3>{value.title}</h3>
+                    <p>{value.shortText}</p>
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
       </div>

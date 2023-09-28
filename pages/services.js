@@ -1,29 +1,18 @@
 import React from "react";
-import Head from "next/head";
-import NavbarDark from "../components/Layouts/NavbarDark";
+import NavbarTwo from "../components/Layouts/NavbarTwo";
 import PageBanner from "../components/Common/PageBanner";
-import ServiceDetailsContent from "../components/Services/ServiceDetailsContent";
+import ServicesStyleOne from "../components/Services/ServicesStyleOne";
 import CtaAreaTwo from "../components/Common/CtaAreaTwo";
 import Footer from "../components/Layouts/Footer";
 
-const ServiceDetails = () => {
+const Services = () => {
   return (
     <>
-      <Head>
-        <title>FlagOne | Services</title>
-        <meta
-          name="description"
-          content="FlagOne services and offerings as a web3 tech provider."
-        />
-      </Head>
-      <NavbarDark />
+      <NavbarTwo />
 
-      <PageBanner
-        pageTitle="Web3 dApp Development"
-        BGImage="/images/page-banner1.jpg"
-      />
+      <PageBanner pageTitle="Our Services" BGImage="/images/page-banner1.jpg" />
 
-      <ServiceDetailsContent />
+      <ServicesStyleOne />
 
       <CtaAreaTwo />
 
@@ -32,4 +21,4 @@ const ServiceDetails = () => {
   );
 };
 
-export default ServiceDetails;
+export default Services;

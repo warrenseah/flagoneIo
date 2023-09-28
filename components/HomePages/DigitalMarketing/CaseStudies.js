@@ -1,6 +1,33 @@
 import React from "react";
 import Link from "next/link";
 
+const caseStudiesData = [
+  {
+    image: "/images/case-studies/studie1.jpg",
+    title: "Community Engagements",
+    category: "Web, Sales",
+    detailsLink: "/portfolio-details",
+    shapeImage: "/images/case-studies/studie-shape1.png",
+    aosDelay: "100",
+  },
+  {
+    image: "/images/case-studies/studie2.jpg",
+    title: "Built web faster & better",
+    category: "Sales, SEO, Web",
+    detailsLink: "/portfolio-details",
+    shapeImage: "/images/case-studies/studie-shape2.png",
+    aosDelay: "200",
+  },
+  {
+    image: "/images/case-studies/studie3.jpg",
+    title: "Traffic Management",
+    category: "Marketing",
+    detailsLink: "/portfolio-details",
+    shapeImage: "/images/case-studies/studie-shape3.png",
+    aosDelay: "300",
+  },
+];
+
 const CaseStudies = () => {
   return (
     <>
@@ -15,115 +42,45 @@ const CaseStudies = () => {
           </div>
 
           <div className="row justify-content-center">
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="single-case-studies"
-                style={{ backgroundImage: `url(/images/case-studies/studie1.jpg)` }}
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="100"
-              >
-                <div className="content">
-                  <span>
-                    <Link href="/portfolio-details">
-                      <a>Web, Sales</a>
+            {caseStudiesData &&
+              caseStudiesData.slice(0, 3).map((value, i) => (
+                <div className="col-lg-4 col-md-6" key={i}>
+                  <div
+                    className="single-case-studies"
+                    style={{ backgroundImage: `url(${value.image})` }}
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-delay={value.aosDelay}
+                  >
+                    <div className="content">
+                      <span>
+                        <Link href={value.detailsLink}>
+                          {value.category}
+                        </Link>
+                      </span>
+
+                      <h3>
+                        <Link href={value.detailsLink}>
+                          {value.title}
+                        </Link>
+                      </h3>
+                    </div>
+
+                    <Link href={value.detailsLink} className="btn btn-primary">
+                      View Case Study
                     </Link>
-                  </span>
 
-                  <h3>
-                    <Link href="/portfolio-details">
-                      <a>Community Engagements</a>
-                    </Link>
-                  </h3>
+                    <div className="shape">
+                      <img src={value.shapeImage} alt="shape Image" />
+                    </div>
+                  </div>
                 </div>
-
-                <Link href="/portfolio-details">
-                  <a className="btn btn-primary">View Case Study</a>
-                </Link>
-
-                <div className="shape">
-                  <img
-                    src="/images/case-studies/studie-shape1.png"
-                    alt="logo"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="single-case-studies" 
-                style={{ backgroundImage: `url(/images/case-studies/studie2.jpg)` }}
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="200"
-              >
-                <div className="content">
-                  <span>
-                    <Link href="/portfolio-details">
-                      <a>Sales, SEO, Web</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link href="/portfolio-details">
-                      <a>Built web faster & better</a>
-                    </Link>
-                  </h3>
-                </div>
-
-                <Link href="/portfolio-details">
-                  <a className="btn btn-primary">View Case Study</a>
-                </Link>
-
-                <div className="shape">
-                  <img
-                    src="/images/case-studies/studie-shape2.png"
-                    alt="logo"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="single-case-studies" 
-                style={{ backgroundImage: `url(/images/case-studies/studie3.jpg)` }}
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="300"
-              >
-                <div className="content">
-                  <span>
-                    <Link href="/portfolio-details">
-                      <a>Marketing</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link href="/portfolio-details">
-                      <a>Traffic Management</a>
-                    </Link>
-                  </h3>
-                </div>
-
-                <Link href="/portfolio-details">
-                  <a className="btn btn-primary">View Case Study</a>
-                </Link>
-
-                <div className="shape">
-                  <img
-                    src="/images/case-studies/studie-shape3.png"
-                    alt="logo"
-                  />
-                </div>
-              </div>
-            </div>
+              ))}
           </div>
 
           <div className="view-more-work">
-            <Link href="/portfolio">
-              <a className="btn btn-primary">View More Work</a>
+            <Link href="/portfolio" className="btn btn-primary">
+              View More Work
             </Link>
           </div>
         </div>

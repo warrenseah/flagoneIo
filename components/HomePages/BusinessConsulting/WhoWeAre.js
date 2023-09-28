@@ -15,7 +15,12 @@ const WhoWeAre = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-12">
-              <div className="bc-who-we-are-content">
+              <div 
+                className="bc-who-we-are-content"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="100"
+              >
                 <span className="sub-title">WHO WE ARE</span>
                 <h2>
                   Pungent global consulting firm is working with more than 1200+
@@ -28,16 +33,19 @@ const WhoWeAre = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Quis ipsum suspend sghisse ultrices gravida.
                 </p>
-                <Link href="/about">
-                  <a className="default-btn-two">
-                    Read More <i className="fas fa-chevron-right"></i>
-                  </a>
+                <Link href="/about" className="default-btn-two">
+                  Read More <i className="fas fa-chevron-right"></i>
                 </Link>
               </div>
             </div>
 
             <div className="col-lg-6 col-md-12">
-              <div className="bc-who-we-are-image">
+              <div 
+                className="bc-who-we-are-image"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="200"
+              >
                 <img
                   src="/images/business-consulting/who-we-are.jpg"
                   alt="image"

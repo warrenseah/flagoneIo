@@ -14,7 +14,12 @@ const WhyChooseUs = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-7 col-md-12">
-              <div className="about-content about-content-two pl-0 mt-0">
+              <div 
+                className="about-content about-content-two pl-0 mt-0"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="200"
+              >
                 <div className="section-title">
                   <h2>Why Choose Us</h2>
                   <p>
@@ -57,7 +62,12 @@ const WhyChooseUs = () => {
             </div>
 
             <div className="col-lg-5 col-md-12">
-              <div className="about-image right-image">
+              <div 
+                className="about-image right-image"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="400"
+              >
                 <img
                   src="/images/about-img3.jpg"
                   alt="image"

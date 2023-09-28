@@ -23,26 +23,40 @@ const MainBanner = () => {
                 <div className="row align-items-center">
                   <div className="col-lg-6">
                     <div className="main-banner-content">
-                      <h1>IT agency</h1>
+                      <h1
+                        data-aos="fade-up" 
+                        data-aos-duration="1200" 
+                        data-aos-delay="100"
+                      >
+                        IT agency
+                      </h1>
 
-                      <p>
+                      <p
+                        data-aos="fade-up" 
+                        data-aos-duration="1200" 
+                        data-aos-delay="200"
+                      >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua.
                       </p>
 
-                      <Link href="/contact">
-                        <a className="btn btn-primary">Get Started</a>
-                      </Link>
+                      <div
+                        data-aos="fade-up" 
+                        data-aos-duration="1300" 
+                        data-aos-delay="300"
+                      >
+                        <Link href="/contact" className="btn btn-primary">
+                          Get Started
+                        </Link>
 
-                      <Link href="#play-video">
-                        <a
+                        <button
                           className="btn btn-secondary" 
                           onClick={() => setToggler(!toggler)}
                         >
                           <i className="fa-solid fa-play me-1"></i> How it works
-                        </a>
-                      </Link>
+                        </button>
+                      </div>
                     </div>
                   </div>
 

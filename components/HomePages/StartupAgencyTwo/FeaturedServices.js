@@ -1,191 +1,126 @@
 import React from "react";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
+
+const featuredServicesData = [
+  {
+    iconName: "pe-7s-filter",
+    title: "Information Architect",
+    bgText: "Ia",
+    shortText:
+      "Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+    viewDetails: "/service-details",
+  },
+  {
+    iconName: "pe-7s-display1",
+    title: "Business Analyst",
+    bgText: "Ba",
+    shortText:
+      "Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+    viewDetails: "/service-details",
+  },
+  {
+    iconName: "pe-7s-plugin",
+    title: "Interaction Designer",
+    bgText: "Id",
+    shortText:
+      "Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+    viewDetails: "/service-details",
+  },
+  {
+    iconName: "pe-7s-arc",
+    title: "Information Architect",
+    bgText: "Ia",
+    shortText:
+      "Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+    viewDetails: "/service-details",
+  },
+  {
+    iconName: "pe-7s-diamond",
+    title: "Visual Designer",
+    bgText: "Vd",
+    shortText:
+      "Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+    viewDetails: "/service-details",
+  },
+  {
+    iconName: "pe-7s-helm",
+    title: "Content Strategist",
+    bgText: "Cs",
+    shortText:
+      "Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+    viewDetails: "/service-details",
+  },
+  {
+    iconName: "pe-7s-magnet",
+    title: "UX Strategist",
+    bgText: "Ux",
+    shortText:
+      "Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+    viewDetails: "/service-details",
+  },
+];
 
 const FeaturedServices = () => {
   return (
     <>
       <section className="featured-services-area">
         <div className="container">
-          <Swiper
-            spaceBetween={30}
-            navigation={true}
-            breakpoints={{
-              0: {
-                slidesPerView: 1,
-              },
-              600: {
-                slidesPerView: 2,
-              },
-              992: {
-                slidesPerView: 3,
-              },
-            }}
-            modules={[Navigation]}
-            className="featured-services-slides"
-          >
-            <SwiperSlide>
-              <div className="featured-services-box">
-                <div className="icon">
-                  <i className="pe-7s-filter"></i>
-                </div>
-                <h3>
-                  <Link href="/service-details">
-                    <a>Information Architect</a>
-                  </Link>
-                </h3>
-                <p>
-                  Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                  maecenas accumsan lacus vel facilisis.
-                </p>
+          <div className="row">
+            <Swiper
+              spaceBetween={30}
+              navigation={true}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: true,
+                pauseOnMouseEnter: true,
+              }}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                },
+                600: {
+                  slidesPerView: 2,
+                },
+                992: {
+                  slidesPerView: 3,
+                },
+              }}
+              modules={[Autoplay, Navigation]}
+              className="featured-services-slides"
+            >
+              {featuredServicesData &&
+                featuredServicesData.map((value, i) => (
+                  <SwiperSlide key={i}>
+                    <div className="col-lg-12">
+                      <div className="featured-services-box">
+                        <div className="icon">
+                          <i className={value.iconName}></i>
+                        </div>
+                        
+                        <h3>
+                          <Link href={value.viewDetails}>{value.title}</Link>
+                        </h3>
 
-                <Link href="/service-details">
-                  <a className="read-more-btn">Read More</a>
-                </Link>
+                        <p>{value.shortText}</p>
 
-                <div className="back-text">Ia</div>
-              </div>
-            </SwiperSlide>
+                        <Link
+                          href={value.viewDetails}
+                          className="read-more-btn"
+                        >
+                          Read More
+                        </Link>
 
-            <SwiperSlide>
-              <div className="featured-services-box">
-                <div className="icon">
-                  <i className="pe-7s-display1"></i>
-                </div>
-                <h3>
-                  <Link href="/service-details">
-                    <a>Business Analyst</a>
-                  </Link>
-                </h3>
-                <p>
-                  Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                  maecenas accumsan lacus vel facilisis.
-                </p>
-
-                <Link href="/service-details">
-                  <a className="read-more-btn">Read More</a>
-                </Link>
-
-                <div className="back-text">Ba</div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="featured-services-box">
-                <div className="icon">
-                  <i className="pe-7s-plugin"></i>
-                </div>
-                <h3>
-                  <Link href="/service-details">
-                    <a>Interaction Designer</a>
-                  </Link>
-                </h3>
-                <p>
-                  Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                  maecenas accumsan lacus vel facilisis.
-                </p>
-
-                <Link href="/service-details">
-                  <a className="read-more-btn">Read More</a>
-                </Link>
-
-                <div className="back-text">Id</div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="featured-services-box">
-                <div className="icon">
-                  <i className="pe-7s-arc"></i>
-                </div>
-                <h3>
-                  <Link href="/service-details">
-                    <a>Information Architect</a>
-                  </Link>
-                </h3>
-                <p>
-                  Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                  maecenas accumsan lacus vel facilisis.
-                </p>
-
-                <Link href="/service-details">
-                  <a className="read-more-btn">Read More</a>
-                </Link>
-
-                <div className="back-text">Ia</div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="featured-services-box">
-                <div className="icon">
-                  <i className="pe-7s-diamond"></i>
-                </div>
-                <h3>
-                  <Link href="/service-details">
-                    <a>Visual Designer</a>
-                  </Link>
-                </h3>
-                <p>
-                  Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                  maecenas accumsan lacus vel facilisis.
-                </p>
-
-                <Link href="/service-details">
-                  <a className="read-more-btn">Read More</a>
-                </Link>
-
-                <div className="back-text">Vd</div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="featured-services-box">
-                <div className="icon">
-                  <i className="pe-7s-helm"></i>
-                </div>
-                <h3>
-                  <Link href="/service-details">
-                    <a>Content Strategist</a>
-                  </Link>
-                </h3>
-                <p>
-                  Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                  maecenas accumsan lacus vel facilisis.
-                </p>
-
-                <Link href="/service-details">
-                  <a className="read-more-btn">Read More</a>
-                </Link>
-
-                <div className="back-text">Cr</div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="featured-services-box">
-                <div className="icon">
-                  <i className="pe-7s-magnet"></i>
-                </div>
-                <h3>
-                  <Link href="/service-details">
-                    <a>UX Strategist</a>
-                  </Link>
-                </h3>
-                <p>
-                  Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                  maecenas accumsan lacus vel facilisis.
-                </p>
-
-                <Link href="/service-details">
-                  <a className="read-more-btn">Read More</a>
-                </Link>
-
-                <div className="back-text">Ux</div>
-              </div>
-            </SwiperSlide>
-          </Swiper>
+                        <div className="back-text">
+                          {value.bgText}
+                        </div>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+            </Swiper>
+          </div>
         </div>
       </section>
     </>

@@ -9,12 +9,15 @@ const FooterDark = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-3 col-sm-6">
-              <div className="single-footer-widget">
+              <div 
+                className="single-footer-widget"
+                data-aos="fade-in" 
+                data-aos-duration="1200" 
+                data-aos-delay="100"
+              >
                 <div className="logo">
                   <Link href="/">
-                    <a>
-                      <img src="/images/logo-white.png" alt="Logo" />
-                    </a>
+                    <img src="/images/logo-white.png" alt="Logo" />
                   </Link>
                 </div>
 
@@ -50,33 +53,38 @@ const FooterDark = () => {
             </div>
 
             <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="single-footer-widget ml-4 pl-5">
+              <div 
+                className="single-footer-widget ml-4 pl-5"
+                data-aos="fade-in" 
+                data-aos-duration="1200" 
+                data-aos-delay="200"
+              >
                 <h3>Explore</h3>
 
                 <ul className="list">
                   <li>
                     <Link href="/">
-                      <a>Home</a>
+                      Home
                     </Link>
                   </li>
                   <li>
-                    <Link href="/about">
-                      <a>About</a>
+                    <Link href="/about/">
+                      About
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services">
-                      <a>Services</a>
+                    <Link href="/services/">
+                      Services
                     </Link>
                   </li>
                   <li>
-                    <Link href="/portfolio">
-                      <a>Portfolio</a>
+                    <Link href="/portfolio/">
+                      Portfolio
                     </Link>
                   </li>
                   <li>
-                    <Link href="/team">
-                      <a>Team</a>
+                    <Link href="/team/">
+                      Team
                     </Link>
                   </li>
                 </ul>
@@ -84,33 +92,38 @@ const FooterDark = () => {
             </div>
 
             <div className="col-lg-3 col-sm-6">
-              <div className="single-footer-widget ml-4">
+              <div 
+                className="single-footer-widget ml-4"
+                data-aos="fade-in" 
+                data-aos-duration="1200" 
+                data-aos-delay="300"
+              >
                 <h3>Quick Links</h3>
 
                 <ul className="list">
                   <li>
-                    <Link href="/contact">
-                      <a>Contact Us</a>
+                    <Link href="/contact/">
+                      Contact Us
                     </Link>
                   </li>
                   <li>
-                    <Link href="/pricing">
-                      <a>Pricing</a>
+                    <Link href="/pricing/">
+                      Pricing
                     </Link>
                   </li>
                   <li>
-                    <Link href="/faq">
-                      <a>Faq</a>
+                    <Link href="/faq/">
+                      Faq
                     </Link>
                   </li>
                   <li>
-                    <Link href="/privacy-policy">
-                      <a>Privacy Policy</a>
+                    <Link href="/privacy-policy/">
+                      Privacy Policy
                     </Link>
                   </li>
                   <li>
-                    <Link href="/terms-conditions">
-                      <a>Terms & Conditions</a>
+                    <Link href="/terms-conditions/">
+                      Terms & Conditions
                     </Link>
                   </li>
                 </ul>
@@ -118,7 +131,12 @@ const FooterDark = () => {
             </div>
 
             <div className="col-lg-3 col-sm-6">
-              <div className="single-footer-widget">
+              <div 
+                className="single-footer-widget"
+                data-aos="fade-in" 
+                data-aos-duration="1200" 
+                data-aos-delay="400"
+              >
                 <h3>Get in Touch</h3>
 
                 <ul className="get-in-touch">

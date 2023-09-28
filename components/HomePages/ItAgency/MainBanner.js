@@ -23,26 +23,43 @@ const MainBanner = () => {
               <div className="row align-items-center">
                 <div className="col-lg-6">
                   <div className="main-banner-content">
-                    <h1>We're an IT agency</h1>
+                    <h1
+                      data-aos="fade-in"
+                      data-aos-duration="1200"
+                      data-aos-delay="100"
+                    >
+                      We're an IT agency
+                    </h1>
 
-                    <p>
+                    <p
+                      data-aos="fade-in"
+                      data-aos-duration="1200"
+                      data-aos-delay="200"
+                    >
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore
                       magna aliqua.
                     </p>
 
-                    <Link href="/contact">
-                      <a className="btn btn-primary">Get Started</a>
+                    <Link 
+                      href="/contact" 
+                      className="btn btn-primary"
+                      data-aos="fade-in"
+                      data-aos-duration="1200"
+                      data-aos-delay="300"
+                    >
+                      Get Started
                     </Link>
 
-                    <Link href="#play-video">
-                      <a
-                        onClick={() => setToggler(!toggler)}
-                        className="btn btn-secondary"
-                      >
-                        <i className="fa-solid fa-play me-1"></i> How it works
-                      </a>
-                    </Link>
+                    <button
+                      onClick={() => setToggler(!toggler)}
+                      className="btn btn-secondary"
+                      data-aos="fade-in"
+                      data-aos-duration="1200"
+                      data-aos-delay="400"
+                    >
+                      <i className="fa-solid fa-play me-1"></i> How it works
+                    </button>
                   </div>
                 </div>
 

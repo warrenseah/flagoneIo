@@ -1,6 +1,113 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
+
+const clientFeedbackData = [
+  {
+    image: "/images/app/user1.jpg",
+    name: "Deanna Hodges",
+    designation: "Spotify Developer",
+    feedbackText:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.",
+    category: "Theme Customization",
+
+    rating: [
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+    ],
+  },
+  {
+    image: "/images/app/user2.jpg",
+    name: "Londynn Vargas",
+    designation: "PHP Developer",
+    feedbackText:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.",
+    category: "Customer Support",
+
+    rating: [
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+    ],
+  },
+  {
+    image: "/images/app/user3.jpg",
+    name: "James Andy",
+    designation: "Moodle Developer",
+    feedbackText:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.",
+    category: "Theme Customization",
+
+    rating: [
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+    ],
+  },
+  {
+    image: "/images/app/user4.jpg",
+    name: "David Warner",
+    designation: "Python Developer",
+    feedbackText:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.",
+    category: "Theme Customization",
+
+    rating: [
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+    ],
+  },
+];
 
 const ClientFeedback = () => {
   return (
@@ -17,6 +124,11 @@ const ClientFeedback = () => {
               clickable: true,
             }}
             spaceBetween={30}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: true,
+              pauseOnMouseEnter: true,
+            }}
             breakpoints={{
               0: {
                 slidesPerView: 1,
@@ -28,128 +140,37 @@ const ClientFeedback = () => {
                 slidesPerView: 3,
               },
             }}
-            modules={[Pagination]}
+            modules={[Autoplay, Pagination]}
             className="app-screenshots-slides"
           >
-            <SwiperSlide>
-              <div className="app-feedback-box">
-                <div className="client-info">
-                  <div className="d-flex align-items-center">
-                    <img src="/images/app/user1.jpg" alt="user" />
-                    <div className="title">
-                      <h3>Deanna Hodges</h3>
-                      <span>Spotify Developer</span>
-                    </div>
-                  </div>
-                </div>
-                <p>
-                  "Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type."
-                </p>
-                <div className="rating d-flex align-items-center justify-content-between">
-                  <h5>Theme Customization</h5>
-                  <div>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
+            {clientFeedbackData &&
+              clientFeedbackData.map((value, i) => (
+                <SwiperSlide key={i}>
+                  <div className="app-feedback-box">
+                    <div className="client-info">
+                      <div className="d-flex align-items-center">
+                        <img src={value.image} alt="user" />
 
-            <SwiperSlide>
-              <div className="app-feedback-box">
-                <div className="client-info">
-                  <div className="d-flex align-items-center">
-                    <img src="/images/app/user2.jpg" alt="user" />
-                    <div className="title">
-                      <h3>Londynn Vargas</h3>
-                      <span>PHP Developer</span>
+                        <div className="title">
+                          <h3>{value.name}</h3>
+                          <span>{value.designation}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <q>{value.feedbackText}</q>
+                    </p>
+                    <div className="rating d-flex align-items-center justify-content-between">
+                      <h5>{value.category}</h5>
+                      <div>
+                        {value.rating.map((value, i) => (
+                          <i className={value.iconName} key={i}></i>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-                <p>
-                  "Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type."
-                </p>
-                <div className="rating d-flex align-items-center justify-content-between">
-                  <h5>Customer Support</h5>
-                  <div>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="app-feedback-box">
-                <div className="client-info">
-                  <div className="d-flex align-items-center">
-                    <img src="/images/app/user3.jpg" alt="user" />
-                    <div className="title">
-                      <h3>James Andy</h3>
-                      <span>Moodle Developer</span>
-                    </div>
-                  </div>
-                </div>
-                <p>
-                  "Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type."
-                </p>
-                <div className="rating d-flex align-items-center justify-content-between">
-                  <h5>Responsive Design</h5>
-                  <div>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="app-feedback-box">
-                <div className="client-info">
-                  <div className="d-flex align-items-center">
-                    <img src="/images/app/user4.jpg" alt="user" />
-                    <div className="title">
-                      <h3>David Warner</h3>
-                      <span>Python Developer</span>
-                    </div>
-                  </div>
-                </div>
-                <p>
-                  "Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type."
-                </p>
-                <div className="rating d-flex align-items-center justify-content-between">
-                  <h5>Design Quality</h5>
-                  <div>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
+                </SwiperSlide>
+              ))}
           </Swiper>
         </div>
       </div>

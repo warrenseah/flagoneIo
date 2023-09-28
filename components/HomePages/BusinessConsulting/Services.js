@@ -1,6 +1,57 @@
 import React from "react";
 import Link from "next/link";
 
+const servicesData = [
+  {
+    image: "/images/business-consulting/services-img1.jpg",
+    title: "Sales & Marketing",
+    shortText:
+      "Lorem ipsum dolor sit amet, cons e ctetur adipiscing elit, sed do eiu smod.",
+    serviceDetailsLink: "/service-details",
+    aosDelay: "100",
+  },
+  {
+    image: "/images/business-consulting/services-img2.jpg",
+    title: "Cost Transformation",
+    shortText:
+      "Lorem ipsum dolor sit amet, cons e ctetur adipiscing elit, sed do eiu smod.",
+    serviceDetailsLink: "/service-details",
+    aosDelay: "200",
+  },
+  {
+    image: "/images/business-consulting/services-img3.jpg",
+    title: "Sustainability",
+    shortText:
+      "Lorem ipsum dolor sit amet, cons e ctetur adipiscing elit, sed do eiu smod.",
+    serviceDetailsLink: "/service-details",
+    aosDelay: "300",
+  },
+  {
+    image: "/images/business-consulting/services-img4.jpg",
+    title: "Strategy",
+    shortText:
+      "Lorem ipsum dolor sit amet, cons e ctetur adipiscing elit, sed do eiu smod.",
+    serviceDetailsLink: "/service-details",
+    aosDelay: "400",
+  },
+  {
+    image: "/images/business-consulting/services-img5.jpg",
+    title: "Customer Experience",
+    shortText:
+      "Lorem ipsum dolor sit amet, cons e ctetur adipiscing elit, sed do eiu smod.",
+    serviceDetailsLink: "/service-details",
+    aosDelay: "500",
+  },
+  {
+    image: "/images/business-consulting/services-img6.jpg",
+    title: "Profit Planning",
+    shortText:
+      "Lorem ipsum dolor sit amet, cons e ctetur adipiscing elit, sed do eiu smod.",
+    serviceDetailsLink: "/service-details",
+    aosDelay: "600",
+  },
+];
+
 const Services = () => {
   return (
     <>
@@ -12,161 +63,34 @@ const Services = () => {
           </div>
 
           <div className="row justify-content-center">
-            <div className="col-lg-4 col-md-6">
-              <div className="bc-services-item">
-                <img
-                  src="/images/business-consulting/services-img1.jpg"
-                  alt="image"
-                />
-                <h3>Sales & Marketing</h3>
-                <div className="hover-content">
-                  <h3>
-                    <Link href="/service-details">
-                      <a>Sales & Marketing</a>
-                    </Link>
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, cons e ctetur adipiscing elit,
-                    sed do eiu smod.
-                  </p>
-                  <Link href="/service-details">
-                    <a className="link-btn">
-                      Read More <i className="fas fa-chevron-right"></i>
-                    </a>
-                  </Link>
+            {servicesData &&
+              servicesData.slice(0, 6).map((value, i) => (
+                <div className="col-lg-4 col-md-6" key={i}>
+                  <div 
+                    className="bc-services-item"
+                    data-aos="fade-in"
+                    data-aos-duration="1200"
+                    data-aos-delay={value.aosDelay}
+                  >
+                    <img src={value.image} alt="image" />
+                    <h3>{value.title}</h3>
+                    <div className="hover-content">
+                      <h3>
+                        <Link href={value.serviceDetailsLink}>
+                          {value.title}
+                        </Link>
+                      </h3>
+                      <p>{value.shortText}</p>
+                      <Link
+                        href={value.serviceDetailsLink}
+                        className="link-btn"
+                      >
+                        Read More <i className="fas fa-chevron-right"></i>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="bc-services-item">
-                <img
-                  src="/images/business-consulting/services-img2.jpg"
-                  alt="image"
-                />
-                <h3>Cost Transformation</h3>
-                <div className="hover-content">
-                  <h3>
-                    <Link href="/service-details">
-                      <a>Cost Transformation</a>
-                    </Link>
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, cons e ctetur adipiscing elit,
-                    sed do eiu smod.
-                  </p>
-                  <Link href="/service-details">
-                    <a className="link-btn">
-                      Read More <i className="fas fa-chevron-right"></i>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="bc-services-item">
-                <img
-                  src="/images/business-consulting/services-img3.jpg"
-                  alt="image"
-                />
-                <h3>Sustainability</h3>
-                <div className="hover-content">
-                  <h3>
-                    <Link href="/service-details">
-                      <a>Sustainability</a>
-                    </Link>
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, cons e ctetur adipiscing elit,
-                    sed do eiu smod.
-                  </p>
-                  <Link href="/service-details">
-                    <a className="link-btn">
-                      Read More <i className="fas fa-chevron-right"></i>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="bc-services-item">
-                <img
-                  src="/images/business-consulting/services-img4.jpg"
-                  alt="image"
-                />
-                <h3>Strategy</h3>
-                <div className="hover-content">
-                  <h3>
-                    <Link href="/service-details">
-                      <a>Strategy</a>
-                    </Link>
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, cons e ctetur adipiscing elit,
-                    sed do eiu smod.
-                  </p>
-                  <Link href="/service-details">
-                    <a className="link-btn">
-                      Read More <i className="fas fa-chevron-right"></i>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="bc-services-item">
-                <img
-                  src="/images/business-consulting/services-img5.jpg"
-                  alt="image"
-                />
-                <h3>Customer Experience</h3>
-                <div className="hover-content">
-                  <h3>
-                    <Link href="/service-details">
-                      <a>Customer Experience</a>
-                    </Link>
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, cons e ctetur adipiscing elit,
-                    sed do eiu smod.
-                  </p>
-                  <Link href="/service-details">
-                    <a className="link-btn">
-                      Read More <i className="fas fa-chevron-right"></i>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="bc-services-item">
-                <img
-                  src="/images/business-consulting/services-img6.jpg"
-                  alt="image"
-                />
-                <h3>Profit Planning</h3>
-                <div className="hover-content">
-                  <h3>
-                    <Link href="/service-details">
-                      <a>Profit Planning</a>
-                    </Link>
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, cons e ctetur adipiscing elit,
-                    sed do eiu smod.
-                  </p>
-                  <Link href="/service-details">
-                    <a className="link-btn">
-                      Read More <i className="fas fa-chevron-right"></i>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </div>
+              ))}
           </div>
         </div>
       </div>

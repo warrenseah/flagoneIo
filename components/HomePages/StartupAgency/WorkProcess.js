@@ -1,79 +1,102 @@
 import React from "react";
 
+const workProcessData = [
+  {
+    title: "Our Work Process",
+    shortText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    image: "/images/man-with-mobile.png",
+    circleImage: "/images/circle.png",
+
+    list: [
+      {
+        iconName: "pe-7s-display1",
+        title: "Surface",
+        text: "Visual Design",
+        aosDelay: "100",
+      },
+      {
+        iconName: "pe-7s-display2",
+        title: "Skeleton",
+        text: "Wireframes",
+        aosDelay: "200",
+      },
+      {
+        iconName: "pe-7s-airplay",
+        title: "Structure",
+        text: "Screen Flow",
+        aosDelay: "300",
+      },
+      {
+        iconName: "pe-7s-note2",
+        title: "Scope",
+        text: "Requirements",
+        aosDelay: "400",
+      },
+      {
+        iconName: "pe-7s-light",
+        title: "User Research",
+        text: "User Research",
+        aosDelay: "500",
+      },
+      {
+        iconName: "pe-7s-sun",
+        title: "Implement",
+        text: "Lunch/Analyse",
+        aosDelay: "600",
+      },
+    ],
+  },
+];
+
 const WorkProcess = () => {
   return (
     <>
-      <section className="work-process-area ptb-100">
-        <div className="container">
-          <div className="section-title">
-            <h2>Our Work Process</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </div>
-
-          <div className="work-process">
-            <img src="/images/man-with-mobile.png" alt="logo" />
-
-            <div className="work-process-list">
-              <div className="single-work-process">
-                <div className="icon">
-                  <i className="pe-7s-display1"></i>
-                </div>
-                <h3>Surface</h3>
-                <span>Visual Design</span>
+      {workProcessData &&
+        workProcessData.map((value, i) => (
+          <section className="work-process-area ptb-100" key={i}>
+            <div className="container">
+              <div className="section-title">
+                <h2>{value.title}</h2>
+                <p>{value.shortText}</p>
               </div>
 
-              <div className="single-work-process">
-                <div className="icon">
-                  <i className="pe-7s-display2"></i>
+              <div className="work-process">
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="1200"
+                  data-aos-delay="600"
+                >
+                  <img src={value.image} alt="image" />
                 </div>
-                <h3>Skeleton</h3>
-                <span>Wireframes</span>
-              </div>
 
-              <div className="single-work-process">
-                <div className="icon">
-                  <i className="pe-7s-airplay"></i>
+                <div className="work-process-list">
+                  {value.list.slice(0, 6).map((value, i) => (
+                    <div
+                      className="single-work-process"
+                      key={i}
+                      data-aos="fade-in"
+                      data-aos-duration="1200"
+                      data-aos-delay={value.aosDelay}
+                    >
+                      <div className="icon">
+                        <i className={value.iconName}></i>
+                      </div>
+                      <h3>{value.title}</h3>
+                      <span>{value.text}</span>
+                    </div>
+                  ))}
                 </div>
-                <h3>Structure</h3>
-                <span>Screen Flow</span>
-              </div>
 
-              <div className="single-work-process">
-                <div className="icon">
-                  <i className="pe-7s-note2"></i>
-                </div>
-                <h3>Scope</h3>
-                <span>Requirements</span>
-              </div>
-
-              <div className="single-work-process">
-                <div className="icon">
-                  <i className="pe-7s-light"></i>
-                </div>
-                <h3>User Research</h3>
-                <span>User Research</span>
-              </div>
-
-              <div className="single-work-process">
-                <div className="icon">
-                  <i className="pe-7s-sun"></i>
-                </div>
-                <h3>Implement</h3>
-                <span>Lunch/Analyse</span>
+                <img
+                  src={value.circleImage}
+                  className="rotateme circle-image"
+                  alt="image"
+                />
               </div>
             </div>
-
-            <img
-              src="/images/circle.png"
-              className="rotateme circle-image"
-              alt="image"
-            />
-          </div>
-        </div>
-      </section>
+          </section>
+        ))}
     </>
   );
 };

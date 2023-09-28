@@ -8,10 +8,20 @@ const ServiceStyleTwo = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <div className="service-info pr-50">
+              <div 
+                className="service-info pr-50"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="100"
+              >
                 <div className="info-head">
-                  <h2 className="title">Web3 dApp Development</h2>
-                  <p>From smart contract development to frontend web design.</p>
+                  <h2 className="title">Web & Mobile Development</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris.
+                  </p>
                 </div>
 
                 <div className="row">
@@ -22,42 +32,45 @@ const ServiceStyleTwo = () => {
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Smart Contract Development
+                      Mobile App Development
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Smart Contract Unit Testing
-                    </div>
-                    <div className="feature-list">
-                      <i className="fa-solid fa-circle-check"></i>
-                      Hardhat / Truffle JS
+                      React Web Development
                     </div>
                   </div>
 
                   <div className="col-sm-6">
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      NodeJS Backend Development
+                      UI / UX Design
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Testnet Deployment
+                      Laravel Web Development
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      React Web Development
-                    </div>
-                    <div className="feature-list">
-                      <i className="fa-solid fa-circle-check"></i>
-                      NextJS Development
+                      Angular Web Development
                     </div>
                   </div>
+                </div>
+
+                <div className="service-read-more">
+                  <Link href="/service-details" className="btn btn-primary">
+                    <i className="fa-solid fa-list-check"></i> Read more
+                  </Link>
                 </div>
               </div>
             </div>
 
             <div className="col-lg-6">
-              <div className="service-right-img">
+              <div 
+                  className="service-right-img"
+                  data-aos="fade-in"
+                  data-aos-duration="1200"
+                  data-aos-delay="300"
+              >
                 <img
                   src="/images/services/it-service1.png"
                   alt="Service Image"
@@ -72,20 +85,33 @@ const ServiceStyleTwo = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <div className="service-left-img">
+              <div 
+                className="service-left-img"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="100"
+              >
                 <img
-                  src="/images/services/it-service3.png"
+                  src="/images/services/it-service2.png"
                   alt="Service Image"
                 />
               </div>
             </div>
 
             <div className="col-lg-6">
-              <div className="service-info pl-50">
+              <div 
+                className="service-info pl-50"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="300"
+              >
                 <div className="info-head">
-                  <h2 className="title">Programming Stack</h2>
+                  <h2 className="title">Digital Marketing</h2>
                   <p>
-                    Our team or coder work in the following programming stacks:
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris.
                   </p>
                 </div>
 
@@ -93,40 +119,38 @@ const ServiceStyleTwo = () => {
                   <div className="col-sm-6">
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Git Version Control
+                      SEO Marketing
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Javascript
+                      Facebook Marketing
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Hardhat / Truffle Suite
-                    </div>
-                    <div className="feature-list">
-                      <i className="fa-solid fa-circle-check"></i>
-                      Solidity
+                      Social Marketing
                     </div>
                   </div>
 
                   <div className="col-sm-6">
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Openzepplin Token Standards
+                      Email Marketing
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      MySql
+                      Data Scraping
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      EtherJs / Web3Js
-                    </div>
-                    <div className="feature-list">
-                      <i className="fa-solid fa-circle-check"></i>
-                      ReactJs / NextJS
+                      Youtube Marketing
                     </div>
                   </div>
+                </div>
+
+                <div className="service-read-more">
+                  <Link href="/service-details" className="btn btn-primary">
+                    <i className="fa-solid fa-list-check"></i> Read more
+                  </Link>
                 </div>
               </div>
             </div>
@@ -138,13 +162,19 @@ const ServiceStyleTwo = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <div className="service-info pr-50">
+              <div 
+                className="service-info pr-50"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="100"
+              >
                 <div className="info-head">
-                  <h2 className="title">Biz to Blockchain Consulting</h2>
+                  <h2 className="title">Cloud Hosting Services</h2>
                   <p>
-                    Do your business is blockchain ready? Consultations are
-                    complimentary and available on a first-come-first-serve
-                    basis.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris.
                   </p>
                 </div>
 
@@ -152,40 +182,51 @@ const ServiceStyleTwo = () => {
                   <div className="col-sm-6">
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Asset Tokenization
+                      Cloud Databases
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Choice of Blockchain Network
+                      Email Servers
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Choice of Token Standards
+                      File Storage
                     </div>
                   </div>
 
                   <div className="col-sm-6">
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Gas Optimizations
+                      Hybrid Cloud
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      Smart Contract Security
+                      Website Hosting
                     </div>
                     <div className="feature-list">
                       <i className="fa-solid fa-circle-check"></i>
-                      dApp Architecture
+                      Backup Systems
                     </div>
                   </div>
+                </div>
+
+                <div className="service-read-more">
+                  <Link href="/service-details" className="btn btn-primary">
+                    <i className="fa-solid fa-list-check"></i> Read more
+                  </Link>
                 </div>
               </div>
             </div>
 
             <div className="col-lg-6">
-              <div className="service-right-img">
+              <div 
+                className="service-right-img"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="300"
+              >
                 <img
-                  src="/images/services/it-service2.png"
+                  src="/images/services/it-service3.png"
                   alt="Service Image"
                 />
               </div>

@@ -10,8 +10,9 @@ const AboutContent = () => {
             <div className="col-lg-6 col-md-12">
               <div
                 className="marketing-about-image"
-                data-aos="fade-left"
+                data-aos="fade-in"
                 data-aos-duration="1200"
+                data-aos-delay="100"
               >
                 <img
                   src="/images/digital-marketing/about-img.png"
@@ -21,7 +22,12 @@ const AboutContent = () => {
             </div>
 
             <div className="col-lg-6 col-md-12">
-              <div className="marketing-about-content">
+              <div 
+                className="marketing-about-content"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="200"
+              >
                 <span className="sub-title">ABOUT US</span>
                 <h2>
                   We offer the World's Best <b>Digital Marketing</b> Services!
@@ -72,10 +78,8 @@ const AboutContent = () => {
                   </div>
                 </div>
 
-                <Link href="/about">
-                  <a className="default-btn-two">
-                    Learn More <i className="fas fa-chevron-right"></i>
-                  </a>
+                <Link href="/about" className="default-btn-two">
+                  Learn More <i className="fas fa-chevron-right"></i>
                 </Link>
               </div>
             </div>

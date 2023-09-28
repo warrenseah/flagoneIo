@@ -1,6 +1,123 @@
 import React from "react";
 import Link from "next/link";
 
+const pricingData = [
+  {
+    title: "Basic",
+    shotText: "Powerful & awesome elements",
+    price: "39",
+    duration: "/Monthly",
+    btnText: "Purchase Plan",
+    btnLink: "#",
+    activeClass: "",
+    popularTag: "",
+    aosDelay: "100",
+
+    priceList: [
+      {
+        title: "Up to 10 Website",
+        iconName: "fa-solid fa-check",
+      },
+      {
+        title: "Lifetime free Support",
+        iconName: "fa-solid fa-check",
+      },
+      {
+        title: "10 GB Dedicated Hosting free",
+        iconName: "fa-solid fa-check",
+      },
+      {
+        title: "24/7 Support",
+        iconName: "fa-solid fa-check",
+      },
+      {
+        title: "SEO Optimized",
+        iconName: "fa-solid fa-xmark",
+      },
+      {
+        title: "Live Support",
+        iconName: "fa-solid fa-xmark",
+      },
+    ],
+  },
+  {
+    title: "Team",
+    shotText: "Powerful & awesome elements",
+    price: "49",
+    duration: "/Monthly",
+    btnText: "Purchase Plan",
+    btnLink: "#",
+    activeClass: "active",
+    popularTag: "Most Popular",
+    aosDelay: "200",
+
+    priceList: [
+      {
+        title: "Up to 200 Website",
+        iconName: "fa-solid fa-check",
+      },
+      {
+        title: "Lifetime free Support",
+        iconName: "fa-solid fa-check",
+      },
+      {
+        title: "25 GB Dedicated Hosting free",
+        iconName: "fa-solid fa-check",
+      },
+      {
+        title: "24/7 Support",
+        iconName: "fa-solid fa-check",
+      },
+      {
+        title: "SEO Optimized",
+        iconName: "fa-solid fa-check",
+      },
+      {
+        title: "Live Support",
+        iconName: "fa-solid fa-xmark",
+      },
+    ],
+  },
+  {
+    title: "Business",
+    shotText: "Powerful & awesome elements",
+    price: "59",
+    duration: "/Monthly",
+    btnText: "Purchase Plan",
+    btnLink: "#",
+    activeClass: "",
+    popularTag: "",
+    aosDelay: "300",
+
+    priceList: [
+      {
+        title: "Up to 500 Website",
+        iconName: "fa-solid fa-check",
+      },
+      {
+        title: "Lifetime free Support",
+        iconName: "fa-solid fa-check",
+      },
+      {
+        title: "50 GB Dedicated Hosting free",
+        iconName: "fa-solid fa-check",
+      },
+      {
+        title: "24/7 Support",
+        iconName: "fa-solid fa-check",
+      },
+      {
+        title: "SEO Optimized",
+        iconName: "fa-solid fa-check",
+      },
+      {
+        title: "Live Support",
+        iconName: "fa-solid fa-check",
+      },
+    ],
+  },
+];
+
 const PricingPlan = () => {
   return (
     <>
@@ -12,135 +129,43 @@ const PricingPlan = () => {
           </div>
 
           <div className="row align-items-center justify-content-center">
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="app-pricing-box"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="100"
-              >
-                <div className="title">
-                  <h3>Basic</h3>
-                  <p>Powerful & awesome elements</p>
+            {pricingData &&
+              pricingData.slice(0, 3).map((value, i) => (
+                <div className="col-lg-4 col-md-6" key={i}>
+                  <div
+                    className={`app-pricing-box ${value.activeClass}`}
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-delay={value.aosDelay}
+                  >
+                    <div className="title">
+                      <h3>{value.title}</h3>
+                      <p>{value.shotText}</p>
+                    </div>
+
+                    <span className="popular">
+                      {value.popularTag}
+                    </span>
+
+                    <div className="price">
+                      ${value.price} <span>{value.duration}</span>
+                    </div>
+
+                    <Link href={value.btnLink} className="app-default-btn">
+                      {value.btnText}
+                    </Link>
+
+                    <ul className="features-list">
+                      {value.priceList.map((value, i) => (
+                        <li key={i}>
+                          <i className={value.iconName}></i>
+                          {value.title}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <div className="price">
-                  $39 <span>/Month</span>
-                </div>
-
-                <Link href="/sign-in">
-                  <a className="app-default-btn">Purchase Plan</a>
-                </Link>
-
-                <ul className="features-list">
-                  <li>
-                    <i className="fa-solid fa-check"></i> Up to 10 Website
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> Lifetime free Support
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> 10 GB Dedicated
-                    Hosting free
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> 24/7 Support
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-xmark"></i> SEO Optimized
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-xmark"></i> Live Support
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="app-pricing-box active"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="200"
-              >
-                <div className="title">
-                  <h3>Team</h3>
-                  <p>Powerful & awesome elements</p>
-                </div>
-                <span className="popular">Most Popular</span>
-                <div className="price">
-                  $49 <span>/Month</span>
-                </div>
-
-                <Link href="/sign-in">
-                  <a className="app-default-btn">Purchase Plan</a>
-                </Link>
-
-                <ul className="features-list">
-                  <li>
-                    <i className="fa-solid fa-check"></i> Up to 200 Website
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> Lifetime free Support
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> 25 GB Dedicated
-                    Hosting free
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> 24/7 Support
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> SEO Optimized
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-xmark"></i> Live Support
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="app-pricing-box"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="300"
-              >
-                <div className="title">
-                  <h3>Business</h3>
-                  <p>Powerful & awesome elements</p>
-                </div>
-                <div className="price">
-                  $59 <span>/Yearly</span>
-                </div>
-
-                <Link href="/sign-in">
-                  <a className="app-default-btn">Purchase Plan</a>
-                </Link>
-
-                <ul className="features-list">
-                  <li>
-                    <i className="fa-solid fa-check"></i> Up to 500 Website
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> Lifetime free Support
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> 50 GB Dedicated
-                    Hosting free
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> 24/7 Support
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> SEO Optimized
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> Live Support
-                  </li>
-                </ul>
-              </div>
-            </div>
+              ))}
           </div>
         </div>
       </div>

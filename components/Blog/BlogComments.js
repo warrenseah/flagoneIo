@@ -34,8 +34,8 @@ const BlogComments = () => {
               </div>
 
               <div className="reply">
-                <Link href="#">
-                  <a className="comment-reply-link">Reply</a>
+                <Link href="#" className="comment-reply-link">
+                  Reply
                 </Link>
               </div>
             </article>
@@ -68,8 +68,8 @@ const BlogComments = () => {
                   </div>
 
                   <div className="reply">
-                    <Link href="#">
-                      <a className="comment-reply-link">Reply</a>
+                    <Link href="#" className="comment-reply-link">
+                      Reply
                     </Link>
                   </div>
                 </article>
@@ -103,8 +103,8 @@ const BlogComments = () => {
                       </div>
 
                       <div className="reply">
-                        <Link href="#">
-                          <a className="comment-reply-link">Reply</a>
+                        <Link href="#" className="comment-reply-link">
+                          Reply
                         </Link>
                       </div>
                     </article>
@@ -139,8 +139,8 @@ const BlogComments = () => {
               </div>
 
               <div className="reply">
-                <Link href="#">
-                  <a className="comment-reply-link">Reply</a>
+                <Link href="#" className="comment-reply-link">
+                  Reply
                 </Link>
               </div>
             </article>
@@ -173,8 +173,8 @@ const BlogComments = () => {
                   </div>
 
                   <div className="reply">
-                    <Link href="#">
-                      <a className="comment-reply-link">Reply</a>
+                    <Link href="#" className="comment-reply-link">
+                      Reply
                     </Link>
                   </div>
                 </article>

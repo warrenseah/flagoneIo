@@ -1,6 +1,38 @@
 import React from "react";
 import Link from "next/link";
 
+const latestArticleData = [
+  {
+    image: "/images/blog/blog1.jpg",
+    title:
+      "Branding involves developing strategy to create a point of differentiation",
+    category: "Branding",
+    date: "Feb 15, 2023",
+    comment: "1",
+    viewDetails: "/blog-details",
+    aosDelay: "100",
+  },
+  {
+    image: "/images/blog/blog2.jpg",
+    title:
+      "Design is a plan or specification for the construction of an object",
+    category: "Agency",
+    date: "Feb 16, 2023",
+    comment: "2",
+    viewDetails: "/blog-details",
+    aosDelay: "200",
+  },
+  {
+    image: "/images/blog/blog3.jpg",
+    title: "Branding involves developing strategy to create a point",
+    category: "Marketing",
+    date: "Feb 17, 2023",
+    comment: "5",
+    viewDetails: "/blog-details",
+    aosDelay: "300",
+  },
+];
+
 const BlogPost = () => {
   return (
     <>
@@ -12,116 +44,44 @@ const BlogPost = () => {
           </div>
 
           <div className="row justify-content-center">
-            <div className="col-lg-4 col-md-6">
-              <div className="app-blog-post">
-                <div className="image">
-                  <Link href="/blog-details">
-                    <a className="d-block">
-                      <img src="/images/blog/blog1.jpg" alt="blog" />
-                    </a>
-                  </Link>
-
-                  <Link href="/blog-grid">
-                    <a className="tag">Branding</a>
-                  </Link>
-                </div>
-                <div className="content">
-                  <ul className="meta">
-                    <li>
-                      <i className="fa-solid fa-calendar"></i>
-                      April 14, 2022
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-comment"></i>
-                      <Link href="/blog-details">
-                        <a>(0) Comment</a>
+            {latestArticleData &&
+              latestArticleData.slice(0, 3).map((value, i) => (
+                <div className="col-lg-4 col-md-6" key={i}>
+                  <div 
+                    className="app-blog-post"
+                    data-aos="fade-in"
+                    data-aos-duration="1200"
+                    data-aos-delay={value.aosDelay}
+                  >
+                    <div className="image">
+                      <Link href={value.viewDetails} className="d-block">
+                        <img src={value.image} alt="blog" />
                       </Link>
-                    </li>
-                  </ul>
-                  <h3>
-                    <Link href="/blog-details">
-                      <a>
-                        Branding involves developing strategy to create a point
-                        of differentiation
-                      </a>
-                    </Link>
-                  </h3>
-                </div>
-              </div>
-            </div>
 
-            <div className="col-lg-4 col-md-6">
-              <div className="app-blog-post">
-                <div className="image">
-                  <Link href="/blog-details">
-                    <a className="d-block">
-                      <img src="/images/blog/blog2.jpg" alt="blog" />
-                    </a>
-                  </Link>
-                  <Link href="/blog-grid">
-                    <a className="tag">Agency</a>
-                  </Link>
-                </div>
-                <div className="content">
-                  <ul className="meta">
-                    <li>
-                      <i className="fa-solid fa-calendar"></i>
-                      April 13, 2022
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-comment"></i>
-                      <Link href="/blog-details">
-                        <a>(4) Comment</a>
+                      <Link href={value.viewDetails} className="tag">
+                        {value.category}
                       </Link>
-                    </li>
-                  </ul>
-                  <h3>
-                    <Link href="/blog-details">
-                      <a>
-                        Design is a plan or specification for the construction
-                        of an object
-                      </a>
-                    </Link>
-                  </h3>
+                    </div>
+                    <div className="content">
+                      <ul className="meta">
+                        <li>
+                          <i className="fa-solid fa-calendar"></i>
+                          {value.date}
+                        </li>
+                        <li>
+                          <i className="fa-solid fa-comment"></i>
+                          <Link href={value.viewDetails}>
+                            ({value.comment}) Comment
+                          </Link>
+                        </li>
+                      </ul>
+                      <h3>
+                        <Link href={value.viewDetails}>{value.title}</Link>
+                      </h3>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="app-blog-post">
-                <div className="image">
-                  <Link href="/blog-details">
-                    <a className="d-block">
-                      <img src="/images/blog/blog3.jpg" alt="blog" />
-                    </a>
-                  </Link>
-                  <Link href="/blog-grid">
-                    <a className="tag">Marketing</a>
-                  </Link>
-                </div>
-                <div className="content">
-                  <ul className="meta">
-                    <li>
-                      <i className="fa-solid fa-calendar"></i>
-                      April 12, 2022
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-comment"></i>
-                      <Link href="/blog-details">
-                        <a>(2) Comment</a>
-                      </Link>
-                    </li>
-                  </ul>
-                  <h3>
-                    <Link href="/blog-details">
-                      <a>
-                        Branding involves developing strategy to create a point
-                      </a>
-                    </Link>
-                  </h3>
-                </div>
-              </div>
-            </div>
+              ))}
           </div>
         </div>
       </div>

@@ -1,6 +1,93 @@
 import React from "react";
 import Link from "next/link";
 
+const ourWorksData = [
+  {
+    image: "/images/works/work1.jpg",
+    title: "Designing a better cinema experience",
+    category: "Development",
+    viewDetails: "/portfolio-details",
+    aosDelay: "100",
+  },
+  {
+    image: "/images/works/work2.jpg",
+    title: "Building design process within teams",
+    category: "Web Design",
+    viewDetails: "/portfolio-details",
+    aosDelay: "200",
+  },
+  {
+    image: "/images/works/work3.jpg",
+    title: "How intercom brings play into their design process",
+    category: "eCommerce",
+    viewDetails: "/portfolio-details",
+    aosDelay: "300",
+  },
+  {
+    image: "/images/works/work4.jpg",
+    title: "Stuck with to-do list, I created a new app for myself",
+    category: "Email Marketing",
+    viewDetails: "/portfolio-details",
+    aosDelay: "400",
+  },
+  {
+    image: "/images/works/work5.jpg",
+    title: "Examples of different types of sprints",
+    category: "Marketing & Reporting",
+    viewDetails: "/portfolio-details",
+    aosDelay: "500",
+  },
+  {
+    image: "/images/works/work6.jpg",
+    title: "Redesigning the New York times app",
+    category: "App Development",
+    viewDetails: "/portfolio-details",
+    aosDelay: "600",
+  },
+  {
+    image: "/images/works/work7.jpg",
+    title: "Design the Web, Mobile, and eCommerce",
+    category: "SEO Optimization",
+    viewDetails: "/portfolio-details",
+    aosDelay: "700",
+  },
+  {
+    image: "/images/works/work8.jpg",
+    title: "Redesigning the New York times app",
+    category: "Digital Marketing",
+    viewDetails: "/portfolio-details",
+    aosDelay: "800",
+  },
+  {
+    image: "/images/works/work9.jpg",
+    title: "We provide any type of app development",
+    category: "App Development",
+    viewDetails: "/portfolio-details",
+    aosDelay: "900",
+  },
+  {
+    image: "/images/works/work10.jpg",
+    title: "We provide any type of marketing support",
+    category: "SEO Marketing",
+    viewDetails: "/portfolio-details",
+    aosDelay: "1000",
+  },
+  {
+    image: "/images/works/work11.jpg",
+    title: "We provide any type of Email Marketing",
+    category: "Email Marketing",
+    viewDetails: "/portfolio-details",
+    aosDelay: "1100",
+  },
+  {
+    image: "/images/works/work12.jpg",
+    title: "We provide any type of Marketing & Reporting",
+    category: "Marketing & Reporting",
+    viewDetails: "/portfolio-details",
+    aosDelay: "1200",
+  },
+];
+
 const OurWorks = () => {
   return (
     <>
@@ -14,322 +101,53 @@ const OurWorks = () => {
             </p>
           </div>
 
-          <div className="row">
-            <div className="col-lg-4 col-sm-6">
-              <div className="work-card">
-                <img src="/images/works/work1.jpg" alt="image" />
+          <div className="row justify-content-center">
+            {ourWorksData &&
+              ourWorksData.map((value, i) => (
+                <div className="col-xxl-4 col-xl-4 col-lg-4 col-sm-6" key={i}>
+                  <div
+                    className="work-card"
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-delay={value.aosDelay}
+                  >
+                    <img src={value.image} alt="image" />
 
-                <div className="content text-center">
-                  <span>
-                    <Link href="/portfolio">
-                      <a>Development</a>
-                    </Link>
-                  </span>
+                    <div className="content text-center">
+                      <span>
+                        <Link href={value.viewDetails}>{value.category}</Link>
+                      </span>
 
-                  <h3>
-                    <Link href="/portfolio-details">
-                      <a>Designing a better cinema experience</a>
-                    </Link>
-                  </h3>
+                      <h3>
+                        <Link href={value.viewDetails}>{value.title}</Link>
+                      </h3>
 
-                  <Link href="/portfolio-details">
-                    <a className="custom-btn">View Details</a>
-                  </Link>
+                      <Link href={value.viewDetails} className="custom-btn">
+                        View Details
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="work-card">
-                <img src="/images/works/work2.jpg" alt="image" />
-                <div className="content text-center">
-                  <span>
-                    <Link href="/portfolio">
-                      <a>Web Design</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link href="/portfolio-details">
-                      <a>Building design process within teams</a>
-                    </Link>
-                  </h3>
-
-                  <Link href="/portfolio-details">
-                    <a className="custom-btn">View Details</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="work-card">
-                <img src="/images/works/work3.jpg" alt="image" />
-
-                <div className="content text-center">
-                  <span>
-                    <Link href="/portfolio">
-                      <a>eCommerce</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link href="/portfolio-details">
-                      <a>How intercom brings play eCommerce</a>
-                    </Link>
-                  </h3>
-
-                  <Link href="/portfolio-details">
-                    <a className="custom-btn">View Details</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="work-card">
-                <img src="/images/works/work4.jpg" alt="image" />
-
-                <div className="content text-center">
-                  <span>
-                    <Link href="/portfolio">
-                      <a>Reactjs</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link href="/portfolio-details">
-                      <a>How to start a project with Reactjs</a>
-                    </Link>
-                  </h3>
-
-                  <Link href="/portfolio-details">
-                    <a className="custom-btn">View Details</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="work-card">
-                <img src="/images/works/work5.jpg" alt="image" />
-
-                <div className="content text-center">
-                  <span>
-                    <Link href="/portfolio">
-                      <a>Angular js</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link href="/portfolio-details">
-                      <a>Examples of different types of sprints</a>
-                    </Link>
-                  </h3>
-
-                  <Link href="/portfolio-details">
-                    <a className="custom-btn">View Details</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="work-card">
-                <img src="/images/works/work6.jpg" alt="image" />
-
-                <div className="content text-center">
-                  <span>
-                    <Link href="/portfolio">
-                      <a>UI/UX Design</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link href="/portfolio-details">
-                      <a>Redesigning the New York times app</a>
-                    </Link>
-                  </h3>
-
-                  <Link href="/portfolio-details">
-                    <a className="custom-btn">View Details</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="work-card">
-                <img src="/images/works/work7.jpg" alt="image" />
-
-                <div className="content text-center">
-                  <span>
-                    <Link href="/portfolio">
-                      <a>Graphic Design</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link href="/portfolio-details">
-                      <a>Design the Web, Mobile, and eCommerce</a>
-                    </Link>
-                  </h3>
-
-                  <Link href="/portfolio-details">
-                    <a className="custom-btn">View Details</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="work-card">
-                <img src="/images/works/work8.jpg" alt="image" />
-
-                <div className="content text-center">
-                  <span>
-                    <Link href="/portfolio">
-                      <a>Bootstrap</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link href="/portfolio-details">
-                      <a>Redesigning the New York times app</a>
-                    </Link>
-                  </h3>
-
-                  <Link href="/portfolio-details">
-                    <a className="custom-btn">View Details</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="work-card">
-                <img src="/images/works/work9.jpg" alt="image" />
-
-                <div className="content text-center">
-                  <span>
-                    <Link href="/portfolio">
-                      <a>App Development</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link href="/portfolio-details">
-                      <a>We provide any type of app development</a>
-                    </Link>
-                  </h3>
-
-                  <Link href="/portfolio-details">
-                    <a className="custom-btn">View Details</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="work-card">
-                <img src="/images/works/work10.jpg" alt="image" />
-
-                <div className="content text-center">
-                  <span>
-                    <Link href="/portfolio">
-                      <a>Marketing</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link href="/portfolio-details">
-                      <a>We provide any type of marketing support</a>
-                    </Link>
-                  </h3>
-
-                  <Link href="/portfolio-details">
-                    <a className="custom-btn">View Details</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="work-card">
-                <img src="/images/works/work11.jpg" alt="image" />
-
-                <div className="content text-center">
-                  <span>
-                    <Link href="/portfolio">
-                      <a>Email Marketing</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link href="/portfolio-details">
-                      <a>We provide any type of Email Marketing</a>
-                    </Link>
-                  </h3>
-
-                  <Link href="/portfolio-details">
-                    <a className="custom-btn">View Details</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="work-card">
-                <img src="/images/works/work12.jpg" alt="image" />
-
-                <div className="content text-center">
-                  <span>
-                    <Link href="/portfolio">
-                      <a>Marketing & Reporting</a>
-                    </Link>
-                  </span>
-
-                  <h3>
-                    <Link href="/portfolio-details">
-                      <a>We provide any type of Marketing & Reporting</a>
-                    </Link>
-                  </h3>
-
-                  <Link href="/portfolio-details">
-                    <a className="custom-btn">View Details</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
+              ))}
           </div>
 
           {/* Pagination */}
           <div className="pagination-area">
-            <Link href="#">
-              <a className="prev page-numbers">
-                <i className="fa-solid fa-angles-left"></i>
-              </a>
-            </Link>
+            <a className="prev page-numbers">
+              <i className="fa-solid fa-angles-left"></i>
+            </a>
 
-            <Link href="#">
-              <a className="page-numbers">1</a>
-            </Link>
+            <a className="page-numbers">1</a>
 
             <span className="page-numbers current">2</span>
 
-            <Link href="#">
-              <a className="page-numbers">3</a>
-            </Link>
+            <a className="page-numbers">3</a>
 
-            <Link href="#">
-              <a className="page-numbers">4</a>
-            </Link>
+            <a className="page-numbers">4</a>
 
-            <Link href="#">
-              <a className="next page-numbers">
-                <i className="fa-solid fa-angles-right"></i>
-              </a>
-            </Link>
+            <a className="next page-numbers">
+              <i className="fa-solid fa-angles-right"></i>
+            </a>
           </div>
         </div>
       </section>

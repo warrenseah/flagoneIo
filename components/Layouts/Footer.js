@@ -9,50 +9,42 @@ const Footer = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-3 col-sm-6">
-              <div className="single-footer-widget">
+              <div 
+                className="single-footer-widget"
+                data-aos="fade-in" 
+                data-aos-duration="1200" 
+                data-aos-delay="100"
+              >
                 <div className="logo">
                   <Link href="/">
-                    <a>
-                      <img src="/images/f1logo.png" alt="Logo" />
-                    </a>
+                    <img src="/images/logo.png" alt="Logo" />
                   </Link>
                 </div>
 
                 <p>
-                  FlagOne is building the future of digital assets. We educate
-                  and help individuals, institutions and brands to produce,
-                  trade, collect in digital assets. Experience Web 3.0 Better
-                  with FlagOne. We are a member of Singapore Fintech Association
-                  (20050024).
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam.
                 </p>
 
                 <ul className="social-links">
                   <li>
-                    <a
-                      href="https://www.facebook.com/profile.php?id=100057178100785"
-                      target="_blank"
-                    >
+                    <a href="https://www.facebook.com/" target="_blank">
                       <i className="fa-brands fa-facebook-f"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://twitter.com/warrenseah" target="_blank">
+                    <a href="https://twitter.com/" target="_blank">
                       <i className="fa-brands fa-twitter"></i>
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="https://www.linkedin.com/in/warrenseah/"
-                      target="_blank"
-                    >
+                    <a href="https://linkedin.com/" target="_blank">
                       <i className="fa-brands fa-linkedin-in"></i>
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="https://www.instagram.com/warrenseah/"
-                      target="_blank"
-                    >
+                    <a href="https://www.instagram.com/" target="_blank">
                       <i className="fa-brands fa-instagram"></i>
                     </a>
                   </li>
@@ -61,28 +53,38 @@ const Footer = () => {
             </div>
 
             <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="single-footer-widget ml-4 pl-5">
+              <div 
+                className="single-footer-widget ml-4 pl-5"
+                data-aos="fade-in" 
+                data-aos-duration="1200" 
+                data-aos-delay="200"
+              >
                 <h3>Explore</h3>
 
                 <ul className="list">
                   <li>
                     <Link href="/">
-                      <a>Home</a>
+                      Home
                     </Link>
                   </li>
                   <li>
-                    <Link href="/#aboutUs">
-                      <a>About</a>
+                    <Link href="/about/">
+                      About
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services">
-                      <a>Services</a>
+                    <Link href="/services/">
+                      Services
                     </Link>
                   </li>
                   <li>
-                    <Link href="/#ourWorks">
-                      <a>Portfolio</a>
+                    <Link href="/portfolio/">
+                      Portfolio
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/team/">
+                      Team
                     </Link>
                   </li>
                 </ul>
@@ -90,28 +92,38 @@ const Footer = () => {
             </div>
 
             <div className="col-lg-3 col-sm-6">
-              <div className="single-footer-widget ml-4">
+              <div 
+                className="single-footer-widget ml-4"
+                data-aos="fade-in" 
+                data-aos-duration="1200" 
+                data-aos-delay="300"
+              >
                 <h3>Quick Links</h3>
 
                 <ul className="list">
                   <li>
-                    <Link href="/contact">
-                      <a>Contact</a>
+                    <Link href="/contact/">
+                      Contact Us
                     </Link>
                   </li>
                   <li>
-                    <Link href="/privacy-policy">
-                      <a>Privacy Policy</a>
+                    <Link href="/pricing/">
+                      Pricing
                     </Link>
                   </li>
                   <li>
-                    <Link href="/terms-conditions">
-                      <a>Terms & Conditions</a>
+                    <Link href="/faq/">
+                      Faq
                     </Link>
                   </li>
                   <li>
-                    <Link href="/disclaimer">
-                      <a>Disclaimer</a>
+                    <Link href="/privacy-policy/">
+                      Privacy Policy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/terms-conditions/">
+                      Terms & Conditions
                     </Link>
                   </li>
                 </ul>
@@ -119,18 +131,30 @@ const Footer = () => {
             </div>
 
             <div className="col-lg-3 col-sm-6">
-              <div className="single-footer-widget">
+              <div 
+                className="single-footer-widget"
+                data-aos="fade-in" 
+                data-aos-duration="1200" 
+                data-aos-delay="400"
+              >
                 <h3>Get in Touch</h3>
 
                 <ul className="get-in-touch">
                   <li>
-                    <i className="fa-solid fa-location-dot"></i> The Plaza,
-                    7500A Beach Road #07-320, Singapore 199591.
+                    <i className="fa-solid fa-location-dot"></i> 2750 Quadra Street
+                    Victoria, Canada.
                   </li>
-                  {/* <li>
+                  <li>
                     <i className="fa-solid fa-headset"></i>
                     <a href="tel:+324-9442-515">+324-9442-515</a> 
-                  </li> */}
+                    <br />
+                    <a href="tel:+324-9442-515">+324-9442-999</a>
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-envelope"></i>
+                    <a href="mailto:hello@pungent.com">hello@pungent.com</a>
+                    <a href="mailto:support@pungent.com">support@pungent.com</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -140,8 +164,10 @@ const Footer = () => {
         <div className="copyright-area">
           <div className="container">
             <p>
-              Copyright &copy; {currentYear} Flag One Pte Ltd. All Rights
-              Reserved.
+              Copyright &copy; {currentYear} Pungent. All Rights Reserved By{" "}
+              <a href="https://envytheme.com" target="_blank">
+                EnvyTheme
+              </a>
             </p>
           </div>
         </div>

@@ -1,6 +1,45 @@
 import React from "react";
 import Link from "next/link";
 
+const projectsData = [
+  {
+    image: "/images/personal-portfolio/project-img1.jpg",
+    title: "Startup Business",
+    detailsLink: "/portfolio-details/",
+    aosDelay: "100",
+  },
+  {
+    image: "/images/personal-portfolio/project-img2.jpg",
+    title: "App Landing",
+    detailsLink: "/portfolio-details/",
+    aosDelay: "200",
+  },
+  {
+    image: "/images/personal-portfolio/project-img3.jpg",
+    title: "Digital Marketing",
+    detailsLink: "/portfolio-details/",
+    aosDelay: "300",
+  },
+  {
+    image: "/images/personal-portfolio/project-img4.jpg",
+    title: "Business Startup",
+    detailsLink: "/portfolio-details/",
+    aosDelay: "400",
+  },
+  {
+    image: "/images/personal-portfolio/project-img5.jpg",
+    title: "Digital Agency",
+    detailsLink: "/portfolio-details/",
+    aosDelay: "500",
+  },
+  {
+    image: "/images/personal-portfolio/project-img6.jpg",
+    title: "Blog Business",
+    detailsLink: "/portfolio-details/",
+    aosDelay: "600",
+  },
+];
+
 const MyAllProjects = () => {
   return (
     <>
@@ -11,110 +50,26 @@ const MyAllProjects = () => {
           </div>
 
           <div className="row justify-content-center">
-            <div className="col-lg-4 col-sm-6 col-md-6">
-              <div
-                className="pp-works-box"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="100"
-              >
-                <img
-                  src="/images/personal-portfolio/project-img1.jpg"
-                  alt="image"
-                />
-                <h3>Startup Business</h3>
-                <Link href="/portfolio-details/">
-                  <a className="link-btn"></a>
-                </Link>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6 col-md-6">
-              <div
-                className="pp-works-box"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="200"
-              >
-                <img
-                  src="/images/personal-portfolio/project-img2.jpg"
-                  alt="image"
-                />
-                <h3>App Landing</h3>
-                <a href="single-portfolio-1.html" className="link-btn"></a>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6 col-md-6">
-              <div
-                className="pp-works-box"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="300"
-              >
-                <img
-                  src="/images/personal-portfolio/project-img3.jpg"
-                  alt="image"
-                />
-                <h3>Digital Marketing</h3>
-                <a href="single-portfolio-1.html" className="link-btn"></a>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6 col-md-6">
-              <div
-                className="pp-works-box"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="400"
-              >
-                <img
-                  src="/images/personal-portfolio/project-img4.jpg"
-                  alt="image"
-                />
-                <h3>Business Startup</h3>
-                <a href="single-portfolio-1.html" className="link-btn"></a>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6 col-md-6">
-              <div
-                className="pp-works-box"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="500"
-              >
-                <img
-                  src="/images/personal-portfolio/project-img5.jpg"
-                  alt="image"
-                />
-                <h3>Digital Agency</h3>
-                <a href="single-portfolio-1.html" className="link-btn"></a>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6 col-md-6">
-              <div
-                className="pp-works-box"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="600"
-              >
-                <img
-                  src="/images/personal-portfolio/project-img6.jpg"
-                  alt="image"
-                />
-                <h3>Blog Business</h3>
-                <a href="single-portfolio-1.html" className="link-btn"></a>
-              </div>
-            </div>
+            {projectsData &&
+              projectsData.map((value, i) => (
+                <div className="col-lg-4 col-sm-6 col-md-6" key={i}>
+                  <div
+                    className="pp-works-box"
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-delay={value.aosDelay}
+                  >
+                    <img src={value.image} alt="image" />
+                    <h3>{value.title}</h3>
+                    <Link href={value.detailsLink} className="link-btn"></Link>
+                  </div>
+                </div>
+              ))}
 
             <div className="col-lg-12 col-sm-12 col-md-12">
               <div className="pp-works-box-btn">
-                <Link href="#">
-                  <a className="default-btn-two">
-                    View More <i className="fas fa-chevron-right"></i>
-                  </a>
+                <Link href="#" className="default-btn-two">
+                  View More <i className="fas fa-chevron-right"></i>
                 </Link>
               </div>
             </div>

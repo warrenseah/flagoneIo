@@ -92,14 +92,10 @@
   z-index: -1;
 }
 .cs-banner-shape img {
-  -webkit-animation-name: rotateMe;
-          animation-name: rotateMe;
-  -webkit-animation-duration: 30s;
-          animation-duration: 30s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-name: rotateMe;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .cs-lock {
@@ -108,14 +104,10 @@
   left: 50%;
   transform: translateY(-10%) translateX(-50%);
   z-index: -1;
-  -webkit-animation-name: rotateMe;
-          animation-name: rotateMe;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-name: rotateMe;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 /* Card Area CSS */
@@ -586,27 +578,18 @@
   margin-bottom: 0;
   color: #F4F5F8;
 }
-.leading-technology-content .list {
-  padding: 0;
-  margin-top: 22px;
-  margin-bottom: 0;
-}
-.leading-technology-content .list li {
+.leading-technology-content .features-list {
   border-radius: 5px;
-  list-style-type: none;
   font-size: 15.5px;
   font-weight: 600;
   color: #F4F5F8;
-  margin-bottom: 15px;
+  margin-top: 15px;
   position: relative;
   border: 1px solid rgba(203, 220, 221, 0.06);
   padding: 10px 10px 10px 38px;
   transition: all 0.6s ease;
 }
-.leading-technology-content .list li:last-child {
-  margin-bottom: 0;
-}
-.leading-technology-content .list li::before {
+.leading-technology-content .features-list::before {
   position: absolute;
   content: "";
   height: 10px;
@@ -616,7 +599,7 @@
   left: 15px;
   top: 16px;
 }
-.leading-technology-content .list li:hover {
+.leading-technology-content .features-list:hover {
   border: 1px solid linear-gradient(to left top, #ff2c9c, #ff287b, #ff395a, #ff5137, #ff6a00);
   transform: translateY(-2px);
 }
@@ -1097,7 +1080,7 @@
   .leading-technology-content h3 {
     font-size: 30px;
   }
-  .leading-technology-content .list li {
+  .leading-technology-content .features-list {
     font-size: 13px;
   }
   .cs-overview-item .cs-overview-content h3 {
