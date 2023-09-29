@@ -4894,7 +4894,26 @@ Portfolio Details CSS
 .service-details-info .single-info-box:last-child {
   text-align: center;
 }
-
+.service-details-info .single-info-link-box .default-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  color: #ffffff;
+  text-transform: capitalize;
+  background-color: #ff2c9c;
+  border: 1px solid #ff2c9c;
+  transition: 0.5s;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.service-details-info .single-info-link-box .default-btn:hover {
+  background-color: #ffffff;
+  color: #ff2c9c;
+}
+.service-details-info .single-info-link-box:last-child {
+  text-align: start;
+  width: "100%";
+}
 .pd-preview-img {
   position: relative;
 }
