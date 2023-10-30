@@ -48,8 +48,8 @@ const AboutUsContent = () => {
                 </div>
 
                 <div className="btn-box">
-                  <Link href="#">
-                    <a className="app-default-btn">Start Free Trial</a>
+                  <Link href="#" className="app-default-btn">
+                    Start Free Trial
                   </Link>
                 </div>
               </div>

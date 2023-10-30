@@ -1,6 +1,30 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
+
+const myBestClientData = [
+  {
+    image: "/images/digital-marketing/partner1.png",
+  },
+  {
+    image: "/images/digital-marketing/partner2.png",
+  },
+  {
+    image: "/images/digital-marketing/partner3.png",
+  },
+  {
+    image: "/images/digital-marketing/partner4.png",
+  },
+  {
+    image: "/images/digital-marketing/partner5.png",
+  },
+  {
+    image: "/images/digital-marketing/partner6.png",
+  },
+  {
+    image: "/images/digital-marketing/partner4.png",
+  },
+];
 
 const MyBestClient = () => {
   return (
@@ -13,6 +37,11 @@ const MyBestClient = () => {
 
           <Swiper
             navigation={true}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: true,
+              pauseOnMouseEnter: true,
+            }}
             breakpoints={{
               0: {
                 slidesPerView: 2,
@@ -30,71 +59,17 @@ const MyBestClient = () => {
                 slidesPerView: 6,
               },
             }}
-            modules={[Navigation]}
+            modules={[Autoplay, Navigation]}
             className="partner-slides"
           >
-            <SwiperSlide>
-              <div className="partner-item text-center">
-                <img
-                  src="/images/digital-marketing/partner1.png"
-                  alt="image"
-                />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="partner-item text-center"> 
-                <img
-                  src="/images/digital-marketing/partner2.png"
-                  alt="image"
-                /> 
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="partner-item text-center"> 
-                <img
-                  src="/images/digital-marketing/partner3.png"
-                  alt="image"
-                /> 
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="partner-item text-center"> 
-                <img
-                  src="/images/digital-marketing/partner4.png"
-                  alt="image"
-                /> 
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="partner-item text-center">
-                <img
-                  src="/images/digital-marketing/partner5.png"
-                  alt="image"
-                /> 
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="partner-item text-center"> 
-                <img
-                  src="/images/digital-marketing/partner6.png"
-                  alt="image"
-                /> 
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="partner-item text-center"> 
-                <img
-                  src="/images/digital-marketing/partner4.png"
-                  alt="image"
-                /> 
-              </div>
-            </SwiperSlide>
+            {myBestClientData &&
+              myBestClientData.map((value, i) => (
+                <SwiperSlide key={i}>
+                  <div className="partner-item text-center">
+                    <img src={value.image} alt="image" />
+                  </div>
+                </SwiperSlide>
+              ))}
           </Swiper>
         </div>
       </div>

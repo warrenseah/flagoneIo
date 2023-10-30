@@ -1,6 +1,41 @@
 import React from "react";
 import Link from "next/link";
 
+const servicesData = [
+  {
+    iconName: "fa-solid fa-gear",
+    title: "Product Engineering",
+    shortText:
+      "Lorem ipsum dolor sit amet, tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    serviceDetailsLink: "/service-details",
+    aosDelay: "100",
+  },
+  {
+    iconName: "fa-solid fa-building-lock",
+    title: "Security Design",
+    shortText:
+      "Lorem ipsum dolor sit amet, tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    serviceDetailsLink: "/service-details",
+    aosDelay: "200",
+  },
+  {
+    iconName: "fa-solid fa-certificate",
+    title: "License Management",
+    shortText:
+      "Lorem ipsum dolor sit amet, tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    serviceDetailsLink: "/service-details",
+    aosDelay: "300",
+  },
+  {
+    iconName: "fa-solid fa-file-pen",
+    title: "Release Planning",
+    shortText:
+      "Lorem ipsum dolor sit amet, tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    serviceDetailsLink: "/service-details",
+    aosDelay: "400",
+  },
+];
+
 const Services = () => {
   return (
     <>
@@ -16,85 +51,23 @@ const Services = () => {
           </div>
 
           <div className="row justify-content-center">
-            <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-              <div
-                className="saas-services-box color-white"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="100"
-              >
-                <i className="icon fa-solid fa-gear"></i>
-                <h3>
-                  <Link href="/service-details">
-                    <a>Product Engineering</a>
-                  </Link>
-                </h3>
-                <p>
-                  Lorem ipsum dolor sit amet, tetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-              <div
-                className="saas-services-box color-white"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="200"
-              >
-                <i className="icon fa-solid fa-building-lock"></i>
-                <h3>
-                  <Link href="/service-details">
-                    <a>Security Design</a>
-                  </Link>
-                </h3>
-                <p>
-                  Lorem ipsum dolor sit amet, tetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-              <div
-                className="saas-services-box color-white"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="300"
-              >
-                <i className="icon fa-solid fa-certificate"></i>
-                <h3>
-                  <Link href="/service-details">
-                    <a>License Management</a>
-                  </Link>
-                </h3>
-                <p>
-                  Lorem ipsum dolor sit amet, tetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-              <div
-                className="saas-services-box color-white"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="400"
-              >
-                <i className="icon fa-solid fa-file-pen"></i>
-                <h3>
-                  <Link href="/service-details">
-                    <a>Release Planning</a>
-                  </Link>
-                </h3>
-                <p>
-                  Lorem ipsum dolor sit amet, tetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore.
-                </p>
-              </div>
-            </div>
+            {servicesData &&
+              servicesData.slice(0, 4).map((value, i) => (
+                <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12" key={i}>
+                  <div
+                    className="saas-services-box color-white"
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-delay={value.aosDelay}
+                  >
+                    <i className={`icon ${value.iconName}`}></i>
+                    <h3>
+                      <Link href={value.serviceDetailsLink}>{value.title}</Link>
+                    </h3>
+                    <p>{value.shortText}</p>
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
       </div>

@@ -1,6 +1,41 @@
 import React from "react";
 import Link from "next/link";
 
+const servicesData = [
+  {
+    icon: "/images/software/icon1.png",
+    title: "Zero Configuration",
+    shortText:
+      "Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed est non feugiat sagittis, donec.",
+    viewDetails: "/service-details",
+    aosDelay: "100",
+  },
+  {
+    icon: "/images/software/icon2.png",
+    title: "Code Security",
+    shortText:
+      "Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed est non feugiat sagittis, donec.",
+    viewDetails: "/service-details",
+    aosDelay: "200",
+  },
+  {
+    icon: "/images/software/icon3.png",
+    title: "Team Management",
+    shortText:
+      "Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed est non feugiat sagittis, donec.",
+    viewDetails: "/service-details",
+    aosDelay: "300",
+  },
+  {
+    icon: "/images/software/icon4.png",
+    title: "Access Controlled",
+    shortText:
+      "Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed est non feugiat sagittis, donec.",
+    viewDetails: "/service-details",
+    aosDelay: "400",
+  },
+];
+
 const HelpDesk = () => {
   return (
     <>
@@ -10,98 +45,29 @@ const HelpDesk = () => {
             <span className="sub-title">How Can Help You!</span>
             <h2>We’re helping teams do their best work</h2>
           </div>
+
           <div className="row justify-content-center">
-            <div
-              className="col-lg-3 col-md-6 col-sm-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="100"
-            >
-              <div className="software-single-help-desk-box">
-                <div className="icon">
-                  <img src="/images/software/icon1.png" alt="icon" />
+            {servicesData &&
+              servicesData.slice(0, 4).map((value, i) => (
+                <div
+                  className="col-lg-3 col-md-6 col-sm-6"
+                  data-aos="fade-up"
+                  data-aos-duration="1200"
+                  data-aos-delay={value.aosDelay}
+                  key={i}
+                >
+                  <div className="software-single-help-desk-box">
+                    <div className="icon">
+                      <img src={value.icon} alt="icon" />
+                    </div>
+                    <h3>{value.title}</h3>
+                    <p>{value.shortText}</p>
+                    <Link href={value.viewDetails} className="link-btn">
+                      Learn More <i className="fa-solid fa-angle-right"></i>
+                    </Link>
+                  </div>
                 </div>
-                <h3>Zero Configuration</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed
-                  est non feugiat sagittis, donec.
-                </p>
-                <Link href="/service-details">
-                  <a className="link-btn">
-                    Learn More <i className="fa-solid fa-angle-right"></i>
-                  </a>
-                </Link>
-              </div>
-            </div>
-
-            <div
-              className="col-lg-3 col-md-6 col-sm-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="200"
-            >
-              <div className="software-single-help-desk-box">
-                <div className="icon">
-                  <img src="/images/software/icon2.png" alt="icon" />
-                </div>
-                <h3>Code Security</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed
-                  est non feugiat sagittis, donec.
-                </p>
-                <Link href="/service-details">
-                  <a className="link-btn">
-                    Learn More <i className="fa-solid fa-angle-right"></i>
-                  </a>
-                </Link>
-              </div>
-            </div>
-
-            <div
-              className="col-lg-3 col-md-6 col-sm-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="300"
-            >
-              <div className="software-single-help-desk-box">
-                <div className="icon">
-                  <img src="/images/software/icon3.png" alt="icon" />
-                </div>
-                <h3>Team Management</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed
-                  est non feugiat sagittis, donec.
-                </p>
-                <Link href="/service-details">
-                  <a className="link-btn">
-                    Learn More <i className="fa-solid fa-angle-right"></i>
-                  </a>
-                </Link>
-              </div>
-            </div>
-
-            <div
-              className="col-lg-3 col-md-6 col-sm-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="400"
-            >
-              <div className="software-single-help-desk-box">
-                <div className="icon">
-                  <img src="/images/software/icon4.png" alt="icon" />
-                </div>
-                <h3>Access Controlled</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed
-                  est non feugiat sagittis, donec.
-                </p>
-                <Link href="/service-details">
-                  <a className="link-btn">
-                    Learn More <i className="fa-solid fa-angle-right"></i>
-                  </a>
-                </Link>
-              </div>
-            </div>
+              ))}
           </div>
         </div>
       </div>

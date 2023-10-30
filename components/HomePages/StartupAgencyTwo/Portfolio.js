@@ -18,134 +18,155 @@ const Portfolio = () => {
         <div className="mw-1920">
           <div className="row m-0">
             <div className="col-lg-3 col-sm-6 p-0">
-              <div className="single-portfolio">
+              <div 
+                className="single-portfolio"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="100"
+              >
                 <img src="/images/portfolio/portfolio1.jpg" alt="image" />
 
                 <div className="portfolio-content">
                   <h3>
                     <Link href="/portfolio-details">
-                      <a>UX Workflow</a>
+                      UX Workflow
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
-                    <a className="link-btn">
-                      <i className="pe-7s-link"></i>
-                    </a>
+                  <Link href="/portfolio-details" className="link-btn">
+                    <i className="pe-7s-link"></i>
                   </Link>
                 </div>
               </div>
 
-              <div className="single-portfolio">
+              <div 
+                className="single-portfolio"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="200"
+              >
                 <img src="/images/portfolio/portfolio2.jpg" alt="image" />
 
                 <div className="portfolio-content">
                   <h3>
                     <Link href="/portfolio-details">
-                      <a>Web Development</a>
+                      Web Development
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
-                    <a className="link-btn">
-                      <i className="pe-7s-link"></i>
-                    </a>
+                  <Link href="/portfolio-details" className="link-btn">
+                    <i className="pe-7s-link"></i>
                   </Link>
                 </div>
               </div>
             </div>
 
             <div className="col-lg-3 col-sm-6 p-0">
-              <div className="single-portfolio">
+              <div 
+                className="single-portfolio"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="300"
+              >
                 <img src="/images/portfolio/portfolio3.jpg" alt="image" />
 
                 <div className="portfolio-content">
                   <h3>
                     <Link href="/portfolio-details">
-                      <a>Web Design</a>
+                      Web Design
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
-                    <a className="link-btn">
-                      <i className="pe-7s-link"></i>
-                    </a>
+                  <Link href="/portfolio-details" className="link-btn">
+                    <i className="pe-7s-link"></i>
                   </Link>
                 </div>
               </div>
             </div>
 
             <div className="col-lg-3 col-sm-6 p-0">
-              <div className="single-portfolio">
+              <div 
+                className="single-portfolio"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="400"
+              >
                 <img src="/images/portfolio/portfolio4.jpg" alt="image" />
 
                 <div className="portfolio-content">
                   <h3>
                     <Link href="/portfolio-details">
-                      <a>React Development</a>
+                      React Development
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
-                    <a className="link-btn" target="_blank">
-                      <i className="pe-7s-link"></i>
-                    </a>
+                  <Link href="/portfolio-details" className="link-btn">
+                    <i className="pe-7s-link"></i>
                   </Link>
                 </div>
               </div>
 
-              <div className="single-portfolio">
+              <div 
+                className="single-portfolio"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="500"
+              >
                 <img src="/images/portfolio/portfolio5.jpg" alt="image" />
 
                 <div className="portfolio-content">
                   <h3>
                     <Link href="/portfolio-details">
-                      <a>Mobile Apps Development</a>
+                      Mobile Apps Development
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
-                    <a className="link-btn" target="_blank">
-                      <i className="pe-7s-link"></i>
-                    </a>
+                  <Link href="/portfolio-details" className="link-btn">
+                    <i className="pe-7s-link"></i>
                   </Link>
                 </div>
               </div>
             </div>
 
             <div className="col-lg-3 col-sm-6 p-0">
-              <div className="single-portfolio">
+              <div 
+                className="single-portfolio"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="600"
+              >
                 <img src="/images/portfolio/portfolio6.jpg" alt="image" />
 
                 <div className="portfolio-content">
                   <h3>
                     <Link href="/portfolio-details">
-                      <a>eCommerce</a>
+                      eCommerce
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
-                    <a className="link-btn" target="_blank">
-                      <i className="pe-7s-link"></i>
-                    </a>
+                  <Link href="/portfolio-details" className="link-btn">
+                    <i className="pe-7s-link"></i>
                   </Link>
                 </div>
               </div>
 
-              <div className="single-portfolio">
+              <div 
+                className="single-portfolio"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="800"
+              >
                 <img src="/images/portfolio/portfolio7.jpg" alt="image" />
 
                 <div className="portfolio-content">
                   <h3>
                     <Link href="/portfolio-details">
-                      <a>UX for Mobile Apps</a>
+                      UX for Mobile Apps
                     </Link>
                   </h3>
 
-                  <Link href="/portfolio-details">
-                    <a className="link-btn" target="_blank">
-                      <i className="pe-7s-link"></i>
-                    </a>
+                  <Link href="/portfolio-details" className="link-btn">
+                    <i className="pe-7s-link"></i>
                   </Link>
                 </div>
               </div>

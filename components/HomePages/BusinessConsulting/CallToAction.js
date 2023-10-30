@@ -8,7 +8,12 @@ const CallToAction = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-8 col-md-12">
-              <div className="call-to-action-content">
+              <div 
+                className="call-to-action-content"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="100"
+              >
                 <h2>
                   We Open for You 24 Hours a Day to Growing Our Partnerships in
                   a Better Way
@@ -17,11 +22,14 @@ const CallToAction = () => {
             </div>
 
             <div className="col-lg-4 col-md-12">
-              <div className="call-to-action-btn">
-                <Link href="/contact">
-                  <a className="default-btn-two">
-                    Contact Us <i className="fas fa-chevron-right"></i>
-                  </a>
+              <div 
+                className="call-to-action-btn"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="200"
+              >
+                <Link href="/contact" className="default-btn-two">
+                  Contact Us <i className="fas fa-chevron-right"></i>
                 </Link>
               </div>
             </div>

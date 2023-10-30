@@ -1,6 +1,109 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
+
+const feedbacskData = [
+  {
+    name: "Richard Turner",
+    designation: "Director",
+    feedbackText:
+      "Lorem ipsum dolor sit amet, consectetur apiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus com modo viverra accumsan lacus vel facilisis.",
+    quoteIconBg: "",
+
+    rating: [
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+    ],
+  },
+  {
+    name: "Mary K. Austin",
+    designation: "Law Consultant",
+    feedbackText:
+      "Lorem ipsum dolor sit amet, consectetur apiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus com modo viverra accumsan lacus vel facilisis.",
+    quoteIconBg: "bg-ca83ff",
+
+    rating: [
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+    ],
+  },
+  {
+    name: "Christopher Lindsey",
+    designation: "Finance Consultant",
+    feedbackText:
+      "Lorem ipsum dolor sit amet, consectetur apiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus com modo viverra accumsan lacus vel facilisis.",
+    quoteIconBg: "bg-ff9f07",
+
+    rating: [
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+    ],
+  },
+  {
+    name: "Johnson",
+    designation: "React Developer",
+    feedbackText:
+      "Lorem ipsum dolor sit amet, consectetur apiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus com modo viverra accumsan lacus vel facilisis.",
+    quoteIconBg: "bg-ca83ff",
+
+    rating: [
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+    ],
+  },
+];
 
 const Testimonials = () => {
   return (
@@ -14,6 +117,11 @@ const Testimonials = () => {
           <Swiper
             navigation={true}
             spaceBetween={30}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: true,
+              pauseOnMouseEnter: true,
+            }}
             breakpoints={{
               0: {
                 slidesPerView: 1,
@@ -23,102 +131,33 @@ const Testimonials = () => {
               },
               992: {
                 slidesPerView: 3,
-              }
+              },
             }}
-            modules={[Navigation]}
+            modules={[Autoplay, Navigation]}
             className="pp-testimonials-slides"
           >
-            <SwiperSlide>
-              <div className="pp-testimonials-box">
-                <i className="icon fa-solid fa-quote-left"></i>
-                <p>
-                  “Lorem ipsum dolor sit amet, consectetur apiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Quis ipsum suspendisse ultrices gravida. Risus com modo
-                  viverra accumsan lacus vel facilisis.”
-                </p>
-                <div className="rating">
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                </div>
-                <div className="info">
-                  <h3>Richard Turner</h3>
-                  <span>Director</span>
-                </div>
-              </div>
-            </SwiperSlide>
+            {feedbacskData &&
+              feedbacskData.map((value, i) => (
+                <SwiperSlide key={i}>
+                  <div className={`pp-testimonials-box ${value.quoteIconBg}`}>
+                    <i className="icon fa-solid fa-quote-left"></i>
+                    <p>
+                      <q>{value.feedbackText}</q>
+                    </p>
 
-            <SwiperSlide>
-              <div className="pp-testimonials-box bg-ca83ff">
-                <i className="icon fa-solid fa-quote-left"></i>
-                <p>
-                  “Lorem ipsum dolor sit amet, consectetur apiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Quis ipsum suspendisse ultrices gravida. Risus com modo
-                  viverra accumsan lacus vel facilisis.”
-                </p>
-                <div className="rating">
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                </div>
-                <div className="info">
-                  <h3>Mary K. Austin</h3>
-                  <span>Law Consultant</span>
-                </div>
-              </div>
-            </SwiperSlide>
+                    <div className="rating">
+                      {value.rating.map((value, i) => (
+                        <i className={value.iconName} key={i}></i>
+                      ))}
+                    </div>
 
-            <SwiperSlide>
-              <div className="pp-testimonials-box bg-ff9f07">
-                <i className="icon fa-solid fa-quote-left"></i>
-                <p>
-                  “Lorem ipsum dolor sit amet, consectetur apiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Quis ipsum suspendisse ultrices gravida. Risus com modo
-                  viverra accumsan lacus vel facilisis.”
-                </p>
-                <div className="rating">
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                </div>
-                <div className="info">
-                  <h3>Christopher Lindsey</h3>
-                  <span>Finance Consultant</span>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="pp-testimonials-box bg-ca83ff">
-                <i className="icon fa-solid fa-quote-left"></i>
-                <p>
-                  “Lorem ipsum dolor sit amet, consectetur apiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Quis ipsum suspendisse ultrices gravida. Risus com modo
-                  viverra accumsan lacus vel facilisis.”
-                </p>
-                <div className="rating">
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                </div>
-                <div className="info">
-                  <h3>Johnson</h3>
-                  <span>React Developer</span>
-                </div>
-              </div>
-            </SwiperSlide>
+                    <div className="info">
+                      <h3>{value.name}</h3>
+                      <span>{value.designation}</span>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
           </Swiper>
         </div>
       </div>

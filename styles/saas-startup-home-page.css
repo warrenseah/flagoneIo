@@ -438,12 +438,10 @@
   border: 2px solid #ff2c9c;
 }
 .saas-video-box .video-btn::before {
-  -webkit-animation: ripple 2s linear infinite;
-          animation: ripple 2s linear infinite;
+  animation: ripple 2s linear infinite;
 }
 .saas-video-box .video-btn::after {
-  -webkit-animation: ripple 2s linear 1s infinite;
-          animation: ripple 2s linear 1s infinite;
+  animation: ripple 2s linear 1s infinite;
 }
 
 /* Testimonials */

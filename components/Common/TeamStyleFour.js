@@ -1,5 +1,128 @@
 import React from "react";
 
+const teamMemberData = [
+  {
+    image: "/images/team/team1.jpg",
+    name: "Jos Buttler",
+    designation: "UI/UX Designer",
+    email: "contactJosButtler@gmail.com",
+    aosDelay: "100",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+  {
+    image: "/images/team/team2.jpg",
+    name: "Smith John",
+    designation: "Marketing Specialist",
+    email: "contactJohn@gmail.com",
+    aosDelay: "200",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+  {
+    image: "/images/team/team3.jpg",
+    name: "Nick Leaver",
+    designation: "QA Specialist",
+    email: "contactNick@gmail.com",
+    aosDelay: "300",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+  {
+    image: "/images/team/team4.jpg",
+    name: "David Miller",
+    designation: "Creative Director",
+    email: "contactMiller@gmail.com",
+    aosDelay: "400",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+];
+
 const TeamStyleFour = () => {
   return (
     <>
@@ -14,213 +137,42 @@ const TeamStyleFour = () => {
           </div>
 
           <div className="row justify-content-center">
-            <div className="col-lg-3 col-sm-6 col-md-6">
-              <div
-                className="single-team"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="100"
-              >
-                <div className="team-img">
-                  <img src="/images/team/team1.jpg" alt="image" />
+            {teamMemberData &&
+              teamMemberData.slice(0, 4).map((value, i) => (
+                <div className="col-lg-3 col-sm-6" key={i}>
+                  <div
+                    className="single-team"
+                    data-aos="fade-in"
+                    data-aos-duration="1200"
+                    data-aos-delay={value.aosDelay}
+                  >
+                    <div className="team-img">
+                      <img src={value.image} alt="Team Image" />
 
-                  <div className="overlay">
-                    <p>
-                      Email: <span>hello@uxhaven.com</span>
-                    </p>
+                      <div className="overlay">
+                        <p>
+                          Email: <span>{value.email}</span>
+                        </p>
 
-                    <ul>
-                      <li>
-                        <a href="linkedin.com" target="_blank">
-                          <i className="fa-brands fa-linkedin-in"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://twitter.com/" target="_blank">
-                          <i className="fa-brands fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.facebook.com/" target="_blank">
-                          <i className="fa-brands fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.instagram.com/" target="_blank">
-                          <i className="fa-brands fa-instagram"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://dribbble.com/" target="_blank">
-                          <i className="fa-brands fa-dribbble"></i>
-                        </a>
-                      </li>
-                    </ul>
+                        <ul>
+                          {value.socialLinks.map((value, i) => (
+                            <li key={i}>
+                              <a href={value.url} target="_blank">
+                                <i className={value.iconName}></i>
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="team-content">
+                      <h3>{value.name}</h3>
+                      <span>{value.designation}</span>
+                    </div>
                   </div>
                 </div>
-
-                <div className="team-content">
-                  <h3>Jos Buttler</h3>
-                  <span>UX Designer</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-sm-6 col-md-6">
-              <div
-                className="single-team"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="200"
-              >
-                <div className="team-img">
-                  <img src="/images/team/team2.jpg" alt="image" />
-
-                  <div className="overlay">
-                    <p>
-                      Email: <span>hello@uxhaven.com</span>
-                    </p>
-
-                    <ul>
-                      <li>
-                        <a href="linkedin.com" target="_blank">
-                          <i className="fa-brands fa-linkedin-in"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://twitter.com/" target="_blank">
-                          <i className="fa-brands fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.facebook.com/" target="_blank">
-                          <i className="fa-brands fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.instagram.com/" target="_blank">
-                          <i className="fa-brands fa-instagram"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://dribbble.com/" target="_blank">
-                          <i className="fa-brands fa-dribbble"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="team-content">
-                  <h3>Smith John</h3>
-                  <span>UI Designer</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-sm-6 col-md-6">
-              <div
-                className="single-team"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="300"
-              >
-                <div className="team-img">
-                  <img src="/images/team/team3.jpg" alt="image" />
-
-                  <div className="overlay">
-                    <p>
-                      Email: <span>hello@uxhaven.com</span>
-                    </p>
-
-                    <ul>
-                      <li>
-                        <a href="linkedin.com" target="_blank">
-                          <i className="fa-brands fa-linkedin-in"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://twitter.com/" target="_blank">
-                          <i className="fa-brands fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.facebook.com/" target="_blank">
-                          <i className="fa-brands fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.instagram.com/" target="_blank">
-                          <i className="fa-brands fa-instagram"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://dribbble.com/" target="_blank">
-                          <i className="fa-brands fa-dribbble"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="team-content">
-                  <h3>Nick Leaver</h3>
-                  <span>Product Designer</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-sm-6 col-md-6">
-              <div
-                className="single-team"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="400"
-              >
-                <div className="team-img">
-                  <img src="/images/team/team4.jpg" alt="image" />
-
-                  <div className="overlay">
-                    <p>
-                      Email: <span>hello@uxhaven.com</span>
-                    </p>
-
-                    <ul>
-                      <li>
-                        <a href="linkedin.com" target="_blank">
-                          <i className="fa-brands fa-linkedin-in"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://twitter.com/" target="_blank">
-                          <i className="fa-brands fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.facebook.com/" target="_blank">
-                          <i className="fa-brands fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.instagram.com/" target="_blank">
-                          <i className="fa-brands fa-instagram"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://dribbble.com/" target="_blank">
-                          <i className="fa-brands fa-dribbble"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="team-content">
-                  <h3>Olivia Jacob</h3>
-                  <span>Interior Designer</span>
-                </div>
-              </div>
-            </div>
+              ))}
           </div>
         </div>
       </div>

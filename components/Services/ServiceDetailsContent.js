@@ -1,20 +1,16 @@
 import React, { useState } from "react";
-import Image from "next/image";
 
 const ServiceDetailsContent = () => {
+  const [toggler, setToggler] = useState(false);
   return (
     <>
+
       <div className="services-details-area ptb-100">
         <div className="container">
           <div className="row">
             <div className="col-lg-12 col-md-12">
               <div className="services-details-image">
-                <Image
-                  src="/images/services/single-service.jpg"
-                  alt="dApp development image"
-                  width="1250"
-                  height="703"
-                />
+                <img src="/images/services/single-service.jpg" alt="image" />
               </div>
             </div>
 

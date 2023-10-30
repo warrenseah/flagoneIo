@@ -30,19 +30,19 @@ const OurWorks = () => {
                 <div className="content">
                   <span>
                     <Link href="/portfolio">
-                      <a>Development</a>
+                      Development
                     </Link>
                   </span>
 
                   <h3>
                     <Link href="/portfolio-details">
-                      <a>Designing a better cinema experience</a>
+                      Designing a better cinema experience
                     </Link>
                   </h3>
                 </div>
 
-                <Link href="/portfolio-details">
-                  <a className="btn btn-primary">View Case Study</a>
+                <Link href="/portfolio-details" className="btn btn-primary">
+                  View Case Study
                 </Link>
 
                 <div className="shape">
@@ -69,19 +69,19 @@ const OurWorks = () => {
                 <div className="content">
                   <span>
                     <Link href="/portfolio">
-                      <a>App Development</a>
+                      App Development
                     </Link>
                   </span>
 
                   <h3>
                     <Link href="/portfolio-details">
-                      <a>Building design process within teams</a>
+                      Building design process within teams
                     </Link>
                   </h3>
                 </div>
 
-                <Link href="/portfolio-details">
-                  <a className="btn btn-primary">View Case Study</a>
+                <Link href="/portfolio-details" className="btn btn-primary">
+                  View Case Study
                 </Link>
 
                 <div className="shape">
@@ -108,19 +108,19 @@ const OurWorks = () => {
                 <div className="content">
                   <span>
                     <Link href="/portfolio">
-                      <a>React Development</a>
+                      React Development
                     </Link>
                   </span>
 
                   <h3>
                     <Link href="/portfolio-details">
-                      <a>How intercom brings play into their design process</a>
+                      How intercom brings play into their design process
                     </Link>
                   </h3>
                 </div>
 
-                <Link href="/portfolio-details">
-                  <a className="btn btn-primary">View Case Study</a>
+                <Link href="/portfolio-details" className="btn btn-primary">
+                  View Case Study
                 </Link>
 
                 <div className="shape">
@@ -147,21 +147,19 @@ const OurWorks = () => {
                 <div className="content">
                   <span>
                     <Link href="/portfolio">
-                      <a>Web Development</a>
+                      Web Development
                     </Link>
                   </span>
 
                   <h3>
                     <Link href="/portfolio-details">
-                      <a>
-                        Stuck with to-do list, I created a new app for myself
-                      </a>
+                      Stuck with to-do list, I created a new app for myself
                     </Link>
                   </h3>
                 </div>
 
-                <Link href="/portfolio-details">
-                  <a className="btn btn-primary">View Case Study</a>
+                <Link href="/portfolio-details" className="btn btn-primary">
+                  View Case Study
                 </Link>
 
                 <div className="shape">
@@ -188,19 +186,19 @@ const OurWorks = () => {
                 <div className="content">
                   <span>
                     <Link href="/portfolio">
-                      <a>Angular Development</a>
+                      Angular Development
                     </Link>
                   </span>
 
                   <h3>
                     <Link href="/portfolio-details">
-                      <a>Examples of different types of sprints</a>
+                      Examples of different types of sprints
                     </Link>
                   </h3>
                 </div>
 
-                <Link href="/portfolio-details">
-                  <a className="btn btn-primary">View Case Study</a>
+                <Link href="/portfolio-details" className="btn btn-primary">
+                  View Case Study
                 </Link>
 
                 <div className="shape">
@@ -227,19 +225,19 @@ const OurWorks = () => {
                 <div className="content">
                   <span>
                     <Link href="/portfolio">
-                      <a>Web Design</a>
+                      Web Design
                     </Link>
                   </span>
 
                   <h3>
                     <Link href="/portfolio-details">
-                      <a>Redesigning the New York times app</a>
+                      Redesigning the New York times app
                     </Link>
                   </h3>
                 </div>
 
-                <Link href="/portfolio-details">
-                  <a className="btn btn-primary">View Case Study</a>
+                <Link href="/portfolio-details" className="btn btn-primary">
+                  View Case Study
                 </Link>
 
                 <div className="shape">
@@ -253,8 +251,8 @@ const OurWorks = () => {
           </div>
 
           <div className="view-more-work">
-            <Link href="/portfolio">
-              <a className="btn btn-primary">View More Work</a>
+            <Link href="/portfolio" className="btn btn-primary">
+              View More Work
             </Link>
           </div>
         </div>

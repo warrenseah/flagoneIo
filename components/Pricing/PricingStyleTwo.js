@@ -2,6 +2,222 @@ import React from "react";
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
+const monthlyPricingData = [
+  {
+    title: "Basic Plan",
+    price: "99",
+    duration: "/Monthly",
+    shortText:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+    aosDelay: "200",
+
+    priceList: [
+      {
+        title: "24/7 Live Chat",
+      },
+      {
+        title: "Email Integration",
+      },
+      {
+        title: "Messenger Integration",
+      },
+      {
+        title: "Mobile + Desktop Apps",
+      },
+      {
+        title: "Quick Responses",
+      },
+      {
+        title: "Drag & Drop Widgets",
+      },
+      {
+        title: "Google Analytics",
+      },
+      {
+        title: "Monthly Reports and Analytics",
+      },
+    ],
+  },
+  {
+    title: "Professional Plan",
+    price: "299",
+    duration: "/Monthly",
+    shortText:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+    aosDelay: "300",
+
+    priceList: [
+      {
+        title: "24/7 Live Chat",
+      },
+      {
+        title: "Email Integration",
+      },
+      {
+        title: "Messenger Integration",
+      },
+      {
+        title: "Mobile + Desktop Apps",
+      },
+      {
+        title: "Quick Responses",
+      },
+      {
+        title: "Drag & Drop Widgets",
+      },
+      {
+        title: "Google Analytics",
+      },
+      {
+        title: "Monthly Reports and Analytics",
+      },
+    ],
+  },
+  {
+    title: "Business Plan",
+    price: "399",
+    duration: "/Monthly",
+    shortText:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+    aosDelay: "400",
+
+    priceList: [
+      {
+        title: "24/7 Live Chat",
+      },
+      {
+        title: "Email Integration",
+      },
+      {
+        title: "Messenger Integration",
+      },
+      {
+        title: "Mobile + Desktop Apps",
+      },
+      {
+        title: "Quick Responses",
+      },
+      {
+        title: "Drag & Drop Widgets",
+      },
+      {
+        title: "Google Analytics",
+      },
+      {
+        title: "Monthly Reports and Analytics",
+      },
+    ],
+  },
+];
+
+const yearlyPricingData = [
+  {
+    title: "Basic Plan",
+    price: "199",
+    duration: "/Yearly",
+    shortText:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+    aosDelay: "200",
+
+    priceList: [
+      {
+        title: "24/7 Live Chat",
+      },
+      {
+        title: "Email Integration",
+      },
+      {
+        title: "Messenger Integration",
+      },
+      {
+        title: "Mobile + Desktop Apps",
+      },
+      {
+        title: "Quick Responses",
+      },
+      {
+        title: "Drag & Drop Widgets",
+      },
+      {
+        title: "Google Analytics",
+      },
+      {
+        title: "Monthly Reports and Analytics",
+      },
+    ],
+  },
+  {
+    title: "Professional Plan",
+    price: "399",
+    duration: "/Yearly",
+    shortText:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+    aosDelay: "300",
+
+    priceList: [
+      {
+        title: "24/7 Live Chat",
+      },
+      {
+        title: "Email Integration",
+      },
+      {
+        title: "Messenger Integration",
+      },
+      {
+        title: "Mobile + Desktop Apps",
+      },
+      {
+        title: "Quick Responses",
+      },
+      {
+        title: "Drag & Drop Widgets",
+      },
+      {
+        title: "Google Analytics",
+      },
+      {
+        title: "Monthly Reports and Analytics",
+      },
+    ],
+  },
+  {
+    title: "Business Plan",
+    price: "499",
+    duration: "/Yearly",
+    shortText:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+    aosDelay: "400",
+
+    priceList: [
+      {
+        title: "24/7 Live Chat",
+      },
+      {
+        title: "Email Integration",
+      },
+      {
+        title: "Messenger Integration",
+      },
+      {
+        title: "Mobile + Desktop Apps",
+      },
+      {
+        title: "Quick Responses",
+      },
+      {
+        title: "Drag & Drop Widgets",
+      },
+      {
+        title: "Google Analytics",
+      },
+      {
+        title: "Monthly Reports and Analytics",
+      },
+    ],
+  },
+];
+
 const PricingStyleTwo = () => {
   return (
     <>
@@ -24,381 +240,87 @@ const PricingStyleTwo = () => {
 
               <TabPanel>
                 <div className="row justify-content-center">
-                  {/* Single pricing table */}
-                  <div className="col-lg-4 col-sm-6">
-                    <div className="single-pricing-table">
-                      <div className="pricing-header">
-                        <h3>Basic</h3>
+                  {monthlyPricingData &&
+                    monthlyPricingData.slice(0, 3).map((value, i) => (
+                      <div className="col-lg-4 col-md-6" key={i}>
+                        <div
+                          className="single-pricing-table"
+                          data-aos="fade-in"
+                          data-aos-duration="1200"
+                          data-aos-delay={value.aosDelay}
+                        >
+                          <div className="pricing-header">
+                            <h3>{value.title}</h3>
+                          </div>
+
+                          <div className="price">
+                            <sup>$</sup>
+                            {value.price} <sub>{value.duration}</sub>
+                            <p className="info-text">{value.shortText}</p>
+                          </div>
+
+                          <ul className="pricing-features">
+                            {value.priceList.map((value, i) => (
+                              <li key={i}>
+                                <i className="fa-solid fa-circle-check"></i>{" "}
+                                {value.title}
+                              </li>
+                            ))}
+                          </ul>
+
+                          <div className="btn-box">
+                            <Link href="#" className="btn btn-primary">
+                              <i className="bx bxs-hot"></i>
+                              Try It Free Now
+                              <span></span>
+                            </Link>
+                          </div>
+                        </div>
                       </div>
-
-                      <div className="price">
-                        <sup>$</sup>49 <sub>/ monthly</sub>
-                      </div>
-
-                      <ul className="pricing-features">
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          24/7 Live Chat
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Email Integration
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Messenger Integration
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Visitor Info
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Mobile + Desktop Apps
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Quick Responses
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>Drag & Drop
-                          Widgets
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Visitor Notes
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>Google
-                          Analytics
-                        </li>
-                      </ul>
-
-                      <div className="btn-box">
-                        <Link href="#">
-                          <a className="btn btn-primary">
-                            <i className="bx bxs-hot"></i>
-                            Try It Free Now
-                            <span></span>
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Single pricing table */}
-                  <div className="col-lg-4 col-sm-6">
-                    <div className="single-pricing-table">
-                      <div className="pricing-header">
-                        <h3>Standard</h3>
-                      </div>
-
-                      <div className="price">
-                        <sup>$</sup>69 <sub>/ monthly</sub>
-                      </div>
-
-                      <ul className="pricing-features">
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          24/7 Live Chat
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Email Integration
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Messenger Integration
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Visitor Info
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Mobile + Desktop Apps
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Quick Responses
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>Drag & Drop
-                          Widgets
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Visitor Notes
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Google Analytics
-                        </li>
-                      </ul>
-
-                      <div className="btn-box">
-                        <Link href="#">
-                          <a className="btn btn-primary">
-                            <i className="bx bxs-hot"></i>
-                            Try It Free Now
-                            <span></span>
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Single pricing table */}
-                  <div className="col-lg-4 col-sm-6">
-                    <div className="single-pricing-table">
-                      <div className="pricing-header">
-                        <h3>Professional</h3>
-                      </div>
-
-                      <div className="price">
-                        <sup>$</sup>99<sub> / monthly</sub>
-                      </div>
-
-                      <ul className="pricing-features">
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          24/7 Live Chat
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Email Integration
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Messenger Integration
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Visitor Info
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Mobile + Desktop Apps
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Quick Responses
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Drag & Drop Widgets
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Visitor Notes
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Google Analytics
-                        </li>
-                      </ul>
-
-                      <div className="btn-box">
-                        <Link href="#">
-                          <a className="btn btn-primary">
-                            <i className="bx bxs-hot"></i>
-                            Try It Free Now
-                            <span></span>
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
+                    ))}
                 </div>
               </TabPanel>
 
               <TabPanel>
                 <div className="row justify-content-center">
-                  {/* Single pricing table */}
-                  <div className="col-lg-4 col-sm-6">
-                    <div className="single-pricing-table">
-                      <div className="pricing-header">
-                        <h3>Basic</h3>
+                  {yearlyPricingData &&
+                    yearlyPricingData.slice(0, 3).map((value, i) => (
+                      <div className="col-lg-4 col-md-6" key={i}>
+                        <div
+                          className="single-pricing-table"
+                          data-aos="fade-in"
+                          data-aos-duration="1200"
+                          data-aos-delay={value.aosDelay}
+                        >
+                          <div className="pricing-header">
+                            <h3>{value.title}</h3>
+                          </div>
+
+                          <div className="price">
+                            <sup>$</sup>
+                            {value.price} <sub>{value.duration}</sub>
+                            <p className="info-text">{value.shortText}</p>
+                          </div>
+
+                          <ul className="pricing-features">
+                            {value.priceList.map((value, i) => (
+                              <li key={i}>
+                                <i className="fa-solid fa-circle-check"></i>{" "}
+                                {value.title}
+                              </li>
+                            ))}
+                          </ul>
+
+                          <div className="btn-box">
+                            <Link href="#" className="btn btn-primary">
+                              <i className="bx bxs-hot"></i>
+                              Try It Free Now
+                              <span></span>
+                            </Link>
+                          </div>
+                        </div>
                       </div>
-
-                      <div className="price">
-                        <sup>$</sup>149 <sub>/ yearly</sub>
-                      </div>
-
-                      <ul className="pricing-features">
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          24/7 Live Chat
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Email Integration
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Messenger Integration
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Visitor Info
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Mobile + Desktop Apps
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Quick Responses
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Drag & Drop Widgets
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Visitor Notes
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Google Analytics
-                        </li>
-                      </ul>
-
-                      <div className="btn-box">
-                        <Link href="#">
-                          <a className="btn btn-primary">
-                            <i className="bx bxs-hot"></i>
-                            Try It Free Now
-                            <span></span>
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Single pricing table */}
-                  <div className="col-lg-4 col-sm-6">
-                    <div className="single-pricing-table">
-                      <div className="pricing-header">
-                        <h3>Standard</h3>
-                      </div>
-
-                      <div className="price">
-                        <sup>$</sup>159 <sub>/ yearly</sub>
-                      </div>
-
-                      <ul className="pricing-features">
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          24/7 Live Chat
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Email Integration
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Messenger Integration
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Visitor Info
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Mobile + Desktop Apps
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Quick Responses
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Drag & Drop Widgets
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Visitor Notes
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Google Analytics
-                        </li>
-                      </ul>
-
-                      <div className="btn-box">
-                        <Link href="#">
-                          <a className="btn btn-primary">
-                            <i className="bx bxs-hot"></i>
-                            Try It Free Now
-                            <span></span>
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Single pricing table */}
-                  <div className="col-lg-4 col-sm-6">
-                    <div className="single-pricing-table">
-                      <div className="pricing-header">
-                        <h3>Professional</h3>
-                      </div>
-
-                      <div className="price">
-                        <sup>$</sup>199 <sub>/ yearly</sub>
-                      </div>
-
-                      <ul className="pricing-features">
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          24/7 Live Chat
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Email Integration
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Messenger Integration
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Visitor Info
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Mobile + Desktop Apps
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Quick Responses
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Drag & Drop Widgets
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Visitor Notes
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-circle-check"></i>
-                          Google Analytics
-                        </li>
-                      </ul>
-
-                      <div className="btn-box">
-                        <Link href="#">
-                          <a className="btn btn-primary">
-                            <i className="bx bxs-hot"></i>
-                            Try It Free Now
-                            <span></span>
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
+                    ))}
                 </div>
               </TabPanel>
             </Tabs>

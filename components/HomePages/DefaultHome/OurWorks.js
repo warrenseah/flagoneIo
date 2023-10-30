@@ -26,18 +26,18 @@ const OurWorks = () => {
                 <div className="content">
                   <span>
                     <Link href="/portfolio-defi-staking">
-                      <a>DeFi Staking</a>
+                      DeFi Staking
                     </Link>
                   </span>
                   <h3>
                     <Link href="/portfolio-defi-staking">
-                      <a>Bnb Charger</a>
+                      Bnb Charger
                     </Link>
                   </h3>
                 </div>
 
-                <Link href="/portfolio-defi-staking">
-                  <a className="btn btn-primary">View Case Study</a>
+                <Link href="/portfolio-defi-staking" className="btn btn-primary">
+                  View Case Study
                 </Link>
 
                 <div className="shape">
@@ -64,18 +64,18 @@ const OurWorks = () => {
                 <div className="content">
                   <span>
                     <Link href="/portfolio-nft-collections">
-                      <a>NFT</a>
+                      NFT
                     </Link>
                   </span>
                   <h3>
                     <Link href="/portfolio-nft-collections">
-                      <a>Generative Art NFT Collection</a>
+                      Generative Art NFT Collection
                     </Link>
                   </h3>
                 </div>
 
-                <Link href="/portfolio-nft-collections">
-                  <a className="btn btn-primary">View Case Study</a>
+                <Link href="/portfolio-nft-collections" className="btn btn-primary">
+                  View Case Study
                 </Link>
 
                 <div className="shape">
@@ -102,18 +102,18 @@ const OurWorks = () => {
                 <div className="content">
                   <span>
                     <Link href="/portfolio-dapp-dev">
-                      <a>dApp</a>
+                      dApp
                     </Link>
                   </span>
                   <h3>
                     <Link href="/portfolio-dapp-dev">
-                      <a>dApp Development</a>
+                      dApp Development
                     </Link>
                   </h3>
                 </div>
 
-                <Link href="/portfolio-dapp-dev">
-                  <a className="btn btn-primary">View Case Study</a>
+                <Link href="/portfolio-dapp-dev" className="btn btn-primary">
+                  View Case Study
                 </Link>
 
                 <div className="shape">

@@ -1,5 +1,269 @@
 import React from "react";
 
+const teamMemberData = [
+  {
+    image: "/images/team/team5.jpg",
+    name: "Anderson",
+    designation: "CEO & Founder",
+    aosDelay: "100",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+  {
+    image: "/images/team/team6.jpg",
+    name: "Rodriguez",
+    designation: "React Developer",
+    aosDelay: "200",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+  {
+    image: "/images/team/team7.jpg",
+    name: "Thomas",
+    designation: "Angular Developer",
+    aosDelay: "300",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+  {
+    image: "/images/team/team9.jpg",
+    name: "James White",
+    designation: "Marketing Manager",
+    aosDelay: "400",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+  {
+    image: "/images/team/team10.jpg",
+    name: "Johnson Lee",
+    designation: "Backend Specialist",
+    aosDelay: "500",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+  {
+    image: "/images/team/team11.jpg",
+    name: "Williams Smith",
+    designation: "Front-end Specialist",
+    aosDelay: "600",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+  {
+    image: "/images/team/team12.jpg",
+    name: "Brown",
+    designation: "Marketing Specialist",
+    aosDelay: "700",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+  {
+    image: "/images/team/team13.jpg",
+    name: "Taylor",
+    designation: "Graphics Designer",
+    aosDelay: "800",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+  {
+    image: "/images/team/team9.jpg",
+    name: "Tremblay",
+    designation: "SEO Specialist",
+    aosDelay: "900",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+];
+
 const TeamStyleTwo = () => {
   return (
     <>
@@ -14,455 +278,43 @@ const TeamStyleTwo = () => {
           </div>
 
           <div className="row justify-content-center">
-            <div className="col-lg-4 col-sm-6">
-              <div className="team-card text-center">
-                <div className="team-img">
-                  <img src="/images/team/team5.jpg" alt="Image" />
+            {teamMemberData &&
+              teamMemberData.map((value, i) => (
+                <div
+                  className="col-lg-4 col-sm-6"
+                  key={i}
+                  data-aos="fade-in"
+                  data-aos-duration="1200"
+                  data-aos-delay={value.aosDelay}
+                >
+                  <div className="team-card text-center">
+                    <div className="team-img">
+                      <img src={value.image} alt="Image" />
 
-                  <div className="social-links">
-                    <div className="d-table">
-                      <div className="d-table-cell">
-                        <ul>
-                          <li>
-                            <a href="linkedin.com" target="_blank">
-                              <i className="fa-brands fa-linkedin-in"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://twitter.com/" target="_blank">
-                              <i className="fa-brands fa-twitter"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.facebook.com/" target="_blank">
-                              <i className="fa-brands fa-facebook-f"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="https://www.instagram.com/"
-                              target="_blank"
-                            >
-                              <i className="fa-brands fa-instagram"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://dribbble.com/" target="_blank">
-                              <i className="fa-brands fa-dribbble"></i>
-                            </a>
-                          </li>
-                        </ul>
+                      <div className="social-links">
+                        <div className="d-table">
+                          <div className="d-table-cell">
+                            <ul>
+                              {value.socialLinks.map((value, i) => (
+                                <li key={i}>
+                                  <a href={value.url} target="_blank">
+                                    <i className={value.iconName}></i>
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
                       </div>
+                    </div>
+
+                    <div className="team-caption">
+                      <h3>{value.name}</h3>
+                      <p>{value.designation}</p>
                     </div>
                   </div>
                 </div>
-
-                <div className="team-caption">
-                  <h3>Anderson</h3>
-                  <p>CEO & Founder</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="team-card text-center">
-                <div className="team-img">
-                  <img src="/images/team/team6.jpg" alt="Image" />
-
-                  <div className="social-links">
-                    <div className="d-table">
-                      <div className="d-table-cell">
-                        <ul>
-                          <li>
-                            <a href="linkedin.com" target="_blank">
-                              <i className="fa-brands fa-linkedin-in"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://twitter.com/" target="_blank">
-                              <i className="fa-brands fa-twitter"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.facebook.com/" target="_blank">
-                              <i className="fa-brands fa-facebook-f"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="https://www.instagram.com/"
-                              target="_blank"
-                            >
-                              <i className="fa-brands fa-instagram"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://dribbble.com/" target="_blank">
-                              <i className="fa-brands fa-dribbble"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="team-caption">
-                  <h3>Rodriguez</h3>
-                  <p>React Developer</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="team-card text-center">
-                <div className="team-img">
-                  <img src="/images/team/team7.jpg" alt="Image" />
-
-                  <div className="social-links">
-                    <div className="d-table">
-                      <div className="d-table-cell">
-                        <ul>
-                          <li>
-                            <a href="linkedin.com" target="_blank">
-                              <i className="fa-brands fa-linkedin-in"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://twitter.com/" target="_blank">
-                              <i className="fa-brands fa-twitter"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.facebook.com/" target="_blank">
-                              <i className="fa-brands fa-facebook-f"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="https://www.instagram.com/"
-                              target="_blank"
-                            >
-                              <i className="fa-brands fa-instagram"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://dribbble.com/" target="_blank">
-                              <i className="fa-brands fa-dribbble"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="team-caption">
-                  <h3>Thomas</h3>
-                  <p>Angular Developer</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="team-card text-center">
-                <div className="team-img">
-                  <img src="/images/team/team9.jpg" alt="Image" />
-
-                  <div className="social-links">
-                    <div className="d-table">
-                      <div className="d-table-cell">
-                        <ul>
-                          <li>
-                            <a href="linkedin.com" target="_blank">
-                              <i className="fa-brands fa-linkedin-in"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://twitter.com/" target="_blank">
-                              <i className="fa-brands fa-twitter"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.facebook.com/" target="_blank">
-                              <i className="fa-brands fa-facebook-f"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="https://www.instagram.com/"
-                              target="_blank"
-                            >
-                              <i className="fa-brands fa-instagram"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://dribbble.com/" target="_blank">
-                              <i className="fa-brands fa-dribbble"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="team-caption">
-                  <h3>James White</h3>
-                  <p>CEO & Founder</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="team-card text-center">
-                <div className="team-img">
-                  <img src="/images/team/team10.jpg" alt="Image" />
-
-                  <div className="social-links">
-                    <div className="d-table">
-                      <div className="d-table-cell">
-                        <ul>
-                          <li>
-                            <a href="linkedin.com" target="_blank">
-                              <i className="fa-brands fa-linkedin-in"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://twitter.com/" target="_blank">
-                              <i className="fa-brands fa-twitter"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.facebook.com/" target="_blank">
-                              <i className="fa-brands fa-facebook-f"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="https://www.instagram.com/"
-                              target="_blank"
-                            >
-                              <i className="fa-brands fa-instagram"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://dribbble.com/" target="_blank">
-                              <i className="fa-brands fa-dribbble"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="team-caption">
-                  <h3>Johnson Lee</h3>
-                  <p>Backend Specialist</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="team-card text-center">
-                <div className="team-img">
-                  <img src="/images/team/team11.jpg" alt="Image" />
-
-                  <div className="social-links">
-                    <div className="d-table">
-                      <div className="d-table-cell">
-                        <ul>
-                          <li>
-                            <a href="linkedin.com" target="_blank">
-                              <i className="fa-brands fa-linkedin-in"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://twitter.com/" target="_blank">
-                              <i className="fa-brands fa-twitter"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.facebook.com/" target="_blank">
-                              <i className="fa-brands fa-facebook-f"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="https://www.instagram.com/"
-                              target="_blank"
-                            >
-                              <i className="fa-brands fa-instagram"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://dribbble.com/" target="_blank">
-                              <i className="fa-brands fa-dribbble"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="team-caption">
-                  <h3>Williams Smith</h3>
-                  <p>Front-end Specialist</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="team-card text-center">
-                <div className="team-img">
-                  <img src="/images/team/team12.jpg" alt="Image" />
-
-                  <div className="social-links">
-                    <div className="d-table">
-                      <div className="d-table-cell">
-                        <ul>
-                          <li>
-                            <a href="linkedin.com" target="_blank">
-                              <i className="fa-brands fa-linkedin-in"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://twitter.com/" target="_blank">
-                              <i className="fa-brands fa-twitter"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.facebook.com/" target="_blank">
-                              <i className="fa-brands fa-facebook-f"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="https://www.instagram.com/"
-                              target="_blank"
-                            >
-                              <i className="fa-brands fa-instagram"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://dribbble.com/" target="_blank">
-                              <i className="fa-brands fa-dribbble"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="team-caption">
-                  <h3>Brown</h3>
-                  <p>Marketing Specialist</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="team-card text-center">
-                <div className="team-img">
-                  <img src="/images/team/team13.jpg" alt="Image" />
-
-                  <div className="social-links">
-                    <div className="d-table">
-                      <div className="d-table-cell">
-                        <ul>
-                          <li>
-                            <a href="linkedin.com" target="_blank">
-                              <i className="fa-brands fa-linkedin-in"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://twitter.com/" target="_blank">
-                              <i className="fa-brands fa-twitter"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.facebook.com/" target="_blank">
-                              <i className="fa-brands fa-facebook-f"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="https://www.instagram.com/"
-                              target="_blank"
-                            >
-                              <i className="fa-brands fa-instagram"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://dribbble.com/" target="_blank">
-                              <i className="fa-brands fa-dribbble"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="team-caption">
-                  <h3>Taylor</h3>
-                  <p>Graphics Designer</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="team-card text-center">
-                <div className="team-img">
-                  <img src="/images/team/team9.jpg" alt="Image" />
-
-                  <div className="social-links">
-                    <div className="d-table">
-                      <div className="d-table-cell">
-                        <ul>
-                          <li>
-                            <a href="linkedin.com" target="_blank">
-                              <i className="fa-brands fa-linkedin-in"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://twitter.com/" target="_blank">
-                              <i className="fa-brands fa-twitter"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.facebook.com/" target="_blank">
-                              <i className="fa-brands fa-facebook-f"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="https://www.instagram.com/"
-                              target="_blank"
-                            >
-                              <i className="fa-brands fa-instagram"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://dribbble.com/" target="_blank">
-                              <i className="fa-brands fa-dribbble"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="team-caption">
-                  <h3>Tremblay</h3>
-                  <p>SEO Specialist</p>
-                </div>
-              </div>
-            </div>
+              ))}
           </div>
         </div>
       </div>

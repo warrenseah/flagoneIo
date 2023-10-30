@@ -1,6 +1,134 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
+
+const feedbacskData = [
+  {
+    image: "/images/cyber-security/user1.jpg",
+    name: "Jason Roy",
+    designation: "CEO & Founder, Envato",
+    feedbackText:
+      "We believe brand interaction is key in communication. Real innovations and a positive customer experience are the heart of successful communication. No fake products and services.",
+
+    rating: [
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+    ],
+  },
+  {
+    image: "/images/cyber-security/user2.jpg",
+    name: "James Anderson",
+    designation: "ReactJS Developer",
+    feedbackText:
+      "We believe brand interaction is key in communication. Real innovations and a positive customer experience are the heart of successful communication. No fake products and services.",
+
+    rating: [
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+    ],
+  },
+  {
+    image: "/images/cyber-security/user3.jpg",
+    name: "Gilbert",
+    designation: "Marketing Manager",
+    feedbackText:
+      "We believe brand interaction is key in communication. Real innovations and a positive customer experience are the heart of successful communication. No fake products and services.",
+
+    rating: [
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+    ],
+  },
+  {
+    image: "/images/cyber-security/user2.jpg",
+    name: "Nathaniel",
+    designation: "Web Developer",
+    feedbackText:
+      "We believe brand interaction is key in communication. Real innovations and a positive customer experience are the heart of successful communication. No fake products and services.",
+
+    rating: [
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+    ],
+  },
+  {
+    image: "/images/cyber-security/user1.jpg",
+    name: "Lewis",
+    designation: "Web Developer",
+    feedbackText:
+      "We believe brand interaction is key in communication. Real innovations and a positive customer experience are the heart of successful communication. No fake products and services.",
+
+    rating: [
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+    ],
+  },
+];
 
 const Feedbacks = () => {
   return (
@@ -18,6 +146,11 @@ const Feedbacks = () => {
             pagination={{
               clickable: true,
             }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: true,
+              pauseOnMouseEnter: true,
+            }}
             spaceBetween={30}
             breakpoints={{
               0: {
@@ -27,224 +160,37 @@ const Feedbacks = () => {
                 slidesPerView: 2,
               },
             }}
-            modules={[Pagination]}
+            modules={[Autoplay, Pagination]}
             className="cs-feedback-slides"
           >
-            <SwiperSlide>
-              <div className="cs-single-feedback with-black-color">
-                <ul className="rating">
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                </ul>
-                <p>
-                  “We believe brand interaction is key in communication. Real
-                  innovations and a positive customer experience are the heart
-                  of successful communication. No fake products and services.”
-                </p>
-                <div className="client-info">
-                  <img src="/images/cyber-security/user1.jpg" alt="image" />
+            {feedbacskData &&
+              feedbacskData.map((value, i) => (
+                <SwiperSlide key={i}>
+                  <div className="cs-single-feedback with-black-color">
+                    <ul className="rating">
+                      {value.rating.map((value, i) => (
+                        <li key={i}>
+                          <i className={value.iconName}></i>
+                        </li>
+                      ))}
+                    </ul>
 
-                  <h3>Jason Roy</h3>
-                  <span>Manager</span>
-                </div>
-                <div className="quote">
-                  <i className="fa-solid fa-quote-right"></i>
-                </div>
-              </div>
-            </SwiperSlide>
+                    <p>
+                      <q>{value.feedbackText}</q>
+                    </p>
 
-            <SwiperSlide>
-              <div className="cs-single-feedback with-black-color">
-                <ul className="rating">
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                </ul>
-                <p>
-                  “We believe brand interaction is key in communication. Real
-                  innovations and a positive customer experience are the heart
-                  of successful communication. No fake products and services.”
-                </p>
-                <div className="client-info">
-                  <img src="/images/cyber-security/user2.jpg" alt="image" />
+                    <div className="client-info">
+                      <img src={value.image} alt="image" />
+                      <h3>{value.name}</h3>
+                      <span>{value.designation}</span>
+                    </div>
 
-                  <h3>James Anderson</h3>
-                  <span>Web Developer</span>
-                </div>
-                <div className="quote">
-                  <i className="fa-solid fa-quote-right"></i>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="cs-single-feedback with-black-color">
-                <ul className="rating">
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                </ul>
-                <p>
-                  “We believe brand interaction is key in communication. Real
-                  innovations and a positive customer experience are the heart
-                  of successful communication. No fake products and services.”
-                </p>
-                <div className="client-info">
-                  <img src="/images/cyber-security/user3.jpg" alt="image" />
-
-                  <h3>Jason Roy</h3>
-                  <span>Manager</span>
-                </div>
-                <div className="quote">
-                  <i className="fa-solid fa-quote-right"></i>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="cs-single-feedback with-black-color">
-                <ul className="rating">
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                </ul>
-                <p>
-                  “We believe brand interaction is key in communication. Real
-                  innovations and a positive customer experience are the heart
-                  of successful communication. No fake products and services.”
-                </p>
-                <div className="client-info">
-                  <img src="/images/cyber-security/user1.jpg" alt="image" />
-
-                  <h3>James Anderson</h3>
-                  <span>Web Developer</span>
-                </div>
-                <div className="quote">
-                  <i className="fa-solid fa-quote-right"></i>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="cs-single-feedback with-black-color">
-                <ul className="rating">
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                </ul>
-                <p>
-                  “We believe brand interaction is key in communication. Real
-                  innovations and a positive customer experience are the heart
-                  of successful communication. No fake products and services.”
-                </p>
-                <div className="client-info">
-                  <img src="/images/cyber-security/user2.jpg" alt="image" />
-
-                  <h3>Jason Roy</h3>
-                  <span>Manager</span>
-                </div>
-                <div className="quote">
-                  <i className="fa-solid fa-quote-right"></i>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="cs-single-feedback with-black-color">
-                <ul className="rating">
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-star"></i>
-                  </li>
-                </ul>
-                <p>
-                  “We believe brand interaction is key in communication. Real
-                  innovations and a positive customer experience are the heart
-                  of successful communication. No fake products and services.”
-                </p>
-                <div className="client-info">
-                  <img src="/images/cyber-security/user3.jpg" alt="image" />
-
-                  <h3>James Anderson</h3>
-                  <span>Web Developer</span>
-                </div>
-                <div className="quote">
-                  <i className="fa-solid fa-quote-right"></i>
-                </div>
-              </div>
-            </SwiperSlide>
+                    <div className="quote">
+                      <i className="fa-solid fa-quote-right"></i>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
           </Swiper>
         </div>
 

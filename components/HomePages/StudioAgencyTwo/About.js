@@ -7,7 +7,12 @@ const About = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-5 col-md-12">
-              <div className="about-image">
+              <div 
+                className="about-image"
+                data-aos="fade-up"
+                data-aos-duration="1200"
+                data-aos-delay="200"
+              >
                 <img
                   src="/images/about-img4.jpg"
                   alt="image"

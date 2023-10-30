@@ -12,9 +12,7 @@ const Footer = () => {
               <div className="single-footer-widget">
                 <div className="logo">
                   <Link href="/">
-                    <a>
                       <img src="/images/f1logo.png" alt="Logo" />
-                    </a>
                   </Link>
                 </div>
 
@@ -67,22 +65,22 @@ const Footer = () => {
                 <ul className="list">
                   <li>
                     <Link href="/">
-                      <a>Home</a>
+                      Home
                     </Link>
                   </li>
                   <li>
                     <Link href="/#aboutUs">
-                      <a>About</a>
+                      About
                     </Link>
                   </li>
                   <li>
                     <Link href="/services">
-                      <a>Services</a>
+                      Services
                     </Link>
                   </li>
                   <li>
                     <Link href="/#ourWorks">
-                      <a>Portfolio</a>
+                      Portfolio
                     </Link>
                   </li>
                 </ul>
@@ -96,22 +94,22 @@ const Footer = () => {
                 <ul className="list">
                   <li>
                     <Link href="/contact">
-                      <a>Contact</a>
+                      Contact
                     </Link>
                   </li>
                   <li>
                     <Link href="/privacy-policy">
-                      <a>Privacy Policy</a>
+                      Privacy Policy
                     </Link>
                   </li>
                   <li>
                     <Link href="/terms-conditions">
-                      <a>Terms & Conditions</a>
+                      Terms & Conditions
                     </Link>
                   </li>
                   <li>
                     <Link href="/disclaimer">
-                      <a>Disclaimer</a>
+                      Disclaimer
                     </Link>
                   </li>
                 </ul>

@@ -1,6 +1,27 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
+
+const feedbacskData = [
+  {
+    name: "John Smith",
+    designation: "CEO & Founder, Envato",
+    feedbacskText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+  },
+  {
+    name: "Oliver Smith",
+    designation: "React JS Specialist",
+    feedbacskText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+  },
+  {
+    name: "Thomas John",
+    designation: "Angular JS Specialist",
+    feedbacskText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+  },
+];
 
 const Feedback = () => {
   return (
@@ -16,58 +37,29 @@ const Feedback = () => {
               pagination={{
                 clickable: true,
               }}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: true,
+                pauseOnMouseEnter: true,
+              }}
               spaceBetween={30}
               slidesPerView={1}
-              modules={[Pagination]}
+              modules={[Autoplay, Pagination]}
               className="feedback-slides"
             >
-              <SwiperSlide>
-                <div className="single-feedback">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-                    commodo viverra maecenas accumsan lacus vel facilisis.
-                  </p>
+              {feedbacskData &&
+                feedbacskData.map((value, i) => (
+                  <SwiperSlide key={i}>
+                    <div className="single-feedback">
+                      <p><q>{value.feedbacskText}</q></p>
 
-                  <div className="bar"></div>
+                      <div className="bar"></div>
 
-                  <h3>John Smith</h3>
-                  <span>CEO & Founder, Envato</span>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="single-feedback">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-                    commodo viverra maecenas accumsan lacus vel facilisis.
-                  </p>
-
-                  <div className="bar"></div>
-
-                  <h3>Oliver Smith</h3>
-                  <span>React JS Specialist</span>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="single-feedback">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-                    commodo viverra maecenas accumsan lacus vel facilisis.
-                  </p>
-
-                  <div className="bar"></div>
-
-                  <h3>Thomas John</h3>
-                  <span>Angular JS Specialist</span>
-                </div>
-              </SwiperSlide>
+                      <h3>{value.name}</h3>
+                      <span>{value.designation}</span>
+                    </div>
+                  </SwiperSlide>
+                ))}
             </Swiper>
           </div>
         </div>
@@ -77,30 +69,30 @@ const Feedback = () => {
           <img
             src="/images/clients/client1.png"
             className="client1"
-            alt="client" 
+            alt="client"
             data-aos="zoom-in"
             data-aos-duration="1200"
             data-aos-delay="200"
           />
- 
+
           <img
             src="/images/clients/client2.png"
             className="client2"
-            alt="client" 
+            alt="client"
             data-aos="zoom-in"
             data-aos-duration="1200"
             data-aos-delay="300"
           />
-       
+
           <img
             src="/images/clients/client3.png"
             className="client3"
-            alt="client" 
+            alt="client"
             data-aos="zoom-in"
             data-aos-duration="1200"
             data-aos-delay="400"
           />
-         
+
           <img
             src="/images/clients/client4.png"
             className="client4"
@@ -109,7 +101,7 @@ const Feedback = () => {
             data-aos-duration="1200"
             data-aos-delay="500"
           />
-         
+
           <img
             src="/images/clients/client5.png"
             className="client5"
@@ -118,7 +110,7 @@ const Feedback = () => {
             data-aos-duration="1200"
             data-aos-delay="600"
           />
-         
+
           <img
             src="/images/clients/client6.png"
             className="client6"
@@ -127,16 +119,16 @@ const Feedback = () => {
             data-aos-duration="1200"
             data-aos-delay="700"
           />
-           
+
           <img
             src="/images/clients/client7.png"
             className="client7"
-            alt="client" 
+            alt="client"
             data-aos="zoom-in"
             data-aos-duration="1200"
             data-aos-delay="800"
           />
-         
+
           <img
             src="/images/clients/client8.png"
             className="client8"

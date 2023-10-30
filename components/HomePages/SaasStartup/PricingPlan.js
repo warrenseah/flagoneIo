@@ -1,6 +1,222 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
+const monthlyPricingData = [
+  {
+    title: "Starter",
+    price: "29",
+    duration: "/Monthly",
+    btnText: "Choose Plan",
+    btnLink: "#",
+    aosDelay: "100",
+
+    lists: [
+      {
+        title: "7 Days Free Trail",
+        unactiveCalss: "",
+      },
+      {
+        title: "App-In-Purchase",
+        unactiveCalss: "",
+      },
+      {
+        title: "Webmail Access",
+        unactiveCalss: "",
+      },
+      {
+        title: "Unlimited Attachment",
+        unactiveCalss: "",
+      },
+      {
+        title: "100% Safe & Secure",
+        unactiveCalss: "",
+      },
+      {
+        title: "No Hidden Charges",
+        unactiveCalss: "unactive",
+      },
+    ],
+  },
+  {
+    title: "Professional",
+    price: "39",
+    duration: "/Monthly",
+    btnText: "Choose Plan",
+    btnLink: "#",
+    aosDelay: "200",
+
+    lists: [
+      {
+        title: "One Time Purchase",
+        unactiveCalss: "",
+      },
+      {
+        title: "App-In-Purchase",
+        unactiveCalss: "",
+      },
+      {
+        title: "Webmail Access",
+        unactiveCalss: "",
+      },
+      {
+        title: "Unlimited Attachment",
+        unactiveCalss: "",
+      },
+      {
+        title: "100% Safe & Secure",
+        unactiveCalss: "",
+      },
+      {
+        title: "No Hidden Charges",
+        unactiveCalss: "",
+      },
+    ],
+  },
+  {
+    title: "Premium",
+    price: "49",
+    duration: "/Monthly",
+    btnText: "Choose Plan",
+    btnLink: "#",
+    aosDelay: "300",
+
+    lists: [
+      {
+        title: "Unlimited Purchase",
+        unactiveCalss: "",
+      },
+      {
+        title: "App-In-Purchase",
+        unactiveCalss: "",
+      },
+      {
+        title: "Webmail Access",
+        unactiveCalss: "",
+      },
+      {
+        title: "Unlimited Attachment",
+        unactiveCalss: "",
+      },
+      {
+        title: "100% Safe & Secure",
+        unactiveCalss: "",
+      },
+      {
+        title: "No Hidden Charges",
+        unactiveCalss: "",
+      },
+    ],
+  },
+];
+
+const yearlyPricingData = [
+  {
+    title: "Starter",
+    price: "59",
+    duration: "/Yearly",
+    btnText: "Choose Plan",
+    btnLink: "#",
+    aosDelay: "100",
+
+    lists: [
+      {
+        title: "50 Days Free Trail",
+        unactiveCalss: "",
+      },
+      {
+        title: "App-In-Purchase",
+        unactiveCalss: "",
+      },
+      {
+        title: "Webmail Access",
+        unactiveCalss: "",
+      },
+      {
+        title: "Unlimited Attachment",
+        unactiveCalss: "",
+      },
+      {
+        title: "100% Safe & Secure",
+        unactiveCalss: "",
+      },
+      {
+        title: "No Hidden Charges",
+        unactiveCalss: "unactive",
+      },
+    ],
+  },
+  {
+    title: "Professional",
+    price: "79",
+    duration: "/Yearly",
+    btnText: "Choose Plan",
+    btnLink: "#",
+    aosDelay: "200",
+
+    lists: [
+      {
+        title: "One Time Purchase",
+        unactiveCalss: "",
+      },
+      {
+        title: "App-In-Purchase",
+        unactiveCalss: "",
+      },
+      {
+        title: "Webmail Access",
+        unactiveCalss: "",
+      },
+      {
+        title: "Unlimited Attachment",
+        unactiveCalss: "",
+      },
+      {
+        title: "100% Safe & Secure",
+        unactiveCalss: "",
+      },
+      {
+        title: "No Hidden Charges",
+        unactiveCalss: "",
+      },
+    ],
+  },
+  {
+    title: "Premium",
+    price: "99",
+    duration: "/Yearly",
+    btnText: "Choose Plan",
+    btnLink: "#",
+    aosDelay: "300",
+
+    lists: [
+      {
+        title: "Unlimited Purchase",
+        unactiveCalss: "",
+      },
+      {
+        title: "App-In-Purchase",
+        unactiveCalss: "",
+      },
+      {
+        title: "Webmail Access",
+        unactiveCalss: "",
+      },
+      {
+        title: "Unlimited Attachment",
+        unactiveCalss: "",
+      },
+      {
+        title: "100% Safe & Secure",
+        unactiveCalss: "",
+      },
+      {
+        title: "No Hidden Charges",
+        unactiveCalss: "",
+      },
+    ],
+  },
+];
+
 const PricingPlan = () => {
   return (
     <>
@@ -24,141 +240,81 @@ const PricingPlan = () => {
 
               <TabPanel>
                 <div className="row justify-content-center">
-                  <div className="col-lg-4 col-md-6 col-sm-6">
-                    <div className="saas-pricing-box bg-black saas-color">
-                      <div className="pricing-header">
-                        <h3>Starter</h3>
-                        <span className="price">
-                          $29<span>/Monthly</span>
-                        </span>
-                      </div>
-                      <ul className="features-list">
-                        <li>7 Days Free Trail</li>
-                        <li>App-In-Purchase</li>
-                        <li>Webmail Access</li>
-                        <li>Unlimited Attachment</li>
-                        <li>100% Safe & Secure</li>
-                        <li className="unactive">No Hidden Charges</li>
-                      </ul>
-                      <a href="#" className="default-btn-two saas-color">
-                        Choose Plan <i className="fas fa-chevron-right"></i>
-                      </a>
-                    </div>
-                  </div>
+                  {monthlyPricingData &&
+                    monthlyPricingData.slice(0, 3).map((value, i) => (
+                      <div className="col-lg-4 col-md-6 col-sm-6" key={i}>
+                        <div
+                          className="saas-pricing-box bg-black saas-color"
+                          data-aos="fade-up"
+                          data-aos-duration="1200"
+                          data-aos-delay={value.aosDelay}
+                        >
+                          <div className="pricing-header">
+                            <h3>{value.title}</h3>
+                            <span className="price">
+                              ${value.price}
+                              <span>{value.duration}</span>
+                            </span>
+                          </div>
 
-                  <div className="col-lg-4 col-md-6 col-sm-6">
-                    <div className="saas-pricing-box active bg-black saas-color">
-                      <div className="pricing-header">
-                        <h3>Professional</h3>
-                        <span className="price">
-                          $39<span>/Monthly</span>
-                        </span>
-                      </div>
-                      <ul className="features-list">
-                        <li>One Time Purchase</li>
-                        <li>App-In-Purchase</li>
-                        <li>Webmail Access</li>
-                        <li>Unlimited Attachment</li>
-                        <li>100% Safe & Secure</li>
-                        <li>No Hidden Charges</li>
-                      </ul>
-                      <a href="#" className="default-btn-two saas-color">
-                        Choose Plan <i className="fas fa-chevron-right"></i>
-                      </a>
-                    </div>
-                  </div>
+                          <ul className="features-list">
+                            {value.lists.map((value, i) => (
+                              <li className={value.unactiveCalss} key={i}>
+                                {value.title}
+                              </li>
+                            ))}
+                          </ul>
 
-                  <div className="col-lg-4 col-md-6 col-sm-6">
-                    <div className="saas-pricing-box bg-black saas-color">
-                      <div className="pricing-header">
-                        <h3>Premium</h3>
-                        <span className="price">
-                          $49<span>/Monthly</span>
-                        </span>
+                          <a
+                            href={value.btnLink}
+                            className="default-btn-two saas-color"
+                          >
+                            {value.btnText}{" "}
+                            <i className="fas fa-chevron-right"></i>
+                          </a>
+                        </div>
                       </div>
-                      <ul className="features-list">
-                        <li>Unlimited Purchase</li>
-                        <li>App-In-Purchase</li>
-                        <li>Webmail Access</li>
-                        <li>Unlimited Attachment</li>
-                        <li>100% Safe & Secure</li>
-                        <li>No Hidden Charges</li>
-                      </ul>
-                      <a href="#" className="default-btn-two saas-color">
-                        Choose Plan <i className="fas fa-chevron-right"></i>
-                      </a>
-                    </div>
-                  </div>
+                    ))}
                 </div>
               </TabPanel>
 
               <TabPanel>
                 <div className="row justify-content-center">
-                  <div className="col-lg-4 col-md-6 col-sm-6">
-                    <div className="saas-pricing-box bg-black saas-color">
-                      <div className="pricing-header">
-                        <h3>Starter</h3>
-                        <span className="price">
-                          $59<span>/year</span>
-                        </span>
-                      </div>
-                      <ul className="features-list">
-                        <li>7 Days Free Trail</li>
-                        <li>App-In-Purchase</li>
-                        <li>Webmail Access</li>
-                        <li>Unlimited Attachment</li>
-                        <li>100% Safe & Secure</li>
-                        <li className="unactive">No Hidden Charges</li>
-                      </ul>
-                      <a href="#" className="default-btn-two saas-color">
-                        Choose Plan <i className="fas fa-chevron-right"></i>
-                      </a>
-                    </div>
-                  </div>
+                  {yearlyPricingData &&
+                    yearlyPricingData.slice(0, 3).map((value, i) => (
+                      <div className="col-lg-4 col-md-6 col-sm-6" key={i}>
+                        <div
+                          className="saas-pricing-box bg-black saas-color"
+                          data-aos="fade-up"
+                          data-aos-duration="1200"
+                          data-aos-delay={value.aosDelay}
+                        >
+                          <div className="pricing-header">
+                            <h3>{value.title}</h3>
+                            <span className="price">
+                              ${value.price}
+                              <span>{value.duration}</span>
+                            </span>
+                          </div>
 
-                  <div className="col-lg-4 col-md-6 col-sm-6">
-                    <div className="saas-pricing-box active bg-black saas-color">
-                      <div className="pricing-header">
-                        <h3>Professional</h3>
-                        <span className="price">
-                          $79<span>/year</span>
-                        </span>
-                      </div>
-                      <ul className="features-list">
-                        <li>One Time Purchase</li>
-                        <li>App-In-Purchase</li>
-                        <li>Webmail Access</li>
-                        <li>Unlimited Attachment</li>
-                        <li>100% Safe & Secure</li>
-                        <li>No Hidden Charges</li>
-                      </ul>
-                      <a href="#" className="default-btn-two saas-color">
-                        Choose Plan <i className="fas fa-chevron-right"></i>
-                      </a>
-                    </div>
-                  </div>
+                          <ul className="features-list">
+                            {value.lists.map((value, i) => (
+                              <li className={value.unactiveCalss} key={i}>
+                                {value.title}
+                              </li>
+                            ))}
+                          </ul>
 
-                  <div className="col-lg-4 col-md-6 col-sm-6">
-                    <div className="saas-pricing-box bg-black saas-color">
-                      <div className="pricing-header">
-                        <h3>Premium</h3>
-                        <span className="price">
-                          $99<span>/year</span>
-                        </span>
+                          <a
+                            href={value.btnLink}
+                            className="default-btn-two saas-color"
+                          >
+                            {value.btnText}{" "}
+                            <i className="fas fa-chevron-right"></i>
+                          </a>
+                        </div>
                       </div>
-                      <ul className="features-list">
-                        <li>Unlimited Purchase</li>
-                        <li>App-In-Purchase</li>
-                        <li>Webmail Access</li>
-                        <li>Unlimited Attachment</li>
-                        <li>100% Safe & Secure</li>
-                        <li>No Hidden Charges</li>
-                      </ul>
-                      <a href="#" className="default-btn-two saas-color">
-                        Choose Plan <i className="fas fa-chevron-right"></i>
-                      </a>
-                    </div>
-                  </div>
+                    ))}
                 </div>
               </TabPanel>
             </Tabs>

@@ -21,11 +21,9 @@ const MainBanner = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id
                     tincidunt eifend odio viverra diam aliquet donec again.
                   </p>
-                  <Link href="#">
-                    <a className="app-banner-btn">
-                      Start Free Trial{" "}
-                      <i className="fa-solid fa-arrow-right-long"></i>
-                    </a>
+                  <Link href="#" className="app-banner-btn">
+                    Start Free Trial{" "}
+                    <i className="fa-solid fa-arrow-right-long"></i>
                   </Link>
                 </div>
               </div>

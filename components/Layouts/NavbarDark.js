@@ -29,8 +29,7 @@ const NavbarTwo = () => {
       <div id="navbar" className="navbar-area navbar-style-2">
         <nav className="navbar navbar-expand-md navbar-light">
           <div className="container-fluid">
-            <Link href="/">
-              <a className="navbar-brand">
+            <Link href="/" className="navbar-brand">
                 <img
                   src="/images/f1logo.png"
                   className="black-logo"
@@ -41,7 +40,6 @@ const NavbarTwo = () => {
                   className="white-logo"
                   alt="logo"
                 />
-              </a>
             </Link>
 
             {/* Toggle navigation */}
@@ -63,32 +61,32 @@ const NavbarTwo = () => {
             <div className={classOne} id="navbarSupportedContent">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link href="/#home">
-                    <a className="nav-link">Home</a>
+                  <Link href="/#home" className="nav-link">
+                    Home
                   </Link>
                 </li>
 
                 <li className="nav-item">
-                  <Link href="/#aboutUs" activeClassName="active">
-                    <a className="nav-link">About</a>
+                  <Link href="/#aboutUs" activeClassName="active" className="nav-link">
+                    About
                   </Link>
                 </li>
 
                 <li className="nav-item">
-                  <Link href="/#ourWorks">
-                    <a className="nav-link">Portfolio</a>
+                  <Link href="/#ourWorks" className="nav-link">
+                    Portfolio
                   </Link>
                 </li>
 
                 <li className="nav-item">
-                  <Link href="/services">
-                    <a className="nav-link">Services</a>
+                  <Link href="/services" className="nav-link">
+                    Services
                   </Link>
                 </li>
 
                 <li className="nav-item">
-                  <Link href="/contact" activeClassName="active">
-                    <a className="nav-link">Contact</a>
+                  <Link href="/contact" activeClassName="active" className="nav-link">
+                    Contact
                   </Link>
                 </li>
               </ul>

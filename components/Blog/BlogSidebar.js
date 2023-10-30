@@ -7,10 +7,7 @@ const BlogSidebar = () => {
       <div className="widget-area" id="secondary">
         {/* Search form */}
         <div className="widget widget_search">
-          <form 
-            className="search-form" 
-            onSubmit={(e) => e.preventDefault()}
-          >
+          <form className="search-form" onSubmit={(e) => e.preventDefault()}>
             <label>
               <input
                 type="search"
@@ -29,16 +26,14 @@ const BlogSidebar = () => {
           <h3 className="widget-title">Popular posts</h3>
 
           <article className="item">
-            <Link href="/blog-details">
-              <a className="thumb">
-                <span className="fullimage cover bg1" role="img"></span>
-              </a>
+            <Link href="/blog-details" className="thumb">
+              <span className="fullimage cover bg1" role="img"></span>
             </Link>
             <div className="info">
               <time>March 15, 2022</time>
               <h4 className="title usmall">
                 <Link href="/blog-details">
-                  <a>The Best Marketing top use Management Tools</a>
+                  The Best Marketing top use Management Tools
                 </Link>
               </h4>
             </div>
@@ -47,14 +42,14 @@ const BlogSidebar = () => {
           </article>
 
           <article className="item">
-            <a href="/blog-details" className="thumb">
+            <Link href="/blog-details" className="thumb">
               <span className="fullimage cover bg2" role="img"></span>
-            </a>
+            </Link>
             <div className="info">
               <time>March 16, 2022</time>
               <h4 className="title usmall">
                 <Link href="/blog-details">
-                  <a>Top 21 Must-Read Blogs For Creative Agencies</a>
+                  Top 21 Must-Read Blogs For Creative Agencies
                 </Link>
               </h4>
             </div>
@@ -63,14 +58,14 @@ const BlogSidebar = () => {
           </article>
 
           <article className="item">
-            <a href="/blog-details" className="thumb">
+            <Link href="/blog-details" className="thumb">
               <span className="fullimage cover bg3" role="img"></span>
-            </a>
+            </Link>
             <div className="info">
               <time>March 17, 2022</time>
               <h4 className="title usmall">
                 <Link href="/blog-details">
-                  <a>Protect your workplace from cyber attacks</a>
+                  Protect your workplace from cyber attacks
                 </Link>
               </h4>
             </div>
@@ -86,31 +81,31 @@ const BlogSidebar = () => {
           <ul>
             <li>
               <Link href="/blog-details">
-                <a>The security risks of changing package owners</a>
+                The security risks of changing package owners
               </Link>
               <span className="post-date">March 15, 2022</span>
             </li>
             <li>
               <Link href="/blog-details">
-                <a>Tips to protecting business and Family</a>
+                Tips to protecting business and Family
               </Link>
               <span className="post-date">March 16, 2022</span>
             </li>
             <li>
               <Link href="/blog-details">
-                <a>Protect your workplace from cyber attacks</a>
+                Protect your workplace from cyber attacks
               </Link>
               <span className="post-date">March 17, 2022</span>
             </li>
             <li>
               <Link href="/blog-details">
-                <a>Business debit Fees to increase in 2022</a>
+                Business debit Fees to increase in 2022
               </Link>
               <span className="post-date">March 18, 2022</span>
             </li>
             <li>
               <Link href="/blog-details">
-                <a>10 tips to reduce your card processing costs</a>
+                10 tips to reduce your card processing costs
               </Link>
               <span className="post-date">March 19, 2022</span>
             </li>
@@ -124,37 +119,27 @@ const BlogSidebar = () => {
           <ul>
             <li>
               <Link href="/blog">
-                <a>
-                  Business <span className="post-count">(05)</span>
-                </a>
+                Business <span className="post-count">(05)</span>
               </Link>
             </li>
             <li>
               <Link href="/blog">
-                <a>
-                  Privacy <span className="post-count">(10)</span>
-                </a>
+                Privacy <span className="post-count">(10)</span>
               </Link>
             </li>
             <li>
               <Link href="/blog">
-                <a>
-                  Technology <span className="post-count">(15)</span>
-                </a>
+                Technology <span className="post-count">(15)</span>
               </Link>
             </li>
             <li>
               <Link href="/blog">
-                <a>
-                  Tips <span className="post-count">(12)</span>
-                </a>
+                Tips <span className="post-count">(12)</span>
               </Link>
             </li>
             <li>
               <Link href="/blog">
-                <a>
-                  Uncategorized <span className="post-count">(02)</span>
-                </a>
+                Uncategorized <span className="post-count">(02)</span>
               </Link>
             </li>
           </ul>
@@ -166,44 +151,28 @@ const BlogSidebar = () => {
 
           <div className="tagcloud">
             <Link href="/blog">
-              <a>
-                IT <span className="tag-link-count">(3)</span>
-              </a>
+              IT <span className="tag-link-count">(3)</span>
             </Link>
             <Link href="/blog">
-              <a>
-                React <span className="tag-link-count">(3)</span>
-              </a>
+              React <span className="tag-link-count">(3)</span>
             </Link>
             <Link href="/blog">
-              <a>
-                Games <span className="tag-link-count">(2)</span>
-              </a>
+              Games <span className="tag-link-count">(2)</span>
             </Link>
             <Link href="/blog">
-              <a>
-                Development <span className="tag-link-count">(2)</span>
-              </a>
+              Development <span className="tag-link-count">(2)</span>
             </Link>
             <Link href="/blog">
-              <a>
-                Design <span className="tag-link-count">(1)</span>
-              </a>
+              Design <span className="tag-link-count">(1)</span>
             </Link>
             <Link href="/blog">
-              <a>
-                Apps <span className="tag-link-count">(1)</span>
-              </a>
+              Apps <span className="tag-link-count">(1)</span>
             </Link>
             <Link href="/blog">
-              <a>
-                Marketing <span className="tag-link-count">(1)</span>
-              </a>
+              Marketing <span className="tag-link-count">(1)</span>
             </Link>
             <Link href="/blog">
-              <a>
-                Tips <span className="tag-link-count">(2)</span>
-              </a>
+              Tips <span className="tag-link-count">(2)</span>
             </Link>
           </div>
         </div>

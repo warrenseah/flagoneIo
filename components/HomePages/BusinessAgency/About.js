@@ -14,7 +14,12 @@ const About = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-5 col-md-12">
-              <div className="about-image">
+              <div 
+                className="about-image"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="200"
+              >
                 <img
                   src="/images/about-img5.jpg"
                   alt="image"
@@ -33,7 +38,12 @@ const About = () => {
             </div>
 
             <div className="col-lg-7 col-md-12">
-              <div className="about-content about-content-two">
+              <div 
+                className="about-content about-content-two"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="400"
+              >
                 <div className="section-title">
                   <h2>About Us</h2>
                   <p>

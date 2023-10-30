@@ -1,5 +1,124 @@
 import React from "react";
 
+const teamMemberData = [
+  {
+    image: "/images/team/team5.jpg",
+    name: "James White",
+    designation: "CEO & Founder",
+    aosDelay: "100",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+  {
+    image: "/images/team/team6.jpg",
+    name: "Johnson Lee",
+    designation: "Backend Specialist",
+    aosDelay: "200",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+  {
+    image: "/images/team/team7.jpg",
+    name: "Williams Smith",
+    designation: "Front-end Specialist",
+    aosDelay: "300",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+  {
+    image: "/images/team/team8.jpg",
+    name: "David Miller",
+    designation: "Reactjs Specialist",
+    aosDelay: "400",
+
+    socialLinks: [
+      {
+        iconName: "fa-brands fa-linkedin-in",
+        url: "https://linkedin.com/",
+      },
+      {
+        iconName: "fa-brands fa-twitter",
+        url: "https://twitter.com/",
+      },
+      {
+        iconName: "fa-brands fa-facebook-f",
+        url: "https://facebook.com/",
+      },
+      {
+        iconName: "fa-brands fa-instagram",
+        url: "https://instagram.com/",
+      },
+      {
+        iconName: "fa-brands fa-dribbble",
+        url: "https://dribbble.com/",
+      },
+    ],
+  },
+];
+
 const Team = () => {
   return (
     <>
@@ -14,193 +133,38 @@ const Team = () => {
           </div>
 
           <div className="row justify-content-center">
-            <div className="col-lg-3 col-sm-6">
-              <div
-                className="team-card text-center"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="100"
-              >
-                <img
-                  src="/images/team/team5.jpg"
-                  alt="Image"
-                  className="rounded"
-                />
+            {teamMemberData &&
+              teamMemberData.slice(0, 4).map((value, i) => (
+                <div className="col-lg-3 col-sm-6" key={i}>
+                  <div
+                    className="team-card text-center"
+                    data-aos="fade-in"
+                    data-aos-duration="1200"
+                    data-aos-delay={value.aosDelay}
+                  >
+                    <img
+                      src={value.image}
+                      alt="Image"
+                      className="rounded"
+                    />
 
-                <div className="team-caption">
-                  <h3>James White</h3>
-                  <p>CEO & Founder</p>
-                  <ul>
-                    <li>
-                      <a href="https://linkedin.com/" target="_blank">
-                        <i className="fa-brands fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://twitter.com/" target="_blank">
-                        <i className="fa-brands fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.facebook.com/" target="_blank">
-                        <i className="fa-brands fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.instagram.com/" target="_blank">
-                        <i className="fa-brands fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://dribbble.com/" target="_blank">
-                        <i className="fa-brands fa-dribbble"></i>
-                      </a>
-                    </li>
-                  </ul>
+                    <div className="team-caption">
+                      <h3>{value.name}</h3>
+                      <p>{value.designation}</p>
+
+                      <ul>
+                        {value.socialLinks.map((value, i) => (
+                          <li key={i}>
+                            <a href={value.url} target="_blank">
+                              <i className={value.iconName}></i>
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-sm-6">
-              <div
-                className="team-card text-center"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="200"
-              >
-                <img
-                  src="/images/team/team6.jpg"
-                  alt="Image"
-                  className="rounded"
-                />
-
-                <div className="team-caption">
-                  <h3>Johnson Lee</h3>
-                  <p>Backend Specialist</p>
-                  <ul>
-                    <li>
-                      <a href="linkedin.com" target="_blank">
-                        <i className="fa-brands fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://twitter.com/" target="_blank">
-                        <i className="fa-brands fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.facebook.com/" target="_blank">
-                        <i className="fa-brands fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.instagram.com/" target="_blank">
-                        <i className="fa-brands fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://dribbble.com/" target="_blank">
-                        <i className="fa-brands fa-dribbble"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-sm-6">
-              <div
-                className="team-card text-center"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="300"
-              >
-                <img
-                  src="/images/team/team7.jpg"
-                  alt="Image"
-                  className="rounded"
-                />
-
-                <div className="team-caption">
-                  <h3>Williams Smith</h3>
-                  <p>Front-end Specialist</p>
-                  <ul>
-                    <li>
-                      <a href="linkedin.com" target="_blank">
-                        <i className="fa-brands fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://twitter.com/" target="_blank">
-                        <i className="fa-brands fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.facebook.com/" target="_blank">
-                        <i className="fa-brands fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.instagram.com/" target="_blank">
-                        <i className="fa-brands fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://dribbble.com/" target="_blank">
-                        <i className="fa-brands fa-dribbble"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-sm-6">
-              <div
-                className="team-card text-center"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="400"
-              >
-                <img
-                  src="/images/team/team8.jpg"
-                  alt="Image"
-                  className="rounded"
-                />
-
-                <div className="team-caption">
-                  <h3>David Miller</h3>
-                  <p>Reactjs Specialist</p>
-                  <ul>
-                    <li>
-                      <a href="linkedin.com" target="_blank">
-                        <i className="fa-brands fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://twitter.com/" target="_blank">
-                        <i className="fa-brands fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.facebook.com/" target="_blank">
-                        <i className="fa-brands fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.instagram.com/" target="_blank">
-                        <i className="fa-brands fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://dribbble.com/" target="_blank">
-                        <i className="fa-brands fa-dribbble"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+              ))}
           </div>
         </div>
       </div>

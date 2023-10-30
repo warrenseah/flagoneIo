@@ -1,6 +1,59 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
+
+const feedbacskData = [
+  {
+    image: "/images/digital-marketing/testimonials-img1.jpg",
+    name: "Sarah Taylor",
+    designation: "Director",
+    feedbackText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+
+    rating: [
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+    ],
+  },
+  {
+    image: "/images/digital-marketing/testimonials-img2.jpg",
+    name: "Richard Turner",
+    designation: "CEO & Founder",
+    feedbackText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+
+    rating: [
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+      {
+        iconName: "fa-solid fa-star",
+      },
+    ],
+  },
+];
 
 const Testimonials = () => {
   return (
@@ -14,80 +67,46 @@ const Testimonials = () => {
 
           <Swiper
             navigation={true}
-            modules={[Navigation]}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: true,
+              pauseOnMouseEnter: true,
+            }}
+            modules={[Autoplay, Navigation]}
             className="marketing-testimonials-slides"
           >
-            <SwiperSlide>
-              <div className="row align-items-center">
-                <div className="col-lg-6 col-md-6">
-                  <div className="marketing-testimonials-image">
-                    <img
-                      src="/images/digital-marketing/testimonials-img1.jpg"
-                      alt="image"
-                    />
-                  </div>
-                </div>
+            {feedbacskData &&
+              feedbacskData.map((value, i) => (
+                <SwiperSlide key={i}>
+                  <div className="row align-items-center">
+                    <div className="col-lg-6 col-md-6">
+                      <div className="marketing-testimonials-image">
+                        <img src={value.image} alt="image" />
+                      </div>
+                    </div>
 
-                <div className="col-lg-6 col-md-6">
-                  <div className="marketing-testimonials-content">
-                    <i className="icon fa-solid fa-quote-left"></i>
-                    <p>
-                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Quis ipsum suspendisse ultrices gravida. Risus com
-                      modo viverra maecenas accumsan lacus vel facilisis.”
-                    </p>
-                    <div className="rating">
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                    </div>
-                    <div className="info">
-                      <h3>Sarah Taylor</h3>
-                      <span>Director</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
+                    <div className="col-lg-6 col-md-6">
+                      <div className="marketing-testimonials-content">
+                        <i className="icon fa-solid fa-quote-left"></i>
+                        <p>
+                          <q>{value.feedbackText}</q>
+                        </p>
 
-            <SwiperSlide>
-              <div className="row align-items-center">
-                <div className="col-lg-6 col-md-6">
-                  <div className="marketing-testimonials-image">
-                    <img
-                      src="/images/digital-marketing/testimonials-img2.jpg"
-                      alt="image"
-                    />
-                  </div>
-                </div>
+                        <div className="rating">
+                          {value.rating.map((value, i) => (
+                            <i className={value.iconName} key={i}></i>
+                          ))}
+                        </div>
 
-                <div className="col-lg-6 col-md-6">
-                  <div className="marketing-testimonials-content">
-                    <i className="icon fa-solid fa-quote-left"></i>
-                    <p>
-                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Quis ipsum suspendisse ultrices gravida. Risus com
-                      modo viverra maecenas accumsan lacus vel facilisis.”
-                    </p>
-                    <div className="rating">
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                    </div>
-                    <div className="info">
-                      <h3>Richard Turner</h3>
-                      <span>CEO & Founder</span>
+                        <div className="info">
+                          <h3>{value.name}</h3>
+                          <span>{value.designation}</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </SwiperSlide>
+                </SwiperSlide>
+              ))}
           </Swiper>
         </div>
       </div>

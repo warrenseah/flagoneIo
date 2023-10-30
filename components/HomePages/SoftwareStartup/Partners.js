@@ -1,5 +1,24 @@
 import React from "react";
 
+const partnersData = [
+  {
+    image: "/images/software/partner1.png",
+    aosDelay: "200",
+  },
+  {
+    image: "/images/software/partner2.png",
+    aosDelay: "300",
+  },
+  {
+    image: "/images/software/partner3.png",
+    aosDelay: "400",
+  },
+  {
+    image: "/images/software/partner4.png",
+    aosDelay: "500",
+  },
+];
+
 const Partners = () => {
   return (
     <>
@@ -7,44 +26,31 @@ const Partners = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-4 col-md-12">
-              <div className="partner-title">
+              <div
+                className="partner-title"
+                data-aos="fade-in"
+                data-aos-duration="1200"
+                data-aos-delay="100"
+              >
                 Trusted by world famous companies:
               </div>
             </div>
+
             <div className="col-lg-8 col-md-12">
               <div className="row justify-content-center align-items-center">
-                <div className="col-lg-3 col-md-3 col-sm-3 col-6">
-                  <div className="software-partner-item">
-                    <img
-                      src="/images/software/partner1.png"
-                      alt="partner-image"
-                    />
-                  </div>
-                </div>
-                <div className="col-lg-3 col-md-3 col-sm-3 col-6">
-                  <div className="software-partner-item">
-                    <img
-                      src="/images/software/partner2.png"
-                      alt="partner-image"
-                    />
-                  </div>
-                </div>
-                <div className="col-lg-3 col-md-3 col-sm-3 col-6">
-                  <div className="software-partner-item">
-                    <img
-                      src="/images/software/partner3.png"
-                      alt="partner-image"
-                    />
-                  </div>
-                </div>
-                <div className="col-lg-3 col-md-3 col-sm-3 col-6">
-                  <div className="software-partner-item">
-                    <img
-                      src="/images/software/partner4.png"
-                      alt="partner-image"
-                    />
-                  </div>
-                </div>
+                {partnersData &&
+                  partnersData.slice(0, 4).map((value, i) => (
+                    <div className="col-lg-3 col-md-3 col-sm-3 col-6" key={i}>
+                      <div
+                        className="software-partner-item"
+                        data-aos="fade-in"
+                        data-aos-duration="1200"
+                        data-aos-delay={value.aosDelay}
+                      >
+                        <img src={value.image} alt="partner-image" />
+                      </div>
+                    </div>
+                  ))}
               </div>
             </div>
           </div>

@@ -3440,6 +3440,9 @@ Pricing Area CSS
       font-size: 14px;
       font-weight: 500;
     }
+    .info-text {
+      font-weight: normal;
+    }
   }
 
   .pricing-features {
@@ -5091,7 +5094,6 @@ Contact CSS
   .help-block {
     ul {
       margin: 0;
-
       li {
         color: red;
       }
@@ -5128,7 +5130,10 @@ Contact CSS
 .contact-form {
   background-color: $white-color;
   text-align: center;
-
+  .contact-form-box {
+    padding: 30px;
+    border: 1px solid #eee;
+  }
   .contact-title {
     margin-bottom: 30px;
     max-width: 600px;
@@ -5796,6 +5801,7 @@ Portfolio Details CSS
         color: $main-color;
       }
     }
+
     &:last-child {
       text-align: center;
     }
@@ -5820,7 +5826,7 @@ Portfolio Details CSS
     }
     &:last-child {
       text-align: start;
-      width: '100%';
+      width: "100%";
     }
   }
 }
@@ -5879,6 +5885,10 @@ FAQ CSS
           background: $main-color;
           color: $white-color;
           outline: 0;
+        }
+        &::before {
+          position: relative;
+          top: -2px;
         }
       }
       .accordion-content {

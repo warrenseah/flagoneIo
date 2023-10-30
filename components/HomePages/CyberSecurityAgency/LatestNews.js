@@ -1,6 +1,48 @@
 import React from "react";
 import Link from "next/link";
 
+const latestNewsData = [
+  {
+    title: "The Launch Of A Revamped User Referral Program",
+    shortText:
+      "We work hand-in-hand with industry-leading brands to help redefine the possibilities and potential of digital engagements We work.",
+    date: "17th January 2023",
+    comment: "0",
+    authorImg: "/images/cyber-security/user1.jpg",
+    authorName: "Thomas Adison",
+    designation: "Content Writing",
+    blogDetailsLink: "/blog-details",
+    tag: "LATEST NEWS",
+    aosDelay: "100",
+  },
+  {
+    title: "Complete Protection For All Your Devices",
+    shortText:
+      "We work hand-in-hand with industry-leading brands to help redefine the possibilities and potential of digital engagements We work.",
+    date: "18th January 2023",
+    comment: "2",
+    authorImg: "/images/cyber-security/user2.jpg",
+    authorName: "James Anderson",
+    designation: "Content Writing",
+    blogDetailsLink: "/blog-details",
+    tag: "LATEST NEWS",
+    aosDelay: "200",
+  },
+  {
+    title: "Online Security For Your Devices Antivirus",
+    shortText:
+      "We work hand-in-hand with industry-leading brands to help redefine the possibilities and potential of digital engagements We work.",
+    date: "19th January 2023",
+    comment: "5",
+    authorImg: "/images/cyber-security/user3.jpg",
+    authorName: "Sarah Taylor",
+    designation: "Content Writing",
+    blogDetailsLink: "/blog-details",
+    tag: "LATEST NEWS",
+    aosDelay: "300",
+  },
+];
+
 const LatestNews = () => {
   return (
     <>
@@ -15,98 +57,44 @@ const LatestNews = () => {
           </div>
 
           <div className="row justify-content-center">
-            <div className="col-lg-4 col-md-6">
-              <div className="cs-blog-card with-black-color">
-                <div className="tag">
-                  <span>LATEST NEWS</span>
-                </div>
-                <ul className="post-meta">
-                  <li>
-                    <i className="fa-solid fa-calendar-days"></i> 17th January
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-comment"></i> 0 comment
-                  </li>
-                </ul>
-                <h3>
-                  <Link href="/blog-details">
-                    <a>The Launch Of A Revamped User Referral Program</a>
-                  </Link>
-                </h3>
-                <p>
-                  We work hand-in-hand with industry-leading brands to help
-                  redefine the possibilities and potential of digital
-                  engagements We work.
-                </p>
-                <div className="info">
-                  <img src="/images/cyber-security/user1.jpg" alt="image" />
-                  <h3>Thomas Adison</h3>
-                  <span>Manager</span>
-                </div>
-              </div>
-            </div>
+            {latestNewsData &&
+              latestNewsData.slice(0, 3).map((value, i) => (
+                <div
+                  className="col-lg-4 col-md-6"
+                  data-aos="fade-in"
+                  data-aos-duration="1200"
+                  data-aos-delay={value.aosDelay}
+                  key={i}
+                >
+                  <div className="cs-blog-card with-black-color">
+                    <div className="tag">
+                      <span>{value.tag}</span>
+                    </div>
 
-            <div className="col-lg-4 col-md-6">
-              <div className="cs-blog-card with-black-color">
-                <div className="tag">
-                  <span>LATEST NEWS</span>
-                </div>
-                <ul className="post-meta">
-                  <li>
-                    <i className="fa-solid fa-calendar-days"></i> 17th January
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-comment"></i> 0 comment
-                  </li>
-                </ul>
-                <h3>
-                  <Link href="/blog-details">
-                    <a>Complete Protection For All Your Devices</a>
-                  </Link>
-                </h3>
-                <p>
-                  We work hand-in-hand with industry-leading brands to help
-                  redefine the possibilities and potential of digital
-                  engagements We work.
-                </p>
-                <div className="info">
-                  <img src="/images/cyber-security/user2.jpg" alt="image" />
-                  <h3>James Anderson</h3>
-                  <span>Web Developer</span>
-                </div>
-              </div>
-            </div>
+                    <ul className="post-meta">
+                      <li>
+                        <i className="fa-solid fa-calendar-days"></i>{" "}
+                        {value.date}
+                      </li>
+                      <li>
+                        <i className="fa-solid fa-comment"></i> {value.comment}{" "}
+                        comment
+                      </li>
+                    </ul>
 
-            <div className="col-lg-4 col-md-6">
-              <div className="cs-blog-card with-black-color">
-                <div className="tag">
-                  <span>LATEST NEWS</span>
+                    <h3>
+                      <Link href={value.blogDetailsLink}>{value.title}</Link>
+                    </h3>
+                    <p>{value.shortText}</p>
+
+                    <div className="info">
+                      <img src={value.authorImg} alt="image" />
+                      <h3>{value.authorName}</h3>
+                      <span>{value.designation}</span>
+                    </div>
+                  </div>
                 </div>
-                <ul className="post-meta">
-                  <li>
-                    <i className="fa-solid fa-calendar-days"></i> 17th January
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-comment"></i> 0 comment
-                  </li>
-                </ul>
-                <h3>
-                  <Link href="/blog-details">
-                    <a>Online Security For Your Devices Antivirus</a>
-                  </Link>
-                </h3>
-                <p>
-                  We work hand-in-hand with industry-leading brands to help
-                  redefine the possibilities and potential of digital
-                  engagements We work.
-                </p>
-                <div className="info">
-                  <img src="/images/cyber-security/user3.jpg" alt="image" />
-                  <h3>Sarah Taylor</h3>
-                  <span>Designer</span>
-                </div>
-              </div>
-            </div>
+              ))}
           </div>
         </div>
       </div>

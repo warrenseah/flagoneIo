@@ -120,14 +120,10 @@ p, ul, ol {
   top: 20%;
 }
 .app-banner-shape1 img {
-  -webkit-animation-name: rotateme;
-          animation-name: rotateme;
-  -webkit-animation-duration: 40s;
-          animation-duration: 40s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-name: rotateme;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .app-banner-shape5 {
@@ -138,8 +134,7 @@ p, ul, ol {
   right: -2%;
 }
 .app-banner-shape5 img {
-  -webkit-animation: movebounce 5s linear infinite;
-          animation: movebounce 5s linear infinite;
+  animation: movebounce 5s linear infinite;
 }
 
 .app-banner-shape2 {
@@ -149,8 +144,7 @@ p, ul, ol {
   left: 45%;
 }
 .app-banner-shape2 img {
-  -webkit-animation: moveleftbounce 5s linear infinite;
-          animation: moveleftbounce 5s linear infinite;
+  animation: moveleftbounce 5s linear infinite;
 }
 
 .app-banner-shape3 {
@@ -160,8 +154,7 @@ p, ul, ol {
   right: 1%;
 }
 .app-banner-shape3 img {
-  -webkit-animation: opacitychange 4s linear 1s infinite;
-          animation: opacitychange 4s linear 1s infinite;
+  animation: opacitychange 4s linear 1s infinite;
 }
 
 .app-banner-shape4 {
@@ -606,11 +599,6 @@ p, ul, ol {
   -moz-transition: var(--transition);
   transition: var(--transition);
 }
-.app-free-trial-content form .input-newsletter:-ms-input-placeholder {
-  color: var(--paragraphColor);
-  -ms-transition: var(--transition);
-  transition: var(--transition);
-}
 .app-free-trial-content form .input-newsletter::placeholder {
   color: var(--paragraphColor);
   transition: var(--transition);
@@ -619,9 +607,6 @@ p, ul, ol {
   outline: 0;
 }
 .app-free-trial-content form .input-newsletter:focus::-moz-placeholder {
-  color: transparent;
-}
-.app-free-trial-content form .input-newsletter:focus:-ms-input-placeholder {
   color: transparent;
 }
 .app-free-trial-content form .input-newsletter:focus::placeholder {

@@ -20,7 +20,7 @@ const BlogRightSidebar = () => {
                     <li>
                       <i className="fa-solid fa-user"></i>
                       <Link href="/blog">
-                        <a>Admin</a>
+                        Admin
                       </Link>
                     </li>
                     <li>
@@ -94,22 +94,22 @@ const BlogRightSidebar = () => {
                     </li>
                     <li>
                       <Link href="/blog">
-                        <a>Business</a>
+                        Business
                       </Link>
                     </li>
                     <li>
                       <Link href="/blog">
-                        <a>IT</a>
+                        IT
                       </Link>
                     </li>
                     <li>
                       <Link href="/blog">
-                        <a>Tips</a>
+                        Tips
                       </Link>
                     </li>
                     <li>
                       <Link href="/blog">
-                        <a>Design</a>
+                        Design
                       </Link>
                     </li>
                   </ul>
@@ -120,12 +120,12 @@ const BlogRightSidebar = () => {
               <div className="post-controls-buttons">
                 <div>
                   <Link href="#">
-                    <a>Prev Post</a>
+                    Prev Post
                   </Link>
                 </div>
                 <div>
                   <Link href="#">
-                    <a>Next Post</a>
+                    Next Post
                   </Link>
                 </div>
               </div>

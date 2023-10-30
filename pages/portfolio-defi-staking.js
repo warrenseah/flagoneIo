@@ -153,27 +153,21 @@ const DefiStaking = () => {
                 <div className="single-info-link-box">
                   <Link
                     href="https://github.com/warrenseah/vault-v1"
-                    legacyBehavior
+                    className="default-btn m-1" target="_blank"
                   >
-                    <a className="default-btn m-1" target="_blank">
-                      GitHub Repo
-                    </a>
+                    GitHub Repo
                   </Link>
                   <Link
                     href="https://testnet.bscscan.com/address/0x8a1f638791aed3514d72543d3698dfea0096cd6d"
-                    legacyBehavior
+                    className="default-btn m-1" target="_blank"
                   >
-                    <a className="default-btn m-1" target="_blank">
-                      Contract Address Preview (Bnb chain Testnet)
-                    </a>
+                    Contract Address Preview (Bnb chain Testnet)
                   </Link>
                   <Link
                     href="https://timely-marshmallow-62bc3f.netlify.app"
-                    legacyBehavior
+                    className="default-btn m-1" target="_blank"
                   >
-                    <a className="default-btn m-1" target="_blank">
-                      dApp Preview
-                    </a>
+                    dApp Preview
                   </Link>
                 </div>
               </div>

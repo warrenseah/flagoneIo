@@ -9,16 +9,40 @@ const AppDownload = () => {
             <div className="row align-items-center">
               <div className="col-lg-6 col-md-12">
                 <div className="app-download-content">
-                  <span className="app-sub-title">DOWNLOAD APP</span>
-                  <h2>Let's Get Your Free Copy From Apple and Play Store</h2>
-                  <p>
+                  <span 
+                    className="app-sub-title"
+                    data-aos="fade-in"
+                    data-aos-duration="1200"
+                    data-aos-delay="100"
+                  >
+                    DOWNLOAD APP
+                  </span>
+
+                  <h2
+                    data-aos="fade-in"
+                    data-aos-duration="1200"
+                    data-aos-delay="200"
+                  >
+                    Let's Get Your Free Copy From Apple and Play Store
+                  </h2>
+
+                  <p
+                    data-aos="fade-in"
+                    data-aos-duration="1200"
+                    data-aos-delay="300"
+                  >
                     Instant free download from store Cloud based storage for
                     your data backup just log in with your mail account from
                     play store and using whatever you want for your business
                     purpose orem ipsum dummy text.
                   </p>
 
-                  <div className="btn-box">
+                  <div 
+                    className="btn-box"
+                    data-aos="fade-in"
+                    data-aos-duration="1200"
+                    data-aos-delay="400"
+                  >
                     <a
                       href="https://play.google.com/store/apps"
                       className="playstore-btn"
