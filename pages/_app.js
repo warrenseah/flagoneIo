@@ -41,18 +41,17 @@ function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <>
-      <Script strategy="beforeInteractive">{`var continuallySettings = { appID: "43krzj84vrj6" }`}</Script>
-      <Script
-        src="https://cdn-app.continual.ly/js/embed/continually-embed.latest.min.js"
-        strategy="lazyOnlooad"
-        onReady={console.log("Continually script loaded...")}
-      />
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Warren Seah" />
         <title>Building the Future of Digital Assets - Flag One</title>
       </Head>
+      <Script strategy="beforeInteractive">{`var continuallySettings = { appID: "43krzj84vrj6" }`}</Script>
+      <Script
+        src="https://cdn-app.continual.ly/js/embed/continually-embed.latest.min.js"
+        strategy="lazyOnload"
+      />
 
       <Component {...pageProps} />
 
