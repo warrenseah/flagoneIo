@@ -32,6 +32,7 @@ import "../styles/style.css";
 import "../styles/responsive.css";
 
 import Head from "next/head";
+import Script from "next/script";
 import GoTop from "../components/Layouts/GoTop";
 
 function MyApp({ Component, pageProps }) {
@@ -45,6 +46,12 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Warren Seah" />
         <title>Building the Future of Digital Assets - Flag One</title>
+        <Script strategy="beforeInteractive">{`var continuallySettings = { appID: "43krzj84vrj6" }`}</Script>
+        <Script
+          src="https://cdn-app.continual.ly/js/embed/continually-embed.latest.min.js"
+          strategy="lazyOnlooad"
+          onReady={console.log("Continually script loaded...")}
+        />
       </Head>
 
       <Component {...pageProps} />
