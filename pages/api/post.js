@@ -143,8 +143,7 @@ export const getRecentPosts = async () => {
   }
 }
 
-export const getPost = async (id) => {
-  console.log("=========id",id)
+export const getPost = async (slug) => {
   try {
     // setIsLoading(true);
     const headers = {
@@ -152,7 +151,7 @@ export const getPost = async (id) => {
     };
     const requestBody = {
       query: `query GePost {
-        post(id: "${id}") {
+        post(id: "${slug}", idType: SLUG) {
           id
           content
           date

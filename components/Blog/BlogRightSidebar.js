@@ -109,7 +109,7 @@ const BlogRightSidebar = () => {
                         <div className="blog-post-content">
                           <span className="date">{formatDate(value.node.date)}</span>
                           <h3>
-                            <Link href={`/blog-details/${value.node.id}` }>
+                            <Link href={`/blog-details/${value.node.slug}` }>
                               {value.node.title}
                             </Link>
                           </h3>
@@ -117,7 +117,7 @@ const BlogRightSidebar = () => {
                           <div dangerouslySetInnerHTML={{__html: value.node.content}} />
 
                           <Link
-                            href={`/blog-details/${value.node.id}`}
+                            href={`/blog-details/${value.node.slug}`}
                             className="read-more-btn"
                           >
                             Read More

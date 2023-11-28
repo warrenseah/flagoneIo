@@ -9,13 +9,13 @@ import { useRouter } from "next/router";
 const BlogDetails = () => {
   const [post, setPost] = useState({});
   const router = useRouter()
-  const setData = async (id) => {
-    let postData = await getPost(id);
+  const setData = async (slug) => {
+    let postData = await getPost(slug);
     setPost(postData);
   };
   useEffect(() => {
-    setData(router.query.id);
-  }, [router.query.id]);
+    setData(router.query.slug);
+  }, [router.query.slug]);
   return (
     <>
       <NavbarTwo />
