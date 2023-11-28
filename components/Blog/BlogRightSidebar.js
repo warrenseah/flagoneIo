@@ -117,7 +117,7 @@ const BlogRightSidebar = () => {
                           <div dangerouslySetInnerHTML={{__html: value.node.content}} />
 
                           <Link
-                            href={"/blog-details"}
+                            href={`/blog-details/${value.node.id}`}
                             className="read-more-btn"
                           >
                             Read More

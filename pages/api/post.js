@@ -152,7 +152,7 @@ export const getPost = async (id) => {
     };
     const requestBody = {
       query: `query GePost {
-        post(id: ${id}) {
+        post(id: "${id}") {
           id
           content
           date

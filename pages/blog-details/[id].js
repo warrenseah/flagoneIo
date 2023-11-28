@@ -9,21 +9,20 @@ import { useRouter } from "next/router";
 const BlogDetails = () => {
   const [post, setPost] = useState({});
   const router = useRouter()
-  const setData = async () => {
-    const id = await router.query.id
+  const setData = async (id) => {
     let postData = await getPost(id);
     setPost(postData);
   };
   useEffect(() => {
-    setData();
-  }, []);
+    setData(router.query.id);
+  }, [router.query.id]);
   return (
     <>
       <NavbarTwo />
 
-      <PageBanner pageTitle={post.title} BGImage="/images/page-banner2.jpg" />
+      <PageBanner pageTitle={post?.title} BGImage="/images/page-banner2.jpg" />
 
-      <BlogDetailsContent post={post} />
+      {post && <BlogDetailsContent post={post} />}
 
       <Footer />
     </>
