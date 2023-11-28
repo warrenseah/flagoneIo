@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import BlogSidebar from "./BlogSidebar";
 import BlogComments from "./BlogComments";
+import { formatDate } from "../../utils/formatting";
 
-const BlogRightSidebar = () => {
+const BlogRightSidebar = ({post}) => {
   return (
     <>
       <div className="blog-area ptb-100">
@@ -12,7 +13,7 @@ const BlogRightSidebar = () => {
             <div className="col-lg-8 col-md-12">
               <div className="blog-details">
                 <div className="article-img">
-                  <img src="/images/blog/blog-details.jpg" alt="image" />
+                  <img src={post?.featuredImage?.node?.sourceUrl} alt="image" />
                 </div>
 
                 <div className="article-content">
@@ -20,35 +21,26 @@ const BlogRightSidebar = () => {
                     <li>
                       <i className="fa-solid fa-user"></i>
                       <Link href="/blog">
-                        Admin
+                        {post?.author?.node?.name}
                       </Link>
                     </li>
                     <li>
-                      <i className="fa-solid fa-calendar-days"></i> March 08, 2022
+                      <i className="fa-solid fa-calendar-days"></i> {formatDate(post.date)}
                     </li>
                   </ul>
 
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </p>
+                  <div dangerouslySetInnerHTML={{__html: post.content}} />
 
-                  <blockquote className="wp-block-quote">
+                  {/* <blockquote className="wp-block-quote">
                     <p>
                       It is a long established fact that a reader will be
                       distracted by the readable content of a page when looking
                       at its layout.
                     </p>
                     <cite>Tom Cruise</cite>
-                  </blockquote>
+                  </blockquote> */}
 
-                  <p>
+                  {/* <p>
                     Sed ut perspiciatis unde omnis iste natus error sit
                     voluptatem accusantium doloremque laudantium, totam rem
                     aperiam, eaque ipsa quae ab illo inventore veritatis et
@@ -85,19 +77,25 @@ const BlogRightSidebar = () => {
                     Itaque earum rerum hic tenetur a sapiente delectus, ut aut
                     reiciendis voluptatibus maiores alias consequatur aut
                     perferendis doloribus.
-                  </p>
+                  </p> */}
 
                   {/* Category */}
                   <ul className="category">
                     <li>
                       <span>Tags:</span>
                     </li>
-                    <li>
-                      <Link href="/blog">
-                        Business
-                      </Link>
-                    </li>
-                    <li>
+                    {
+                      post?.tags?.edges.map((tag, index) => {
+                        return (
+                          <li key={index}>
+                            <Link key={index} href="/blog">
+                              {tag.node.name}
+                            </Link>
+                          </li>
+                        )
+                      })
+                    }
+                    {/* <li>
                       <Link href="/blog">
                         IT
                       </Link>
@@ -111,7 +109,7 @@ const BlogRightSidebar = () => {
                       <Link href="/blog">
                         Design
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>

@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import BlogSidebar from "./BlogSidebar";
+import { getPosts } from "../../pages/api/post";
+import { formatDate } from "../../utils/formatting";
+import { useRouter } from "next/router";
 
 const blogPostData = [
   {
@@ -66,6 +69,16 @@ const blogPostData = [
 ];
 
 const BlogRightSidebar = () => {
+  const [posts, setPosts] = useState([]);
+  const router = useRouter();
+  const setPostsData = async () => {
+    const id = await router.query.id
+    let data = await getPosts();
+    setPosts(data.edges);
+  };
+  useEffect(() => {
+    setPostsData();
+  }, []);
   return (
     <>
       <div className="blog-area ptb-100">
@@ -73,38 +86,38 @@ const BlogRightSidebar = () => {
           <div className="row">
             <div className="col-lg-8 col-md-12">
               <div className="row justify-content-center">
-                {blogPostData &&
-                  blogPostData.map((value, i) => (
+                {posts &&
+                  posts.map((value, i) => (
                     <div
                       className="col-lg-6 col-md-6"
                       key={i}
                       data-aos="fade-in"
                       data-aos-duration="1200"
-                      data-aos-delay={value.aosDelay}
+                      // data-aos-delay={value.aosDelay}
                     >
                       <div className="single-blog-item">
                         <div className="blog-image">
-                          <Link href={value.readMoreLink}>
+                          {/* <Link href={value.readMoreLink}>
                             <img src={value.image} alt="image" />
-                          </Link>
+                          </Link> */}
 
-                          <div className="post-tag">
-                            <Link href={value.readMoreLink}>
-                              {value.category}
-                            </Link>
-                          </div>
+                          {/* <div className="post-tag">
+                            <Link href={"/blog-details"}>{value.category}</Link>
+                          </div> */}
                         </div>
 
                         <div className="blog-post-content">
-                          <span className="date">{value.date}</span>
+                          <span className="date">{formatDate(value.node.date)}</span>
                           <h3>
-                            <Link href={value.readMoreLink}>{value.title}</Link>
+                            <Link href={`/blog-details/${value.node.id}` }>
+                              {value.node.title}
+                            </Link>
                           </h3>
 
-                          <p>{value.shortText}</p>
+                          <div dangerouslySetInnerHTML={{__html: value.node.content}} />
 
                           <Link
-                            href={value.readMoreLink}
+                            href={"/blog-details"}
                             className="read-more-btn"
                           >
                             Read More
@@ -121,14 +134,16 @@ const BlogRightSidebar = () => {
                     <a className="prev page-numbers">
                       <i className="fa-solid fa-angles-left"></i>
                     </a>
-
-                    <a className="page-numbers">1</a>
+                    {posts.map((post, i) => {
+                      return <a className="page-numbers">{post.node.postId}</a>;
+                    })}
+                    {/* <a className="page-numbers">1</a>
 
                     <span className="page-numbers current">2</span>
 
                     <a className="page-numbers">3</a>
 
-                    <a className="page-numbers">4</a>
+                    <a className="page-numbers">4</a> */}
 
                     <a className="next page-numbers">
                       <i className="fa-solid fa-angles-right"></i>

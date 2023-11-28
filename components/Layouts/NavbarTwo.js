@@ -6,7 +6,7 @@ const NavbarTwo = () => {
   // Add active class
   const [currentPath, setCurrentPath] = useState("");
   const router = useRouter();
-  // console.log(router.asPath)
+  console.log("router",router.asPath)
 
   useEffect(() => {
     setCurrentPath(router.asPath);
