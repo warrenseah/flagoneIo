@@ -54,6 +54,82 @@ export const getPosts = async () => {
   }
 };
 
+export const getPaginatedPosts = async (variables) => {
+  try {
+    // setIsLoading(true);
+    const headers = {
+      'content-type': 'application/json',
+    };
+    const requestBody = {
+      query: `query GetPaginatedPosts(
+        $first: Int
+        $last: Int
+        $after: String
+        $before: String
+      ) {
+        posts(first: $first, last: $last, after: $after, before: $before) {
+          pageInfo {
+            hasNextPage
+            hasPreviousPage
+            startCursor
+            endCursor
+          }
+          edges {
+            cursor
+            node {
+              author {
+                node {
+                  name
+                }
+              }
+              id
+              slug
+              title
+              link
+              postId
+              date
+              tags {
+                nodes {
+                  name
+                }
+              }
+              content
+              categories {
+                nodes {
+                  name
+                }
+              }
+              featuredImage {
+                node {
+                  id
+                  sourceUrl
+                }
+              }
+            }
+          }
+        }
+    }`,
+    variables
+    };
+    const options = {
+      method: 'POST',
+      url: 'https://cms.flagone.io/index.php?graphql',
+      headers,
+      data: requestBody
+    };
+    const response = await axios(options);
+    console.log('RESPONSE FROM AXIOS REQUEST Pagination', response.data.data);
+    // setUserDetails(response?.data?.data?.nextUser ?? {});
+    return response.data.data.posts
+  }
+  catch (err) {
+    console.log('ERROR DURING AXIOS REQUEST', process.env.WORDPRESS_API_UR, err);
+  }
+  finally {
+    console.log('FINALLY DURING AXIOS REQUEST');
+    // setIsLoading(false);
+  }
+}
 export const getPopularPosts = async () => {
   try {
     // setIsLoading(true);
@@ -82,6 +158,11 @@ export const getPopularPosts = async () => {
                 }
               }
               content
+              categories {
+                nodes {
+                  name
+                }
+              }
             }
           }
         }
@@ -175,14 +256,13 @@ export const getPost = async (slug) => {
               name
             }
           }
-          terms(after: "1", first: 1) {
-            edges {
-              node {
-                id
-                slug
-                link
-              }
-            }
+          previousPost {
+            title
+            slug
+          }
+          nextPost {
+            title
+            slug
           }
         }
       }`

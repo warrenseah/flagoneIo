@@ -4,7 +4,7 @@ import BlogSidebar from "./BlogSidebar";
 import BlogComments from "./BlogComments";
 import { formatDate } from "../../utils/formatting";
 
-const BlogRightSidebar = ({post}) => {
+const BlogRightSidebar = ({ post }) => {
   return (
     <>
       <div className="blog-area ptb-100">
@@ -13,23 +13,27 @@ const BlogRightSidebar = ({post}) => {
             <div className="col-lg-8 col-md-12">
               <div className="blog-details">
                 <div className="article-img">
-                  <img src={post?.featuredImage?.node?.sourceUrl} alt="image" />
+                  {post?.featuredImage?.node?.sourceUrl && (
+                    <img
+                      src={post?.featuredImage?.node?.sourceUrl}
+                      alt="image"
+                    />
+                  )}
                 </div>
 
                 <div className="article-content">
                   <ul className="entry-meta">
                     <li>
                       <i className="fa-solid fa-user"></i>
-                      <Link href="/blog">
-                        {post?.author?.node?.name}
-                      </Link>
+                      <Link href="/blog">{post?.author?.node?.name}</Link>
                     </li>
                     <li>
-                      <i className="fa-solid fa-calendar-days"></i> {formatDate(post.date)}
+                      <i className="fa-solid fa-calendar-days"></i>{" "}
+                      {formatDate(post.date)}
                     </li>
                   </ul>
 
-                  <div dangerouslySetInnerHTML={{__html: post.content}} />
+                  <div dangerouslySetInnerHTML={{ __html: post.content }} />
 
                   {/* <blockquote className="wp-block-quote">
                     <p>
@@ -81,20 +85,20 @@ const BlogRightSidebar = ({post}) => {
 
                   {/* Category */}
                   <ul className="category">
-                    <li>
-                      <span>Tags:</span>
-                    </li>
-                    {
-                      post?.tags?.edges.map((tag, index) => {
-                        return (
-                          <li key={index}>
-                            <Link key={index} href="/blog">
-                              {tag.node.name}
-                            </Link>
-                          </li>
-                        )
-                      })
-                    }
+                    {post?.tags.edges.length > 0 ? (
+                      <li>
+                        <span>Tags:</span>
+                      </li>
+                    ) : null}
+                    {post?.tags?.edges.map((tag, index) => {
+                      return (
+                        <li key={index}>
+                          <Link key={index} href="/blog">
+                            {tag.node.name}
+                          </Link>
+                        </li>
+                      );
+                    })}
                     {/* <li>
                       <Link href="/blog">
                         IT
@@ -116,16 +120,24 @@ const BlogRightSidebar = ({post}) => {
 
               {/* Post controls */}
               <div className="post-controls-buttons">
-                <div>
-                  <Link href="#">
-                    Prev Post
-                  </Link>
-                </div>
-                <div>
-                  <Link href="#">
-                    Next Post
-                  </Link>
-                </div>
+                {post.previousPost ? (
+                  <div>
+                    <Link href={`/blog-details/${post.previousPost.slug}`}>
+                      Prev Post
+                    </Link>
+                  </div>
+                ) : (
+                  <div></div>
+                )}
+                {post.nextPost ? (
+                  <div>
+                    <Link href={`/blog-details/${post.nextPost.slug}`}>
+                      Next Post
+                    </Link>
+                  </div>
+                ) : (
+                  <div></div>
+                )}
               </div>
 
               <BlogComments />

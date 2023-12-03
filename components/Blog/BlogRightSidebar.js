@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import BlogSidebar from "./BlogSidebar";
-import { getPosts } from "../../pages/api/post";
+import { getPaginatedPosts } from "../../pages/api/post";
 import { formatDate } from "../../utils/formatting";
 import { useRouter } from "next/router";
 
@@ -69,16 +69,20 @@ const blogPostData = [
 ];
 
 const BlogRightSidebar = () => {
+  const [page, setPage] = useState(1);
+  const perPagePosts = 2;
   const [posts, setPosts] = useState([]);
+  const [pageInfo, setPageInfo] = useState({});
   const router = useRouter();
   const setPostsData = async () => {
-    const id = await router.query.id
-    let data = await getPosts();
+    const id = await router.query.id;
+    let data = await getPaginatedPosts({ first: page * perPagePosts });
     setPosts(data.edges);
+    setPageInfo(data.pageInfo)
   };
   useEffect(() => {
     setPostsData();
-  }, []);
+  }, [page]);
   return (
     <>
       <div className="blog-area ptb-100">
@@ -97,24 +101,43 @@ const BlogRightSidebar = () => {
                     >
                       <div className="single-blog-item">
                         <div className="blog-image">
-                          {/* <Link href={value.readMoreLink}>
-                            <img src={value.image} alt="image" />
-                          </Link> */}
+                         {/* {value.node.featuredImage && value.node.featuredImage.node.sourceUrl && <Link href={`/blog-details/${value.node.slug}`}>
+                            <img src={value.node.featuredImage.node.sourceUrl} alt="image" />
+                          </Link>} */}
 
-                          {/* <div className="post-tag">
-                            <Link href={"/blog-details"}>{value.category}</Link>
-                          </div> */}
+                          <div className="post-tag">
+=                            {
+                              value?.node?.tags?.nodes.map(tag => {
+                                return <Link href={"/blog-details"}>{tag.name}</Link>
+                              })
+                            }
+                          </div>
+                          <div className="post-tag">
+=                            {
+                              value?.node?.categories?.nodes.map(category => {
+                                return <Link href={"/blog-details"}>{category.name}</Link>
+                              })
+                            }
+                          </div>
                         </div>
 
                         <div className="blog-post-content">
-                          <span className="date">{formatDate(value.node.date)}</span>
+                          <span className="date">
+                            {formatDate(value.node.date)}
+                          </span>
                           <h3>
-                            <Link href={`/blog-details/${value.node.slug}` }>
+                            <Link href={`/blog-details/${value.node.slug}`}>
                               {value.node.title}
                             </Link>
                           </h3>
-
-                          <div dangerouslySetInnerHTML={{__html: value.node.content}} />
+                          <span className="date">
+                            {value.node.author.node.name}
+                          </span>
+                          {/* <div
+                            dangerouslySetInnerHTML={{
+                              __html: value.node.content,
+                            }}
+                          /> */}
 
                           <Link
                             href={`/blog-details/${value.node.slug}`}
@@ -131,12 +154,24 @@ const BlogRightSidebar = () => {
                 <div className="col-lg-12 col-md-12">
                   {/* Pagination */}
                   <div className="pagination-area">
-                    <a className="prev page-numbers">
-                      <i className="fa-solid fa-angles-left"></i>
-                    </a>
-                    {posts.map((post, i) => {
-                      return <a className="page-numbers">{post.node.postId}</a>;
-                    })}
+                    {pageInfo?.hasPreviousPage && (
+                      <a
+                        className="prev page-numbers"
+                        onClick={() => setPage(page - 1)}
+                      >
+                        <i className="fa-solid fa-angles-left"></i>
+                      </a>
+                    )}
+                    {pageInfo?.hasNextPage && (
+                      <a
+                        className="next page-numbers"
+                        onClick={() => setPage(page + 1)}
+                      >
+                        <i className="fa-solid fa-angles-right"></i>
+                      </a>
+                    )}
+
+                    {/* <a className="page-numbers">1</a>
                     {/* <a className="page-numbers">1</a>
 
                     <span className="page-numbers current">2</span>
@@ -145,9 +180,9 @@ const BlogRightSidebar = () => {
 
                     <a className="page-numbers">4</a> */}
 
-                    <a className="next page-numbers">
+                    {/* <a className="next page-numbers">
                       <i className="fa-solid fa-angles-right"></i>
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
