@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 export const getPosts = async () => {
   try {
     // setIsLoading(true);
@@ -130,38 +131,25 @@ export const getPaginatedPosts = async (variables) => {
     // setIsLoading(false);
   }
 }
+
 export const getPopularPosts = async () => {
   try {
-    // setIsLoading(true);
     const headers = {
       'content-type': 'application/json',
     };
     const requestBody = {
-      query: `query GetPosts {
-        posts {
-          edges {
-            node {
-              author {
-                node {
-                  name
-                }
-              }
-              title
-              link
-              postId
-              date
-              tags {
-                edges {
-                  node {
-                    id
-                  }
-                }
-              }
-              content
-              categories {
-                nodes {
-                  name
-                }
+      query: `query GetPopularPosts {
+        popularPosts(first: 5) {
+          nodes {
+            id
+            title
+            date
+            viewCount
+            slug
+            featuredImage {
+              node {
+                id
+                sourceUrl
               }
             }
           }
@@ -175,9 +163,9 @@ export const getPopularPosts = async () => {
       data: requestBody
     };
     const response = await axios(options);
-    console.log('RESPONSE FROM AXIOS REQUEST', response.data.data.posts.edges);
+    console.log('RESPONSE FROM AXIOS REQUEST GetPopularPosts', response.data.data.popularPosts);
     // setUserDetails(response?.data?.data?.nextUser ?? {});
-    return response.data.data.posts
+    return response.data.data.popularPosts
   }
   catch (err) {
     console.log('ERROR DURING AXIOS REQUEST', process.env.WORDPRESS_API_UR, err);
@@ -200,6 +188,7 @@ export const getRecentPosts = async () => {
           nodes {
             title
             date
+            slug
           }
         }
       }`

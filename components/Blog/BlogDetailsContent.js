@@ -85,7 +85,7 @@ const BlogRightSidebar = ({ post }) => {
 
                   {/* Category */}
                   <ul className="category">
-                    {post?.tags.edges.length > 0 ? (
+                    {post?.tags?.edges?.length > 0 ? (
                       <li>
                         <span>Tags:</span>
                       </li>

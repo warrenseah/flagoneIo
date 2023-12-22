@@ -1,21 +1,24 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { getTags } from "../../pages/api/tag";
 import { getCategories } from "../../pages/api/category";
-import { getRecentPosts } from "../../pages/api/post";
+import { getPopularPosts, getRecentPosts } from "../../pages/api/post";
 import { formatDate } from "../../utils/formatting";
 
 const BlogSidebar = () => {
   const [tags, setTags] = useState([]);
   const [categories, setCategories] = useState([]);
   const [recentPosts, setRecentPosts] = useState([]);
+  const [popularPosts, setPopularPostss] = useState([]);
   const setData = async () => {
     let tagsData = await getTags();
     let categoriesData = await getCategories();
     let recentData = await getRecentPosts();
+    let popularData = await getPopularPosts();
     setTags(tagsData);
     setCategories(categoriesData);
     setRecentPosts(recentData);
+    setPopularPostss(popularData);
   };
   useEffect(() => {
     setData();
@@ -43,53 +46,32 @@ const BlogSidebar = () => {
         <div className="widget widget_posts_thumb">
           <h3 className="widget-title">Popular posts</h3>
 
-          <article className="item">
-            <Link href="/blog-details" className="thumb">
-              <span className="fullimage cover bg1" role="img"></span>
-            </Link>
-            <div className="info">
-              <time>March 15, 2022</time>
-              <h4 className="title usmall">
-                <Link href="/blog-details">
-                  The Best Marketing top use Management Tools
-                </Link>
-              </h4>
-            </div>
+          {popularPosts &&
+            popularPosts.nodes &&
+            popularPosts.nodes.map((popularPost, index) => {
+              return (
+                <article className="item">
+                  {popularPost?.featuredImage?.node?.sourceUrl && (
+                    <Link
+                      href={`/blog-details/${popularPost.slug}`}
+                      className="thumb"
+                    >
+                      <img src={popularPost?.featuredImage?.node?.sourceUrl} alt="image" />
+                    </Link>
+                  )}
+                  <div className="info">
+                    <time>{formatDate(popularPost.date)}</time>
+                    <h4 className="title usmall">
+                      <Link href={`/blog-details/${popularPost.slug}`}>
+                        {popularPost.title}
+                      </Link>
+                    </h4>
+                  </div>
 
-            <div className="clear"></div>
-          </article>
-
-          <article className="item">
-            <Link href="/blog-details" className="thumb">
-              <span className="fullimage cover bg2" role="img"></span>
-            </Link>
-            <div className="info">
-              <time>March 16, 2022</time>
-              <h4 className="title usmall">
-                <Link href="/blog-details">
-                  Top 21 Must-Read Blogs For Creative Agencies
-                </Link>
-              </h4>
-            </div>
-
-            <div className="clear"></div>
-          </article>
-
-          <article className="item">
-            <Link href="/blog-details" className="thumb">
-              <span className="fullimage cover bg3" role="img"></span>
-            </Link>
-            <div className="info">
-              <time>March 17, 2022</time>
-              <h4 className="title usmall">
-                <Link href="/blog-details">
-                  Protect your workplace from cyber attacks
-                </Link>
-              </h4>
-            </div>
-
-            <div className="clear"></div>
-          </article>
+                  <div className="clear"></div>
+                </article>
+              );
+            })}
         </div>
 
         {/* Recent posts */}
@@ -97,14 +79,20 @@ const BlogSidebar = () => {
           <h3 className="widget-title">Recent posts</h3>
 
           <ul>
-            {recentPosts && recentPosts.nodes && recentPosts.nodes.map((recentPost, index) => {
-              return(<li>
-                <Link href="/blog-details">
-                  {recentPost.title}
-                </Link>
-                <span className="post-date">{formatDate(recentPost.date)}</span>
-              </li>);
-            })}
+            {recentPosts &&
+              recentPosts.nodes &&
+              recentPosts.nodes.map((recentPost, index) => {
+                return (
+                  <li>
+                    <Link href={`/blog-details/${recentPost.slug}`}>
+                      {recentPost.title}
+                    </Link>
+                    <span className="post-date">
+                      {formatDate(recentPost.date)}
+                    </span>
+                  </li>
+                );
+              })}
             {/* <li>
               <Link href="/blog-details">
                 The security risks of changing package owners
@@ -143,15 +131,20 @@ const BlogSidebar = () => {
           <h3 className="widget-title">Categories</h3>
 
           <ul>
-            {
-              categories && categories.nodes && categories.nodes.map((category, index) => {
-                return (<li key={index}>
-                  <Link key={index} href="/blog">
-                    {category.name} {category.count > 0 && <span className="post-count">({category.count})</span>}
-                  </Link>
-                </li>)
-              })
-            }
+            {categories &&
+              categories.nodes &&
+              categories.nodes.map((category, index) => {
+                return (
+                  <li key={index}>
+                    <Link key={index} href="/blog">
+                      {category.name}{" "}
+                      {category.count > 0 && (
+                        <span className="post-count">({category.count})</span>
+                      )}
+                    </Link>
+                  </li>
+                );
+              })}
             {/* <li>
               <Link href="/blog">
                 Business <span className="post-count">(05)</span>
@@ -185,14 +178,18 @@ const BlogSidebar = () => {
           <h3 className="widget-title">Tags</h3>
 
           <div className="tagcloud">
-            {
-              tags && tags.nodes && tags.nodes.map((tag, index) => {
+            {tags &&
+              tags.nodes &&
+              tags.nodes.map((tag, index) => {
                 return (
                   <Link key={index} href="/blog">
-                    {tag.name} {tag.count > 0 && <span className="tag-link-count">({tag.count})</span>}
-                  </Link>)
-              })
-            }
+                    {tag.name}{" "}
+                    {tag.count > 0 && (
+                      <span className="tag-link-count">({tag.count})</span>
+                    )}
+                  </Link>
+                );
+              })}
             {/* <Link href="/blog">
               IT <span className="tag-link-count">(3)</span>
             </Link>
