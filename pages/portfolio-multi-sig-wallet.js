@@ -143,17 +143,17 @@ const dappDev = () => {
 
                 <h2>Wallet Factory dApp</h2>
                 <p>
-                  The wallet factory dApp provides a way for anyone to deploy
-                  their own multi sig wallet. You can deploy your own wallets
-                  with your specified wallet addresses as the signatories and
-                  number of approvals (quorum) into Ethereum Sepolia testnet
-                  .That means you will need some testnet Ether in your wallet
-                  before you can deploy a wallet at the dApp page.
+                  The wallet factory dApp offers a method for anyone to deploy
+                  their own multi-sig wallet. You can deploy your own wallet by
+                  specifying wallet addresses as approving signatories and the
+                  number of approvals required (quorum) on the Ethereum Sepolia
+                  testnet. This means that you will need some testnet Ether in
+                  your wallet before you can interact on the dApp page.
                 </p>
                 <p>
                   The instructions on how to use this dashboard to test the
                   various features of the multi sig wallet on Sepolia testnet
-                  can be found at the{" "}
+                  can be found at{" "}
                   <a
                     href="https://github.com/warrenseah/multi-sig-wallet-frontend"
                     target="_blank"
