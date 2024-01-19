@@ -105,9 +105,9 @@ const dappDev = () => {
                 </p>
                 <p>
                   In a multi-sig wallet, a predetermined number of signatories
-                  must provide their approval before any transaction can be
-                  executed. This number of approvals is represented by the
-                  variable quorem
+                  must provide their approval before any transaction/withdrawal
+                  can be executed. This number of approvals is represented by
+                  the variable quorem.
                 </p>
 
                 <h2>Core Benefits</h2>
@@ -142,14 +142,33 @@ const dappDev = () => {
                 </p>
 
                 <h2>Wallet Factory dApp</h2>
+
                 <p>
-                  The wallet factory dApp offers a method for anyone to deploy
-                  their own multi-sig wallet. You can deploy your own wallet by
-                  specifying wallet addresses as approving signatories and the
-                  number of approvals required (quorum) on the Ethereum Sepolia
-                  testnet. This means that you will need some testnet Ether in
-                  your wallet before you can interact on the dApp page.
+                  The wallet factory dApp offers a quick way for anyone to
+                  deploy their multi-sig wallet and test the features of a multi
+                  sign wallet. You can deploy your own wallet by specifying at
+                  least 3 unique wallet addresses as approving signatories and
+                  at least 2 amount of approvals required (quorum) on the
+                  Ethereum Sepolia testnet.
                 </p>
+                <p>
+                  The easiest way to get started is to download the metamask
+                  browser extension. Create a wallet and have the network set to
+                  Sepolia Ethereum testnet. Get some sepolia test ether{" "}
+                  <a href="https://sepoliafaucet.com/" target="_blank">
+                    here
+                  </a>{" "}
+                  because you will need them later at the dApp page. Once you
+                  have a wallet on Sepolia testnet ready, visit the{" "}
+                  <a
+                    href="https://main--sage-squirrel-518549.netlify.app"
+                    target="_blank"
+                  >
+                    Multi Sig Wallet Factory
+                  </a>{" "}
+                  Page.
+                </p>
+
                 <p>
                   The instructions on how to use this dashboard to test the
                   various features of the multi sig wallet on Sepolia testnet
@@ -181,6 +200,13 @@ const dappDev = () => {
                 </div>
 
                 <div className="single-info-link-box">
+                  <Link
+                    href="https://main--sage-squirrel-518549.netlify.app"
+                    className="default-btn m-1"
+                    target="_blank"
+                  >
+                    dApp Preview (Ethereum Testnet)
+                  </Link>
                   <Link
                     href="https://github.com/warrenseah/multi-sig-wallet"
                     className="default-btn m-1"
