@@ -1,10 +1,10 @@
-import axios from 'axios';
+import axios from "axios";
 
 export const getPosts = async () => {
   try {
     // setIsLoading(true);
     const headers = {
-      'content-type': 'application/json',
+      "content-type": "application/json",
     };
     const requestBody = {
       query: `query GetPosts {
@@ -33,25 +33,25 @@ export const getPosts = async () => {
             }
           }
         }
-      }`
+      }`,
     };
     const options = {
-      method: 'POST',
-      url: 'https://cms.flagone.io/index.php?graphql',
+      method: "POST",
+      url: "https://cms.flagone.io/index.php?graphql",
       headers,
-      data: requestBody
+      data: requestBody,
     };
     const response = await axios(options);
-    console.log('RESPONSE FROM AXIOS REQUEST', response.data.data.posts.edges);
-    // setUserDetails(response?.data?.data?.nextUser ?? {});
-    return response.data.data.posts
-  }
-  catch (err) {
-    console.log('ERROR DURING AXIOS REQUEST', process.env.WORDPRESS_API_UR, err);
-  }
-  finally {
-    console.log('FINALLY DURING AXIOS REQUEST');
-    // setIsLoading(false);
+    console.log("RESPONSE FROM AXIOS REQUEST", response.data.data.posts.edges);
+    return response.data.data.posts;
+  } catch (err) {
+    console.log(
+      "ERROR DURING AXIOS REQUEST",
+      process.env.WORDPRESS_API_UR,
+      err
+    );
+  } finally {
+    console.log("FINALLY DURING AXIOS REQUEST");
   }
 };
 
@@ -59,7 +59,7 @@ export const getPaginatedPosts = async (variables) => {
   try {
     // setIsLoading(true);
     const headers = {
-      'content-type': 'application/json',
+      "content-type": "application/json",
     };
     const requestBody = {
       query: `query GetPaginatedPosts(
@@ -110,32 +110,32 @@ export const getPaginatedPosts = async (variables) => {
           }
         }
     }`,
-    variables
+      variables,
     };
     const options = {
-      method: 'POST',
-      url: 'https://cms.flagone.io/index.php?graphql',
+      method: "POST",
+      url: "https://cms.flagone.io/index.php?graphql",
       headers,
-      data: requestBody
+      data: requestBody,
     };
     const response = await axios(options);
-    console.log('RESPONSE FROM AXIOS REQUEST Pagination', response.data.data);
-    // setUserDetails(response?.data?.data?.nextUser ?? {});
-    return response.data.data.posts
+    console.log("RESPONSE FROM AXIOS REQUEST Pagination", response.data.data);
+    return response.data.data.posts;
+  } catch (err) {
+    console.log(
+      "ERROR DURING AXIOS REQUEST",
+      process.env.WORDPRESS_API_UR,
+      err
+    );
+  } finally {
+    console.log("FINALLY DURING AXIOS REQUEST");
   }
-  catch (err) {
-    console.log('ERROR DURING AXIOS REQUEST', process.env.WORDPRESS_API_UR, err);
-  }
-  finally {
-    console.log('FINALLY DURING AXIOS REQUEST');
-    // setIsLoading(false);
-  }
-}
+};
 
 export const getPopularPosts = async () => {
   try {
     const headers = {
-      'content-type': 'application/json',
+      "content-type": "application/json",
     };
     const requestBody = {
       query: `query GetPopularPosts {
@@ -154,25 +154,28 @@ export const getPopularPosts = async () => {
             }
           }
         }
-      }`
+      }`,
     };
     const options = {
-      method: 'POST',
-      url: 'https://cms.flagone.io/index.php?graphql',
+      method: "POST",
+      url: "https://cms.flagone.io/index.php?graphql",
       headers,
-      data: requestBody
+      data: requestBody,
     };
     const response = await axios(options);
-    console.log('RESPONSE FROM AXIOS REQUEST GetPopularPosts', response.data.data.popularPosts);
-    // setUserDetails(response?.data?.data?.nextUser ?? {});
-    return response.data.data.popularPosts
-  }
-  catch (err) {
-    console.log('ERROR DURING AXIOS REQUEST', process.env.WORDPRESS_API_UR, err);
-  }
-  finally {
-    console.log('FINALLY DURING AXIOS REQUEST');
-    // setIsLoading(false);
+    console.log(
+      "RESPONSE FROM AXIOS REQUEST GetPopularPosts",
+      response.data.data.popularPosts
+    );
+    return response.data.data.popularPosts;
+  } catch (err) {
+    console.log(
+      "ERROR DURING AXIOS REQUEST",
+      process.env.WORDPRESS_API_UR,
+      err
+    );
+  } finally {
+    console.log("FINALLY DURING AXIOS REQUEST");
   }
 };
 
@@ -180,7 +183,7 @@ export const getRecentPosts = async () => {
   try {
     // setIsLoading(true);
     const headers = {
-      'content-type': 'application/json',
+      "content-type": "application/json",
     };
     const requestBody = {
       query: `query GetRecentPosts {
@@ -191,33 +194,33 @@ export const getRecentPosts = async () => {
             slug
           }
         }
-      }`
+      }`,
     };
     const options = {
-      method: 'POST',
-      url: 'https://cms.flagone.io/index.php?graphql',
+      method: "POST",
+      url: "https://cms.flagone.io/index.php?graphql",
       headers,
-      data: requestBody
+      data: requestBody,
     };
     const response = await axios(options);
-    console.log('RESPONSE FROM AXIOS REQUEST', response.data.data.posts);
-    // setUserDetails(response?.data?.data?.nextUser ?? {});
-    return response.data.data.posts
+    console.log("RESPONSE FROM AXIOS REQUEST", response.data.data.posts);
+    return response.data.data.posts;
+  } catch (err) {
+    console.log(
+      "ERROR DURING AXIOS REQUEST",
+      process.env.WORDPRESS_API_UR,
+      err
+    );
+  } finally {
+    console.log("FINALLY DURING AXIOS REQUEST");
   }
-  catch (err) {
-    console.log('ERROR DURING AXIOS REQUEST', process.env.WORDPRESS_API_UR, err);
-  }
-  finally {
-    console.log('FINALLY DURING AXIOS REQUEST');
-    // setIsLoading(false);
-  }
-}
+};
 
 export const getPost = async (slug) => {
   try {
     // setIsLoading(true);
     const headers = {
-      'content-type': 'application/json',
+      "content-type": "application/json",
     };
     const requestBody = {
       query: `query GePost {
@@ -253,25 +256,70 @@ export const getPost = async (slug) => {
             title
             slug
           }
+          comments {
+            nodes {
+              content
+              date
+              parentId
+              author {
+                node {
+                  avatar {
+                    url
+                  }
+                  name
+                }
+              }
+              replies {
+                nodes {
+                  content
+                  date
+                  parentId
+                  author {
+                    node {
+                      name
+                      avatar {
+                        url
+                      }
+                    }
+                  }
+                  replies {
+                    nodes {
+                      date
+                      content
+                      parentId
+                      author {
+                        node {
+                          name
+                          avatar {
+                            url
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
-      }`
+      }`,
     };
     const options = {
-      method: 'POST',
-      url: 'https://cms.flagone.io/index.php?graphql',
+      method: "POST",
+      url: "https://cms.flagone.io/index.php?graphql",
       headers,
-      data: requestBody
+      data: requestBody,
     };
     const response = await axios(options);
-    console.log('RESPONSE FROM AXIOS REQUEST', response.data);
-    // setUserDetails(response?.data?.data?.nextUser ?? {});
-    return response.data.data.post
-  }
-  catch (err) {
-    console.log('ERROR DURING AXIOS REQUEST', process.env.WORDPRESS_API_UR, err);
-  }
-  finally {
-    console.log('FINALLY DURING AXIOS REQUEST');
-    // setIsLoading(false);
+    console.log("RESPONSE FROM AXIOS REQUEST", response.data);
+    return response.data.data.post;
+  } catch (err) {
+    console.log(
+      "ERROR DURING AXIOS REQUEST",
+      process.env.WORDPRESS_API_UR,
+      err
+    );
+  } finally {
+    console.log("FINALLY DURING AXIOS REQUEST");
   }
 };

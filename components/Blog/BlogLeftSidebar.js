@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import BlogSidebar from "./BlogSidebar";
+import { formatTitle } from "../../utils/formatting";
 
 const blogPostData = [
   {
@@ -106,7 +107,7 @@ const BlogRightSidebar = () => {
                         <div className="blog-post-content">
                           <span className="date">{value.date}</span>
                           <h3>
-                            <Link href={value.readMoreLink}>{value.title}</Link>
+                            <Link href={value.readMoreLink}>{formatTitle(value.title)}</Link>
                           </h3>
 
                           <p>{value.shortText}</p>

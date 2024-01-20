@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getTags } from "../../pages/api/tag";
 import { getCategories } from "../../pages/api/category";
 import { getPopularPosts, getRecentPosts } from "../../pages/api/post";
-import { formatDate } from "../../utils/formatting";
+import { formatDate, formatTitle } from "../../utils/formatting";
 
 const BlogSidebar = () => {
   const [tags, setTags] = useState([]);
@@ -27,7 +27,7 @@ const BlogSidebar = () => {
     <>
       <div className="widget-area" id="secondary">
         {/* Search form */}
-        <div className="widget widget_search">
+        {/* <div className="widget widget_search">
           <form className="search-form" onSubmit={(e) => e.preventDefault()}>
             <label>
               <input
@@ -40,7 +40,7 @@ const BlogSidebar = () => {
               <i className="fa-solid fa-magnifying-glass"></i>
             </button>
           </form>
-        </div>
+        </div> */}
 
         {/* Popular posts */}
         <div className="widget widget_posts_thumb">
@@ -51,19 +51,20 @@ const BlogSidebar = () => {
             popularPosts.nodes.map((popularPost, index) => {
               return (
                 <article className="item">
-                  {popularPost?.featuredImage?.node?.sourceUrl && (
-                    <Link
-                      href={`/blog-details/${popularPost.slug}`}
-                      className="thumb"
-                    >
-                      <img src={popularPost?.featuredImage?.node?.sourceUrl} alt="image" />
-                    </Link>
-                  )}
+                  <Link
+                    href={`/blog-details/${popularPost.slug}`}
+                    className="thumb"
+                  >
+                      <img
+                        src={popularPost?.featuredImage?.node?.sourceUrl ? popularPost?.featuredImage?.node?.sourceUrl : "/images/blog/blog2.jpg"}
+                        alt="image"
+                      />
+                  </Link>
                   <div className="info">
                     <time>{formatDate(popularPost.date)}</time>
                     <h4 className="title usmall">
                       <Link href={`/blog-details/${popularPost.slug}`}>
-                        {popularPost.title}
+                        {formatTitle(popularPost.title)}
                       </Link>
                     </h4>
                   </div>
@@ -85,7 +86,7 @@ const BlogSidebar = () => {
                 return (
                   <li>
                     <Link href={`/blog-details/${recentPost.slug}`}>
-                      {recentPost.title}
+                      {formatTitle(recentPost.title)}
                     </Link>
                     <span className="post-date">
                       {formatDate(recentPost.date)}

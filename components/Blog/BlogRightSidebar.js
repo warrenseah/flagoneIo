@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import BlogSidebar from "./BlogSidebar";
 import { getPaginatedPosts } from "../../pages/api/post";
-import { formatDate } from "../../utils/formatting";
+import { formatDate, formatTitle } from "../../utils/formatting";
 import { useRouter } from "next/router";
 
 const BlogRightSidebar = () => {
@@ -64,11 +64,11 @@ const BlogRightSidebar = () => {
                           </span>
                           <h3>
                             <Link href={`/blog-details/${value.node.slug}`}>
-                              {value.node.title}
+                              {formatTitle(value.node.title)}
                             </Link>
                           </h3>
                           <span className="date">
-                            {value.node.author.node.name}
+                            {formatTitle(value.node.author.node.name)}
                           </span>
                           {/* <div
                             dangerouslySetInnerHTML={{

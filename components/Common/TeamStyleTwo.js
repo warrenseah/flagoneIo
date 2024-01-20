@@ -1,4 +1,5 @@
 import React from "react";
+import { formatTitle } from "../../utils/formatting";
 
 const teamMemberData = [
   {
@@ -134,7 +135,7 @@ const TeamStyleTwo = () => {
                     </div>
 
                     <div className="team-caption">
-                      <h3>{value.name}</h3>
+                      <h3>{formatTitle(value.name)}</h3>
                       <p>{value.designation}</p>
                     </div>
                   </div>
