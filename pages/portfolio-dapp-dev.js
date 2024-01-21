@@ -3,7 +3,6 @@ import Head from "next/head";
 import Image from "next/image";
 import NavbarDark from "../components/Layouts/NavbarDark";
 import PageBanner from "../components/Common/PageBanner";
-import PortfolioDetailsContent2 from "../components/Portfolio/PortfolioDetailsContent2";
 import CtaAreaTwo from "../components/Common/CtaAreaTwo";
 import Footer from "../components/Layouts/Footer";
 import Link from "next/link";
