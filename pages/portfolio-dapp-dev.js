@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import NavbarDark from "../components/Layouts/NavbarDark";
 import PageBanner from "../components/Common/PageBanner";
+import PortfolioDetailsContent2 from "../components/Portfolio/PortfolioDetailsContent2";
 import CtaAreaTwo from "../components/Common/CtaAreaTwo";
 import Footer from "../components/Layouts/Footer";
 import Link from "next/link";
@@ -26,13 +27,68 @@ const dappDev = () => {
 
       <div className="portfolio-details ptb-100">
         <div className="container">
-          <div className="row lg-4 md-6 p-0">
-            <Image
-              src="/images/case-studies/studie3.jpg"
-              alt="watch and keyboard"
-              width="480"
-              height="700"
-            />
+          <div className="row m-0">
+            <div className="col-lg-4 col-md-6 p-0">
+              <div className="portfolio-details-image">
+                <Image
+                  src="/images/portfolio/portfolio1.jpg"
+                  alt="man doing brainstorming image"
+                  width="480"
+                  height="350"
+                  sizes="(max-width: 768px) 100vw,
+                      (max-width: 1200px) 50vw,
+                      33vw" 
+                />
+              </div>
+
+              <div className="portfolio-details-image">
+                <Image
+                  src="/images/portfolio/coding.jpg"
+                  alt="doing coding on a laptop image"
+                  width="480"
+                  height="350"
+                />
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6 p-0">
+              <div className="portfolio-details-image">
+                <Image
+                  src="/images/portfolio/portfolio3.jpg"
+                  alt="workflow flip chart image"
+                  width="480"
+                  height="700"
+                />
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-12 p-0">
+              <div className="row">
+                <div className="col-lg-12 col-md-6 pr_0">
+                  <div className="portfolio-details-image">
+                    <Image
+                      src="/images/portfolio/womanSelecting.jpg"
+                      alt="lady selecting on board image"
+                      width="480"
+                      height="350"
+                      sizes="(max-width: 768px) 100vw,
+                      (max-width: 1200px) 50vw,
+                      33vw" 
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-12 col-md-6 pl_0">
+                  <div className="portfolio-details-image">
+                    <Image
+                      src="/images/portfolio/teamWorking.jpg"
+                      alt="team working together image"
+                      width="480"
+                      height="350"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="row">
@@ -97,17 +153,12 @@ const dappDev = () => {
                 </div>
 
                 <div className="single-info-link-box">
-                  <Link
-                    href="https://mint.kryptotrees.com"
-                    className="default-btn m-1"
-                    target="_blank"
-                  >
+                  <Link href="https://mint.kryptotrees.com" className="default-btn m-1" target="_blank">
                     Minting dApp Preview
                   </Link>
                   <Link
                     href="https://timely-marshmallow-62bc3f.netlify.app"
-                    className="default-btn m-1"
-                    target="_blank"
+                    className="default-btn m-1" target="_blank"
                   >
                     Staking dApp Preview
                   </Link>

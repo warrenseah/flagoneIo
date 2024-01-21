@@ -2,10 +2,10 @@ import React from "react";
 import Head from "next/head";
 import NavbarDark from "../components/Layouts/NavbarDark";
 import PageBanner from "../components/Common/PageBanner";
+import PortfolioDetailsContent2 from "../components/Portfolio/PortfolioDetailsContent2";
 import CtaAreaTwo from "../components/Common/CtaAreaTwo";
 import Footer from "../components/Layouts/Footer";
 import Link from "next/link";
-import Image from "next/image";
 
 const DefiStaking = () => {
   return (
@@ -26,13 +26,37 @@ const DefiStaking = () => {
 
       <div className="portfolio-details ptb-100">
         <div className="container">
-          <div className="row lg-4 md-6 p-0">
-            <Image
-              src="/images/case-studies/studie1.jpg"
-              alt="lady selecting on board image"
-              width="480"
-              height="700"
-            />
+          <div className="row m-0">
+            <div className="col-lg-4 col-md-6 p-0">
+              <div className="portfolio-details-image">
+                <img src="/images/portfolio/portfolio1.jpg" alt="image" />
+              </div>
+
+              <div className="portfolio-details-image">
+                <img src="/images/portfolio/portfolio2.jpg" alt="image" />
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6 p-0">
+              <div className="portfolio-details-image">
+                <img src="/images/portfolio/portfolio3.jpg" alt="image" />
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-12 p-0">
+              <div className="row">
+                <div className="col-lg-12 col-md-6 pr_0">
+                  <div className="portfolio-details-image">
+                    <img src="/images/portfolio/portfolio4.jpg" alt="image" />
+                  </div>
+                </div>
+                <div className="col-lg-12 col-md-6 pl_0">
+                  <div className="portfolio-details-image">
+                    <img src="/images/portfolio/portfolio5.jpg" alt="image" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="row">
@@ -129,22 +153,19 @@ const DefiStaking = () => {
                 <div className="single-info-link-box">
                   <Link
                     href="https://github.com/warrenseah/vault-v1"
-                    className="default-btn m-1"
-                    target="_blank"
+                    className="default-btn m-1" target="_blank"
                   >
                     GitHub Repo
                   </Link>
                   <Link
                     href="https://testnet.bscscan.com/address/0x8a1f638791aed3514d72543d3698dfea0096cd6d"
-                    className="default-btn m-1"
-                    target="_blank"
+                    className="default-btn m-1" target="_blank"
                   >
                     Contract Address Preview (Bnb chain Testnet)
                   </Link>
                   <Link
                     href="https://timely-marshmallow-62bc3f.netlify.app"
-                    className="default-btn m-1"
-                    target="_blank"
+                    className="default-btn m-1" target="_blank"
                   >
                     dApp Preview
                   </Link>

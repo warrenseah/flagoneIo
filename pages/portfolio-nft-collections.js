@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import NavbarDark from "../components/Layouts/NavbarDark";
 import PageBanner from "../components/Common/PageBanner";
+import PortfolioDetailsContent2 from "../components/Portfolio/PortfolioDetailsContent2";
 import CtaAreaTwo from "../components/Common/CtaAreaTwo";
 import Footer from "../components/Layouts/Footer";
 import Link from "next/link";
@@ -26,13 +27,68 @@ const NftCollections = () => {
 
       <div className="portfolio-details ptb-100">
         <div className="container">
-          <div className="row lg-4 md-6 p-0">
-            <Image
-              src="/images/case-studies/studie2.jpg"
-              alt="workflow flip chart image"
-              width="480"
-              height="700"
-            />
+          <div className="row m-0">
+            <div className="col-lg-4 col-md-6 p-0">
+              <div className="portfolio-details-image">
+                <Image
+                  src="/images/portfolio/painting.jpg"
+                  alt="painting image"
+                  height="350"
+                  width="480"
+                  sizes="(max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  33vw"  
+                />
+              </div>
+
+              <div className="portfolio-details-image">
+                <Image
+                  src="/images/portfolio/womanDrawing.jpg"
+                  alt="woman drawing image"
+                  width="480"
+                  height="350"
+                />
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6 p-0">
+              <div className="portfolio-details-image">
+                <Image
+                  src="/images/portfolio/paintingArt.jpg"
+                  alt="another painting image"
+                  width="480"
+                  height="700"
+                />
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-12 p-0">
+              <div className="row">
+                <div className="col-lg-12 col-md-6 pr_0">
+                  <div className="portfolio-details-image">
+                    <Image
+                      src="/images/portfolio/abstractArt.jpg"
+                      alt="apple image"
+                      width="480"
+                      height="350"
+                      sizes="(max-width: 768px) 100vw,
+                      (max-width: 1200px) 50vw,
+                      33vw" 
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-12 col-md-6 pl_0">
+                  <div className="portfolio-details-image">
+                    <Image
+                      src="/images/portfolio/deal.jpg"
+                      alt="deal image"
+                      width="480"
+                      height="350"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="row">
@@ -133,39 +189,28 @@ const NftCollections = () => {
                 </div>
 
                 <div className="single-info-link-box">
-                  <Link
-                    href="https://kryptotrees.com"
-                    className="default-btn m-1"
-                    target="_blank"
-                  >
+                  <Link href="https://kryptotrees.com" className="default-btn m-1" target="_blank">
                     Website Preview
                   </Link>
 
-                  <Link
-                    href="https://mint.kryptotrees.com"
-                    className="default-btn m-1"
-                    target="_blank"
-                  >
+                  <Link href="https://mint.kryptotrees.com" className="default-btn m-1" target="_blank">
                     dApp Preview
                   </Link>
                   <Link
                     href="https://polygonscan.com/address/0x660dec2e3a19fb5534afe02b5c115dc4905bc9f9"
-                    className="default-btn m-1"
-                    target="_blank"
+                    className="default-btn m-1" target="_blank"
                   >
                     Contract Address (Polygon)
                   </Link>
                   <Link
                     href="https://github.com/warrenseah/kryptoTreesNft/tree/main/contracts"
-                    className="default-btn m-1"
-                    target="_blank"
+                    className="default-btn m-1" target="_blank"
                   >
                     Smart Contract Github
                   </Link>
                   <Link
                     href="https://github.com/coollif3/nftArtEngine"
-                    className="default-btn m-1"
-                    target="_blank"
+                    className="default-btn m-1" target="_blank"
                   >
                     Generative Art Engine Github
                   </Link>
