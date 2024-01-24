@@ -20,7 +20,7 @@ const OurWorks = () => {
               <div
                 className="single-case-studies"
                 style={{
-                  backgroundImage: `url(/images/case-studies/studie3.jpg)`,
+                  backgroundImage: `url(/images/portfolio/multisig-wallet-2.jpg)`,
                 }}
               >
                 <div className="content">
@@ -41,7 +41,7 @@ const OurWorks = () => {
 
                 <div className="shape">
                   <img
-                    src="/images/case-studies/studie-shape3.png"
+                    src="/images/case-studies/studie-shape6.png"
                     alt="logo"
                   />
                 </div>

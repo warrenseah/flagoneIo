@@ -1,11 +1,11 @@
 import React from "react";
 import Head from "next/head";
-import Image from "next/image";
 import NavbarDark from "../components/Layouts/NavbarDark";
 import PageBanner from "../components/Common/PageBanner";
 import CtaAreaTwo from "../components/Common/CtaAreaTwo";
 import Footer from "../components/Layouts/Footer";
 import Link from "next/link";
+import PortfolioImages from "../components/Portfolio/PortfolioDetailsImages";
 
 const dappDev = () => {
   return (
@@ -26,144 +26,178 @@ const dappDev = () => {
 
       <div className="portfolio-details ptb-100">
         <div className="container">
-          <div className="row lg-4 md-6 p-0">
-            <Image
-              src="/images/case-studies/studie3.jpg"
-              alt="watch and keyboard"
-              width="480"
-              height="700"
-            />
-          </div>
+          <PortfolioImages
+            colOneImages={[
+              {
+                src: "/images/portfolio/multisig-wallet-1.jpg",
+                alt: "multisig wallet 1",
+                height: "350",
+                width: "480",
+              },
+              {
+                src: "/images/portfolio/multisig-wallet-7.jpg",
+                alt: "multisig wallet 7",
+                height: "350",
+                width: "480",
+              }
+            ]}
+            colTwoImages={[
+              {
+                src: "/images/portfolio/multisig-wallet-10.jpg",
+                alt: "multisig wallet 10",
+                height: "700",
+                width: "480",
+              }
+            ]}
+            colThreeImages={[
+              {
+                src: "/images/portfolio/multisig-wallet-6.jpg",
+                alt: "multisig wallet 6",
+                height: "350",
+                width: "480",
+              },
+              {
+                src: "/images/portfolio/multisig-wallet-11.jpg",
+                alt: "multisig wallet 11",
+                height: "350",
+                width: "480",
+              },
+            ]}
+          />
 
           <div className="row">
             <div className="col-lg-12">
               <div className="portfolio-desc">
-                <h2>Multi Sig Wallet</h2>
+                <h2>kryptoTree NFT</h2>
                 <p>
-                  A multi-signature (multi-sig) wallet is a type of
-                  cryptocurrency wallet that requires multiple approvals to
-                  authorize transactions. It adds an extra layer of security by
-                  distributing control among multiple parties. Ethereum, a
-                  popular blockchain platform, supports multi-sig wallets
-                  through smart contracts.
-                </p>
-                <p>
-                  In a multi-sig wallet, a predetermined number of signatories
-                  must provide their approval before any transaction/withdrawal
-                  can be executed. This number of approvals is represented by
-                  the variable quorem.
+                  Non Fungible Tokens (NFT) are on the rise. The kryptoTree NFT
+                  collection consists of 10,000 different variation of trees
+                  bearing fruits. Each of the tree's artwork file and their
+                  randomly generated attributes are stored in decentralized
+                  storage. You will be able to see the NFT owner by calling the
+                  ERC-721 smart contract.
                 </p>
 
-                <h2>Core Benefits</h2>
-
+                <h2>Core Development</h2>
                 <p>
-                  The use of multi-sig wallets on Ethereum provides several
-                  advantages. First, it mitigates the risk of a single point of
-                  failure or compromise. If one wallet is lost or compromised,
-                  the funds stored in the wallet remain secure as long as the
-                  remaining signatories are trustworthy. Second, multi-sig
-                  wallets can be beneficial for organizations or projects that
-                  require consensus or shared decision-making for financial
-                  transactions.
+                  A nodeJS generative art code repo is coded to define the
+                  number of attributes the artwork should have. The number of
+                  variant for each attribute will then be provided into the code
+                  repo. The code repo is executed to generate 10,000 different
+                  variants of the kryptoTrees. The 10,000 artworks are named and
+                  properly stored into decentralized storage like IPFS. An
+                  ERC721 smart contract is customized to collect a minting fee
+                  and to ensure the artwork files, attribute file in json and
+                  the all necessary information relating to individual artwork
+                  are issued with an NFT id for minting later.
                 </p>
 
-                <h2>Multi Sig Smart Contract</h2>
-
+                <h2>Putting a Minting dApp Together</h2>
                 <p>
-                  Smart contracts play a crucial role in implementing multi-sig
-                  wallets on any ethereum virtual machine compatible chains.
-                  These self-executing contracts define the rules and conditions
-                  for approving transactions. They ensure that transactions are
-                  processed only when the required number of approvals is
-                  provided.
-                </p>
-                <p>
-                  Overall, multi-sig wallets offer enhanced security and
-                  accountability for managing digital assets on any EVM
-                  compatible blockchain. They are particularly useful in
-                  scenarios where multiple parties need to collaborate or when
-                  safeguarding large sums of cryptocurrency.
-                </p>
-
-                <h2>Wallet Factory dApp</h2>
-
-                <p>
-                  The wallet factory dApp offers a quick way for anyone to
-                  deploy their multi-sig wallet and test the features of a multi
-                  sign wallet. You can deploy your own wallet by specifying at
-                  least 3 unique wallet addresses as approving signatories and
-                  at least 2 amount of approvals required (quorum) on the
-                  Ethereum Sepolia testnet.
-                </p>
-                <p>
-                  The easiest way to get started is to download the metamask
-                  browser extension. Create a wallet and have the network set to
-                  Sepolia Ethereum testnet. Get some sepolia test ether{" "}
-                  <a href="https://sepoliafaucet.com/" target="_blank">
-                    here
-                  </a>{" "}
-                  because you will need them later at the dApp page. Once you
-                  have a wallet on Sepolia testnet ready, visit the{" "}
-                  <a
-                    href="https://main--sage-squirrel-518549.netlify.app"
-                    target="_blank"
-                  >
-                    Multi Sig Wallet Factory
-                  </a>{" "}
-                  Page.
-                </p>
-
-                <p>
-                  The instructions on how to use this dashboard to test the
-                  various features of the multi sig wallet on Sepolia testnet
-                  can be found at{" "}
-                  <a
-                    href="https://github.com/warrenseah/multi-sig-wallet-frontend"
-                    target="_blank"
-                  >
-                    dApp github page
-                  </a>
-                  .
+                  When the digital artwork files are ready and ERC721
+                  openzeppelin contract are deployed, a frontend website powered
+                  by ReactJS is developed and designed. User will be able to
+                  interact with the smart contract via Metamask browser
+                  extension to mint the NFT. Each user is allowed to mint up to
+                  a maximum of 10 kryptoTrees per wallet address controlled by
+                  the deployed smart contract.
                 </p>
               </div>
 
               <div className="service-details-info">
                 <div className="single-info-box">
                   <h4>Client</h4>
-                  <span>TokenClan</span>
+                  <span>Real Herbs</span>
                 </div>
 
                 <div className="single-info-box">
                   <h4>Category</h4>
-                  <span>dApp, Smart Contracts, Development</span>
+                  <span>NFT, Generative Art</span>
                 </div>
 
                 <div className="single-info-box">
                   <h4>Date</h4>
-                  <span>December 15, 2023</span>
+                  <span>October 28, 2021</span>
+                </div>
+
+                <div className="single-info-box">
+                  <h4>Share</h4>
+                  <ul className="social">
+                    <li>
+                      <a
+                        href="https://github.com/warrenseah/kryptoTreesNft/tree/main/contracts"
+                        title="kyrptoTrees github"
+                        target="_blank"
+                      >
+                        <i className="fa-brands fa-github"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.facebook.com/kryptotrees"
+                        title="kyrptoTrees fb"
+                        target="_blank"
+                      >
+                        <i className="fa-brands fa-facebook-f"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://twitter.com/KryptoTreesNFT"
+                        title="kyrptoTrees Twitter"
+                        target="_blank"
+                      >
+                        <i className="fa-brands fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://discord.gg/EwybaHdp"
+                        title="kyrptoTrees Discord"
+                        target="_blank"
+                      >
+                        <i className="fa-brands fa-discord"></i>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
 
                 <div className="single-info-link-box">
                   <Link
-                    href="https://main--sage-squirrel-518549.netlify.app"
+                    href="https://kryptotrees.com"
                     className="default-btn m-1"
                     target="_blank"
                   >
-                    dApp Preview (Ethereum Testnet)
+                    Website Preview
+                  </Link>
+
+                  <Link
+                    href="https://mint.kryptotrees.com"
+                    className="default-btn m-1"
+                    target="_blank"
+                  >
+                    dApp Preview
                   </Link>
                   <Link
-                    href="https://github.com/warrenseah/multi-sig-wallet"
+                    href="https://polygonscan.com/address/0x660dec2e3a19fb5534afe02b5c115dc4905bc9f9"
+                    className="default-btn m-1"
+                    target="_blank"
+                  >
+                    Contract Address (Polygon)
+                  </Link>
+                  <Link
+                    href="https://github.com/warrenseah/kryptoTreesNft/tree/main/contracts"
                     className="default-btn m-1"
                     target="_blank"
                   >
                     Smart Contract Github
                   </Link>
                   <Link
-                    href="https://github.com/warrenseah/multi-sig-wallet-frontend"
+                    href="https://github.com/coollif3/nftArtEngine"
                     className="default-btn m-1"
                     target="_blank"
                   >
-                    dApp Github
+                    Generative Art Engine Github
                   </Link>
                 </div>
               </div>
