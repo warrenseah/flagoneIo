@@ -5,7 +5,7 @@ import PageBanner from "../components/Common/PageBanner";
 import CtaAreaTwo from "../components/Common/CtaAreaTwo";
 import Footer from "../components/Layouts/Footer";
 import Link from "next/link";
-import PortfolioImages from "../components/Portfolio/PortfolioDetailsImages";
+import PortfolioDetailsImages from "../components/Portfolio/PortfolioDetailsImages";
 
 const dappDev = () => {
   return (
@@ -26,7 +26,7 @@ const dappDev = () => {
 
       <div className="portfolio-details ptb-100">
         <div className="container">
-          <PortfolioImages
+          <PortfolioDetailsImages
             colOneImages={[
               {
                 src: "/images/portfolio/multisig-wallet-1.jpg",
