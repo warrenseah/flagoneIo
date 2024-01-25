@@ -35,16 +35,16 @@ const DefiStaking = () => {
                 width: "480",
               },
               {
-                src: "/images/portfolio/defi-staking-2.jpg",
-                alt: "defi-staking 2",
+                src: "/images/portfolio/defi-staking-5.jpg",
+                alt: "defi-staking 5",
                 height: "350",
                 width: "480",
               },
             ]}
             colTwoImages={[
               {
-                src: "/images/portfolio/defi-staking-10.jpg",
-                alt: "defi-staking 10",
+                src: "/images/portfolio/defi-staking-16.jpg",
+                alt: "defi-staking 13",
                 height: "700",
                 width: "480",
               },
