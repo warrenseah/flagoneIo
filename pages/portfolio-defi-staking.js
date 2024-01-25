@@ -59,8 +59,8 @@ const DefiStaking = () => {
             ]}
             colFourImages={[
               {
-                src: "/images/portfolio/defi-staking-7.jpg",
-                alt: "defi-staking 7",
+                src: "/images/portfolio/defi-staking-1.jpg",
+                alt: "defi-staking 1",
                 height: "350",
                 width: "480",
               }
