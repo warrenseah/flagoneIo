@@ -55,7 +55,7 @@ const dappDev = () => {
                 alt: "multisig wallet 6",
                 height: "350",
                 width: "480",
-              }
+              },
             ]}
             colFourImages={[
               {
@@ -137,7 +137,7 @@ const dappDev = () => {
                   because you will need them later at the dApp page. Once you
                   have a wallet on Sepolia testnet ready, visit the{" "}
                   <a
-                    href="https://main--sage-squirrel-518549.netlify.app"
+                    href="https://multi-sig-wallet-518549.netlify.app"
                     target="_blank"
                   >
                     Multi Sig Wallet Factory
@@ -177,7 +177,7 @@ const dappDev = () => {
 
                 <div className="single-info-link-box">
                   <Link
-                    href="https://main--sage-squirrel-518549.netlify.app"
+                    href="https://multi-sig-wallet-518549.netlify.app"
                     className="default-btn m-1"
                     target="_blank"
                   >
