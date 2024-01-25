@@ -15,6 +15,42 @@ const OurWorks = () => {
               className="col-lg-4 col-md-6"
               data-aos="fade-up"
               data-aos-duration="1200"
+              data-aos-delay="300"
+            >
+              <div
+                className="single-case-studies"
+                style={{
+                  backgroundImage: `url(/images/portfolio/multisig-wallet-2.jpg)`,
+                }}
+              >
+                <div className="content">
+                  <span>
+                    <Link href="/portfolio-dapp-dev">dApp</Link>
+                  </span>
+                  <h3>
+                    <Link href="/portfolio-dapp-dev">Multi Sig Wallet</Link>
+                  </h3>
+                </div>
+
+                <Link
+                  href="/portfolio-multi-sig-wallet"
+                  className="btn btn-primary"
+                >
+                  View dApp
+                </Link>
+
+                <div className="shape">
+                  <img
+                    src="/images/case-studies/studie-shape6.png"
+                    alt="logo"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-duration="1200"
               data-aos-delay="100"
             >
               <div
@@ -25,19 +61,18 @@ const OurWorks = () => {
               >
                 <div className="content">
                   <span>
-                    <Link href="/portfolio-defi-staking">
-                      DeFi Staking
-                    </Link>
+                    <Link href="/portfolio-defi-staking">DeFi Staking</Link>
                   </span>
                   <h3>
-                    <Link href="/portfolio-defi-staking">
-                      Bnb Charger
-                    </Link>
+                    <Link href="/portfolio-defi-staking">Bnb Charger</Link>
                   </h3>
                 </div>
 
-                <Link href="/portfolio-defi-staking" className="btn btn-primary">
-                  View Case Study
+                <Link
+                  href="/portfolio-defi-staking"
+                  className="btn btn-primary"
+                >
+                  View dApp
                 </Link>
 
                 <div className="shape">
@@ -63,9 +98,7 @@ const OurWorks = () => {
               >
                 <div className="content">
                   <span>
-                    <Link href="/portfolio-nft-collections">
-                      NFT
-                    </Link>
+                    <Link href="/portfolio-nft-collections">NFT</Link>
                   </span>
                   <h3>
                     <Link href="/portfolio-nft-collections">
@@ -74,8 +107,11 @@ const OurWorks = () => {
                   </h3>
                 </div>
 
-                <Link href="/portfolio-nft-collections" className="btn btn-primary">
-                  View Case Study
+                <Link
+                  href="/portfolio-nft-collections"
+                  className="btn btn-primary"
+                >
+                  View dApp
                 </Link>
 
                 <div className="shape">
@@ -101,19 +137,15 @@ const OurWorks = () => {
               >
                 <div className="content">
                   <span>
-                    <Link href="/portfolio-dapp-dev">
-                      dApp
-                    </Link>
+                    <Link href="/portfolio-dapp-dev">dApp</Link>
                   </span>
                   <h3>
-                    <Link href="/portfolio-dapp-dev">
-                      dApp Development
-                    </Link>
+                    <Link href="/portfolio-dapp-dev">dApp Development</Link>
                   </h3>
                 </div>
 
                 <Link href="/portfolio-dapp-dev" className="btn btn-primary">
-                  View Case Study
+                  View dApp
                 </Link>
 
                 <div className="shape">
