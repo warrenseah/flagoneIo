@@ -55,7 +55,9 @@ const dappDev = () => {
                 alt: "multisig wallet 6",
                 height: "350",
                 width: "480",
-              },
+              }
+            ]}
+            colFourImages={[
               {
                 src: "/images/portfolio/multisig-wallet-11.jpg",
                 alt: "multisig wallet 11",
