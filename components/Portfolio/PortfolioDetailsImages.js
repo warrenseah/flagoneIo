@@ -35,22 +35,6 @@ const PortfolioDetailsImages = ({
       </div>
 
       <div className="col-lg-4 col-md-12 p-0">
-        {/* <div className="row">
-          {colThreeImages.map((cti, i) => {
-            return (
-              <div key={i} className="col-lg-12 col-md-6 pr_0">
-                <div key={i} className="portfolio-details-image">
-                  <Image
-                    {...cti}
-                    sizes="(max-width: 768px) 100vw,
-                      (max-width: 1200px) 50vw,
-                      33vw"
-                  />
-                </div>
-              </div>
-            );
-          })}
-        </div> */}
         <div className="row">
           <div className="col-lg-12 col-md-6 pr_0">
             {colThreeImages.map((cti, i) => {

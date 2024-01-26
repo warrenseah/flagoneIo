@@ -51,8 +51,8 @@ const dappDev = () => {
             ]}
             colThreeImages={[
               {
-                src: "/images/portfolio/multisig-wallet-6.jpg",
-                alt: "multisig wallet 6",
+                src: "/images/portfolio/multisig-wallet-9.jpg",
+                alt: "multisig wallet 9",
                 height: "350",
                 width: "480",
               },
