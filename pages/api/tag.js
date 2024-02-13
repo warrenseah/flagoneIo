@@ -22,8 +22,6 @@ export const getTags = async () => {
       data: requestBody
     };
     const response = await axios(options);
-    console.log('RESPONSE FROM AXIOS REQUEST', response.data.data.tags);
-    // setUserDetails(response?.data?.data?.nextUser ?? {});
     return response.data.data.tags
   }
   catch (err) {
@@ -31,7 +29,6 @@ export const getTags = async () => {
   }
   finally {
     console.log('FINALLY DURING AXIOS REQUEST');
-    // setIsLoading(false);
   }
 };
 
@@ -77,8 +74,6 @@ export const getTag = async () => {
       data: requestBody
     };
     const response = await axios(options);
-    console.log('RESPONSE FROM AXIOS REQUEST', response.data);
-    // setUserDetails(response?.data?.data?.nextUser ?? {});
     return response.data.data.post
   }
   catch (err) {
@@ -86,6 +81,5 @@ export const getTag = async () => {
   }
   finally {
     console.log('FINALLY DURING AXIOS REQUEST');
-    // setIsLoading(false);
   }
 };

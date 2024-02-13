@@ -70,11 +70,11 @@ const BlogRightSidebar = () => {
                           <span className="date">
                             {formatTitle(value.node.author.node.name)}
                           </span>
-                          {/* <div
+                          <div
                             dangerouslySetInnerHTML={{
-                              __html: value.node.content,
+                              __html: value.node.excerpt,
                             }}
-                          /> */}
+                          />
 
                           <Link
                             href={`/blog-details/${value.node.slug}`}

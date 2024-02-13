@@ -55,18 +55,18 @@ const BlogRightSidebar = ({ post }) => {
 
               {/* Post controls */}
               <div className="post-controls-buttons">
-                {post.previousPost ? (
+                {post.previous ? (
                   <div>
-                    <Link href={`/blog-details/${post.previousPost.slug}`}>
+                    <Link href={`/blog-details/${post.previous.slug}`}>
                       Prev Post
                     </Link>
                   </div>
                 ) : (
                   <div></div>
                 )}
-                {post.nextPost ? (
+                {post.next ? (
                   <div>
-                    <Link href={`/blog-details/${post.nextPost.slug}`}>
+                    <Link href={`/blog-details/${post.next.slug}`}>
                       Next Post
                     </Link>
                   </div>
@@ -75,7 +75,7 @@ const BlogRightSidebar = ({ post }) => {
                 )}
               </div>
 
-              <BlogComments comments={post.comments}commentCount ={post.commentCount} />
+              <BlogComments commentOn={post.databaseId} comments={post.comments}commentCount ={post.commentCount} />
             </div>
 
             <div className="col-lg-4 col-md-12">

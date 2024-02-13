@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import CommentsForm from "./CommentsForm";
 import { formatDateTime, formatTitle } from "../../utils/formatting";
 
-const BlogComments = ({ comments, commentCount }) => {
+const BlogComments = ({ commentOn, comments, commentCount }) => {
+  const [commentId, setCommentId] = useState(null);
+  const [commentOnState, setCommentOnState] = useState(commentOn);
+  // optimize inner listing of replies
   return (
     <>
       <div className="comments-area">
@@ -23,7 +26,9 @@ const BlogComments = ({ comments, commentCount }) => {
                           className="avatar"
                           alt="image"
                         />
-                        <b className="fn">{formatTitle(comment.author.node.name)}</b>
+                        <b className="fn">
+                          {formatTitle(comment.author.node.name)}
+                        </b>
                         <span className="says">says:</span>
                       </div>
 
@@ -41,7 +46,16 @@ const BlogComments = ({ comments, commentCount }) => {
                     </div>
 
                     <div className="reply">
-                      <Link href="#" className="comment-reply-link">
+                      <Link
+                        href="#email-notes"
+                        className="comment-reply-link"
+                        onClick={() => {
+                          setCommentId(comment.commentId);
+                          setCommentOnState(
+                            comment.commentedOn.node.databaseId
+                          );
+                        }}
+                      >
                         Reply
                       </Link>
                     </div>
@@ -59,7 +73,9 @@ const BlogComments = ({ comments, commentCount }) => {
                                   className="avatar"
                                   alt="image"
                                 />
-                                <b className="fn">{formatTitle(reply.author.node.name)}</b>
+                                <b className="fn">
+                                  {formatTitle(reply.author.node.name)}
+                                </b>
                                 <span className="says">says:</span>
                               </div>
 
@@ -77,7 +93,16 @@ const BlogComments = ({ comments, commentCount }) => {
                             </div>
 
                             <div className="reply">
-                              <Link href="#" className="comment-reply-link">
+                              <Link
+                                href="#email-notes"
+                                className="comment-reply-link"
+                                onClick={() => {
+                                  setCommentId(reply.commentId);
+                                  setCommentOnState(
+                                    reply.commentedOn.node.databaseId
+                                  );
+                                }}
+                              >
                                 Reply
                               </Link>
                             </div>
@@ -104,7 +129,9 @@ const BlogComments = ({ comments, commentCount }) => {
                                       </div>
 
                                       <div className="comment-metadata">
-                                        <a href="#">{formatDateTime(innerFirstReply.date)}</a>
+                                        <a href="#">
+                                          {formatDateTime(innerFirstReply.date)}
+                                        </a>
                                       </div>
                                     </footer>
 
@@ -118,8 +145,17 @@ const BlogComments = ({ comments, commentCount }) => {
 
                                     <div className="reply">
                                       <Link
-                                        href="#"
+                                        href="#email-notes"
                                         className="comment-reply-link"
+                                        onClick={() => {
+                                          setCommentId(
+                                            innerFirstReply.commentId
+                                          );
+                                          setCommentOnState(
+                                            innerFirstReply.commentedOn.node
+                                              .databaseId
+                                          );
+                                        }}
                                       >
                                         Reply
                                       </Link>
@@ -142,7 +178,7 @@ const BlogComments = ({ comments, commentCount }) => {
         </ol>
 
         {/* CommentsForm */}
-        <CommentsForm />
+        <CommentsForm commentOn={commentOnState} commentId={commentId} />
       </div>
     </>
   );

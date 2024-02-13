@@ -42,7 +42,6 @@ export const getPosts = async () => {
       data: requestBody,
     };
     const response = await axios(options);
-    console.log("RESPONSE FROM AXIOS REQUEST", response.data.data.posts.edges);
     return response.data.data.posts;
   } catch (err) {
     console.log(
@@ -89,6 +88,7 @@ export const getPaginatedPosts = async (variables) => {
               link
               postId
               date
+              excerpt(format: RENDERED)
               tags {
                 nodes {
                   name
@@ -119,7 +119,6 @@ export const getPaginatedPosts = async (variables) => {
       data: requestBody,
     };
     const response = await axios(options);
-    console.log("RESPONSE FROM AXIOS REQUEST Pagination", response.data.data);
     return response.data.data.posts;
   } catch (err) {
     console.log(
@@ -163,10 +162,6 @@ export const getPopularPosts = async () => {
       data: requestBody,
     };
     const response = await axios(options);
-    console.log(
-      "RESPONSE FROM AXIOS REQUEST GetPopularPosts",
-      response.data.data.popularPosts
-    );
     return response.data.data.popularPosts;
   } catch (err) {
     console.log(
@@ -203,7 +198,6 @@ export const getRecentPosts = async () => {
       data: requestBody,
     };
     const response = await axios(options);
-    console.log("RESPONSE FROM AXIOS REQUEST", response.data.data.posts);
     return response.data.data.posts;
   } catch (err) {
     console.log(
@@ -223,13 +217,22 @@ export const getPost = async (slug) => {
       "content-type": "application/json",
     };
     const requestBody = {
-      query: `query GePost {
+      query: `query GetPost {
         post(id: "${slug}", idType: SLUG) {
           id
           content
           date
           title
           commentCount
+          databaseId
+          next {
+            title
+            slug
+          }
+          previous {
+            title
+            slug
+          }
           featuredImage {
             node {
               id
@@ -248,19 +251,21 @@ export const getPost = async (slug) => {
               name
             }
           }
-          previousPost {
-            title
-            slug
-          }
-          nextPost {
-            title
-            slug
-          }
           comments {
             nodes {
               content
               date
               parentId
+              databaseId
+              databaseId
+              commentId
+              commentedOn {
+                node {
+                  id
+                  slug
+                  databaseId
+                }
+              }
               author {
                 node {
                   avatar {
@@ -274,6 +279,15 @@ export const getPost = async (slug) => {
                   content
                   date
                   parentId
+                  databaseId
+                  commentId
+                  commentedOn {
+                    node {
+                      id
+                      slug
+                      databaseId
+                    }
+                  }
                   author {
                     node {
                       name
@@ -287,6 +301,15 @@ export const getPost = async (slug) => {
                       date
                       content
                       parentId
+                      databaseId
+                      commentId
+                      commentedOn {
+                        node {
+                          id
+                          slug
+                          databaseId
+                        }
+                      }
                       author {
                         node {
                           name
@@ -311,7 +334,6 @@ export const getPost = async (slug) => {
       data: requestBody,
     };
     const response = await axios(options);
-    console.log("RESPONSE FROM AXIOS REQUEST", response.data);
     return response.data.data.post;
   } catch (err) {
     console.log(
