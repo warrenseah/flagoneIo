@@ -116,7 +116,7 @@ const FeedbackThree = () => {
 
                       <h3>{value.name}</h3>
                       <span>{value.designation}</span>
-                    </div>
+                    </div>  
                   </SwiperSlide>
                 ))}
             </Swiper>

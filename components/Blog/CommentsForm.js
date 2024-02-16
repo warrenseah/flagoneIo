@@ -1,15 +1,34 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
+import { createComment } from "../../pages/api/comment";
+import { removeEmpty } from "../../utils/formatting";
 
-const CommentsForm = () => {
+const CommentsForm = ({commentOn, commentId}) => {
+  const [formState, setFormState] = useState({
+    commentOn: null,
+    content: null,
+    author: null,
+  });
+  const handleChange = (e) => {
+    e.preventDefault();
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handlesubmit = (e) => {
+    e.preventDefault();
+    if(commentId) {
+      formState.parent = commentId;
+    }
+    formState.commentOn = commentOn
+    createComment(removeEmpty(formState));
+  };
   return (
     <>
       <div className="comment-respond">
         <h3 className="comment-reply-title">Leave a Reply</h3>
 
-        <form 
-          className="comment-form" 
-          onSubmit={(e) => e.preventDefault()}
-        >
+        <form className="comment-form" onSubmit={handlesubmit}>
           <div className="comment-notes">
             <span id="email-notes">
               Your email address will not be published.
@@ -20,45 +39,63 @@ const CommentsForm = () => {
           <div className="comment-form-comment mb-3">
             <label>Comment</label>
             <textarea
-              name="comment"
+              name="content"
               id="comment"
               rows="5"
               required="required"
-            ></textarea>
+              defaultValue={formState.content}
+              onChange={handleChange}
+            />
           </div>
 
           <div className="comment-form-author mb-3">
             <label>
               Name <span className="required">*</span>
             </label>
-            <input type="text" id="author" name="author" required="required" />
+            <input
+              type="text"
+              id="author"
+              name="author"
+              required="required"
+              defaultValue={formState.author}
+              onChange={handleChange}
+            />
           </div>
 
           <div className="comment-form-email mb-3">
             <label>
               Email <span className="required">*</span>
             </label>
-            <input type="email" id="email" name="email" required="required" />
+            <input
+              type="email"
+              id="email"
+              name="authorEmail"
+              required="required"
+              defaultValue={formState.authorEmail}
+              onChange={handleChange}
+            />
           </div>
 
-          <div className="comment-form-url mb-3">
+          {/* <div className="comment-form-url mb-3">
             <label>Website</label>
-            <input type="url" id="url" name="url" />
-          </div>
+            <input hidden type="url" id="url" name="url" defaultValue={window} />
+          </div> */}
 
-          <div className="comment-form-cookies-consent mb-3">
+          {/* <div className="comment-form-cookies-consent mb-3">
             <div className="form-check">
               <input
                 type="checkbox"
                 className="form-check-input"
                 id="exampleCheck1"
+                defaultValue={formState.authorEmail}
+                onChange={handleChange}
               />
               <label className="form-check-label" htmlFor="exampleCheck1">
                 Save my name, email, and website in this browser for the next
                 time I comment.
               </label>
             </div>
-          </div>
+          </div> */}
 
           <div className="form-submit">
             <input
